@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 藥物開發動態儀表板 2026</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --panel-bg: #1e293b;
+            --border-color: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-orange: #f59e0b;
+            --accent-purple: #8b5cf6;
+            --accent-pink: #ec4899;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 { color: #fff; margin-top: 0; }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+            background: rgba(255,255,255,0.1);
+            padding: 4px 12px;
+            border-radius: 999px;
+        }
+
+        /* Tabs */
+        .tab-controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tab-btn {
+            background-color: var(--panel-bg);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn:hover { background-color: #2a3b52; color: #fff; }
+        .tab-btn.active {
+            background-color: var(--accent-blue);
+            color: #fff;
+            border-color: var(--accent-blue);
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Panels and Layout */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .panel {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+        }
+
+        
+        /* SANKEY SECTION */
+        .sankey-wrap {
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color); /* Updated to match theme */
+            border-radius: 12px;
+            padding: 14px 18px 10px;
+            margin-bottom: 24px;
+        }
+        .sankey-wrap h2 { font-size: 1.1em; font-weight: 700; color: #e6edf3; margin-bottom: 4px; }
+        .sankey-wrap p { font-size: 0.9em; color: var(--text-secondary); margin-bottom: 15px; }
+        #sankey-container { width: 100%; overflow-x: auto; }
+        
+        /* SANKEY SVG elements */
+        .node rect { stroke-width: 0; rx: 4; cursor: pointer; transition: filter 0.2s;}
+        .node rect:hover { filter: brightness(1.2); }
+        .link { fill: none; stroke-opacity: 0.35; }
+        .link:hover { stroke-opacity: 0.6; }
+        .node-label { font-size: 11px; font-weight: 700; fill: #e6edf3; pointer-events: none;}
+        .node-sub { font-size: 10px; fill: #8b949e; pointer-events: none;}
+
+        /* Infographic Home */
+        .infographic-container { display: flex; flex-direction: column; gap: 20px; }
+        .flow-stage {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+            overflow: hidden;
+        }
+        .flow-stage:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+        }
+        .stage-header {
+            padding: 15px 20px;
+            background: rgba(255,255,255,0.03);
+            border-bottom: 1px solid var(--border-color);
+        }
+        .stage-header h3 { margin: 0; font-size: 1.15em; color: #fff; }
+
+        .stage-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 200px;
+        }
+
+        .stage-section {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .stage-section.traditional {
+            background: rgba(0,0,0,0.1);
+            border-right: 1px solid var(--border-color);
+        }
+        .stage-section.ai {
+            background: rgba(59, 130, 246, 0.02);
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .traditional .section-label { color: var(--text-secondary); }
+        .ai .section-label { color: var(--accent-blue); }
+
+        .evidence-note {
+            font-size: 0.7rem;
+            color: #64748b;
+            margin-top: 4px;
+            font-style: italic;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 4px;
+        }
+
+        .metric-mini-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            background: rgba(0,0,0,0.2);
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+        .mini-item { 
+            display: flex; 
+            flex-direction: column; 
+            min-width: 60px;
+        }
+        .mini-label { font-size: 0.7rem; color: var(--text-secondary); }
+        .mini-value { 
+            font-size: 0.85rem; 
+            font-weight: 600; 
+            color: #e2e8f0;
+            white-space: nowrap;
+        }
+
+        .solution-list {
+            margin: 0;
+            padding-left: 18px;
+            font-size: 0.88rem;
+            color: #cbd5e1;
+        }
+        .solution-list li { margin-bottom: 6px; }
+        .traditional .solution-list { color: #94a3b8; }
+        .ai .solution-list { color: #bae6fd; }
+
+        .status-badge {
+            margin-left: auto;
+        }
+
+        /* Metrics Comparison */
+        .metrics-card {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 1), rgba(15, 23, 42, 1));
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        .metrics-card.ai-card {
+            border-color: rgba(59, 130, 246, 0.4);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
+        }
+        .metrics-card.ai-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--accent-blue);
+        }
+        .metrics-card-title { font-size: 1.25em; font-weight: 600; color: #fff; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .metric-item { margin-bottom: 16px; }
+        .metric-label { font-size: 0.85em; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; display: block; }
+        .metric-value { font-size: 1.1em; font-weight: 500; color: #e2e8f0; }
+        .ai-card .metric-value { color: #93c5fd; }
+        .metrics-source { font-size: 0.8em; color: #64748b; margin-top: 20px; border-top: 1px solid var(--border-color); padding-top: 10px; }
+
+
+        /* Infographic Card Metrics */
+        .stage-metrics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 12px;
+            background: rgba(15, 23, 42, 0.4);
+            border-radius: 8px;
+            padding: 10px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .metric-col { font-size: 0.8em; }
+        .metric-col-title { font-weight: 600; margin-bottom: 6px; display: block; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 2px; }
+        .metric-col.traditional .metric-col-title { color: var(--text-secondary); }
+        .metric-col.ai .metric-col-title { color: #93c5fd; }
+        .metric-row { margin-bottom: 4px; display: flex; justify-content: space-between; }
+        .metric-row span:first-child { color: rgba(255,255,255,0.5); font-size: 0.9em; }
+
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid var(--border-color); }
+        th { color: var(--text-secondary); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        tr.clickable-row { cursor: pointer; transition: background 0.2s; }
+        tr.clickable-row:hover { background-color: rgba(59, 130, 246, 0.1); }
+
+        /* Badges & Text Formatting */
+        .badge { display: inline-block; padding: 4px 8px; border-radius: 6px; font-size: 0.8em; font-weight: 600; }
+        .phase-0 { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; border: 1px solid rgba(139, 92, 246, 0.4); }
+        .phase-1 { background: rgba(59, 130, 246, 0.2); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.4); }
+        .phase-2 { background: rgba(245, 158, 11, 0.2); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.4); }
+        .phase-3 { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4); }
+        
+        .ticker { color: var(--text-secondary); font-size: 0.85em; font-family: monospace; display: block; margin-top: 4px; }
+        .metric-val { font-weight: 600; font-size: 1.05em; }
+        .pos { color: #10b981 !important; }
+        .neg { color: #f43f5e !important; }
+        .neu { color: #f59e0b !important; }
+        
+        /* P/S Mini Charts */
+        .ps-mini { display: flex; flex-direction: column; gap: 2px; }
+        .ps-row { display: flex; gap: 6px; align-items: center; }
+        .ps-yr { font-size: 0.75em; color: var(--text-secondary); width: 36px; flex-shrink: 0; }
+        .ps-bar { height: 6px; border-radius: 3px; min-width: 2px; background: var(--accent-purple); }
+        .ps-val { font-size: 0.75em; color: var(--text-secondary); }
+
+        /* News & Audit */
+        .news-item { padding: 16px; border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 16px; background: rgba(255,255,255,0.02); }
+        .news-meta { display: flex; align-items: center; gap: 12px; font-size: 0.85em; color: var(--text-secondary); margin-bottom: 8px; }
+        .news-meta .date { color: var(--accent-blue); }
+        .news-title { font-size: 1.1em; font-weight: 600; margin-bottom: 8px; color: #fff; }
+        .news-summary { color: var(--text-secondary); font-size: 0.95em; }
+        .audit-item { display: flex; gap: 15px; padding: 12px 0; border-bottom: 1px dashed var(--border-color); }
+        .audit-time { color: var(--text-secondary); font-family: monospace; font-size: 0.9em; min-width: 160px; }
+        .audit-desc { color: #e2e8f0; }
+        .audit-reason { color: var(--accent-orange); font-size: 0.85em; margin-top: 4px; }
+
+        /* Sub-Header Actions */
+        .filter-status { background: rgba(245, 158, 11, 0.2); color: #fcd34d; padding: 8px 16px; border-radius: 8px; display: none; margin-bottom: 20px; justify-content: space-between; align-items: center;}
+        .clear-filter { background: none; border: 1px solid #fcd34d; color: #fcd34d; padding: 4px 8px; border-radius: 4px; cursor: pointer; }
+
+        /* Modal Overlay - Company Detail View */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+            display: none; justify-content: center; align-items: center; z-index: 1000;
+            padding: 20px; box-sizing: border-box;
+        }
+        .modal-overlay.active { display: flex; animation: fadeIn 0.2s; }
+        .modal-content {
+            background: var(--bg-color); border: 1px solid var(--border-color);
+            border-radius: 16px; width: 100%; max-width: 1000px; max-height: 90vh;
+            overflow-y: auto; padding: 30px; position: relative;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+        }
+        .modal-close {
+            position: absolute; top: 20px; right: 20px; background: none; border: none;
+            color: var(--text-secondary); font-size: 1.5em; cursor: pointer;
+        }
+        .modal-close:hover { color: #fff; }
+        .detail-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-top: 20px; }
+        .detail-card { background: var(--panel-bg); padding: 20px; border-radius: 8px; border: 1px solid var(--border-color); margin-bottom: 20px; }
+        .risk-text { color: #fca5a5; font-size: 0.95em; line-height: 1.5; }
+        .strategy-text { color: #6ee7b7; font-size: 0.95em; line-height: 1.5; font-weight: bold; }
+    </style>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+</head>
+<body>
+
+    <div class="dashboard-header">
+        <div>
+            <h1>AI 藥物開發動態儀表板 2026</h1>
+            <p style="color: var(--text-secondary); margin: 0;">整合價值鏈分析、公司財報、管線追蹤與即時動態</p>
+        </div>
+        <div class="last-updated" id="last-updated-badge">🔄 同步中...</div>
+    </div>
+
+    <div class="tab-controls">
+        <button class="tab-btn active" onclick="switchTab('tab-home')">🏠 首頁: 價值鏈地圖</button>
+        <button class="tab-btn" onclick="switchTab('tab-companies')">🏢 公司矩陣與財報</button>
+        <button class="tab-btn" onclick="switchTab('tab-news')">📰 每日新聞與臨床突破</button>
+        <button class="tab-btn" onclick="switchTab('tab-audit')">⚙️ 系統驗證紀錄</button>
+    </div>
+
+    <!-- TAB 0: HOME INFOGRAPHIC -->
+    <div id="tab-home" class="tab-content active">
+        <div class="panel">
+            <h2>藥物研發價值鏈痛點與 AI 解決方案 (動態)</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 20px;">點擊任意階段，即可跳轉並篩選出相關的 AI 參與公司。</p>
+            
+            <div class="sankey-wrap">
+                <h2>化合物存活桑基圖 (Sankey) — 成功率 & R&D 資本支出佔比</h2>
+                <p>流量寬度 ∝ 相對研發預算；橘色分支 = 失敗淘汰；白色主流 = 存活進入下一階段。點擊主階段節點可篩選下方公司矩陣。</p>
+                <div id="sankey-container"></div>
+            </div>
+
+            <!-- New AI vs Traditional Metrics Section -->
+            <div id="metrics-comparison-container" class="grid-2" style="margin-bottom: 24px;"></div>
+
+            <div class="infographic-container" id="infographic-container">
+                <!-- Javascript will inject Dynamic Value Chain Stats here -->
+                <div style="text-align: center; color: var(--text-secondary);">載入架構中...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 1: Companies -->
+    <div id="tab-companies" class="tab-content">
+        <div class="filter-status" id="filter-status">
+            <span id="filter-text">目前檢視：全部階段</span>
+            <button class="clear-filter" onclick="clearFilter()">清除過濾</button>
+        </div>
+        <div class="panel" style="overflow-x: auto;">
+            <h2>AI 藥物開發解決方案矩陣 (點擊列查看深度報告)</h2>
+            <table style="min-width: 1200px;">
+                <thead>
+                    <tr>
+                        <th style="width:130px">公司</th>
+                        <th style="width:100px">分類</th>
+                        <th style="width:150px">階段</th>
+                        <th style="width:150px">核心痛點</th>
+                        <th style="width:150px">AI 解決方案</th>
+                        <th style="width:65px">股價</th>
+                        <th style="width:65px">市值</th>
+                        <th style="width:65px">TTM EPS</th>
+                        <th style="width:65px">P/E</th>
+                        <th style="width:110px">P/S 歷史</th>
+                        <th style="width:105px">2026E EPS</th>
+                        <th style="width:110px">投資評級</th>
+                    </tr>
+                </thead>
+                <tbody id="company-table-body">
+                    <tr><td colspan="11" style="text-align: center; color: var(--text-secondary);">載入資料中...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- TAB 2: News -->
+    <div id="tab-news" class="tab-content">
+        <div class="grid-2">
+            <div class="panel" id="news-feed-container"></div>
+            <div class="panel">
+                <h2>💡 AI 趨勢動態解讀</h2>
+                <p style="color: var(--text-secondary);">
+                    基於最新新聞提取的產業趨勢動態將會顯示於此。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB 3: Audit Log -->
+    <div id="tab-audit" class="tab-content">
+        <div class="panel">
+            <h2>自我驗證與修改日誌 (Audit Log)</h2>
+            <div id="audit-log-container"></div>
+        </div>
+    </div>
+
+    <!-- MODAL: Company Detail View -->
+    <div class="modal-overlay" id="company-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div style="border-bottom: 1px solid var(--border-color); padding-bottom: 20px; margin-bottom: 20px;">
+                <h1 id="modal-title" style="margin: 0;">Company Name</h1>
+                <span id="modal-ticker" class="ticker" style="font-size: 1.1em; display: inline-block; margin-right: 15px;">TICKER</span>
+                <span id="modal-badge" class="badge">Phase</span>
+            </div>
+            
+            <p id="modal-profile" style="color: var(--text-secondary); font-size: 1.05em;"></p>
+            
+            <div class="detail-grid">
+                <!-- Left Column: Pipeline & Financials -->
+                <div>
+                    <div class="detail-card">
+                        <h3>🔬 近期管線里程碑 (Pipeline Milestones)</h3>
+                        <table style="margin-bottom: 15px;">
+                            <thead><tr><th>專案</th><th>階段</th><th>預計進度</th><th>時程</th></tr></thead>
+                            <tbody id="modal-pipeline"></tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <h3>📊 近 5 年營收與 EPS 軌跡</h3>
+                        <table>
+                            <thead><tr><th>年份</th><th>營收 (Revenue)</th><th>EPS</th></tr></thead>
+                            <tbody id="modal-financials"></tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Risks & Partners -->
+                <div>
+                    <div class="detail-card">
+                        <h3>🔥 投資策略與風險評估</h3>
+                        <p class="risk-text"><strong>風險因子：</strong><br><span id="modal-risk"></span></p>
+                        <p class="strategy-text"><strong>策略：</strong><br><span id="modal-strategy"></span></p>
+                        <div style="margin-top: 20px; border-top: 1px solid var(--border-color); padding-top: 15px;">
+                            <span style="color: var(--text-secondary); font-size: 0.85em;">近期法說會 (Earnings):</span>
+                            <ul id="modal-earnings" style="margin: 5px 0 0; padding-left: 20px; font-size: 0.9em; color: #cbd5e1;"></ul>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <h3>🤝 重大合作夥伴</h3>
+                        <ul id="modal-partners" style="color: #cbd5e1; padding-left: 20px; font-size: 0.95em;"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let globalData = null;
+
+        // Routing / Tab Logic
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            // Because tab buttons might not trigger this via 'event' perfectly when called programmatically, we match by id fragment
+            document.querySelector(`button[onclick="switchTab('${tabId}')"]`).classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+        }
+
+        function getPhaseBadgeClass(phase) {
+            if (phase.includes('Phase 0') || phase.includes('Pre-clinical') || phase.includes('Target Discovery')) return 'phase-0';
+            if (phase.includes('Phase I') && !phase.includes('II')) return 'phase-1';
+            if (phase.includes('Phase II')) return 'phase-2';
+            if (phase.includes('Phase III') || phase.includes('Post-Market')) return 'phase-3';
+            return '';
+        }
+
+        // Filtering Logic
+        function filterCompaniesByPhase(phase) {
+            switchTab('tab-companies');
+            document.getElementById('filter-status').style.display = 'flex';
+            document.getElementById('filter-text').innerHTML = `<strong>篩選階段：</strong> ${phase}`;
+            renderCompanies(phase);
+        }
+
+        function clearFilter() {
+            document.getElementById('filter-status').style.display = 'none';
+            renderCompanies(null);
+        }
+
+        // Modal Logic
+        function openCompanyDetail(ticker) {
+            const comp = globalData.companies.find(c => c.ticker === ticker);
+            if (!comp) return;
+
+            document.getElementById('modal-title').innerText = comp.name;
+            document.getElementById('modal-ticker').innerText = comp.exchange + ': ' + comp.ticker;
+            
+            const badge = document.getElementById('modal-badge');
+            badge.className = `badge ${getPhaseBadgeClass(comp.phase)}`;
+            badge.innerText = comp.phase;
+
+            const dd = comp.deep_dive;
+            document.getElementById('modal-profile').innerText = dd.profile || '無描述';
+
+            // Pipeline
+            const pipeBody = document.getElementById('modal-pipeline');
+            pipeBody.innerHTML = dd.pipeline_milestones.map(p => 
+                `<tr><td><strong>${p.program}</strong></td><td><span class="badge" style="border:1px solid #334155">${p.phase}</span></td><td style="color:#e2e8f0">${p.milestone}</td><td style="color:var(--accent-blue)">${p.date}</td></tr>`
+            ).join('');
+
+            // Financials
+            const finBody = document.getElementById('modal-financials');
+            finBody.innerHTML = dd.financial_5yr.map(f => {
+                const epsColor = f.eps.includes('-') && f.eps !== 'N/A' ? 'neg' : (f.eps !== 'N/A' ? 'pos' : 'neu');
+                return `<tr><td>${f.year}</td><td>${f.revenue}</td><td class="${epsColor}">${f.eps}</td></tr>`;
+            }).join('');
+
+            // Risk & Strategies
+            document.getElementById('modal-risk').innerText = dd.risk_assessment;
+            document.getElementById('modal-strategy').innerText = dd.investment_strategy;
+
+            // Simple Lists
+            document.getElementById('modal-earnings').innerHTML = dd.earnings_dates.map(e => `<li>${e}</li>`).join('');
+            document.getElementById('modal-partners').innerHTML = dd.partnerships.map(p => `<li>${p}</li>`).join('');
+
+            document.getElementById('company-modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('company-modal').classList.remove('active');
+        }
+
+        // --- Rendering ---
+
+        function renderInfographic() {
+            const container = document.getElementById('infographic-container');
+            container.innerHTML = '';
+            globalData.value_chain_stats.forEach((s, idx) => {
+                const el = document.createElement('div');
+                el.className = 'flow-stage';
+                el.onclick = () => filterCompaniesByPhase(s.phase.includes('-') ? s.phase : s.phase); 
+                
+                let traditionalBlock = `
+                    <div class="stage-section traditional">
+                        <div class="section-label">⚠️ 傳統開發指標與痛點</div>
+                        <div class="metric-mini-grid">
+                            <div class="mini-item"><span class="mini-label">成本</span><span class="mini-value">${s.cost}</span></div>
+                            <div class="mini-item"><span class="mini-label">時間</span><span class="mini-value">${s.time}</span></div>
+                            <div class="mini-item"><span class="mini-label">機率</span><span class="mini-value" style="color:${s.success_rate.includes('< 10%') || s.success_rate.includes('< 1%') ? '#fca5a5' : '#6ee7b7'}">${s.success_rate}</span></div>
+                        </div>
+                        <ul class="solution-list">
+                            ${s.pain_points.map(p => `<li>${p}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+
+                let aiBlock = "";
+                if (s.ai_metrics) {
+                    const isValidated = !s.ai_metrics.success_rate.includes('N/A') && !s.ai_metrics.cost.includes('待實例');
+                    const statusHtml = isValidated 
+                        ? `<span class="status-badge status-validated">實例已驗證</span>` 
+                        : `<span class="status-badge status-pending">待實例驗證</span>`;
+                    
+                    aiBlock = `
+                        <div class="stage-section ai">
+                            <div class="section-label">🤖 AI 賦能指標與解決方案 ${statusHtml}</div>
+                            <div class="metric-mini-grid">
+                                <div class="mini-item"><span class="mini-label">預計成本</span><span class="mini-value" style="color: ${s.ai_metrics.cost.includes('待') ? '#94a3b8' : '#60a5fa'}">${s.ai_metrics.cost}</span></div>
+                                <div class="mini-item"><span class="mini-label">預計時間</span><span class="mini-value" style="color: ${s.ai_metrics.time.includes('待') ? '#94a3b8' : '#60a5fa'}">${s.ai_metrics.time}</span></div>
+                                <div class="mini-item"><span class="mini-label">過關機率</span><span class="mini-value" style="color: ${s.ai_metrics.success_rate.includes('N/A') ? '#94a3b8' : '#60a5fa'}; font-weight:700;">${s.ai_metrics.success_rate}</span></div>
+                            </div>
+                            <div class="evidence-note">📝 證據: ${s.ai_metrics.notes || '觀察中'}</div>
+                            <ul class="solution-list">
+                                ${s.ai_solutions.map(sol => `<li>${sol}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `;
+                } else {
+                    aiBlock = `
+                        <div class="stage-section ai" style="justify-content: center; align-items: center; opacity: 0.5;">
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">尚無特定 AI 指標</div>
+                        </div>
+                    `;
+                }
+
+                el.innerHTML = `
+                    <div class="stage-header">
+                        <h3>${s.title}</h3>
+                    </div>
+                    <div class="stage-body">
+                        ${traditionalBlock}
+                        ${aiBlock}
+                    </div>
+                `;
+                container.appendChild(el);
+            });
+        }
+
+        
+        function renderSankey() {
+            const containerEle = document.getElementById('sankey-container');
+            if (!containerEle) return;
+            
+            // Only render if the element is actually visible, otherwise clientWidth is 0
+            if (containerEle.offsetParent === null) return;
+            
+            containerEle.innerHTML = ''; // clear
+            
+            // Adjust width based on window to make it somewhat responsive but min-width
+            const width = Math.max(containerEle.clientWidth, 900); 
+            const height = 300;
+
+            const svg = d3.select("#sankey-container")
+              .append("svg")
+              .attr("width", width)
+              .attr("height", height)
+              .attr("viewBox", `0 0 ${width} ${height}`)
+              .style("overflow","visible");
+
+            // Extract dynamic states from value_chain_stats where possible, otherwise use hardcoded tree
+            // Since Sankey requires a specific topology, we mix static topology with dynamic values from JSON if needed.
+            const vc = globalData.value_chain_stats;
+            const p0_cost = vc[0]?.cost || "31-42%";
+            const p1_sr = vc[1]?.success_rate || "60-70%";
+            const p2_sr = vc[2]?.success_rate || "30-40%";
+            const p3_sr = vc[3]?.success_rate || "50-65%";
+
+            const nodes = [
+              { id: 0, name: "Discovery",       color: "#c084fc", sub: "5,000–10,000 candidates", filterKey: "0" },
+              { id: 1, name: "Preclinical",     color: "#7c3aed", sub: "250 survive", capex: p0_cost, filterKey: "0" },
+              { id: 2, name: "Pre Fail",        color: "#c0694a", sub: "95% eliminated", filterKey: null },
+              { id: 3, name: "Phase I",         color: "#60a5fa", sub: "5 enter trials", sr: "Pass: " + p1_sr, filterKey: "Phase I" },
+              { id: 4, name: "Ph1 Fail",        color: "#c0694a", sub: "Fail", filterKey: null },
+              { id: 5, name: "Phase II",        color: "#f97316", sub: "⚠ Bottleneck", sr: "Pass: " + p2_sr, filterKey: "Phase II" },
+              { id: 6, name: "Ph2 Fail",        color: "#c0694a", sub: "Fail (Efficacy/Tox)", filterKey: null },
+              { id: 7, name: "Phase III",       color: "#34d399", sub: "~2 compounds", sr: "Pass: " + p3_sr, filterKey: "Phase III" },
+              { id: 8, name: "Ph3 Fail",        color: "#c0694a", sub: "Fail", filterKey: null },
+              { id: 9, name: "NDA/BLA",         color: "#22d3ee", sub: "Req Review", sr: "~90% Approval", filterKey: "Post" },
+              { id:10, name: "✅ Approval",      color: "#fbbf24", sub: "1 reaches market", filterKey: "Post" },
+              { id:11, name: "Phase IV/Mfg",    color: "#fb7185", sub: "Pharmacovigilance", filterKey: "Post" },
+            ];
+
+            const links = [
+              { source:0, target:1, value:80 },
+              { source:0, target:2, value:20 },
+              { source:1, target:3, value:15 },
+              { source:1, target:2, value:65 },
+              { source:3, target:5, value:10 },
+              { source:3, target:4, value:5  },
+              { source:5, target:7, value:4  },
+              { source:5, target:6, value:6  },
+              { source:7, target:9, value:2.5 },
+              { source:7, target:8, value:1.5 },
+              { source:9, target:10, value:2.2 },
+              { source:9, target:8, value:0.3 },
+              { source:10, target:11, value:2.2},
+            ];
+
+            const sankeyGen = d3.sankey()
+              .nodeId(d => d.id)
+              .nodeWidth(20)
+              .nodePadding(20)
+              .extent([[10, 10], [width - 150, height - 10]]);
+
+            const {nodes: sNodes, links: sLinks} = sankeyGen({
+              nodes: nodes.map(d => ({...d})),
+              links: links.map(d => ({...d}))
+            });
+
+            // LINKS
+            svg.append("g")
+              .selectAll("path")
+              .data(sLinks)
+              .join("path")
+              .attr("class","link")
+              .attr("d", d3.sankeyLinkHorizontal())
+              .attr("stroke", d => {
+                if(d.target.id === 2 || d.target.id === 4 || d.target.id === 6 || d.target.id === 8) return "#c0694a";
+                return d.source.color || "#888";
+              })
+              .attr("stroke-width", d => Math.max(1, d.width))
+              .append("title")
+              .text(d => `${d.source.name} → ${d.target.name}`);
+
+            // NODES
+            const nodeG = svg.append("g")
+              .selectAll("g")
+              .data(sNodes)
+              .join("g");
+
+            nodeG.append("rect")
+              .attr("x", d => d.x0)
+              .attr("y", d => d.y0)
+              .attr("width", d => d.x1 - d.x0)
+              .attr("height", d => Math.max(1, d.y1 - d.y0))
+              .attr("fill", d => d.color)
+              .attr("rx", 3)
+              .on("click", (event, d) => {
+                  if(d.filterKey) filterCompaniesByPhase(d.filterKey);
+              })
+              .append("title")
+              .text(d => `Click to filter Phase ${d.filterKey || 'N/A'}`);
+
+            // LABELS
+            nodeG.append("text")
+              .attr("class","node-label")
+              .attr("x", d => d.x1 < width/2 ? d.x1 + 6 : d.x0 - 6)
+              .attr("y", d => (d.y0 + d.y1) / 2 - 10)
+              .attr("text-anchor", d => d.x1 < width/2 ? "start" : "end")
+              .text(d => d.name);
+
+            // SR
+            nodeG.append("text")
+              .attr("class","node-sub")
+              .attr("x", d => d.x1 < width/2 ? d.x1 + 6 : d.x0 - 6)
+              .attr("y", d => (d.y0 + d.y1) / 2 + 5)
+              .attr("text-anchor", d => d.x1 < width/2 ? "start" : "end")
+              .style("fill","#34d399")
+              .text(d => d.sr || "");
+
+            // SUB
+            nodeG.append("text")
+              .attr("class","node-sub")
+              .attr("x", d => d.x1 < width/2 ? d.x1 + 6 : d.x0 - 6)
+              .attr("y", d => (d.y0 + d.y1) / 2 + 18)
+              .attr("text-anchor", d => d.x1 < width/2 ? "start" : "end")
+              .text(d => d.sub);
+
+            svg.selectAll(".node-label")
+              .filter(d => d.id === 2 || d.id === 4 || d.id === 6 || d.id === 8)
+              .style("fill","#f97316");
+        }
+
+        function renderCompanies(filterPhase = null) {
+            const tbody = document.getElementById('company-table-body');
+            tbody.innerHTML = '';
+            
+            let displayList = globalData.companies;
+            // Match substring to handle synchronized long names
+            if (filterPhase) {
+                displayList = displayList.filter(c => c.phase_label.toLowerCase().includes(filterPhase.toLowerCase()));
+            }
+
+            if (displayList.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="12" style="text-align:center; padding: 40px;">此階段目前沒有追蹤的公司。</td></tr>`;
+                return;
+            }
+
+            displayList.forEach(c => {
+                const row = document.createElement('tr');
+                row.className = 'clickable-row';
+                row.onclick = () => openCompanyDetail(c.ticker);
+                
+                const painPointsHtml = c.pain_points.map(p => `• ${p}`).join('<br>');
+                const solutionsHtml = c.ai_solutions.map(s => `• ${s}`).join('<br>');
+                
+                const psHistoryHtml = `<div class="ps-mini">` + 
+                    (c.ps_history && c.ps_history.length > 0 ? c.ps_history.map(ps => {
+                        let w = Math.min(ps.value * 2, 80);
+                        if (ps.value > 100) w = 60;
+                        return `<div class="ps-row"><span class="ps-yr">${ps.year}</span><div class="ps-bar" style="width:${Math.max(4, w)}px;"></div><span class="ps-val">${ps.value}x</span></div>`;
+                    }).join('') : `<div style="font-size:0.8em;color:var(--text-secondary)">無</div>`) + `</div>`;
+
+                const epsColor = c.eps > 0 ? 'pos' : (c.eps < 0 ? 'neg' : 'neu');
+                const epsValHtml = c.eps === 'N/A' || c.eps === undefined ? `<div class="metric-val neu">N/A</div>` : `<div class="metric-val ${epsColor}">${c.eps > 0 ? '+' : ''}$${Math.abs(c.eps)}</div>`;
+                
+                const peHtml = c.pe_ratio === 'N/A' || c.pe_ratio === undefined ? `<div class="metric-val neu">N/A</div>` : `<div class="metric-val">${c.pe_ratio}x</div>`;
+                const eps2026eHtml = `<div class="metric-val ${c.eps_2026e && c.eps_2026e.includes('+') ? 'pos' : (c.eps_2026e && c.eps_2026e.includes('-') ? 'neg' : 'neu')}">${c.eps_2026e || 'N/A'}</div>`;
+
+                row.innerHTML = `
+                    <td>
+                        <strong>${c.name}</strong>
+                        <span class="ticker">${c.exchange}: ${c.ticker}</span>
+                    </td>
+                    <td><div style="font-size: 0.85em; color: var(--accent-blue); font-weight: 500;">${c.category || 'N/A'}</div></td>
+                    <td><span class="badge ${getPhaseBadgeClass(c.phase_label)}">${c.phase_label}</span></td>
+                    <td style="font-size: 0.85em; line-height: 1.4;">${painPointsHtml}</td>
+                    <td style="font-size: 0.85em; line-height: 1.4; color: #bae6fd;">${solutionsHtml}</td>
+                    <td><div class="metric-val">${c.price === 'N/A' ? 'N/A' : '$'+c.price}</div></td>
+                    <td><div class="metric-val">${c.market_cap.toString().includes('$') ? c.market_cap : (c.market_cap === 'Est. 1B+' ? 'Est. 1B+' : '$'+c.market_cap)}</div></td>
+                    <td>${epsValHtml}</td>
+                    <td>${peHtml}</td>
+                    <td>${psHistoryHtml}</td>
+                    <td>${eps2026eHtml}<div style="font-size:0.85em;color:var(--text-secondary);margin-top:2px;">${c.eps_trend}</div></td>
+                    <td><span style="color: var(--accent-orange); font-weight: 600;">${c.rating}</span><div style="font-size:0.8em;color:var(--text-secondary);margin-top:4px;">${c.rating_reason}</div></td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        async function loadDashboardData() {
+            try {
+                const response = await fetch('ai_drug_dev_data.json');
+                globalData = await response.json();
+                
+                // Update Date
+                const updateDate = new Date(globalData.last_updated).toLocaleString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+                document.getElementById('last-updated-badge').innerText = `✅ 最後更新: ${updateDate}`;
+
+                // Render Phase 11: Infographic
+                renderInfographic();
+                renderSankey();
+
+                // Render Phase 15: AI vs Traditional Metrics Comparison
+                if (globalData.metrics_comparison) {
+                    const metricsContainer = document.getElementById('metrics-comparison-container');
+                    const mc = globalData.metrics_comparison;
+                    metricsContainer.innerHTML = `
+                        <div class="metrics-card">
+                            <div class="metrics-card-title">📉 傳統藥物開發指標</div>
+                            <div class="metric-item"><span class="metric-label">平均成本</span><span class="metric-value">${mc.traditional.cost}</span></div>
+                            <div class="metric-item"><span class="metric-label">所需時間</span><span class="metric-value">${mc.traditional.timeline}</span></div>
+                            <div class="metric-item"><span class="metric-label">成功率 (進入臨床至上市)</span><span class="metric-value">${mc.traditional.success_rate}</span></div>
+                            <div class="metrics-source">來源: ${mc.traditional.source}</div>
+                        </div>
+                        <div class="metrics-card ai-card">
+                            <div class="metrics-card-title">🚀 AI 賦能藥物開發指標</div>
+                            <div class="metric-item"><span class="metric-label">預估成本</span><span class="metric-value">${mc.with_ai.cost}</span></div>
+                            <div class="metric-item"><span class="metric-label">預估時間</span><span class="metric-value">${mc.with_ai.timeline}</span></div>
+                            <div class="metric-item"><span class="metric-label">成功率 (早期臨床前)</span><span class="metric-value">${mc.with_ai.success_rate}</span></div>
+                            <div class="metrics-source">來源: ${mc.with_ai.source}</div>
+                        </div>
+                    `;
+                }
+
+                // Render Phase 12: Matrix Default (All)
+                renderCompanies();
+
+                // Render News
+                const newsContainer = document.getElementById('news-feed-container');
+                newsContainer.innerHTML = '<h2>最新動態牆 (News Feed)</h2>';
+                globalData.news_feed.forEach(n => {
+                    const el = document.createElement('div');
+                    el.className = 'news-item';
+                    const companiesHtml = n.companies_impacted.map(c => `<span class="badge">${c}</span>`).join(' ');
+                    el.innerHTML = `
+                        <div class="news-meta">
+                            <span class="date">${n.date}</span><span>•</span><span style="color: #ccc;">${n.category}</span><span>•</span><span style="color: #ccc;">Source: ${n.source}</span><span>${companiesHtml}</span>
+                        </div>
+                        <div class="news-title">${n.title}</div>
+                        <div class="news-summary">${n.summary}</div>
+                    `;
+                    newsContainer.appendChild(el);
+                });
+
+                // Render Audit
+                const auditContainer = document.getElementById('audit-log-container');
+                auditContainer.innerHTML = '';
+                [...globalData.update_history].reverse().forEach(a => {
+                    const el = document.createElement('div');
+                    el.className = 'audit-item';
+                    const auditDate = new Date(a.date).toLocaleString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+                    el.innerHTML = `
+                        <div class="audit-time">${auditDate}</div>
+                        <div>
+                            <div class="audit-desc">${a.verified ? '✅' : '⚠️'} [${a.action.toUpperCase()}] ${a.description}</div>
+                            <div class="audit-reason">↳ 判斷依據: ${a.reason}</div>
+                        </div>
+                    `;
+                    auditContainer.appendChild(el);
+                });
+
+            } catch (error) {
+                console.error("Error loading JSON data:", error);
+                document.getElementById('last-updated-badge').innerText = '❌ 資料庫載入失敗';
+                document.getElementById('last-updated-badge').style.background = 'rgba(239, 68, 68, 0.2)';
+                document.getElementById('last-updated-badge').style.color = '#fca5a5';
+            }
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            const modal = document.getElementById('company-modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', loadDashboardData);
+
+    </script>
+</body>
+</html>

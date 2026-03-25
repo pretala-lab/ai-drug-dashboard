@@ -1,0 +1,11 @@
+# Ignore everything by default
+*
+
+# Allow only the dashboard files we want to publish
+!ai_drug_dev_dashboard.html
+!ai_drug_dev_data.json
+!ai_drug_dev_static.html
+!ai_drug_dev_portable.html
+!ai_drug_dev_dashboard_portable.html
+!index.html
+!.gitignore

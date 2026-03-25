@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 藥物開發追蹤 · 靜態版 2026/03/25 10:38</title>
+  <style>
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0f1e;
+      color: #f0f4f8;
+      padding: 0 0 40px;
+    }
+    .top-bar {
+      background: #111827;
+      border-bottom: 1px solid #1f2d3d;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .brand { display:flex; align-items:center; gap:10px; }
+    .logo { width:34px; height:34px; border-radius:8px; background:linear-gradient(135deg,#3b82f6,#8b5cf6); display:flex; align-items:center; justify-content:center; font-size:18px; }
+    .title-main { font-size:16px; font-weight:800; }
+    .title-sub { font-size:10px; color:#6b7a90; margin-top:2px; }
+    .date-pill {
+      font-size:11px; padding:4px 12px; border-radius:999px;
+      background:rgba(16,185,129,0.1); color:#10b981;
+      border:1px solid rgba(16,185,129,0.3);
+      white-space:nowrap;
+    }
+    .content { max-width:900px; margin:0 auto; padding:20px 16px 0; }
+    .section-title {
+      font-size:11px; font-weight:800; color:#6b7a90;
+      text-transform:uppercase; letter-spacing:1px;
+      padding:20px 0 10px;
+      border-bottom:1px solid #1f2d3d;
+      margin-bottom:16px;
+    }
+    .static-badge {
+      display:inline-block; margin-bottom:16px;
+      background:rgba(245,158,11,0.1); color:#f59e0b;
+      border:1px solid rgba(245,158,11,0.3);
+      padding:6px 14px; border-radius:8px; font-size:12px;
+    }
+    @media(max-width:600px){
+      .content { padding:12px 10px 0; }
+      .title-main { font-size:14px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="brand">
+    <div class="logo">🧬</div>
+    <div>
+      <div class="title-main">AI 新藥開發追蹤</div>
+      <div class="title-sub">靜態版 · 無需 JavaScript · 可在任何環境閱覽</div>
+    </div>
+  </div>
+  <div class="date-pill">✅ 資料日期: 2026/03/25 10:38</div>
+</div>
+
+<div class="content">
+  <div class="static-badge">📄 此為靜態版（Python 預先渲染），適合透過 Email / iMessage 分享</div>
+
+  <!-- ── 公司追蹤 ── -->
+  <div class="section-title">🏢 公司追蹤矩陣 (12 家)</div>
+  
+<div style="background:#1c2433;border:1px solid #1f2d3d;border-radius:12px;padding:16px;margin-bottom:12px;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+    <div>
+      <div style="font-size:16px;font-weight:800;">Generate Biomedicines</div>
+      <div style="font-size:11px;color:#6b7a90;font-family:monospace;margin-top:2px;">NASDAQ:GENB</div>
+      <div style="margin-top:6px;font-size:11px;color:#3b82f6;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);display:inline-block;padding:2px 8px;border-radius:5px;">AI 蛋白設計平台</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:19px;font-weight:800;">$13.34</div>
+      <div style="margin-top:4px;"><span style="display:inline-block;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;color:#10b981;background:rgba(16,185,129,0.15);border:1px solid #10b981;">Phase III (Pivotal)</span></div>
+      <div style="margin-top:4px;font-size:11px;color:#94a3b8;">市值 1.70B &nbsp;|&nbsp; TTM EPS <span style="color:#ef4444">$2.18</span></div>
+    </div>
+  </div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px;">
+    <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">⚠️ 痛點</div>
+      <div style="color:#cbd5e1;line-height:1.7;">• 傳統蛋白設計速度極慢，成功率低<br>• 難以 de novo 設計具療效蛋白</div>
+    </div>
+    <div style="background:rgba(59,130,246,0.05);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">🤖 AI 解方</div>
+      <div style="color:#bae6fd;line-height:1.7;">• Generate Platform：GPT 規模蛋白設計 AI，零起點生成新型治療蛋白<br>• 多模態生物硬體驗證閉環</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:12px;color:#6b7a90;">
+    評級: <strong style="color:#f59e0b;">投機型</strong>
+    &nbsp;·&nbsp; GB-0895 Ph3 數據是關鍵
+    &nbsp;·&nbsp; 2026E EPS: ~-$2.0
+  </div>
+</div>
+
+<div style="background:#1c2433;border:1px solid #1f2d3d;border-radius:12px;padding:16px;margin-bottom:12px;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+    <div>
+      <div style="font-size:16px;font-weight:800;">Recursion Pharma</div>
+      <div style="font-size:11px;color:#6b7a90;font-family:monospace;margin-top:2px;">NASDAQ:RXRX</div>
+      <div style="margin-top:6px;font-size:11px;color:#3b82f6;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);display:inline-block;padding:2px 8px;border-radius:5px;">AI 靶點發現 / 表型組學</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:19px;font-weight:800;">$3.42</div>
+      <div style="margin-top:4px;"><span style="display:inline-block;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;color:#8b5cf6;background:rgba(139,92,246,0.15);border:1px solid #8b5cf6;">Target Discovery / Molecular Design</span></div>
+      <div style="margin-top:4px;font-size:11px;color:#94a3b8;">市值 1.81B &nbsp;|&nbsp; TTM EPS <span style="color:#ef4444">$1.44</span></div>
+    </div>
+  </div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px;">
+    <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">⚠️ 痛點</div>
+      <div style="color:#cbd5e1;line-height:1.7;">• 靶點識別錯誤導致後期臨床巨額損失<br>• 實驗室跨物種轉譯失敗率極高</div>
+    </div>
+    <div style="background:rgba(59,130,246,0.05);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">🤖 AI 解方</div>
+      <div style="color:#bae6fd;line-height:1.7;">• 表型組學 AI：自動化細胞成像+多組學整合靶點發現<br>• Roche/Bayer 夥伴：靶點深度授權</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:12px;color:#6b7a90;">
+    評級: <strong style="color:#f59e0b;">觀察候補</strong>
+    &nbsp;·&nbsp; P/S 歷史低；等臨床數據
+    &nbsp;·&nbsp; 2026E EPS: -$0.98
+  </div>
+</div>
+
+<div style="background:#1c2433;border:1px solid #1f2d3d;border-radius:12px;padding:16px;margin-bottom:12px;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+    <div>
+      <div style="font-size:16px;font-weight:800;">Schrödinger</div>
+      <div style="font-size:11px;color:#6b7a90;font-family:monospace;margin-top:2px;">NASDAQ:SDGR</div>
+      <div style="margin-top:6px;font-size:11px;color:#3b82f6;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);display:inline-block;padding:2px 8px;border-radius:5px;">AI 分子物理模擬</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:19px;font-weight:800;">$12.51</div>
+      <div style="margin-top:4px;"><span style="display:inline-block;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;color:#8b5cf6;background:rgba(139,92,246,0.15);border:1px solid #8b5cf6;">Target Discovery / Molecular Design</span></div>
+      <div style="margin-top:4px;font-size:11px;color:#94a3b8;">市值 924M &nbsp;|&nbsp; TTM EPS <span style="color:#ef4444">$1.41</span></div>
+    </div>
+  </div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px;">
+    <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">⚠️ 痛點</div>
+      <div style="color:#cbd5e1;line-height:1.7;">• 傳統 HTS 命中率低、成本高昂<br>• ADMET 預測不準確導致後期失敗</div>
+    </div>
+    <div style="background:rgba(59,130,246,0.05);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">🤖 AI 解方</div>
+      <div style="color:#bae6fd;line-height:1.7;">• FEP+ 物理模擬：量子力學精度分子對接，準確預測結合自由能<br>• FLX 平台：多靶點優化自動化</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:12px;color:#6b7a90;">
+    評級: <strong style="color:#f59e0b;">觀察候補</strong>
+    &nbsp;·&nbsp; P/S 歷史低；授權收入增長
+    &nbsp;·&nbsp; 2026E EPS: -$1.84
+  </div>
+</div>
+
+<div style="background:#1c2433;border:1px solid #1f2d3d;border-radius:12px;padding:16px;margin-bottom:12px;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+    <div>
+      <div style="font-size:16px;font-weight:800;">Relay Therapeutics</div>
+      <div style="font-size:11px;color:#6b7a90;font-family:monospace;margin-top:2px;">NASDAQ:RLAY</div>
+      <div style="margin-top:6px;font-size:11px;color:#3b82f6;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);display:inline-block;padding:2px 8px;border-radius:5px;">AI 蛋白質動態結構</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:19px;font-weight:800;">$10.54</div>
+      <div style="margin-top:4px;"><span style="display:inline-block;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;color:#10b981;background:rgba(16,185,129,0.15);border:1px solid #10b981;">Phase III (Pivotal)</span></div>
+      <div style="margin-top:4px;font-size:11px;color:#94a3b8;">市值 1.88B &nbsp;|&nbsp; TTM EPS <span style="color:#ef4444">$1.62</span></div>
+    </div>
+  </div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px;">
+    <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">⚠️ 痛點</div>
+      <div style="color:#cbd5e1;line-height:1.7;">• 難以針對動態蛋白口袋設計藥物<br>• PI3Kα 耐藥性突變問題</div>
+    </div>
+    <div style="background:rgba(59,130,246,0.05);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">🤖 AI 解方</div>
+      <div style="color:#bae6fd;line-height:1.7;">• Dynamo 平台：AI+MD 模擬蛋白構象動態，找到隱藏結合位點<br>• RLY-2608 靶向 PI3Kα 突變體</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:12px;color:#6b7a90;">
+    評級: <strong style="color:#f59e0b;">投機型</strong>
+    &nbsp;·&nbsp; 二元事件：Ph2 成敗決定一切
+    &nbsp;·&nbsp; 2026E EPS: -$1.63
+  </div>
+</div>
+
+<div style="background:#1c2433;border:1px solid #1f2d3d;border-radius:12px;padding:16px;margin-bottom:12px;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+    <div>
+      <div style="font-size:16px;font-weight:800;">Absci</div>
+      <div style="font-size:11px;color:#6b7a90;font-family:monospace;margin-top:2px;">NASDAQ:ABSI</div>
+      <div style="margin-top:6px;font-size:11px;color:#3b82f6;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);display:inline-block;padding:2px 8px;border-radius:5px;">AI 抗體設計平台</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:19px;font-weight:800;">$2.37</div>
+      <div style="margin-top:4px;"><span style="display:inline-block;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;color:#8b5cf6;background:rgba(139,92,246,0.15);border:1px solid #8b5cf6;">Pre-clinical / IND-enabling</span></div>
+      <div style="margin-top:4px;font-size:11px;color:#94a3b8;">市值 346M &nbsp;|&nbsp; TTM EPS <span style="color:#ef4444">$0.90</span></div>
+    </div>
+  </div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px;">
+    <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">⚠️ 痛點</div>
+      <div style="color:#cbd5e1;line-height:1.7;">• 抗體篩選耗時數年，成功率低<br>• 難以設計具雙特異性的全新抗體骨架</div>
+    </div>
+    <div style="background:rgba(59,130,246,0.05);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">🤖 AI 解方</div>
+      <div style="color:#bae6fd;line-height:1.7;">• 生成式 AI de novo 抗體：zero-shot 設計全新序列<br>• Integrated Drug Creation 平台：設計→驗證閉環</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:12px;color:#6b7a90;">
+    評級: <strong style="color:#f59e0b;">投機型</strong>
+    &nbsp;·&nbsp; P/S 偏高；等商業合作
+    &nbsp;·&nbsp; 2026E EPS: -$0.70
+  </div>
+</div>
+
+<div style="background:#1c2433;border:1px solid #1f2d3d;border-radius:12px;padding:16px;margin-bottom:12px;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+    <div>
+      <div style="font-size:16px;font-weight:800;">Geron Corp</div>
+      <div style="font-size:11px;color:#6b7a90;font-family:monospace;margin-top:2px;">NASDAQ:GERN</div>
+      <div style="margin-top:6px;font-size:11px;color:#3b82f6;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);display:inline-block;padding:2px 8px;border-radius:5px;">臨床階段藥廠 (血癌)</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:19px;font-weight:800;">$1.6</div>
+      <div style="margin-top:4px;"><span style="display:inline-block;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;color:#10b981;background:rgba(16,185,129,0.15);border:1px solid #10b981;">Phase III (Pivotal)</span></div>
+      <div style="margin-top:4px;font-size:11px;color:#94a3b8;">市值 1.00B &nbsp;|&nbsp; TTM EPS <span style="color:#ef4444">$0.13</span></div>
+    </div>
+  </div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px;">
+    <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">⚠️ 痛點</div>
+      <div style="color:#cbd5e1;line-height:1.7;">• 低風險 MDS 缺乏有效口服藥物<br>• 輸血依賴患者生活品質差</div>
+    </div>
+    <div style="background:rgba(59,130,246,0.05);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">🤖 AI 解方</div>
+      <div style="color:#bae6fd;line-height:1.7;">• RYTELO (imetelstat)：全球首個端粒酶抑制劑，FDA 2024 批准治療低風險 MDS<br>• AML 適應症拓展計畫</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:12px;color:#6b7a90;">
+    評級: <strong style="color:#f59e0b;">觀察候補</strong>
+    &nbsp;·&nbsp; P/S 已壓縮；銷售爬坡速度關鍵
+    &nbsp;·&nbsp; 2026E EPS: ~-$0.10
+  </div>
+</div>
+
+<div style="background:#1c2433;border:1px solid #1f2d3d;border-radius:12px;padding:16px;margin-bottom:12px;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+    <div>
+      <div style="font-size:16px;font-weight:800;">Certara</div>
+      <div style="font-size:11px;color:#6b7a90;font-family:monospace;margin-top:2px;">NASDAQ:CERT</div>
+      <div style="margin-top:6px;font-size:11px;color:#3b82f6;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);display:inline-block;padding:2px 8px;border-radius:5px;">AI 生物仿真與建模</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:19px;font-weight:800;">$6.65</div>
+      <div style="margin-top:4px;"><span style="display:inline-block;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;color:#8b5cf6;background:rgba(139,92,246,0.15);border:1px solid #8b5cf6;">Target Discovery / Molecular Design</span></div>
+      <div style="margin-top:4px;font-size:11px;color:#94a3b8;">市值 1.06B &nbsp;|&nbsp; TTM EPS <span style="color:#ef4444">$0.01</span></div>
+    </div>
+  </div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px;">
+    <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">⚠️ 痛點</div>
+      <div style="color:#cbd5e1;line-height:1.7;">• MTD 難從動物實驗直接預測<br>• 法規提交文件繁複、週期長</div>
+    </div>
+    <div style="background:rgba(59,130,246,0.05);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">🤖 AI 解方</div>
+      <div style="color:#bae6fd;line-height:1.7;">• Phoenix PBPK：AI 強化生理動力學模型，虛擬模擬人體代謝<br>• Pinnacle 21：FDA/EMA 電子提交自動化</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:12px;color:#6b7a90;">
+    評級: <strong style="color:#f59e0b;">強力候選</strong>
+    &nbsp;·&nbsp; EPS 轉正；P/S 2.7x 合理
+    &nbsp;·&nbsp; 2026E EPS: +$0.44–$0.48
+  </div>
+</div>
+
+<div style="background:#1c2433;border:1px solid #1f2d3d;border-radius:12px;padding:16px;margin-bottom:12px;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+    <div>
+      <div style="font-size:16px;font-weight:800;">Tempus AI</div>
+      <div style="font-size:11px;color:#6b7a90;font-family:monospace;margin-top:2px;">NASDAQ:TEM</div>
+      <div style="margin-top:6px;font-size:11px;color:#3b82f6;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);display:inline-block;padding:2px 8px;border-radius:5px;">AI 腫瘤基因組與 RWE</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:19px;font-weight:800;">$50.0</div>
+      <div style="margin-top:4px;"><span style="display:inline-block;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;color:#f59e0b;background:rgba(245,158,11,0.15);border:1px solid #f59e0b;">Clinical - Phase II (Efficacy)</span></div>
+      <div style="margin-top:4px;font-size:11px;color:#94a3b8;">市值 8.94B &nbsp;|&nbsp; TTM EPS <span style="color:#ef4444">$1.41</span></div>
+    </div>
+  </div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px;">
+    <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">⚠️ 痛點</div>
+      <div style="color:#cbd5e1;line-height:1.7;">• 病患異質性導致療效終點稀釋<br>• 臨床試驗招募合格患者耗時<br>• 腫瘤基因組+臨床數據孤島分散</div>
+    </div>
+    <div style="background:rgba(59,130,246,0.05);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">🤖 AI 解方</div>
+      <div style="color:#bae6fd;line-height:1.7;">• Tempus Loop：AI 靶點發現+腫瘤類器官驗證+CRISPR 篩選<br>• Tempus Link：AI 臨床試驗配對，加速患者招募</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:12px;color:#6b7a90;">
+    評級: <strong style="color:#f59e0b;">觀察候補</strong>
+    &nbsp;·&nbsp; P/S 從高位大幅回落
+    &nbsp;·&nbsp; 2026E EPS: ~-$1.2
+  </div>
+</div>
+
+<div style="background:#1c2433;border:1px solid #1f2d3d;border-radius:12px;padding:16px;margin-bottom:12px;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+    <div>
+      <div style="font-size:16px;font-weight:800;">IQVIA Holdings</div>
+      <div style="font-size:11px;color:#6b7a90;font-family:monospace;margin-top:2px;">NYSE:IQV</div>
+      <div style="margin-top:6px;font-size:11px;color:#3b82f6;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);display:inline-block;padding:2px 8px;border-radius:5px;">臨床試驗數據與 CRO</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:19px;font-weight:800;">$164.72</div>
+      <div style="margin-top:4px;"><span style="display:inline-block;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;color:#f59e0b;background:rgba(245,158,11,0.15);border:1px solid #f59e0b;">Clinical - Phase II (Efficacy)</span></div>
+      <div style="margin-top:4px;font-size:11px;color:#94a3b8;">市值 27.95B &nbsp;|&nbsp; TTM EPS <span style="color:#10b981">+$7.93</span></div>
+    </div>
+  </div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px;">
+    <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">⚠️ 痛點</div>
+      <div style="color:#cbd5e1;line-height:1.7;">• 臨床設計失焦，導致極高耗損率<br>• 實體站點管理與 CRA 成本高昂<br>• RWD 數據整合困難且碎片化</div>
+    </div>
+    <div style="background:rgba(59,130,246,0.05);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">🤖 AI 解方</div>
+      <div style="color:#bae6fd;line-height:1.7;">• eMERGE / Site Optimizer：AI 預測站點績效，減少無收案站點<br>• IQVIA RIM / Safety：自動化藥物警戒與不良事件報告</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:12px;color:#6b7a90;">
+    評級: <strong style="color:#f59e0b;">強力候選</strong>
+    &nbsp;·&nbsp; 獲利躍升；估值安全邊際高
+    &nbsp;·&nbsp; 2026E EPS: +$12.55–$12.85 adj.
+  </div>
+</div>
+
+<div style="background:#1c2433;border:1px solid #1f2d3d;border-radius:12px;padding:16px;margin-bottom:12px;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+    <div>
+      <div style="font-size:16px;font-weight:800;">Veeva Systems</div>
+      <div style="font-size:11px;color:#6b7a90;font-family:monospace;margin-top:2px;">NYSE:VEEV</div>
+      <div style="margin-top:6px;font-size:11px;color:#3b82f6;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);display:inline-block;padding:2px 8px;border-radius:5px;">生命科學雲端系統</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:19px;font-weight:800;">$178.5</div>
+      <div style="margin-top:4px;"><span style="display:inline-block;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;color:#10b981;background:rgba(16,185,129,0.15);border:1px solid #10b981;">Post-Market / Commercial</span></div>
+      <div style="margin-top:4px;font-size:11px;color:#94a3b8;">市值 29.4B &nbsp;|&nbsp; TTM EPS <span style="color:#10b981">+$8.10</span></div>
+    </div>
+  </div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px;">
+    <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">⚠️ 痛點</div>
+      <div style="color:#cbd5e1;line-height:1.7;">• 臨床數據收集（EDC/eTMF）紙本與多系統混亂<br>• 法規合規與品管數據難以追蹤</div>
+    </div>
+    <div style="background:rgba(59,130,246,0.05);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">🤖 AI 解方</div>
+      <div style="color:#bae6fd;line-height:1.7;">• Veeva Vault：統一架構的研發、質量與法規雲端平台<br>• Veeva CRM Bot：AI 輔助銷售代表行銷與醫師宣導</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:12px;color:#6b7a90;">
+    評級: <strong style="color:#f59e0b;">強力候選</strong>
+    &nbsp;·&nbsp; SaaS 模型護城河；P/E 壓縮
+    &nbsp;·&nbsp; 2026E EPS: +$8.76 FY27E
+  </div>
+</div>
+
+<div style="background:#1c2433;border:1px solid #1f2d3d;border-radius:12px;padding:16px;margin-bottom:12px;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+    <div>
+      <div style="font-size:16px;font-weight:800;">Hims &amp; Hers</div>
+      <div style="font-size:11px;color:#6b7a90;font-family:monospace;margin-top:2px;">NYSE:HIMS</div>
+      <div style="margin-top:6px;font-size:11px;color:#3b82f6;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);display:inline-block;padding:2px 8px;border-radius:5px;">數位醫療與遠距醫療</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:19px;font-weight:800;">$24.55</div>
+      <div style="margin-top:4px;"><span style="display:inline-block;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;color:#10b981;background:rgba(16,185,129,0.15);border:1px solid #10b981;">Post-Market / Commercial</span></div>
+      <div style="margin-top:4px;font-size:11px;color:#94a3b8;">市值 5.64B &nbsp;|&nbsp; TTM EPS <span style="color:#10b981">+$0.51</span></div>
+    </div>
+  </div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px;">
+    <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">⚠️ 痛點</div>
+      <div style="color:#cbd5e1;line-height:1.7;">• GLP-1 減重藥物極度短缺與昂貴<br>• 傳統醫療獲取個人化配方門檻高</div>
+    </div>
+    <div style="background:rgba(59,130,246,0.05);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">🤖 AI 解方</div>
+      <div style="color:#bae6fd;line-height:1.7;">• AI Telehealth 平台：即時醫師配對與處方簽發放<br>• 複方藥局網絡：精準解決 Semaglutide 等短缺藥物供應</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:12px;color:#6b7a90;">
+    評級: <strong style="color:#f59e0b;">強力候選</strong>
+    &nbsp;·&nbsp; 已獲利；消費者品牌力強
+    &nbsp;·&nbsp; 2026E EPS: +$0.52–$0.55
+  </div>
+</div>
+
+<div style="background:#1c2433;border:1px solid #1f2d3d;border-radius:12px;padding:16px;margin-bottom:12px;">
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px;">
+    <div>
+      <div style="font-size:16px;font-weight:800;">Insilico Medicine</div>
+      <div style="font-size:11px;color:#6b7a90;font-family:monospace;margin-top:2px;">HKEX:03696</div>
+      <div style="margin-top:6px;font-size:11px;color:#3b82f6;background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.2);display:inline-block;padding:2px 8px;border-radius:5px;">AI 全流程藥物研發</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-size:19px;font-weight:800;">N/A</div>
+      <div style="margin-top:4px;"><span style="display:inline-block;padding:2px 10px;border-radius:6px;font-size:11px;font-weight:700;color:#8b5cf6;background:rgba(139,92,246,0.15);border:1px solid #8b5cf6;">Target Discovery / Molecular Design</span></div>
+      <div style="margin-top:4px;font-size:11px;color:#94a3b8;">市值 Est. 1B+ &nbsp;|&nbsp; TTM EPS <span style="color:#94a3b8">N/A</span></div>
+    </div>
+  </div>
+  <div style="margin-top:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:12px;">
+    <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">⚠️ 痛點</div>
+      <div style="color:#cbd5e1;line-height:1.7;">• 靶點識別錯誤導致後期臨床巨額損失<br>• 傳統 HTS 命中率低、成本高昂</div>
+    </div>
+    <div style="background:rgba(59,130,246,0.05);border-radius:8px;padding:10px;">
+      <div style="font-size:10px;color:#6b7a90;font-weight:700;text-transform:uppercase;margin-bottom:6px;">🤖 AI 解方</div>
+      <div style="color:#bae6fd;line-height:1.7;">• LFM2-2.6B-MMAI：與 Liquid AI 合作的輕量級科學基礎模型<br>• Pharma.AI 平台：涵蓋靶點發現、小分子生成與臨床試驗預測</div>
+    </div>
+  </div>
+  <div style="margin-top:10px;font-size:12px;color:#6b7a90;">
+    評級: <strong style="color:#f59e0b;">密切關注</strong>
+    &nbsp;·&nbsp; 近期於港股 IPO，持續關注其 Pharma.AI 平台的臨床數據轉化能力。
+    &nbsp;·&nbsp; 2026E EPS: N/A
+  </div>
+</div>
+
+  <!-- ── 新聞 ── -->
+  <div class="section-title">📰 最新動態 (22 則)</div>
+  
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-25</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">法規動態 (FDA)</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">SDGR</span> <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">CERT</span> <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">RXRX</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">FDA 2026-03-18 發布新 NAMs 指引草案，正式支持 AI/數位孿生取代部分動物試驗</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">FDA 於 3 月 18 日發布「新方法論 (NAMs) 藥物開發指引草案」，明確表示支持 AI 與機器學習應用於早期靶點篩選、毒理學預測及臨床試驗設計優化，並首次提到數位孿生 (Digital Twins) 的應用框架。此舉對 Schrödinger、Certara、Recursion 等平台型公司具正面意義。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: Morgan Lewis / Applied Clinical Trials Online</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-25</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">臨床試驗進度</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">GERN</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Geron (GERN) 2026 RYTELO 全年營收指引 $2.2-2.4億；IMpactMF 期中分析預計 2026H2</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">Geron 公布 2026 全年 RYTELO（imetelstat）淨產品收入指引 $220-240M。骨髓纖維化 (MF) 的 Phase III IMpactMF 樞紐試驗期中分析預計於 2026 下半年公布，為股價重要催化劑。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: Seeking Alpha / Geron.com</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-25</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">商業合作</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">HIMS</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Hims &amp; Hers (HIMS) 與 Novo Nordisk 合作銷售 Ozempic/Wegovy，2026 全年營收指引 $27-29 億</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">Hims &amp; Hers 宣布與 Novo Nordisk 達成里程碑式合作，在其遠距醫療平台上正式分銷 FDA 核准的 GLP-1 藥物 Ozempic 和 Wegovy。公司因應此合作，將 2026 全年營收指引上調至 $2.7-2.9B，國際市場貢獻預計超過 $2億。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: Seeking Alpha / Chronicle Journal</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-25</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">合作案 (最高 $8.88 億)</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">Insilico Medicine</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Insilico Medicine (03696.HK) 與 Servier 達成最高 $8.88 億腫瘤 AI 研發合作</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">Insilico Medicine 宣布與法國藥廠 Servier 簽署多年期戰略研發合作，總金額最高達 $8.88 億，聚焦利用 Insilico Pharma.AI 平台在腫瘤學領域發現和開發創新療法，標誌著 AI 藥物研發大型授權合作的新標桿。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: EurekaAlert</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-25</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">戰略合作</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">IQV</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">IQVIA (IQV) 與 Flagship Pioneering 建立戰略合作，開放 RWD 與 AI 技術平台給新創生技</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">IQVIA 宣布與生技孵化巨頭 Flagship Pioneering 建立戰略合作，Flagship 旗下生技新創將可使用 IQVIA 的真實世界數據 (RWD)、AI 分析工具與臨床試驗基礎設施，加速從發現到臨床的進程。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: PharmaJournalist / IQVIA.com</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-25</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">FDA 認證</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">TEM</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Tempus AI (TEM) 獲 FDA 510(k) 批准 xR IVD 體外診斷工具；2026 全年營收指引 $15.9 億</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">Tempus AI 宣布其腫瘤 RNA 測序分析工具 xR 獲得 FDA 510(k) 批准，成為首批 AI 驅動的伴隨診斷工具之一。公司並公布 2026 全年營收指引 $1.59B，目標調整後 EBITDA $6500萬，顯示向盈利轉型的加速。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: Zacks / MLQ.ai</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-25</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">臨床突破 (Phase III 數據)</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">RLAY</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Relay Therapeutics (RLAY) zovegalisib + fulvestrant Phase 3 數據於 ESMO 2026 公布：ORR 42.9%</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">Relay 在 ESMO Congress 2026 公布 zovegalisib 聯合 fulvestrant 治療 HR+/HER2- 晚期乳癌的 Phase 3 數據：ORR 42.9%，二線患者 ORR 52.4%，中位 PFS 11.1 個月。該藥已於 2026 年 2 月獲 FDA 突破性療法認定 (PIK3CA-mutant)。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: GeneOnline / Investing.com / StockTitan</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-25</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">臨床進展 (Phase I)</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">ABSI</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Absci (ABSI) ABS-201 HEADLINE 試驗完成前 3 批次，安全性數據正向 — 市場潛力 $250億</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">Absci 宣布其生成式 AI 設計的抗 PRLR 抗體 ABS-201 在 Phase 1/2a HEADLINE 試驗中已完成前三個招募批次給藥，初步安全與 PK 數據正向。公司估計雄性禿 (AGA) 市場潛力高達 $250 億/年，並預計 2026H2 公布 PoC 數據。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: Investing.com / StockTitan / Seeking Alpha</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-25</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">策略轉型</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">SDGR</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Schrödinger (SDGR) 宣布 Hosted 合約戰略：目標 75% 雲端轉型、2026 ACV 成長 10-15%</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">Schrödinger 在 2026 KeyBanc Healthcare Forum 揭示策略轉型：三年內將 75% 軟體合約切換至 Hosted 模式，目標 2026 年 Annual Contract Value 成長 10-15%。Q4 2025 財報超預期，分析師看多軟體業務護城河。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: Investing.com / MarketBeat</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-25</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">臨床突破 (PoC 數據)</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">RXRX</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Recursion (RXRX) FAP 孤兒指示獲 PoC 數據，響應率近 50% — FDA 樞紐試驗路徑洽談中</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">Recursion 公布其家族性腺瘤性息肉症 (FAP) 鉛化合物的正向概念驗證 (PoC) 數據，3 個月用藥後響應率接近 50% 且效果持久。公司正積極與 FDA 討論樞紐試驗路徑，預計 2027 上半年啟動。截至 2025 底現金 $754M，營運跑道延伸至 2028 年初。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: MarketBeat / Seeking Alpha</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-01</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">產品發布</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">IQV</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">IQVIA (IQV) 推出 IQVIA.ai 代理式 AI 平台</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">IQVIA 推出基於 NVIDIA 技術的 IQVIA.ai 平台，整合代理式 AI (Agentic AI) 至生命科學工作流程，提升臨床設計效率與藥物警戒自動化水平。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: Simply Wall St / IQVIA</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-01-20</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">戰略合作</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">TEM</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Tempus AI (TEM) 與 Merck 擴大戰略合作，加速 AI 生物標記發現</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">Tempus AI 宣布與大藥廠 Merck 簽署多載點協議，利用 Tempus 的多模態臨床與基因組數據，加速針對癌症藥物的精準生物標記發現與患者招募。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: Tempus.com / Investing.com</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-01-08</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">FDA IND 核准</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">Insilico Medicine</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Insilico Medicine (03696.HK) 獲得 FDA IND 核准，開展 ISM8969 Phase I 臨床</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">FDA 已核准 Insilico Medicine 用於治療帕金森氏症的 AI 賦能 NLRP3 抑制劑 ISM8969 進入臨床研究。該公司正持續擴展其 AI 驅動的產品管線至神經科學領域。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: Insilico.com / EurekaAlert</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-01-26</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">臨床突破 (Phase III)</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">GENB</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Generate Biomedicines (GENB) lead drug GB-0895 enters Pivotal Phase III</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">Generate Biomedicines 宣布其基於 AI 設計的抗 TSLP 抗體 GB-0895 已正式進入 Phase III 臨床試驗，首位氣喘患者已完成給藥。這標誌著生成式 AI 藥物進入晚期臨床研發的重要里程碑。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: MedCity News / BioPharma Dive</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-17</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">IPO / 資本動態</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">Insilico Medicine</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">英矽智能 (Insilico Medicine) 成功於香港聯交所主板掛牌上市 (股票代碼: 03696)</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">AI 藥物研發公司 Insilico Medicine 成為首家根據第 18A 章規則在港交所主板上市的 AI 驅動生技公司，象徵 AI 新藥研發領域的重要里程碑。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: 港交所公告 / 新聞稿</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-17</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">技術與合作</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">Insilico Medicine</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Insilico Medicine 聯手 Liquid AI發布輕量級科學大模型 LFM2-2.6B</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">Insilico 推出專為製藥設計的基礎 AI 模型，可於私有雲部署，覆蓋屬性預測、分子優化及逆合成規劃，精準打擊早期探索的高成本與低命中率痛點。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: Drug Target Review</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-16</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">臨床突破 (FDA 認證)</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">RLAY</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Relay Therapeutics (RLAY) 的 zovegalisib 獲 FDA 突破性療法認定</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">針對 PIK3CA 突變、HR+/HER2- 晚期乳癌患者，zovegalisib 獲得 FDA 突破性療法認定 (Breakthrough Therapy Designation)，這是 Dynamo 平台 AI 尋找隱藏結合位點的一大勝利。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: PharmaFocus / ESMO</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-03</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">合作案</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">TEM</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Tempus AI (TEM) 與 Merck 達成精準醫療戰略合作</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">Tempus AI 宣布與跨國藥廠 Merck 建立合作關係，運用 Tempus Loop 多模態腫瘤數據與 AI 工具加速精準醫療藥物開發。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: Investing.com</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-03</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">技術與合作</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">SDGR</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Schrödinger (SDGR) 聯手 TuneLab (Lilly)，推動預測性毒理學</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">為響應 FDA 的 NAMs (減少動物實驗) 倡議，Schrödinger 的分子建模平台將與 Eli Lilly 旗下的 TuneLab 合作，提升早期藥物開發的安全性預測。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: Investing.com</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-10</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">臨床突破</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">ABSI</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Absci (ABSI) ABS-201 準備與 FDA 進行 pre-IND 會議</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">Absci 的主打生成式 AI 設計抗體 ABS-201 (針對雄性禿與子宮內膜異位症) 準備提交 IND，Phase I/IIa HEADLINE 試驗持續推進中。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: MarketBeat</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-12</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">臨床突破</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">RXRX</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Recursion (RXRX) 宣布與 Roche 首個 AI 靶點進入 IND 準備階段</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">Recursion 運用多組學平台發現的全新腫瘤靶點已通過 Bayer/Roche 的臨床前驗證，準備進入第一期人體試驗，象徵表型篩選的重大里程碑。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: FierceBiotech</div>
+</div>
+
+<div style="padding:14px 0;border-bottom:1px solid #1f2d3d;">
+  <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:6px;">
+    <span style="font-size:11px;font-weight:700;color:#3b82f6;">2026-03-15</span>
+    <span style="font-size:10px;padding:2px 7px;border-radius:5px;background:rgba(59,130,246,0.12);color:#93c5fd;border:1px solid rgba(59,130,246,0.2);font-weight:600;">財報與合作</span>
+    <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:rgba(139,92,246,0.15);color:#c4b5fd;border:1px solid rgba(139,92,246,0.3);">TEM</span>
+  </div>
+  <div style="font-size:14px;font-weight:700;line-height:1.45;margin-bottom:5px;">Tempus AI (TEM) 獲 AstraZeneca 2億美元 RWE 擴展協議</div>
+  <div style="font-size:12px;color:#6b7a90;line-height:1.65;">為解決 Phase II / III 的病患異質性招募難題，AstraZeneca 擴大採用 Tempus Loop 平台，利用其多模態腫瘤資料庫進行精準受試者篩選。</div>
+  <div style="font-size:10px;color:#4b5a6e;margin-top:5px;">來源: Endpoints News</div>
+</div>
+
+  <!-- ── 日誌 ── -->
+  <div class="section-title">⚙️ 自動化更新日誌</div>
+  
+<div style="padding:12px 0;border-bottom:1px dashed #1f2d3d;">
+  <div style="font-size:10px;color:#3b82f6;font-family:monospace;">2026/03/25 10:38</div>
+  <div style="font-size:13px;font-weight:700;margin:3px 0;">✅ [AUTO_DAILY_UPDATE]</div>
+  <div style="font-size:12px;color:#6b7a90;">自動化 Daily Update 偵測到 10 則關於 SDGR, RXRX, GERN, CERT, RLAY, Insilico Medicine, ABSI, TEM, IQV, HIMS 的新動態。</div>
+  <div style="font-size:11px;color:#f59e0b;margin-top:3px;">↳ 系統於 2026 年 Daily Run 自動爬取並比對 MedCity, FierceBiotech 及研發者官方公告。</div>
+</div>
+
+<div style="padding:12px 0;border-bottom:1px dashed #1f2d3d;">
+  <div style="font-size:10px;color:#3b82f6;font-family:monospace;">2026/03/25 10:26</div>
+  <div style="font-size:13px;font-weight:700;margin:3px 0;">✅ [AUTO_DAILY_UPDATE]</div>
+  <div style="font-size:12px;color:#6b7a90;">自動化 Daily Update 偵測到 4 則關於 TEM, GENB, IQV, Insilico Medicine 的新動態。</div>
+  <div style="font-size:11px;color:#f59e0b;margin-top:3px;">↳ 系統於 2026 年 Daily Run 自動爬取並比對 MedCity, FierceBiotech 及研發者官方公告。</div>
+</div>
+
+<div style="padding:12px 0;border-bottom:1px dashed #1f2d3d;">
+  <div style="font-size:10px;color:#3b82f6;font-family:monospace;">2026/03/17 11:34</div>
+  <div style="font-size:13px;font-weight:700;margin:3px 0;">✅ [STATUS_UPDATE]</div>
+  <div style="font-size:12px;color:#6b7a90;">將 Insilico Medicine 從私人公司 (PRIVATE) 狀態更新為已上市，香港股票代號 03696。</div>
+  <div style="font-size:11px;color:#f59e0b;margin-top:3px;">↳ 收到使用者提示並經網路搜尋驗證，公司已於港交所成功 IPO。</div>
+</div>
+
+<div style="padding:12px 0;border-bottom:1px dashed #1f2d3d;">
+  <div style="font-size:10px;color:#3b82f6;font-family:monospace;">2026/03/17 11:00</div>
+  <div style="font-size:13px;font-weight:700;margin:3px 0;">✅ [AUTO_DISCOVERY]</div>
+  <div style="font-size:12px;color:#6b7a90;">檢測到符合價值鏈 Phase 0 痛點解決方案的新聞。已自動將 Insilico Medicine 新增至追蹤矩陣，並全網更新 P/E 比率欄位。</div>
+  <div style="font-size:11px;color:#f59e0b;margin-top:3px;">↳ 確認 Insilico &amp; Liquid AI 合作 (LFM2-2.6B-MMAI) 可高度應對分子優化耗時的痛點。</div>
+</div>
+
+<div style="padding:12px 0;border-bottom:1px dashed #1f2d3d;">
+  <div style="font-size:10px;color:#3b82f6;font-family:monospace;">2026/03/17 10:05</div>
+  <div style="font-size:13px;font-weight:700;margin:3px 0;">✅ [DAILY_UPDATE]</div>
+  <div style="font-size:12px;color:#6b7a90;">執行 2026/03/17 每日新聞檢索，並成功獲取並驗證了 4 則來自 RLAY, TEM, SDGR, ABSI 的重大新聞。</div>
+  <div style="font-size:11px;color:#f59e0b;margin-top:3px;">↳ 交叉比對了 Investing.com, BioSpace, 以及 MarketBeat 的報導，確認了 Relay 的 FDA 突破性療法以及 Tempus/Merck 夥伴關係的真實性。</div>
+</div>
+
+<div style="padding:12px 0;border-bottom:1px dashed #1f2d3d;">
+  <div style="font-size:10px;color:#3b82f6;font-family:monospace;">2026/03/17 10:00</div>
+  <div style="font-size:13px;font-weight:700;margin:3px 0;">✅ [SYSTEM_INIT]</div>
+  <div style="font-size:12px;color:#6b7a90;">系統初始化，匯入 2026 年 3 月底 11 家 AI 藥物開發公司基準盤面資料與歷史估值。</div>
+  <div style="font-size:11px;color:#f59e0b;margin-top:3px;">↳ 初始配置</div>
+</div>
+
+  <div style="margin-top:30px;padding:14px;background:#111827;border-radius:10px;border:1px solid #1f2d3d;font-size:11px;color:#6b7a90;">
+    此頁面由 <code>generate_static_dashboard.py</code> 於 2026/03/25 11:22 自動產生。<br>
+    每日早上 6:00 AM 自動更新。數據來源：ai_drug_dev_data.json
+  </div>
+</div>
+
+</body>
+</html>
