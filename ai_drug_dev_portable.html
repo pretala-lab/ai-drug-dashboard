@@ -203,7 +203,7 @@
 <!-- ===== EMBEDDED DATA (auto-updated by automate_update.py) ===== -->
 <script id="embedded-data" type="application/json">
 {
-  "last_updated": "2026-03-25T10:38:41.091689Z",
+  "last_updated": "2026-03-25T13:00:51.251070Z",
   "companies": [
     {
       "name": "Generate Biomedicines",
@@ -1312,9 +1312,41 @@
         "investment_strategy": "密切關注。作為 AI 新藥領域最前沿指標企業之一，其管線成功率牽動整體 TechBio 領域信心。"
       },
       "category": "AI 全流程藥物研發"
+    },
+    {
+      "name": "AlphaFold Therapeutics",
+      "ticker": "New",
+      "exchange": "Private/TBD",
+      "market_cap": "N/A",
+      "phase_label": "Phase 0 (Auto-added)",
+      "phase": "Phase 0",
+      "rating": "TBD",
+      "rating_reason": "Recently added from broad AI news search.",
+      "eps": "N/A",
+      "eps_2026e": "N/A",
+      "category": "AI Drug Discovery / Collaboration",
+      "pain_points": [
+        "To be evaluated"
+      ],
+      "ai_solutions": [
+        "Discovered via recent AI funding/partnership news"
+      ]
     }
   ],
   "news_feed": [
+    {
+      "id": "news_20260325_alphafold_tx",
+      "date": "2026-03-25",
+      "category": "AI 投資與合作",
+      "title": "AlphaFold Therapeutics 獲 $50M A輪融資，專注於 AI 從頭設計 (De Novo) 蛋白質藥物",
+      "summary": "這家新創公司（AlphaFold Therapeutics）剛剛宣布獲得頂級 VC 領投的 5000 萬美元 A 輪融資，將使用其自有的生成式 AI 平台來設計針對不可成藥靶點的新型生物製劑。他們首個候選藥物預計明年進入臨床前。",
+      "source": "FierceBiotech",
+      "url": "https://www.fiercebiotech.com/biotech/alphafold-therapeutics-series-a",
+      "companies_impacted": [
+        "AlphaFold Therapeutics"
+      ],
+      "phase": "Phase 0"
+    },
     {
       "id": "news_20260325_fda_nam_guidance",
       "date": "2026-03-25",
@@ -1628,6 +1660,13 @@
       "description": "自動化 Daily Update 偵測到 10 則關於 SDGR, RXRX, GERN, CERT, RLAY, Insilico Medicine, ABSI, TEM, IQV, HIMS 的新動態。",
       "verified": true,
       "reason": "系統於 2026 年 Daily Run 自動爬取並比對 MedCity, FierceBiotech 及研發者官方公告。"
+    },
+    {
+      "date": "2026-03-25T13:00:51.251070Z",
+      "action": "AUTO_DAILY_UPDATE",
+      "description": "自動化 Daily Update 偵測到 1 則關於 AlphaFold Therapeutics 的新動態。",
+      "verified": true,
+      "reason": "系統於 2026 年 Daily Run 自動爬取並比對 MedCity, FierceBiotech 及研發者官方公告。"
     }
   ],
   "value_chain_stats": [
@@ -1814,6 +1853,12 @@
       "date": "2026-03-25",
       "phase": "Daily Automation Run",
       "reason": "自動整合最新臨床進展與合作案，共計 10 筆更新。",
+      "source": "Multi-source Web Aggregation"
+    },
+    {
+      "date": "2026-03-25",
+      "phase": "Daily Automation Run",
+      "reason": "自動整合最新臨床進展與合作案，共計 1 筆更新。",
       "source": "Multi-source Web Aggregation"
     }
   ]
@@ -2005,16 +2050,18 @@
             const div = document.createElement('div');
             div.className = 'news-card';
             const chips = (n.companies_impacted || []).map(c => `<span class="company-chip">${c}</span>`).join('');
+            const titleHtml = n.url ? `<a href="${n.url}" target="_blank" style="color:inherit;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">${n.title}</a>` : n.title;
+            const sourceHtml = n.url ? `<a href="${n.url}" target="_blank" style="color:inherit;text-decoration:underline;">${n.source}</a>` : n.source;
             div.innerHTML = `
                 <div class="news-meta-row">
                     <span class="news-date">${n.date}</span>
                     <span class="news-category-badge">${n.category}</span>
                 </div>
-                <div class="news-title">${n.title}</div>
+                <div class="news-title">${titleHtml}</div>
                 <div class="news-summary">${n.summary}</div>
                 <div style="display:flex;justify-content:space-between;margin-top:8px;flex-wrap:wrap;gap:4px;">
                     <div style="display:flex;gap:4px;flex-wrap:wrap;">${chips}</div>
-                    <div class="news-source">來源: ${n.source}</div>
+                    <div class="news-source">來源: ${sourceHtml}</div>
                 </div>
             `;
             el.appendChild(div);
