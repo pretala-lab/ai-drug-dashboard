@@ -550,7 +550,7 @@
             globalData.value_chain_stats.forEach((s, idx) => {
                 const el = document.createElement('div');
                 el.className = 'flow-stage';
-                el.onclick = () => filterCompaniesByPhase(s.phase.includes('-') ? s.phase : s.phase); 
+                el.onclick = () => filterCompaniesByPhase(s.phase === 'Phase 0' ? 'Target Discovery' : s.phase); 
                 
                 let traditionalBlock = `
                     <div class="stage-section traditional">
