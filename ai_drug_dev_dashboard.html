@@ -516,19 +516,23 @@
 
             // Pipeline
             const pipeBody = document.getElementById('modal-pipeline');
-            pipeBody.innerHTML = dd.pipeline_milestones.map(p => 
+            let pipeHtml = dd.pipeline_milestones.map(p => 
                 `<tr><td><strong>${p.program}</strong></td><td><span class="badge" style="border:1px solid #334155">${p.phase}</span></td><td style="color:#e2e8f0">${p.milestone}</td><td style="color:var(--accent-blue)">${p.date}</td></tr>`
             ).join('');
+            if (dd.pipeline_link) pipeHtml += `<tr><td colspan="4" style="text-align:right; font-size:0.85em; padding-top:10px;">${dd.pipeline_link}</td></tr>`;
+            pipeBody.innerHTML = pipeHtml;
 
             // Financials
             const finBody = document.getElementById('modal-financials');
-            finBody.innerHTML = dd.financial_5yr.map(f => {
+            let finHtml = dd.financial_5yr.map(f => {
                 const epsColor = f.eps.includes('-') && f.eps !== 'N/A' ? 'neg' : (f.eps !== 'N/A' ? 'pos' : 'neu');
                 return `<tr><td>${f.year}</td><td>${f.revenue}</td><td class="${epsColor}">${f.eps}</td></tr>`;
             }).join('');
+            if (dd.financial_link) finHtml += `<tr><td colspan="3" style="text-align:right; font-size:0.85em; padding-top:10px;">${dd.financial_link}</td></tr>`;
+            finBody.innerHTML = finHtml;
 
             // Risk & Strategies
-            document.getElementById('modal-risk').innerText = dd.risk_assessment;
+            document.getElementById('modal-risk').innerHTML = dd.risk_assessment;
             document.getElementById('modal-strategy').innerText = dd.investment_strategy;
 
             // Simple Lists
