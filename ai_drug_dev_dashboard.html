@@ -479,7 +479,7 @@
         }
 
         function getPhaseBadgeClass(phase) {
-            if (phase.includes('Phase 0') || phase.includes('Pre-clinical') || phase.includes('Target Discovery')) return 'phase-0';
+            if (phase.includes('Target Discovery / Molecular Design') || phase.includes('Pre-clinical') || phase.includes('Target Discovery')) return 'phase-0';
             if (phase.includes('Phase I') && !phase.includes('II')) return 'phase-1';
             if (phase.includes('Phase II')) return 'phase-2';
             if (phase.includes('Phase III') || phase.includes('Post-Market')) return 'phase-3';
@@ -554,7 +554,7 @@
             globalData.value_chain_stats.forEach((s, idx) => {
                 const el = document.createElement('div');
                 el.className = 'flow-stage';
-                el.onclick = () => filterCompaniesByPhase(s.phase === 'Phase 0' ? 'Target Discovery' : s.phase); 
+                el.onclick = () => filterCompaniesByPhase(s.phase); 
                 
                 let traditionalBlock = `
                     <div class="stage-section traditional">

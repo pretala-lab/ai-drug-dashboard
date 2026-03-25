@@ -479,7 +479,7 @@
         }
 
         function getPhaseBadgeClass(phase) {
-            if (phase.includes('Phase 0') || phase.includes('Pre-clinical') || phase.includes('Target Discovery')) return 'phase-0';
+            if (phase.includes('Target Discovery / Molecular Design') || phase.includes('Pre-clinical') || phase.includes('Target Discovery')) return 'phase-0';
             if (phase.includes('Phase I') && !phase.includes('II')) return 'phase-1';
             if (phase.includes('Phase II')) return 'phase-2';
             if (phase.includes('Phase III') || phase.includes('Post-Market')) return 'phase-3';
@@ -554,7 +554,7 @@
             globalData.value_chain_stats.forEach((s, idx) => {
                 const el = document.createElement('div');
                 el.className = 'flow-stage';
-                el.onclick = () => filterCompaniesByPhase(s.phase === 'Phase 0' ? 'Target Discovery' : s.phase); 
+                el.onclick = () => filterCompaniesByPhase(s.phase); 
                 
                 let traditionalBlock = `
                     <div class="stage-section traditional">
@@ -1007,7 +1007,7 @@
       "name": "Recursion Pharma",
       "ticker": "RXRX",
       "exchange": "NASDAQ",
-      "phase": "Phase 0",
+      "phase": "Target Discovery / Molecular Design",
       "phase_label": "Target Discovery / Molecular Design",
       "pain_points": [
         "靶點識別錯誤導致後期臨床巨額損失",
@@ -1110,7 +1110,7 @@
       "name": "Schrödinger",
       "ticker": "SDGR",
       "exchange": "NASDAQ",
-      "phase": "Phase 0",
+      "phase": "Target Discovery / Molecular Design",
       "phase_label": "Target Discovery / Molecular Design",
       "pain_points": [
         "傳統 HTS 命中率低、成本高昂",
@@ -1294,7 +1294,7 @@
       "name": "Absci",
       "ticker": "ABSI",
       "exchange": "NASDAQ",
-      "phase": "Phase 0",
+      "phase": "Target Discovery / Molecular Design",
       "phase_label": "Pre-clinical / IND-enabling",
       "pain_points": [
         "抗體篩選耗時數年，成功率低",
@@ -1972,7 +1972,7 @@
       "name": "Insilico Medicine",
       "ticker": "03696",
       "exchange": "HKEX",
-      "phase": "Phase 0",
+      "phase": "Target Discovery / Molecular Design",
       "phase_label": "Target Discovery / Molecular Design",
       "pain_points": [
         "靶點識別錯誤導致後期臨床巨額損失",
@@ -2054,8 +2054,8 @@
       "ticker": "New",
       "exchange": "Private/TBD",
       "market_cap": "N/A",
-      "phase_label": "Phase 0 (Auto-added)",
-      "phase": "Phase 0",
+      "phase_label": "Target Discovery / Molecular Design (Auto-added)",
+      "phase": "Target Discovery / Molecular Design",
       "rating": "TBD",
       "rating_reason": "Recently added from broad AI news search.",
       "eps": "N/A",
@@ -2099,7 +2099,7 @@
         "pipeline_milestones": [
           {
             "program": "Lead Program",
-            "phase": "Phase 0",
+            "phase": "Target Discovery / Molecular Design",
             "milestone": "Initiation",
             "date": "2026"
           }
@@ -2129,7 +2129,7 @@
       "companies_impacted": [
         "AlphaFold Therapeutics"
       ],
-      "phase": "Phase 0"
+      "phase": "Target Discovery / Molecular Design"
     },
     {
       "id": "news_20260325_fda_nam_guidance",
@@ -2143,7 +2143,7 @@
         "CERT",
         "RXRX"
       ],
-      "phase": "Phase 0"
+      "phase": "Target Discovery / Molecular Design"
     },
     {
       "id": "news_20260325_gern_impactmf",
@@ -2179,7 +2179,7 @@
       "companies_impacted": [
         "Insilico Medicine"
       ],
-      "phase": "Phase 0"
+      "phase": "Target Discovery / Molecular Design"
     },
     {
       "id": "news_20260325_iqvia_flagship",
@@ -2239,7 +2239,7 @@
       "companies_impacted": [
         "SDGR"
       ],
-      "phase": "Phase 0"
+      "phase": "Target Discovery / Molecular Design"
     },
     {
       "id": "news_20260325_rxrx_fap",
@@ -2312,7 +2312,7 @@
         "Insilico Medicine"
       ],
       "value_chain_phase": [
-        "Phase 0",
+        "Target Discovery / Molecular Design",
         "Phase I",
         "Phase II"
       ]
@@ -2324,7 +2324,7 @@
       "title": "Insilico Medicine 聯手 Liquid AI發布輕量級科學大模型 LFM2-2.6B",
       "summary": "Insilico 推出專為製藥設計的基礎 AI 模型，可於私有雲部署，覆蓋屬性預測、分子優化及逆合成規劃，精準打擊早期探索的高成本與低命中率痛點。",
       "source": "Drug Target Review",
-      "phase": "Phase 0",
+      "phase": "Target Discovery / Molecular Design",
       "companies_impacted": [
         "Insilico Medicine"
       ]
@@ -2360,7 +2360,7 @@
       "title": "Schrödinger (SDGR) 聯手 TuneLab (Lilly)，推動預測性毒理學",
       "summary": "為響應 FDA 的 NAMs (減少動物實驗) 倡議，Schrödinger 的分子建模平台將與 Eli Lilly 旗下的 TuneLab 合作，提升早期藥物開發的安全性預測。",
       "source": "Investing.com",
-      "phase": "Phase 0",
+      "phase": "Target Discovery / Molecular Design",
       "companies_impacted": [
         "SDGR"
       ]
@@ -2384,7 +2384,7 @@
       "title": "Recursion (RXRX) 宣布與 Roche 首個 AI 靶點進入 IND 準備階段",
       "summary": "Recursion 運用多組學平台發現的全新腫瘤靶點已通過 Bayer/Roche 的臨床前驗證，準備進入第一期人體試驗，象徵表型篩選的重大里程碑。",
       "source": "FierceBiotech",
-      "phase": "Phase 0",
+      "phase": "Target Discovery / Molecular Design",
       "companies_impacted": [
         "RXRX"
       ]
@@ -2420,7 +2420,7 @@
     {
       "date": "2026-03-17T11:00:00Z",
       "action": "auto_discovery",
-      "description": "檢測到符合價值鏈 Phase 0 痛點解決方案的新聞。已自動將 Insilico Medicine 新增至追蹤矩陣，並全網更新 P/E 比率欄位。",
+      "description": "檢測到符合價值鏈 Target Discovery / Molecular Design 痛點解決方案的新聞。已自動將 Insilico Medicine 新增至追蹤矩陣，並全網更新 P/E 比率欄位。",
       "verified": true,
       "reason": "確認 Insilico & Liquid AI 合作 (LFM2-2.6B-MMAI) 可高度應對分子優化耗時的痛點。"
     },
@@ -2455,7 +2455,7 @@
   ],
   "value_chain_stats": [
     {
-      "phase": "Phase 0",
+      "phase": "Target Discovery / Molecular Design",
       "title": "Target Discovery / Molecular Design",
       "cost": "$30M - $50M",
       "time": "4 - 5 yrs",
