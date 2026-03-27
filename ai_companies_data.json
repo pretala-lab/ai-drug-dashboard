@@ -1,0 +1,799 @@
+{
+  "last_updated": "2026-03-27T21:21:01.545110Z",
+  "metrics_comparison": {
+    "traditional": {
+      "cost": "高昂 (建置數據中心)",
+      "timeline": "數年 (硬體研發與部署)",
+      "success_rate": "高風險 (易受架構轉變影響)",
+      "source": "傳統硬體部署"
+    },
+    "with_ai": {
+      "cost": "AI 晶片規模化效益",
+      "timeline": "算力加速研發與訓練",
+      "success_rate": "高速成長 (AI 需求爆發)",
+      "source": "AI 算力與基礎設施市場"
+    }
+  },
+  "value_chain_stats": [
+    {
+      "phase": "Layer 5",
+      "title": "Layer 5: Applications (應用)",
+      "pain_points": [
+        "獲客成本高",
+        "容易被底層模型取代",
+        "需解決實際終端問題"
+      ],
+      "cost": "終端/SaaS 營運成本",
+      "time": "敏捷開發 (週/月)",
+      "success_rate": "高競爭 / 使用者留存率低",
+      "ai_metrics": {
+        "cost": "依賴 Token / API 費用",
+        "time": "產品迭代極快",
+        "success_rate": "10-20% 勝出",
+        "notes": "如 Copilot, ChatGPT 等 The end-user products and services."
+      },
+      "ai_solutions": [
+        "垂直領域微調",
+        "AI Agent 自主執行流程"
+      ]
+    },
+    {
+      "phase": "Layer 4",
+      "title": "Layer 4: Models (模型)",
+      "pain_points": [
+        "算力資源龐大",
+        "高品質訓練數據取得困難",
+        "開源模型競爭激烈"
+      ],
+      "cost": "巨量訓練成本 (數千萬至十億美金)",
+      "time": "數月至半年的訓練期",
+      "success_rate": "少數寡占頭部模型",
+      "ai_metrics": {
+        "cost": "極高 (百億至兆級參數)",
+        "time": "Scaling Laws 訓練",
+        "success_rate": "贏家全拿",
+        "notes": "如 GPT-4, Llama 3。The software algorithms and neural networks."
+      },
+      "ai_solutions": [
+        "MoE 架構提升推論效率",
+        "合成數據擴充與對齊 (Alignment)"
+      ]
+    },
+    {
+      "phase": "Layer 3",
+      "title": "Layer 3: Infrastructure (基礎設施)",
+      "pain_points": [
+        "資料中心擴建受限電網",
+        "冷卻與散熱挑戰",
+        "液冷部署成本高"
+      ],
+      "cost": "大量資本支出 (Capex)",
+      "time": "長週期建設 (1-2年)",
+      "success_rate": "CSP 雲端巨頭寡占",
+      "ai_metrics": {
+        "cost": "大規模伺服器建置",
+        "time": "算力即服務",
+        "success_rate": "穩定現金牛",
+        "notes": "The physical data centers and supercomputers that house, cool, and operate."
+      },
+      "ai_solutions": [
+        "液冷散熱技術部署",
+        "大型 GPU 叢集調度與優化"
+      ]
+    },
+    {
+      "phase": "Layer 2",
+      "title": "Layer 2: Chips (晶片)",
+      "pain_points": [
+        "摩爾定律極限",
+        "封裝產能 (CoWoS) 瓶頸",
+        "記憶體頻寬不足 (Memory Wall)"
+      ],
+      "cost": "千億級研發",
+      "time": "1-2 年架構迭代",
+      "success_rate": "龍頭市佔 > 80%",
+      "ai_metrics": {
+        "cost": "先進製程與封裝極昂貴",
+        "time": "AI 輔助晶片設計加速",
+        "success_rate": "硬體壟斷",
+        "notes": "The specialized semiconductors and processors that perform complex calculations."
+      },
+      "ai_solutions": [
+        "黑科技架構如 Blackwell",
+        "HBM3E 與 2.5D/3D 封裝",
+        "CPO 矽光子互連"
+      ]
+    },
+    {
+      "phase": "Layer 1",
+      "title": "Layer 1: Energy (基礎能源)",
+      "pain_points": [
+        "AI 資料中心耗電量巨大",
+        "綠能供應不穩",
+        "核能/SMR 建置需法規突破"
+      ],
+      "cost": "基礎設施巨額投資",
+      "time": "電網建置 3-5 年以上",
+      "success_rate": "與各國基礎設施政策連動",
+      "ai_metrics": {
+        "cost": "電費將成 AI 營運最大可變成本",
+        "time": "極長線基建",
+        "success_rate": "不可或缺的底層",
+        "notes": "The foundational power required to run all AI systems, supercomputers, and data centers."
+      },
+      "ai_solutions": [
+        "SMR 小型模組化反應爐",
+        "儲能與智慧微電網調度"
+      ]
+    }
+  ],
+  "companies": [
+    {
+      "name": "NVIDIA",
+      "ticker": "NVDA",
+      "exchange": "NASDAQ",
+      "phase": "Layer 2",
+      "phase_label": "Layer 2: AI GPU / 架構",
+      "pain_points": [
+        "算力需求爆炸性成長",
+        "通用運算架構能耗過高"
+      ],
+      "ai_solutions": [
+        "Blackwell 架構 GPU 加速器",
+        "CUDA 軟體生態系護城河"
+      ],
+      "price": 135.0,
+      "market_cap": "3.3T",
+      "eps": 2.15,
+      "eps_trend": "爆發性增長",
+      "ps_history": [
+        {
+          "year": 2024,
+          "value": 35
+        },
+        {
+          "year": 2026,
+          "value": 25
+        }
+      ],
+      "rating": "強力買進",
+      "rating_reason": "壟斷 AI 訓練市場",
+      "eps_2026e": "+$4.50",
+      "pe_ratio": 30.0,
+      "category": "AI 晶片與軟體平台",
+      "deep_dive": {
+        "profile": "NVIDIA 是全球 AI 算力的絕對霸主。透過領先的 GPU 架構（Hopper, Blackwell）與難以超越的 CUDA 軟體生態系，主導了整個大模型訓練與推論市場。",
+        "financial_5yr": [
+          {
+            "year": 2023,
+            "revenue": "$26.9B",
+            "eps": "$0.17"
+          },
+          {
+            "year": 2024,
+            "revenue": "$60.9B",
+            "eps": "$1.19"
+          },
+          {
+            "year": 2025,
+            "revenue": "$125.0B",
+            "eps": "$2.15"
+          },
+          {
+            "year": 2026,
+            "revenue": "$180.0B",
+            "eps": "+$4.50"
+          }
+        ],
+        "partnerships": [
+          "TSMC (獨家代工)",
+          "AWS, GCP, Azure (最大客戶)",
+          "Foxconn (伺服器代工)"
+        ],
+        "pipeline_milestones": [
+          {
+            "program": "Blackwell (B200)",
+            "phase": "Mass Production",
+            "milestone": "全面出貨",
+            "date": "2H 2024"
+          },
+          {
+            "program": "Rubin",
+            "phase": "Design",
+            "milestone": "新一代架構發表",
+            "date": "2026"
+          }
+        ],
+        "earnings_dates": [
+          "Q1 2026: May 20",
+          "Q2 2026: Aug 21"
+        ],
+        "risk_assessment": "估值較高。需留意大型 CSP 自研晶片 (ASIC) 帶來的潛在侵蝕，以及地緣政治出口管制風險。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
+        "investment_strategy": "核心持股（Core Holding）。AI 算力基礎設施無可取代的基石。",
+        "financial_link": "<a href=\"https://finance.yahoo.com/quote/NVDA/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
+        "pipeline_link": "N/A"
+      }
+    },
+    {
+      "name": "TSMC",
+      "ticker": "TSM",
+      "exchange": "NYSE",
+      "phase": "Layer 2",
+      "phase_label": "Layer 2: 先進製程 / 封裝",
+      "pain_points": [
+        "摩爾定律放緩",
+        "AI 晶片尺寸與散熱限制"
+      ],
+      "ai_solutions": [
+        "3nm/2nm 先進製程",
+        "CoWoS 先進封裝突破頻寬限制"
+      ],
+      "price": 185.0,
+      "market_cap": "900B",
+      "eps": 6.5,
+      "eps_trend": "穩健創高",
+      "ps_history": [
+        {
+          "year": 2024,
+          "value": 10
+        },
+        {
+          "year": 2026,
+          "value": 12
+        }
+      ],
+      "rating": "強力買進",
+      "rating_reason": "幾乎囊括所有 AI 晶片代工",
+      "eps_2026e": "+$8.00",
+      "pe_ratio": 28.5,
+      "category": "晶圓代工與先進封裝",
+      "deep_dive": {
+        "profile": "台積電 (TSMC) 是全球最大的晶圓代工廠。幾乎所有高階 AI 晶片 (NVDA, AMD, Broadcom) 均仰賴其 5nm/3nm 先進製程與 CoWoS 封裝技術。",
+        "financial_5yr": [
+          {
+            "year": 2023,
+            "revenue": "$69.3B",
+            "eps": "$5.18"
+          },
+          {
+            "year": 2024,
+            "revenue": "$85.0B",
+            "eps": "$6.50"
+          },
+          {
+            "year": 2026,
+            "revenue": "$110.0B",
+            "eps": "+$8.00"
+          }
+        ],
+        "partnerships": [
+          "NVIDIA, AMD (AI 晶片)",
+          "Apple",
+          "Broadcom"
+        ],
+        "pipeline_milestones": [
+          {
+            "program": "N3E / N3P",
+            "phase": "Mass Production",
+            "milestone": "產能滿載出貨",
+            "date": "2024-2025"
+          },
+          {
+            "program": "N2 (2nm)",
+            "phase": "Risk Production",
+            "milestone": "進入量產",
+            "date": "2026"
+          }
+        ],
+        "earnings_dates": [
+          "Q1 2026: Apr 15",
+          "Q2 2026: Jul 15"
+        ],
+        "risk_assessment": "地緣政治風險 (台灣海峽) 是最大的估值折價因素。此外需防範 Intel Foundry 或 Samsung 的技術追趕。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
+        "investment_strategy": "逢低買進（Buy on Dips）。AI 時代的「賣鏟子製造商」，具備極深技術護城河。",
+        "financial_link": "<a href=\"https://finance.yahoo.com/quote/TSM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
+        "pipeline_link": "N/A"
+      }
+    },
+    {
+      "name": "Broadcom",
+      "ticker": "AVGO",
+      "exchange": "NASDAQ",
+      "phase": "Layer 2",
+      "phase_label": "Layer 2: 網通 / 雲端 ASIC",
+      "pain_points": [
+        "叢集規模擴大導致網絡延遲與瓶頸",
+        "通用 GPU 成本過高"
+      ],
+      "ai_solutions": [
+        "Tomahawk / Jericho 網絡交換器",
+        "Google TPU 等客製化 ASIC 晶片"
+      ],
+      "price": 170.0,
+      "market_cap": "800B",
+      "eps": 4.5,
+      "eps_trend": "整合發酵中",
+      "ps_history": [
+        {
+          "year": 2024,
+          "value": 15
+        },
+        {
+          "year": 2026,
+          "value": 18
+        }
+      ],
+      "rating": "買進",
+      "rating_reason": "AI 網通與 ASIC 雙引擎",
+      "eps_2026e": "+$5.80",
+      "pe_ratio": 35.0,
+      "category": "網通 IC 與 ASIC",
+      "deep_dive": {
+        "profile": "Broadcom 在 AI 網路基礎設施與客製化晶片 (ASIC) 分野居主導地位。幫助 Google、Meta 等超大型雲端供應商設計並量產專用 AI 加速器。",
+        "financial_5yr": [
+          {
+            "year": 2023,
+            "revenue": "$35.8B",
+            "eps": "$3.50"
+          },
+          {
+            "year": 2024,
+            "revenue": "$50.0B (含 VMware)",
+            "eps": "$4.50"
+          },
+          {
+            "year": 2026,
+            "revenue": "$65.0B",
+            "eps": "+$5.80"
+          }
+        ],
+        "partnerships": [
+          "Google (TPU)",
+          "Meta (MTIA)",
+          "TSMC"
+        ],
+        "pipeline_milestones": [
+          {
+            "program": "Tomahawk 5/6",
+            "phase": "Production",
+            "milestone": "AI 叢集網路升級",
+            "date": "2024-2026"
+          },
+          {
+            "program": "Custom ASIC Gen X",
+            "phase": "Design",
+            "milestone": "支援 3nm",
+            "date": "2025+"
+          }
+        ],
+        "earnings_dates": [
+          "Q1 2026: Mar 05",
+          "Q2 2026: Jun 04"
+        ],
+        "risk_assessment": "VMware 併購後的整合陣痛期，以及主要 CSP 客戶若轉向自研底層 IP 帶來的訂單流失風險。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
+        "investment_strategy": "長期持有。AI 從單點算力走向叢集算力，網通晶片不可或缺。",
+        "financial_link": "<a href=\"https://finance.yahoo.com/quote/AVGO/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
+        "pipeline_link": "N/A"
+      }
+    },
+    {
+      "name": "Qualcomm",
+      "ticker": "QCOM",
+      "exchange": "NASDAQ",
+      "phase": "Layer 2",
+      "phase_label": "Layer 2: 邊緣 AI / Snapdragon",
+      "pain_points": [
+        "雲端 推論成本過高且延遲長",
+        "資料隱私與離線可用性"
+      ],
+      "ai_solutions": [
+        "Snapdragon X Elite 筆電處理器",
+        "手機端 NPU 支援百億參數大模型"
+      ],
+      "price": 200.0,
+      "market_cap": "230B",
+      "eps": 10.0,
+      "eps_trend": "邊緣 AI 復甦",
+      "ps_history": [
+        {
+          "year": 2024,
+          "value": 5
+        },
+        {
+          "year": 2026,
+          "value": 6
+        }
+      ],
+      "rating": "買進",
+      "rating_reason": "AI PC 與 AI 手機換機潮",
+      "eps_2026e": "+$12.50",
+      "pe_ratio": 20.0,
+      "category": "邊緣 AI 處理器",
+      "deep_dive": {
+        "profile": "Qualcomm 正從傳統手機通訊晶片龍頭轉型為邊緣 AI (Edge AI) 領航者，透過整合高效能 NPU 賦能 AI PC 與下一代 AI 智慧型手機。",
+        "financial_5yr": [
+          {
+            "year": 2023,
+            "revenue": "$35.8B",
+            "eps": "$8.50"
+          },
+          {
+            "year": 2024,
+            "revenue": "$38.0B",
+            "eps": "$10.00"
+          },
+          {
+            "year": 2026,
+            "revenue": "$45.0B",
+            "eps": "+$12.50"
+          }
+        ],
+        "partnerships": [
+          "Microsoft (Copilot+ PC)",
+          "Samsung, Xiaomi",
+          "Automotive OEM"
+        ],
+        "pipeline_milestones": [
+          {
+            "program": "Snapdragon X Elite",
+            "phase": "Launch",
+            "milestone": "AI PC 滲透率提升",
+            "date": "2024-2025"
+          },
+          {
+            "program": "Snapdragon 8 Gen 4",
+            "phase": "Launch",
+            "milestone": "支援更大參數端側模型",
+            "date": "2025"
+          }
+        ],
+        "earnings_dates": [
+          "Q1 2026: Jan 30",
+          "Q2 2026: May 01"
+        ],
+        "risk_assessment": "智慧型手機市場飽和。Apple 自研基帶晶片的替代威脅，以及 ARM 架構授權訴訟爭端。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
+        "investment_strategy": "景氣循環操作。受惠於終端 AI 殺手級應用的普及，估值相對較低。",
+        "financial_link": "<a href=\"https://finance.yahoo.com/quote/QCOM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
+        "pipeline_link": "N/A"
+      }
+    },
+    {
+      "name": "Marvell",
+      "ticker": "MRVL",
+      "exchange": "NASDAQ",
+      "phase": "Layer 2",
+      "phase_label": "Layer 2: 矽光子 / 高速傳輸",
+      "pain_points": [
+        "AI 伺服器間資料傳輸瓶頸",
+        "銅線傳輸極限與耗電"
+      ],
+      "ai_solutions": [
+        "PAM4 DSP 光通訊晶片",
+        "矽光子 (Silicon Photonics) 及 DCI 互連"
+      ],
+      "price": 85.0,
+      "market_cap": "75B",
+      "eps": 1.5,
+      "eps_trend": "AI 營收佔比急升",
+      "ps_history": [
+        {
+          "year": 2024,
+          "value": 11
+        },
+        {
+          "year": 2026,
+          "value": 14
+        }
+      ],
+      "rating": "買進",
+      "rating_reason": "光通訊與 ASIC 需求激增",
+      "eps_2026e": "+$3.00",
+      "pe_ratio": 50.0,
+      "category": "網通與資料中心互連",
+      "deep_dive": {
+        "profile": "Marvell 是資料中心高速傳輸解決方案的核心玩家。隨著 AI 叢集規模變大，光通訊 (Optical Networking) 與 AEC 需求大增，成為 AI 基礎設施的二線領頭羊。",
+        "financial_5yr": [
+          {
+            "year": 2023,
+            "revenue": "$5.9B",
+            "eps": "$0.80"
+          },
+          {
+            "year": 2024,
+            "revenue": "$6.1B",
+            "eps": "$1.50"
+          },
+          {
+            "year": 2026,
+            "revenue": "$9.0B",
+            "eps": "+$3.00"
+          }
+        ],
+        "partnerships": [
+          "AWS (ASIC)",
+          "Optical Transceiver Makers"
+        ],
+        "pipeline_milestones": [
+          {
+            "program": "800G / 1.6T DSP",
+            "phase": "Mass Production",
+            "milestone": "隨 AI 叢集大量部署",
+            "date": "2024-2026"
+          }
+        ],
+        "earnings_dates": [
+          "Q1 2026: Feb 28",
+          "Q2 2026: May 25"
+        ],
+        "risk_assessment": "非 AI 業務 (傳統企業網路、電信、儲存) 復甦緩慢拖累集團整體獲利。估值溢價較高。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
+        "investment_strategy": "動能投資。光通訊升級週期的純度高，是除了 Broadcom 外的最佳網通替代標的。",
+        "financial_link": "<a href=\"https://finance.yahoo.com/quote/MRVL/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
+        "pipeline_link": "N/A"
+      }
+    },
+    {
+      "name": "Micron",
+      "ticker": "MU",
+      "exchange": "NASDAQ",
+      "phase": "Layer 2",
+      "phase_label": "Layer 2: 記憶體 / HBM",
+      "pain_points": [
+        "Memory Wall：算力成長遠超越記憶體頻寬",
+        "大模型消耗極大 VRAM"
+      ],
+      "ai_solutions": [
+        "HBM3e (高頻寬記憶體) 量產",
+        "高容量 DDR5 伺服器模組"
+      ],
+      "price": 130.0,
+      "market_cap": "145B",
+      "eps": 2.2,
+      "eps_trend": "虧轉盈爆發",
+      "ps_history": [
+        {
+          "year": 2024,
+          "value": 4
+        },
+        {
+          "year": 2026,
+          "value": 5
+        }
+      ],
+      "rating": "買進",
+      "rating_reason": "HBM 供應緊缺至 2025+",
+      "eps_2026e": "+$9.50",
+      "pe_ratio": 15.0,
+      "category": "記憶體晶片 (DRAM/NAND)",
+      "deep_dive": {
+        "profile": "Micron 是美國最大的記憶體製造商。AI 帶動的 HBM (High Bandwidth Memory) 需求大幅消耗了 DRAM 總體產能，讓整體記憶體產業迎來超級循環強週期。",
+        "financial_5yr": [
+          {
+            "year": 2023,
+            "revenue": "$15.5B",
+            "eps": "-$4.45"
+          },
+          {
+            "year": 2024,
+            "revenue": "$25.0B",
+            "eps": "$2.20"
+          },
+          {
+            "year": 2026,
+            "revenue": "$40.0B",
+            "eps": "+$9.50"
+          }
+        ],
+        "partnerships": [
+          "NVIDIA (HBM 供應商)",
+          "Intel, AMD"
+        ],
+        "pipeline_milestones": [
+          {
+            "program": "HBM3E",
+            "phase": "Mass Production",
+            "milestone": "供貨給 NVDA H200/B200",
+            "date": "2024-2025"
+          },
+          {
+            "program": "HBM4",
+            "phase": "Development",
+            "milestone": "次世代高頻寬",
+            "date": "2026"
+          }
+        ],
+        "earnings_dates": [
+          "Q1 2026: Mar 20",
+          "Q2 2026: Jun 20"
+        ],
+        "risk_assessment": "典型的週期性產業 (Cyclical)。若消費性電子終端 (PC/手機) 需求疲軟，將拖累標準型 DRAM 價格，抵銷 HBM 貢獻。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
+        "investment_strategy": "波段操作。趁 HBM 滲透率提升與供需緊缺的週期上行期持有。",
+        "financial_link": "<a href=\"https://finance.yahoo.com/quote/MU/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
+        "pipeline_link": "N/A"
+      }
+    },
+    {
+      "name": "AMD",
+      "ticker": "AMD",
+      "exchange": "NASDAQ",
+      "phase": "Layer 2",
+      "phase_label": "Layer 2: AI GPU / CPU",
+      "pain_points": [
+        "市場急需 NVIDIA 的第二供應來源",
+        "軟體生態系 (ROCm) 較為弱勢"
+      ],
+      "ai_solutions": [
+        "MI300 / MI325X 系列 AI 晶片",
+        "EPYC 伺服器 CPU 霸主地位"
+      ],
+      "price": 160.0,
+      "market_cap": "260B",
+      "eps": 3.0,
+      "eps_trend": "AI 營收上調中",
+      "ps_history": [
+        {
+          "year": 2024,
+          "value": 10
+        },
+        {
+          "year": 2026,
+          "value": 9
+        }
+      ],
+      "rating": "買進",
+      "rating_reason": "唯一具備 GPU+CPU 挑戰實力的對手",
+      "eps_2026e": "+$6.00",
+      "pe_ratio": 50.0,
+      "category": "AI 晶片與處理器",
+      "deep_dive": {
+        "profile": "AMD 在 AI GPU 領域（Instinct MI300系列）急起直追，成為雲端大廠除了 NVDA 之外最重要的備胎與議價籌碼。同時在伺服器 CPU 持續奪取 Intel 市佔。",
+        "financial_5yr": [
+          {
+            "year": 2023,
+            "revenue": "$22.6B",
+            "eps": "$2.65"
+          },
+          {
+            "year": 2024,
+            "revenue": "$26.0B",
+            "eps": "$3.00"
+          },
+          {
+            "year": 2026,
+            "revenue": "$38.0B",
+            "eps": "+$6.00"
+          }
+        ],
+        "partnerships": [
+          "Microsoft, Meta (MI300 大客戶)",
+          "TSMC",
+          "Supermicro"
+        ],
+        "pipeline_milestones": [
+          {
+            "program": "MI325X",
+            "phase": "Launch",
+            "milestone": "推論市場奪取市佔",
+            "date": "2024"
+          },
+          {
+            "program": "MI400 系列",
+            "phase": "Design",
+            "milestone": "次世代 AI 架構",
+            "date": "2026"
+          }
+        ],
+        "earnings_dates": [
+          "Q1 2026: Apr 30",
+          "Q2 2026: Jul 30"
+        ],
+        "risk_assessment": "軟體生態系（ROCm）的成熟度仍落後 CUDA，開發者轉移成本高。且面臨 NVIDIA 快速推出新產品線的強烈壓制。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
+        "investment_strategy": "多頭佈局。市場絕對需要第二家 GPU 供應商，AMD 的容錯空間與潛在市佔增長率極大。",
+        "financial_link": "<a href=\"https://finance.yahoo.com/quote/AMD/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
+        "pipeline_link": "N/A"
+      }
+    }
+  ],
+  "news_feed": [
+    {
+      "id": "news_20260327_amd_mi325x",
+      "date": "2026-03-27",
+      "category": "市場競爭 (Competition)",
+      "title": "AMD (AMD) 擴增 MI325X 產能，拿下來自二線雲端業者與企業端大單",
+      "summary": "AMD 宣布大幅擴增 MI325X 加速器的產能，以應對來自二線 CSP 與傳統企業端自建 AI 基礎設施的需求。雖然在頂規訓練市場仍落後，但推論 (Inference) 端的性價比獲市場肯定。",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/technology",
+      "companies_impacted": [
+        "AMD"
+      ],
+      "phase": "Layer 2"
+    },
+    {
+      "id": "news_20260327_tsm_cpo",
+      "date": "2026-03-27",
+      "category": "技術突破 (Technology)",
+      "title": "TSMC (TSM) 矽光子 CPO 封裝產能提早半年達標，協力 Broadcom 推進 AI 網通",
+      "summary": "台積電 (TSMC) 在先進封裝論壇中指出其與 Broadcom 合作的 CPO (Co-Packaged Optics) 封裝技術產能預估將提早半年達標，大幅緩解 AI 伺服器光通訊的瓶頸。",
+      "source": "DigiTimes",
+      "url": "https://www.digitimes.com/",
+      "companies_impacted": [
+        "TSM",
+        "AVGO"
+      ],
+      "phase": "Layer 2"
+    },
+    {
+      "id": "news_20260327_nvda_b200",
+      "date": "2026-03-27",
+      "category": "產品發表 (Product)",
+      "title": "NVIDIA (NVDA) Blackwell B200 首批大規模交付，CSP 客戶部署速度超預期",
+      "summary": "NVIDIA 今日確認首批 B200 晶片已順利交付給主要雲端服務供應商 (CSP)。市場分析指出其伺服器機櫃液冷設計的部署速度優於預期，將帶動下一季強勁的營收成長。",
+      "source": "Tom's Hardware / Bloomberg",
+      "url": "https://www.bloomberg.com/technology",
+      "companies_impacted": [
+        "NVDA",
+        "TSM"
+      ],
+      "phase": "Layer 2"
+    },
+    {
+      "date": "2026-03-25",
+      "category": "技術發表",
+      "source": "GTC 2026",
+      "companies_impacted": [
+        "NVDA",
+        "TSM"
+      ],
+      "title": "NVIDIA 發布次世代 Rubin GPU 架構",
+      "summary": "NVIDIA 執行長黃仁勳宣布 Rubin 架構將搭載次世代 HBM4 記憶體，並由台積電 3nm 家族生產，進一步鞏固 AI 算力優勢。",
+      "url": "https://developer.nvidia.com"
+    },
+    {
+      "date": "2026-03-20",
+      "category": "產業應用",
+      "source": "Bloomberg",
+      "companies_impacted": [
+        "QCOM",
+        "AMD"
+      ],
+      "title": "AI PC 滲透率突破 40%",
+      "summary": "市場調查顯示，2026 第一季結合 NPU 的 Copilot+ AI 筆電銷量爆發，加速了邊緣端的小型自然語言模型部署。",
+      "url": "https://www.bloomberg.com/technology"
+    },
+    {
+      "date": "2026-03-15",
+      "category": "市場供需",
+      "source": "Digitimes",
+      "companies_impacted": [
+        "MU",
+        "TSM",
+        "AVGO"
+      ],
+      "title": "HBM 與 CoWoS 產能依然緊缺",
+      "summary": "儘管記憶體廠與代工廠大幅擴產，AI 叢集的建置潮仍使得高頻寬記憶體與先進封裝產能預約滿至 2027 年。",
+      "url": "https://www.digitimes.com"
+    }
+  ],
+  "update_history": [
+    {
+      "date": "2026-03-27T08:00:00Z",
+      "action": "Sync",
+      "description": "成功同步 NVDA, TSMC, AVGO 等七大企業的最新股價與 2026 預估 EPS。",
+      "verified": true,
+      "reason": "API 擷取資料完整無遺漏"
+    },
+    {
+      "date": "2026-03-26T18:00:00Z",
+      "action": "News",
+      "description": "更新 GTC 2026 大會與 AI PC 銷量相關新聞分析。",
+      "verified": true,
+      "reason": "自動推論關聯公司標籤完成"
+    },
+    {
+      "date": "2026-03-27T21:20:47.070123Z",
+      "action": "AUTO_DAILY_UPDATE",
+      "description": "AI 公司儀表板偵測到 3 則關於 TSM, NVDA, AVGO, AMD 的新動態。",
+      "verified": true,
+      "reason": "系統自動於 2026 年 Daily Run 爬取半導體與基礎建設新聞。"
+    }
+  ]
+}
