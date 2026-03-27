@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-27T21:21:24.320635Z",
+  "last_updated": "2026-03-27T21:36:48.473296Z",
   "metrics_comparison": {
     "traditional": {
       "cost": "高昂 (建置數據中心)",
@@ -23,17 +23,17 @@
         "容易被底層模型取代",
         "需解決實際終端問題"
       ],
-      "cost": "終端/SaaS 營運成本",
+      "cost": "發展特定領域應用",
       "time": "敏捷開發 (週/月)",
-      "success_rate": "高競爭 / 使用者留存率低",
+      "success_rate": "高競爭 / 贏者通吃",
       "ai_metrics": {
         "cost": "依賴 Token / API 費用",
         "time": "產品迭代極快",
-        "success_rate": "10-20% 勝出",
-        "notes": "如 Copilot, ChatGPT 等 The end-user products and services."
+        "success_rate": "經濟價值產生之處",
+        "notes": "最上層是應用層，也是經濟價值產生之處。例如藥物研發平台、工業機器人、自動駕駛車等。應用程式依賴其下方的每一層架構。"
       },
       "ai_solutions": [
-        "垂直領域微調",
+        "針對特定產業微調模型",
         "AI Agent 自主執行流程"
       ]
     },
@@ -45,14 +45,14 @@
         "高品質訓練數據取得困難",
         "開源模型競爭激烈"
       ],
-      "cost": "巨量訓練成本 (數千萬至十億美金)",
-      "time": "數月至半年的訓練期",
-      "success_rate": "少數寡占頭部模型",
+      "cost": "巨量訓練成本",
+      "time": "系統訓練與對齊",
+      "success_rate": "基礎模型寡占化",
       "ai_metrics": {
         "cost": "極高 (百億至兆級參數)",
         "time": "Scaling Laws 訓練",
-        "success_rate": "贏家全拿",
-        "notes": "如 GPT-4, Llama 3。The software algorithms and neural networks."
+        "success_rate": "語言/物理/生物 AI 變革",
+        "notes": "基礎設施之上是模型層。AI 模型能理解語言、生物、化學、物理、醫療以及真實世界本身。最具變革性的進展正發生在化學 AI、物理模擬、機器人。"
       },
       "ai_solutions": [
         "MoE 架構提升推論效率",
@@ -65,20 +65,20 @@
       "pain_points": [
         "資料中心擴建受限電網",
         "冷卻與散熱挑戰",
-        "液冷部署成本高"
+        "建設工程龐大"
       ],
       "cost": "大量資本支出 (Capex)",
-      "time": "長週期建設 (1-2年)",
-      "success_rate": "CSP 雲端巨頭寡占",
+      "time": "長週期建設",
+      "success_rate": "AI 工廠規模化",
       "ai_metrics": {
-        "cost": "大規模伺服器建置",
+        "cost": "百億級建設規模",
         "time": "算力即服務",
-        "success_rate": "穩定現金牛",
-        "notes": "The physical data centers and supercomputers that house, cool, and operate."
+        "success_rate": "製造智慧的工廠",
+        "notes": "這包括土地、電力輸送、散熱、建設工程、網路，以及將數萬顆處理器協調運作為單一機器的系統 (AI 工廠)。其設計目的並非儲存資訊，而是製造智慧。"
       },
       "ai_solutions": [
         "液冷散熱技術部署",
-        "大型 GPU 叢集調度與優化"
+        "大型 GPU 叢集調度與高速網路聯結"
       ]
     },
     {
@@ -90,16 +90,16 @@
         "記憶體頻寬不足 (Memory Wall)"
       ],
       "cost": "千億級研發",
-      "time": "1-2 年架構迭代",
-      "success_rate": "龍頭市佔 > 80%",
+      "time": "持續架構迭代",
+      "success_rate": "龍頭市佔極高",
       "ai_metrics": {
-        "cost": "先進製程與封裝極昂貴",
-        "time": "AI 輔助晶片設計加速",
-        "success_rate": "硬體壟斷",
-        "notes": "The specialized semiconductors and processors that perform complex calculations."
+        "cost": "高頻寬記憶體與高效能架構",
+        "time": "平行運算能力",
+        "success_rate": "高效將能源轉換為算力",
+        "notes": "處理器被設計用來能夠大規模的、高效的將能源轉換為運算能力。AI 工作負載需要龐大的平行運算能力、高頻寬記憶體，以及高速互連技術。"
       },
       "ai_solutions": [
-        "黑科技架構如 Blackwell",
+        "新一代架構如 Blackwell",
         "HBM3E 與 2.5D/3D 封裝",
         "CPO 矽光子互連"
       ]
@@ -109,21 +109,22 @@
       "title": "Layer 1: Energy (基礎能源)",
       "pain_points": [
         "AI 資料中心耗電量巨大",
-        "綠能供應不穩",
-        "核能/SMR 建置需法規突破"
+        "綠能供應需要擴充",
+        "即時生成智慧需要即時電力"
       ],
-      "cost": "基礎設施巨額投資",
-      "time": "電網建置 3-5 年以上",
-      "success_rate": "與各國基礎設施政策連動",
+      "cost": "基礎設施鉅額投資",
+      "time": "極長線基建佈局",
+      "success_rate": "AI 的底層限制與動力",
       "ai_metrics": {
-        "cost": "電費將成 AI 營運最大可變成本",
-        "time": "極長線基建",
-        "success_rate": "不可或缺的底層",
-        "notes": "The foundational power required to run all AI systems, supercomputers, and data centers."
+        "cost": "電費成最大營運成本",
+        "time": "電網升級與建置",
+        "success_rate": "AI 基礎設施的第一性原理",
+        "notes": "能源是 AI 基礎設施的第一性原理，也是限制能產生多少智慧的根本約束。每一個 token 都是電子流動、熱能轉換為運算能力的結果。"
       },
       "ai_solutions": [
-        "SMR 小型模組化反應爐",
-        "儲能與智慧微電網調度"
+        "SMR 小型核能投資",
+        "高效能資料中心散熱調度",
+        "智慧電網配電與儲能"
       ]
     }
   ],
@@ -132,8 +133,8 @@
       "name": "NVIDIA",
       "ticker": "NVDA",
       "exchange": "NASDAQ",
-      "phase": "Layer 2",
-      "phase_label": "Layer 2: AI GPU / 架構",
+      "phase": "Layer 2, Layer 3, Layer 4",
+      "phase_label": "Layer 2: Chips, Layer 3: Infrastructure, Layer 4: Models",
       "pain_points": [
         "算力需求爆炸性成長",
         "通用運算架構能耗過高"

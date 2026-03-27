@@ -524,6 +524,12 @@
         }
 
         function getPhaseBadgeClass(phase) {
+            if (phase.includes('Layer 5')) return 'phase-0'; // Pinkish
+            if (phase.includes('Layer 4')) return 'phase-1'; // Purplish
+            if (phase.includes('Layer 3')) return 'phase-3'; // Greenish
+            if (phase.includes('Layer 2')) return 'phase-1'; // Bluish
+            if (phase.includes('Layer 1')) return 'phase-2'; // Orangish
+            
             if (phase.includes('Target Discovery / Molecular Design') || phase.includes('Pre-clinical') || phase.includes('Target Discovery')) return 'phase-0';
             if (phase.includes('Phase I') && !phase.includes('II')) return 'phase-1';
             if (phase.includes('Phase II')) return 'phase-2';
@@ -718,6 +724,9 @@
                         return `<div class="ps-row"><span class="ps-yr">${ps.year}</span><div class="ps-bar" style="width:${Math.max(4, w)}px;"></div><span class="ps-val">${ps.value}x</span></div>`;
                     }).join('') : `<div style="font-size:0.8em;color:var(--text-secondary)">無</div>`) + `</div>`;
 
+                
+                const phaseBadgesHtml = (c.phase_label || "").split(',').map(p => `<span class="badge ${getPhaseBadgeClass(p.trim())}" style="margin-bottom:4px;display:inline-block;margin-right:4px;">${p.trim()}</span>`).join('');
+
                 const epsColor = c.eps > 0 ? 'pos' : (c.eps < 0 ? 'neg' : 'neu');
                 const epsValHtml = c.eps === 'N/A' || c.eps === undefined ? `<div class="metric-val neu">N/A</div>` : `<div class="metric-val ${epsColor}">${c.eps > 0 ? '+' : ''}$${Math.abs(c.eps)}</div>`;
                 
@@ -730,7 +739,7 @@
                         <span class="ticker">${c.exchange}: ${c.ticker}</span>
                     </td>
                     <td><div style="font-size: 0.85em; color: var(--accent-blue); font-weight: 500;">${c.category || 'N/A'}</div></td>
-                    <td><span class="badge ${getPhaseBadgeClass(c.phase_label)}">${c.phase_label}</span></td>
+                    <td>${phaseBadgesHtml}</td>
                     <td style="font-size: 0.85em; line-height: 1.4;">${painPointsHtml}</td>
                     <td style="font-size: 0.85em; line-height: 1.4; color: #bae6fd;">${solutionsHtml}</td>
                     <td><div class="metric-val">${c.price === 'N/A' ? 'N/A' : '$'+c.price}</div></td>
