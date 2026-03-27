@@ -610,12 +610,8 @@
                 
                 let traditionalBlock = `
                     <div class="stage-section traditional">
-                        <div class="section-label">⚠️ 傳統開發指標與痛點</div>
-                        <div class="metric-mini-grid">
-                            <div class="mini-item"><span class="mini-label">成本</span><span class="mini-value">${s.cost}</span></div>
-                            <div class="mini-item"><span class="mini-label">時間</span><span class="mini-value">${s.time}</span></div>
-                            <div class="mini-item"><span class="mini-label">機率</span><span class="mini-value" style="color:${s.success_rate.includes('< 10%') || s.success_rate.includes('< 1%') ? '#fca5a5' : '#6ee7b7'}">${s.success_rate}</span></div>
-                        </div>
+                        <div class="section-label">⚠️ 去年之前</div>
+                        <div style="font-size: 0.85em; font-weight: 600; margin-bottom: 8px; color: var(--text-secondary);">📌 挑戰：</div>
                         <ul class="solution-list">
                             ${s.pain_points.map(p => `<li>${p}</li>`).join('')}
                         </ul>
@@ -624,29 +620,20 @@
 
                 let aiBlock = "";
                 if (s.ai_metrics) {
-                    const isValidated = !s.ai_metrics.success_rate.includes('N/A') && !s.ai_metrics.cost.includes('待實例');
-                    const statusHtml = isValidated 
-                        ? `<span class="status-badge status-validated">實例已驗證</span>` 
-                        : `<span class="status-badge status-pending">待實例驗證</span>`;
-                    
                     aiBlock = `
                         <div class="stage-section ai">
-                            <div class="section-label">🤖 AI 賦能指標與解決方案 ${statusHtml}</div>
-                            <div class="metric-mini-grid">
-                                <div class="mini-item"><span class="mini-label">預計成本</span><span class="mini-value" style="color: ${s.ai_metrics.cost.includes('待') ? '#94a3b8' : '#60a5fa'}">${s.ai_metrics.cost}</span></div>
-                                <div class="mini-item"><span class="mini-label">預計時間</span><span class="mini-value" style="color: ${s.ai_metrics.time.includes('待') ? '#94a3b8' : '#60a5fa'}">${s.ai_metrics.time}</span></div>
-                                <div class="mini-item"><span class="mini-label">過關機率</span><span class="mini-value" style="color: ${s.ai_metrics.success_rate.includes('N/A') ? '#94a3b8' : '#60a5fa'}; font-weight:700;">${s.ai_metrics.success_rate}</span></div>
-                            </div>
-                            <div class="evidence-note">📝 證據: ${s.ai_metrics.notes || '觀察中'}</div>
+                            <div class="section-label">🚀 今年之後</div>
+                            <div style="font-size: 0.85em; font-weight: 600; margin-bottom: 8px; color: #93c5fd;">💡 發展方向與解決方案：</div>
                             <ul class="solution-list">
                                 ${s.ai_solutions.map(sol => `<li>${sol}</li>`).join('')}
                             </ul>
+                            <div class="evidence-note">📝 備註: ${s.ai_metrics.notes || '觀察中'}</div>
                         </div>
                     `;
                 } else {
                     aiBlock = `
                         <div class="stage-section ai" style="justify-content: center; align-items: center; opacity: 0.5;">
-                            <div style="font-size: 0.9rem; color: var(--text-secondary);">尚無特定 AI 指標</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">尚無特定資料</div>
                         </div>
                     `;
                 }
@@ -682,13 +669,28 @@
             ];
 
             layersData.reverse().forEach(layer => {
-
                 const el = document.createElement('div');
                 el.className = `cake-layer ${layer.class}`;
+                
+                // Increase height slightly to fit companies
+                el.style.minHeight = '75px';
+                el.style.height = 'auto';
+                el.style.padding = '10px 0';
+                
                 el.onclick = () => filterCompaniesByPhase(layer.id);
+                
+                // Find companies matching this layer
+                const compNames = globalData.companies
+                    .filter(c => c.phase_label && c.phase_label.includes(layer.id))
+                    .map(c => c.ticker)
+                    .join(', ');
+                
+                const compDisplayHtml = compNames ? `<div style="font-size: 0.8em; color: rgba(255,255,255,0.9); font-weight: 700; margin-top: 6px; padding: 2px 8px; border-radius: 4px; background: rgba(0,0,0,0.2);">🏢 代表公司: ${compNames}</div>` : '';
+
                 el.innerHTML = `
                     <div class="layer-title">${layer.name}</div>
                     <div class="layer-sub">${layer.sub}</div>
+                    ${compDisplayHtml}
                 `;
                 containerEle.appendChild(el);
             });
