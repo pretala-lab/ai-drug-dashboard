@@ -720,21 +720,22 @@
                 const painPointsHtml = c.pain_points.map(p => `• ${p}`).join('<br>');
                 const solutionsHtml = c.ai_solutions.map(s => `• ${s}`).join('<br>');
                 
-                const psHistoryHtml = `<div class="ps-mini">` + 
-                    (c.ps_history && c.ps_history.length > 0 ? c.ps_history.map(ps => {
-                        let w = Math.min(ps.value * 2, 80);
-                        if (ps.value > 100) w = 60;
-                        return `<div class="ps-row"><span class="ps-yr">${ps.year}</span><div class="ps-bar" style="width:${Math.max(4, w)}px;"></div><span class="ps-val">${ps.value}x</span></div>`;
+                const peHistoryHtml = `<div class="ps-mini">` + 
+                    (c.pe_history_5yr && c.pe_history_5yr.length > 0 ? c.pe_history_5yr.map(pe => {
+                        let w = Math.min(pe.value, 80);
+                        if (pe.value > 100) w = 60;
+                        return `<div class="ps-row"><span class="ps-yr">${pe.year}</span><div class="ps-bar" style="width:${Math.max(4, w)}px; background: #8b5cf6;"></div><span class="ps-val">${pe.value}x</span></div>`;
                     }).join('') : `<div style="font-size:0.8em;color:var(--text-secondary)">無</div>`) + `</div>`;
 
-                
+                const trendHtml = c.trend_6mo_svg ? c.trend_6mo_svg : '<span style="color:#64748b;font-size:0.8em;">No Data</span>';
+
                 const phaseBadgesHtml = (c.phase_label || "").split(',').map(p => `<span class="badge ${getPhaseBadgeClass(p.trim())}" style="margin-bottom:4px;display:inline-block;margin-right:4px;">${p.trim()}</span>`).join('');
 
                 const epsColor = c.eps > 0 ? 'pos' : (c.eps < 0 ? 'neg' : 'neu');
                 const epsValHtml = c.eps === 'N/A' || c.eps === undefined ? `<div class="metric-val neu">N/A</div>` : `<div class="metric-val ${epsColor}">${c.eps > 0 ? '+' : ''}$${Math.abs(c.eps)}</div>`;
                 
                 const peHtml = c.pe_ratio === 'N/A' || c.pe_ratio === undefined ? `<div class="metric-val neu">N/A</div>` : `<div class="metric-val">${c.pe_ratio}x</div>`;
-                const eps2026eHtml = `<div class="metric-val ${c.eps_2026e && c.eps_2026e.includes('+') ? 'pos' : (c.eps_2026e && c.eps_2026e.includes('-') ? 'neg' : 'neu')}">${c.eps_2026e || 'N/A'}</div>`;
+                const eps2026eHtml = `<div class="metric-val ${c.eps_2026e && String(c.eps_2026e).includes('+') ? 'pos' : (c.eps_2026e && String(c.eps_2026e).includes('-') ? 'neg' : 'neu')}">${c.eps_2026e || 'N/A'}</div>`;
 
                 row.innerHTML = `
                     <td>
@@ -745,12 +746,13 @@
                     <td>${phaseBadgesHtml}</td>
                     <td style="font-size: 0.85em; line-height: 1.4;">${painPointsHtml}</td>
                     <td style="font-size: 0.85em; line-height: 1.4; color: #bae6fd;">${solutionsHtml}</td>
-                    <td><div class="metric-val">${c.price === 'N/A' ? 'N/A' : '$'+c.price}</div></td>
+                    <td><div class="metric-val has-price">${c.price === 'N/A' ? 'N/A' : '$'+c.price}</div></td>
                     <td><div class="metric-val">${c.market_cap.toString().includes('$') ? c.market_cap : (c.market_cap === 'Est. 1B+' ? 'Est. 1B+' : '$'+c.market_cap)}</div></td>
                     <td>${epsValHtml}</td>
                     <td>${peHtml}</td>
-                    <td>${psHistoryHtml}</td>
-                    <td>${eps2026eHtml}<div style="font-size:0.85em;color:var(--text-secondary);margin-top:2px;">${c.eps_trend}</div></td>
+                    <td>${peHistoryHtml}</td>
+                    <td>${trendHtml}</td>
+                    <td>${eps2026eHtml}<div style="font-size:0.85em;color:var(--text-secondary);margin-top:2px;">${c.eps_trend || 'Forward'}</div></td>
                     <td><span style="color: var(--accent-orange); font-weight: 600;">${c.rating}</span><div style="font-size:0.8em;color:var(--text-secondary);margin-top:4px;">${c.rating_reason}</div></td>
                 `;
                 tbody.appendChild(row);
