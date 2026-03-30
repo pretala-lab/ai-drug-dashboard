@@ -1,131 +1,226 @@
 {
-  "last_updated": "2026-03-28T01:43:06.259336Z",
+  "last_updated": "2026-03-30T10:24:02.748537Z",
   "metrics_comparison": {
     "traditional": {
-      "cost": "高昂 (建置數據中心)",
-      "timeline": "數年 (硬體研發與部署)",
-      "success_rate": "高風險 (易受架構轉變影響)",
-      "source": "傳統硬體部署"
+      "cost_zh": "高昂 (建置數據中心)",
+      "cost_en": "High (Data Center Buildout)",
+      "timeline_zh": "數年 (硬體研發與部署)",
+      "timeline_en": "Years (Hardware R&D & Deployment)",
+      "success_rate_zh": "高風險 (易受架構轉變影響)",
+      "success_rate_en": "High Risk (Vulnerable to Paradigm Shifts)",
+      "source_zh": "傳統硬體部署",
+      "source_en": "Traditional Hardware Deployment"
     },
     "with_ai": {
-      "cost": "AI 晶片規模化效益",
-      "timeline": "算力加速研發與訓練",
-      "success_rate": "高速成長 (AI 需求爆發)",
-      "source": "AI 算力與基礎設施市場"
+      "cost_zh": "AI 晶片規模化效益",
+      "cost_en": "AI Chip Scale Efficiency",
+      "timeline_zh": "算力加速研發與訓練",
+      "timeline_en": "Compute-Accelerated R&D & Training",
+      "success_rate_zh": "高速成長 (AI 需求爆發)",
+      "success_rate_en": "High Growth (AI Demand Explosion)",
+      "source_zh": "AI 算力與基礎設施市場",
+      "source_en": "AI Compute & Infrastructure Market"
     }
   },
   "value_chain_stats": [
     {
       "phase": "Layer 5",
-      "title": "Layer 5: Applications (應用)",
-      "pain_points": [
+      "ai_metrics": {
+        "notes_zh": "最上層是應用層，也是經濟價值產生之處。例如藥物研發平台、工業機器人、自動駕駛車等。應用程式依賴其下方的每一層架構。",
+        "notes_en": "The top layer is the application layer, where economic value is generated (e.g., drug discovery platforms, industrial robots, autonomous vehicles). Applications rely on every layer below them.",
+        "cost_zh": "依賴 Token / API 費用",
+        "cost_en": "Dependent on Token / API fees",
+        "time_zh": "產品迭代極快",
+        "time_en": "Rapid product iteration",
+        "success_rate_zh": "經濟價值產生之處",
+        "success_rate_en": "Core economic value generator"
+      },
+      "title_zh": "Layer 5: Applications (應用)",
+      "title_en": "Layer 5: Applications",
+      "pain_points_zh": [
         "獲客成本高",
         "容易被底層模型取代",
         "需解決實際終端問題"
       ],
-      "cost": "發展特定領域應用",
-      "time": "敏捷開發 (週/月)",
-      "success_rate": "高競爭 / 贏者通吃",
-      "ai_metrics": {
-        "cost": "依賴 Token / API 費用",
-        "time": "產品迭代極快",
-        "success_rate": "經濟價值產生之處",
-        "notes": "最上層是應用層，也是經濟價值產生之處。例如藥物研發平台、工業機器人、自動駕駛車等。應用程式依賴其下方的每一層架構。"
-      },
-      "ai_solutions": [
+      "pain_points_en": [
+        "High customer acquisition cost",
+        "Easily replaced by base models",
+        "Must solve concrete end-user problems"
+      ],
+      "ai_solutions_zh": [
         "針對特定產業微調模型",
         "AI Agent 自主執行流程"
-      ]
+      ],
+      "ai_solutions_en": [
+        "Fine-tuning models for specific industries",
+        "Autonomous AI Agent workflows"
+      ],
+      "cost_zh": "發展特定領域應用",
+      "cost_en": "Domain-specific app dev",
+      "time_zh": "敏捷開發 (週/月)",
+      "time_en": "Agile (Weeks/Months)",
+      "success_rate_zh": "高競爭 / 贏者通吃",
+      "success_rate_en": "High competition / Winner-takes-all"
     },
     {
       "phase": "Layer 4",
-      "title": "Layer 4: Models (模型)",
-      "pain_points": [
+      "ai_metrics": {
+        "notes_zh": "基礎設施之上是模型層。AI 模型能理解語言、生物、化學、物理、醫療以及真實世界本身。最具變革性的進展正發生在化學 AI、物理模擬、機器人。",
+        "notes_en": "Above the infrastructure is the model layer. AI models can understand language, biology, chemistry, physics, medicine, and the real world itself. The most transformative progress is happening in chemical AI, physics simulation, and robotics.",
+        "cost_zh": "極高 (百億至兆級參數)",
+        "cost_en": "Extremely high (10B to Trillion parameters)",
+        "time_zh": "Scaling Laws 訓練",
+        "time_en": "Scaling laws training",
+        "success_rate_zh": "語言/物理/生物 AI 變革",
+        "success_rate_en": "Language/Physics/Bio AI revolutions"
+      },
+      "title_zh": "Layer 4: Models (模型)",
+      "title_en": "Layer 4: Models",
+      "pain_points_zh": [
         "算力資源龐大",
         "高品質訓練數據取得困難",
         "開源模型競爭激烈"
       ],
-      "cost": "巨量訓練成本",
-      "time": "系統訓練與對齊",
-      "success_rate": "基礎模型寡占化",
-      "ai_metrics": {
-        "cost": "極高 (百億至兆級參數)",
-        "time": "Scaling Laws 訓練",
-        "success_rate": "語言/物理/生物 AI 變革",
-        "notes": "基礎設施之上是模型層。AI 模型能理解語言、生物、化學、物理、醫療以及真實世界本身。最具變革性的進展正發生在化學 AI、物理模擬、機器人。"
-      },
-      "ai_solutions": [
+      "pain_points_en": [
+        "Massive compute resource requirements",
+        "Difficulty acquiring high-quality training data",
+        "Fierce open-source model competition"
+      ],
+      "ai_solutions_zh": [
         "MoE 架構提升推論效率",
         "合成數據擴充與對齊 (Alignment)"
-      ]
+      ],
+      "ai_solutions_en": [
+        "MoE architectures for inference efficiency",
+        "Synthetic data augmentation and Alignment"
+      ],
+      "cost_zh": "巨量訓練成本",
+      "cost_en": "Massive training costs",
+      "time_zh": "系統訓練與對齊",
+      "time_en": "System training & alignment",
+      "success_rate_zh": "基礎模型寡占化",
+      "success_rate_en": "Foundation model oligopoly"
     },
     {
       "phase": "Layer 3",
-      "title": "Layer 3: Infrastructure (基礎設施)",
-      "pain_points": [
+      "ai_metrics": {
+        "notes_zh": "這包括土地、電力輸送、散熱、建設工程、網路，以及將數萬顆處理器協調運作為單一機器的系統 (AI 工廠)。其設計目的並非儲存資訊，而是製造智慧。",
+        "notes_en": "This includes land, power delivery, cooling, construction engineering, networking, and the systems that coordinate tens of thousands of processors to work together as a single machine (AI Factories). Their design purpose is not to store information, but to manufacture intelligence.",
+        "cost_zh": "百億級建設規模",
+        "cost_en": "Tens of billions in construction scale",
+        "time_zh": "算力即服務",
+        "time_en": "Compute as a Service (CaaS)",
+        "success_rate_zh": "製造智慧的工廠",
+        "success_rate_en": "Factories that manufacture intelligence"
+      },
+      "title_zh": "Layer 3: Infrastructure (基礎設施)",
+      "title_en": "Layer 3: Infrastructure",
+      "pain_points_zh": [
         "資料中心擴建受限電網",
         "冷卻與散熱挑戰",
         "建設工程龐大"
       ],
-      "cost": "大量資本支出 (Capex)",
-      "time": "長週期建設",
-      "success_rate": "AI 工廠規模化",
-      "ai_metrics": {
-        "cost": "百億級建設規模",
-        "time": "算力即服務",
-        "success_rate": "製造智慧的工廠",
-        "notes": "這包括土地、電力輸送、散熱、建設工程、網路，以及將數萬顆處理器協調運作為單一機器的系統 (AI 工廠)。其設計目的並非儲存資訊，而是製造智慧。"
-      },
-      "ai_solutions": [
+      "pain_points_en": [
+        "Data center expansion constrained by power grids",
+        "Cooling and thermal challenges",
+        "Massive construction engineering"
+      ],
+      "ai_solutions_zh": [
         "液冷散熱技術部署",
         "大型 GPU 叢集調度與高速網路聯結"
-      ]
+      ],
+      "ai_solutions_en": [
+        "Deployment of liquid cooling tech",
+        "Large GPU cluster orchestration and high-speed networking"
+      ],
+      "cost_zh": "大量資本支出 (Capex)",
+      "cost_en": "Massive Capital Expenditure (Capex)",
+      "time_zh": "長週期建設",
+      "time_en": "Long-cycle construction",
+      "success_rate_zh": "AI 工廠規模化",
+      "success_rate_en": "AI factory scaling"
     },
     {
       "phase": "Layer 2",
-      "title": "Layer 2: Chips (晶片)",
-      "pain_points": [
+      "ai_metrics": {
+        "notes_zh": "處理器被設計用來能夠大規模的、高效的將能源轉換為運算能力。AI 工作負載需要龐大的平行運算能力、高頻寬記憶體，以及高速互連技術。",
+        "notes_en": "Processors are designed to efficiently and massively convert energy into compute power. AI workloads require massive parallel computing capabilities, high-bandwidth memory, and high-speed interconnect tech.",
+        "cost_zh": "高頻寬記憶體與高效能架構",
+        "cost_en": "HBM and high-performance architectures",
+        "time_zh": "平行運算能力",
+        "time_en": "Parallel compute capability",
+        "success_rate_zh": "高效將能源轉換為算力",
+        "success_rate_en": "Highly efficient energy-to-compute conversion"
+      },
+      "title_zh": "Layer 2: Chips (晶片)",
+      "title_en": "Layer 2: Chips",
+      "pain_points_zh": [
         "摩爾定律極限",
         "封裝產能 (CoWoS) 瓶頸",
         "記憶體頻寬不足 (Memory Wall)"
       ],
-      "cost": "千億級研發",
-      "time": "持續架構迭代",
-      "success_rate": "龍頭市佔極高",
-      "ai_metrics": {
-        "cost": "高頻寬記憶體與高效能架構",
-        "time": "平行運算能力",
-        "success_rate": "高效將能源轉換為算力",
-        "notes": "處理器被設計用來能夠大規模的、高效的將能源轉換為運算能力。AI 工作負載需要龐大的平行運算能力、高頻寬記憶體，以及高速互連技術。"
-      },
-      "ai_solutions": [
+      "pain_points_en": [
+        "Limits of Moore's Law",
+        "Advanced packaging (CoWoS) capacity bottlenecks",
+        "Memory Bandwidth limits (Memory Wall)"
+      ],
+      "ai_solutions_zh": [
         "新一代架構如 Blackwell",
         "HBM3E 與 2.5D/3D 封裝",
         "CPO 矽光子互連"
-      ]
+      ],
+      "ai_solutions_en": [
+        "Next-gen architectures (e.g., Blackwell)",
+        "HBM3E and 2.5D/3D packaging",
+        "CPO Silicon Photonics interconnects"
+      ],
+      "cost_zh": "千億級研發",
+      "cost_en": "Hundreds of billions in R&D",
+      "time_zh": "持續架構迭代",
+      "time_en": "Continuous architecture iteration",
+      "success_rate_zh": "龍頭市佔極高",
+      "success_rate_en": "Extremely high leader market share"
     },
     {
       "phase": "Layer 1",
-      "title": "Layer 1: Energy (基礎能源)",
-      "pain_points": [
+      "ai_metrics": {
+        "notes_zh": "能源是 AI 基礎設施的第一性原理，也是限制能產生多少智慧的根本約束。每一個 token 都是電子流動、熱能轉換為運算能力的結果。",
+        "notes_en": "Energy is the first principle of AI infrastructure and the fundamental constraint limiting how much intelligence can be generated. Every token is the result of electron flow and heat converted into compute.",
+        "cost_zh": "電費成最大營運成本",
+        "cost_en": "Electricity becomes the largest OpEx",
+        "time_zh": "電網升級與建置",
+        "time_en": "Power grid upgrades & buildouts",
+        "success_rate_zh": "AI 基礎設施的第一性原理",
+        "success_rate_en": "The first principle of AI infrastructure"
+      },
+      "title_zh": "Layer 1: Energy (基礎能源)",
+      "title_en": "Layer 1: Energy",
+      "pain_points_zh": [
         "AI 資料中心耗電量巨大",
         "綠能供應需要擴充",
         "即時生成智慧需要即時電力"
       ],
-      "cost": "基礎設施鉅額投資",
-      "time": "極長線基建佈局",
-      "success_rate": "AI 的底層限制與動力",
-      "ai_metrics": {
-        "cost": "電費成最大營運成本",
-        "time": "電網升級與建置",
-        "success_rate": "AI 基礎設施的第一性原理",
-        "notes": "能源是 AI 基礎設施的第一性原理，也是限制能產生多少智慧的根本約束。每一個 token 都是電子流動、熱能轉換為運算能力的結果。"
-      },
-      "ai_solutions": [
+      "pain_points_en": [
+        "Massive power consumption of AI Data Centers",
+        "Need for green energy supply expansion",
+        "Real-time intelligence requires real-time power"
+      ],
+      "ai_solutions_zh": [
         "SMR 小型核能投資",
         "高效能資料中心散熱調度",
         "智慧電網配電與儲能"
-      ]
+      ],
+      "ai_solutions_en": [
+        "SMR (Small Modular Reactor) investments",
+        "High-efficiency data center thermal dispatch",
+        "Smart grid distribution & energy storage"
+      ],
+      "cost_zh": "基礎設施鉅額投資",
+      "cost_en": "Infrastructure mega-investments",
+      "time_zh": "極長線基建佈局",
+      "time_en": "Extremely long-term buildouts",
+      "success_rate_zh": "AI 的底層限制與動力",
+      "success_rate_en": "The bedrock limit & driver of AI"
     }
   ],
   "companies": [
@@ -134,19 +229,9 @@
       "ticker": "NVDA",
       "exchange": "NASDAQ",
       "phase": "Layer 2, Layer 3, Layer 4",
-      "phase_label": "Layer 2: Chips, Layer 3: Infrastructure, Layer 4: Models",
-      "pain_points": [
-        "算力需求爆炸性成長",
-        "通用運算架構能耗過高"
-      ],
-      "ai_solutions": [
-        "Blackwell 架構 GPU 加速器",
-        "CUDA 軟體生態系護城河"
-      ],
-      "price": "168.01",
-      "market_cap": "$4.08T",
-      "eps": "4.9",
-      "eps_trend": "爆發性增長",
+      "price": "167.52",
+      "market_cap": "$4.07T",
+      "eps": "4.91",
       "ps_history": [
         {
           "year": 2024,
@@ -157,13 +242,9 @@
           "value": 25
         }
       ],
-      "rating": "強力買進",
-      "rating_reason": "壟斷 AI 訓練市場",
       "eps_2026e": "11.12",
-      "pe_ratio": "34.29",
-      "category": "AI 晶片與軟體平台",
+      "pe_ratio": "34.12",
       "deep_dive": {
-        "profile": "NVIDIA 是全球 AI 算力的絕對霸主。透過領先的 GPU 架構（Hopper, Blackwell）與難以超越的 CUDA 軟體生態系，主導了整個大模型訓練與推論市場。",
         "financial_5yr": [
           {
             "year": 2023,
@@ -186,35 +267,49 @@
             "eps": "+$4.50"
           }
         ],
-        "partnerships": [
-          "TSMC (獨家代工)",
-          "AWS, GCP, Azure (最大客戶)",
-          "Foxconn (伺服器代工)"
-        ],
         "pipeline_milestones": [
           {
             "program": "Blackwell (B200)",
             "phase": "Mass Production",
-            "milestone": "全面出貨",
-            "date": "2H 2024"
+            "date": "2H 2024",
+            "milestone_zh": "全面出貨",
+            "milestone_en": "Mass Production"
           },
           {
             "program": "Rubin",
             "phase": "Design",
-            "milestone": "新一代架構發表",
-            "date": "2026"
+            "date": "2026",
+            "milestone_zh": "新一代架構發表",
+            "milestone_en": "Next-Gen Architecture Unveil"
           }
         ],
         "earnings_dates": [
           "Q1 2026: May 20",
           "Q2 2026: Aug 21"
         ],
-        "risk_assessment": "估值較高。需留意大型 CSP 自研晶片 (ASIC) 帶來的潛在侵蝕，以及地緣政治出口管制風險。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
-        "investment_strategy": "核心持股（Core Holding）。AI 算力基礎設施無可取代的基石。",
+        "pipeline_link": "N/A",
+        "profile_zh": "NVIDIA 是全球 AI 算力的絕對霸主。透過領先的 GPU 架構（Hopper, Blackwell）與難以超越的 CUDA 軟體生態系，主導了整個大模型訓練與推論市場。",
+        "profile_en": "NVIDIA is the absolute hegemon of global AI compute. Through leading GPU architectures (Hopper, Blackwell) and an insurmountable CUDA software ecosystem, it dominates the LLM training and inference market.",
+        "partnerships_zh": [
+          "TSMC (獨家代工)",
+          "AWS, GCP, Azure (最大客戶)",
+          "Foxconn (伺服器代工)"
+        ],
+        "partnerships_en": [
+          "TSMC (Exclusive Foundry)",
+          "AWS, GCP, Azure (Largest Customers)",
+          "Foxconn (Server Assembly)"
+        ],
+        "risk_assessment_zh": "估值較高。需留意大型 CSP 自研晶片 (ASIC) 帶來的潛在侵蝕，以及地緣政治出口管制風險。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
+        "risk_assessment_en": "High valuation. Need to monitor potential erosion from large CSP custom chips (ASICs) and geopolitical export control risks.<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 Read Latest SEC Filings (Risk Factors)</a>",
+        "investment_strategy_zh": "核心持股（Core Holding）。AI 算力基礎設施無可取代的基石。",
+        "investment_strategy_en": "Core Holding. Irreplaceable cornerstone of AI compute infrastructure.",
+        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/NVDA/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
+        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/NVDA/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View 5-Year Financial Statements</a>",
         "financial_link": "<a href=\"https://finance.yahoo.com/quote/NVDA/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "pipeline_link": "N/A"
+        "risk_assessment": "AI 算力基礎建設龍頭，需關注 CSP 資本支出動向。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>"
       },
-      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,16.14471609156774 L0.6451612903225806,13.113186620152243 L1.2903225806451613,12.690171134949079 L1.935483870967742,11.632661764055754 L2.5806451612903225,12.446631583930381 L3.225806451612903,13.779741656374105 L3.870967741935484,14.100196670413329 L4.516129032258064,11.491663122791273 L5.161290322580645,9.27408390984068 L5.806451612903226,15.30512082495942 L6.451612903225806,11.997980871288663 L7.096774193548387,17.31120207601329 L7.741935483870968,17.439378213206062 L8.387096774193548,16.170361099711158 L9.032258064516128,15.266663093449157 L9.67741935483871,15.638398343070351 L10.32258064516129,16.586960442526035 L10.96774193548387,17.150964788288817 L11.612903225806452,15.946040633742728 L12.258064516129032,13.3182880010704 L12.903225806451612,9.966274173501096 L13.548387096774194,3.8519154336784105 L14.193548387096774,0.0 L14.838709677419354,2.659813783204026 L15.483870967741936,2.916175838294432 L16.129032258064516,0.10255069045907916 L16.774193548387096,5.351669155530033 L17.419354838709676,7.58205131114261 L18.064516129032256,12.151802016624853 L18.70967741935484,12.106937923431166 L19.35483870967742,5.120932547173318 L20.0,8.895942298536063 L20.64516129032258,8.485749317404608 L21.29032258064516,12.933730247377499 L21.93548387096774,10.812285582497703 L22.58064516129032,13.100364116080534 L23.225806451612904,16.458774524628403 L23.870967741935484,13.151644351662505 L24.516129032258064,16.920237960636968 L25.161290322580644,18.048246652162533 L25.806451612903224,15.696075159630885 L26.451612903225804,18.727624192456105 L27.096774193548388,17.163787292360524 L27.741935483870968,19.253180587413485 L28.387096774193548,17.38169161594067 L29.032258064516128,16.394681565679583 L29.677419354838708,17.59319935854225 L30.32258064516129,15.157569111438612 L30.967741935483872,15.77929917728623 L31.612903225806452,13.766703976795473 L32.25806451612903,14.138458787826387 L32.90322580645161,14.901197275643344 L33.54838709677419,16.727919960971075 L34.193548387096776,20.515947830502732 L34.83870967741935,19.701938887808666 L35.483870967741936,18.78536947395066 L36.12903225806451,23.131034450381115 L36.774193548387096,21.079991299084956 L37.41935483870968,16.689452448755954 L38.064516129032256,14.95888387290874 L38.70967741935484,11.420811696784064 L39.354838709677416,11.805389011886685 L40.0,10.574761164968018 L40.64516129032258,12.05536426670339 L41.29032258064516,12.49121203668312 L41.935483870967744,13.157796415019565 L42.58064516129032,11.651558085845636 L43.225806451612904,12.119457225652205 L43.87096774193548,12.683490913529571 L44.516129032258064,11.484914436437743 L45.16129032258064,14.093594694632701 L45.806451612903224,14.208967889163487 L46.45161290322581,14.157687653581517 L47.096774193548384,13.600060327387578 L47.74193548387097,15.31140981818452 L48.387096774193544,12.80527046974378 L49.03225806451613,13.330865987520603 L49.67741935483871,18.56103922727737 L50.32258064516129,15.196026842948875 L50.96774193548387,14.221790393235196 L51.61290322580645,12.407890211979172 L52.25806451612903,13.177025280774695 L52.90322580645161,11.86307560915208 L53.54838709677419,9.940208595048695 L54.193548387096776,9.305675586539088 L54.83870967741935,10.190183849865397 L55.483870967741936,13.728246245285211 L56.12903225806451,17.10608113368541 L56.774193548387096,21.047939929258117 L57.41935483870967,22.52854303099349 L58.064516129032256,13.856441943887706 L58.70967741935484,10.888829378733538 L59.354838709677416,11.85026288578523 L60.0,10.882413236345256 L60.64516129032258,12.87577957108088 L61.29032258064516,15.522917560786102 L61.935483870967744,14.138458787826387 L62.58064516129032,12.209195192744438 L63.225806451612904,12.26046564762155 L63.87096774193548,11.02982801999802 L64.51612903225806,9.920979729293563 L65.16129032258064,9.087741920844364 L65.80645161290322,7.350766983313726 L66.45161290322581,14.189739023408357 L67.09677419354838,19.125072915154732 L67.74193548387096,15.734435084092544 L68.38709677419355,17.29195364884844 L69.03225806451613,15.375502777133338 L69.6774193548387,15.183214119582027 L70.3225806451613,18.72127651500184 L70.96774193548387,15.625478031950042 L71.61290322580645,14.26664470572402 L72.25806451612902,13.452596640210512 L72.90322580645162,15.305052360025398 L73.54838709677419,17.157508079840284 L74.19354838709677,15.25377212444343 L74.83870967741936,16.080652474733505 L75.48387096774194,17.06136375106463 L76.12903225806451,18.24077982733535 L76.77419354838709,21.99697150254709 L77.41935483870968,20.112464412905368 L78.06451612903226,20.394500818253768 L78.70967741935483,18.163864364314826 L79.35483870967742,22.93280890497967 L80.0,25.0\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
+      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,15.942384236696796 L0.6451612903225806,12.948847070476914 L1.2903225806451613,12.531132979691272 L1.935483870967742,11.486876727114966 L2.5806451612903225,12.290635902820677 L3.225806451612903,13.607048580003886 L3.870967741935484,13.923487527298702 L4.516129032258064,11.34764513560593 L5.161290322580645,9.157857486962492 L5.806451612903226,15.113311104183014 L6.451612903225806,11.847617513356226 L7.096774193548387,17.094251365562897 L7.741935483870968,17.220821149603264 L8.387096774193548,15.967707851634136 L9.032258064516128,15.07533533990627 L9.67741935483871,15.4424118589465 L10.32258064516129,16.37908620962081 L10.96774193548387,16.936022233786225 L11.612903225806452,15.746198656901912 L12.258064516129032,13.151378041200035 L12.903225806451612,9.841372953297537 L13.548387096774194,3.8036417328538263 L14.193548387096774,0.0 L14.838709677419354,2.626479963438186 L15.483870967741936,2.8796291896481847 L16.129032258064516,0.10126548536155866 L16.774193548387096,5.284599958354146 L17.419354838709676,7.487030098207722 L18.064516129032256,11.999510912333932 L18.70967741935484,11.955209073387488 L19.35483870967742,5.056755030822956 L20.0,8.784454893252562 L20.64516129032258,8.379402609935589 L21.29032258064516,12.771639714691135 L21.93548387096774,10.676791476739556 L22.58064516129032,12.936185263008245 L23.225806451612904,16.252506767451177 L23.870967741935484,12.986813176624391 L24.516129032258064,16.708186964384296 L25.161290322580644,17.822059012715123 L25.806451612903224,15.499365847232347 L26.451612903225804,18.492922329710762 L27.096774193548388,16.948684041254893 L27.741935483870968,19.011892247728696 L28.387096774193548,17.163857503188147 L29.032258064516128,16.18921704636636 L29.677419354838708,17.37271454858097 L30.32258064516129,14.967608566065275 L30.967741935483872,15.58154686916287 L31.612903225806452,13.594174293691347 L32.25806451612903,13.961270128990112 L32.90322580645161,14.714449681726007 L33.54838709677419,16.51827916861278 L34.193548387096776,20.25883400109639 L34.83870967741935,19.45502653474435 L35.483870967741936,18.549943924901477 L36.12903225806451,22.841147339397864 L36.774193548387096,20.81580865777887 L37.41935483870968,16.48029374620677 L38.064516129032256,14.771413328141122 L38.70967741935484,11.27768164719781 L39.354838709677416,11.657439289965243 L40.0,10.44223414936799 L40.64516129032258,11.904281757764073 L41.29032258064516,12.334667314147651 L41.935483870967744,12.992897798062424 L42.58064516129032,11.505536232858269 L43.225806451612904,11.96757147884889 L43.87096774193548,12.524536477402103 L44.516129032258064,11.340981026411892 L45.16129032258064,13.916968290043666 L45.806451612903224,14.030895582873896 L46.45161290322581,13.980258011128482 L47.096774193548384,13.429619087244973 L47.74193548387097,15.119521281301514 L48.387096774193544,12.644789844902034 L49.03225806451613,13.163798395437036 L49.67741935483871,18.328425072039984 L50.32258064516129,15.005584330342018 L50.96774193548387,14.043557390342567 L51.61290322580645,12.252389710924463 L52.25806451612903,13.011885680200797 L52.90322580645161,11.714402936380358 L53.54838709677419,9.815634038801727 L54.193548387096776,9.189053244493998 L54.83870967741935,10.062476506600559 L55.483870967741936,13.556198529414605 L56.12903225806451,16.891701078581242 L56.774193548387096,20.784158968171827 L57.41935483870967,22.24620657656791 L58.064516129032256,13.682787629713506 L58.70967741935484,10.75236633825164 L59.354838709677416,11.701750787040954 L60.0,10.746030605452669 L60.64516129032258,12.714415298785818 L61.29032258064516,15.328378326694335 L61.935483870967744,13.961270128990112 L62.58064516129032,12.056184814871045 L63.225806451612904,12.106812728487192 L63.87096774193548,10.891597929760675 L64.51612903225806,9.796646156663355 L65.16129032258064,8.97385080817294 L65.80645161290322,7.258644315437593 L66.45161290322581,14.011907700735525 L67.09677419354838,18.885390070593196 L67.74193548387096,15.537245030216424 L68.38709677419355,17.07524416716599 L69.03225806451613,15.18281100238633 L69.6774193548387,14.992932181002615 L70.3225806451613,18.48665420381666 L70.96774193548387,15.429653470185162 L71.61290322580645,14.087849571159744 L72.25806451612902,13.284003472290633 L72.90322580645162,15.113243497278146 L73.54838709677419,16.942483522265658 L74.19354838709677,15.062605925532733 L74.83870967741936,15.879123489999781 L75.48387096774194,16.8475441115738 L76.12903225806451,18.012179287330504 L76.77419354838709,21.721296909050942 L77.41935483870968,19.86040719445639 L78.06451612903226,20.13890900999153 L78.70967741935483,17.93622775877702 L79.35483870967742,22.64540603354925 L80.0,25.0\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
       "pe_history_5yr": [
         {
           "year": 2021,
@@ -236,26 +331,42 @@
           "year": 2025,
           "value": 34.5
         }
-      ]
+      ],
+      "phase_label_zh": "Layer 2: Chips, Layer 3: Infrastructure, Layer 4: Models",
+      "phase_label_en": "Layer 2: Chips, Layer 3: Infrastructure, Layer 4: Models",
+      "category_zh": "AI 晶片與軟體平台",
+      "category_en": "AI Chips & Software Platforms",
+      "pain_points_zh": [
+        "算力需求爆炸性成長",
+        "通用運算架構能耗過高"
+      ],
+      "pain_points_en": [
+        "Explosive growth in compute demand",
+        "General-purpose compute architectures consume too much power"
+      ],
+      "ai_solutions_zh": [
+        "Blackwell 架構 GPU 加速器",
+        "CUDA 軟體生態系護城河"
+      ],
+      "ai_solutions_en": [
+        "Blackwell architecture GPU accelerators",
+        "CUDA software ecosystem moat"
+      ],
+      "eps_trend_zh": "爆發性增長",
+      "eps_trend_en": "Explosive Growth",
+      "rating_zh": "強力買進",
+      "rating_en": "Strong Buy",
+      "rating_reason_zh": "壟斷 AI 訓練市場",
+      "rating_reason_en": "Monopolizes AI training market"
     },
     {
       "name": "TSMC",
       "ticker": "TSM",
       "exchange": "NYSE",
       "phase": "Layer 2",
-      "phase_label": "Layer 2: 先進製程 / 封裝",
-      "pain_points": [
-        "摩爾定律放緩",
-        "AI 晶片尺寸與散熱限制"
-      ],
-      "ai_solutions": [
-        "3nm/2nm 先進製程",
-        "CoWoS 先進封裝突破頻寬限制"
-      ],
-      "price": "326.69",
+      "price": "326.74",
       "market_cap": "$1.69T",
-      "eps": "10.37",
-      "eps_trend": "穩健創高",
+      "eps": "10.36",
       "ps_history": [
         {
           "year": 2024,
@@ -266,13 +377,9 @@
           "value": 12
         }
       ],
-      "rating": "強力買進",
-      "rating_reason": "幾乎囊括所有 AI 晶片代工",
       "eps_2026e": "17.96",
-      "pe_ratio": "31.5",
-      "category": "晶圓代工與先進封裝",
+      "pe_ratio": "31.54",
       "deep_dive": {
-        "profile": "台積電 (TSMC) 是全球最大的晶圓代工廠。幾乎所有高階 AI 晶片 (NVDA, AMD, Broadcom) 均仰賴其 5nm/3nm 先進製程與 CoWoS 封裝技術。",
         "financial_5yr": [
           {
             "year": 2023,
@@ -290,35 +397,49 @@
             "eps": "+$8.00"
           }
         ],
-        "partnerships": [
-          "NVIDIA, AMD (AI 晶片)",
-          "Apple",
-          "Broadcom"
-        ],
         "pipeline_milestones": [
           {
             "program": "N3E / N3P",
             "phase": "Mass Production",
-            "milestone": "產能滿載出貨",
-            "date": "2024-2025"
+            "date": "2024-2025",
+            "milestone_zh": "產能滿載出貨",
+            "milestone_en": "Full Capacity Shipment"
           },
           {
             "program": "N2 (2nm)",
             "phase": "Risk Production",
-            "milestone": "進入量產",
-            "date": "2026"
+            "date": "2026",
+            "milestone_zh": "進入量產",
+            "milestone_en": "Enter Mass Production"
           }
         ],
         "earnings_dates": [
           "Q1 2026: Apr 15",
           "Q2 2026: Jul 15"
         ],
-        "risk_assessment": "地緣政治風險 (台灣海峽) 是最大的估值折價因素。此外需防範 Intel Foundry 或 Samsung 的技術追趕。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
-        "investment_strategy": "逢低買進（Buy on Dips）。AI 時代的「賣鏟子製造商」，具備極深技術護城河。",
+        "pipeline_link": "N/A",
+        "profile_zh": "台積電 (TSMC) 是全球最大的晶圓代工廠。幾乎所有高階 AI 晶片 (NVDA, AMD, Broadcom) 均仰賴其 5nm/3nm 先進製程與 CoWoS 封裝技術。",
+        "profile_en": "TSMC is the world's largest semiconductor foundry. Almost all high-end AI chips (NVDA, AMD, Broadcom) rely on its 5nm/3nm advanced nodes and CoWoS packaging tech.",
+        "partnerships_zh": [
+          "NVIDIA, AMD (AI 晶片)",
+          "Apple",
+          "Broadcom"
+        ],
+        "partnerships_en": [
+          "NVIDIA, AMD (AI Chips)",
+          "Apple",
+          "Broadcom"
+        ],
+        "risk_assessment_zh": "地緣政治風險 (台灣海峽) 是最大的估值折價因素。此外需防範 Intel Foundry 或 Samsung 的技術追趕。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
+        "risk_assessment_en": "Geopolitical risk (Taiwan Strait) is the largest valuation discount factor. Also monitor technological catch-up from Intel Foundry or Samsung.<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 Read Latest SEC Filings (Risk Factors)</a>",
+        "investment_strategy_zh": "逢低買進（Buy on Dips）。AI 時代的「賣鏟子製造商」，具備極深技術護城河。",
+        "investment_strategy_en": "Buy on Dips. The \"pick and shovel maker\" of the AI era, possessing a deep technological moat.",
+        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/TSM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
+        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/TSM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View 5-Year Financial Statements</a>",
         "financial_link": "<a href=\"https://finance.yahoo.com/quote/TSM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "pipeline_link": "N/A"
+        "risk_assessment": "AI 算力基礎建設龍頭，需關注 CSP 資本支出動向。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>"
       },
-      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,25.0 L0.6451612903225806,23.688841646239606 L1.2903225806451613,21.70264086704573 L1.935483870967742,21.78053369734665 L2.5806451612903225,20.89776599219744 L3.225806451612903,18.688708859280347 L3.870967741935484,20.499664048993075 L4.516129032258064,18.23001622656642 L5.161290322580645,19.233938753342912 L5.806451612903226,23.392434595783218 L6.451612903225806,18.582685111660552 L7.096774193548387,20.08640447438938 L7.741935483870968,18.188912023328015 L8.387096774193548,19.242596463086553 L9.032258064516128,20.272485479746006 L9.67741935483871,19.705604671976374 L10.32258064516129,20.395804728809193 L10.96774193548387,21.613925899565256 L11.612903225806452,21.213659528924985 L12.258064516129032,20.298445330281005 L12.903225806451612,19.586607638437044 L13.548387096774194,18.876941013376957 L14.193548387096774,18.10669033815527 L14.838709677419354,18.511292203015326 L15.483870967741936,19.114941719803582 L16.129032258064516,18.156458890485283 L16.774193548387096,20.495335194121257 L17.419354838709676,20.584043522253765 L18.064516129032256,21.53604634796026 L18.70967741935484,22.128873727568962 L19.35483870967742,20.231374637159632 L20.0,21.11845791848474 L20.64516129032258,21.237461591372035 L21.29032258064516,23.05922563956839 L21.93548387096774,22.492364749842647 L22.58064516129032,23.100343121502725 L23.225806451612904,23.987426402827833 L23.870967741935484,23.022450291201803 L24.516129032258064,24.076141370308306 L25.161290322580644,24.604062484231548 L25.806451612903224,22.531304525645144 L26.451612903225804,22.52266009459743 L27.096774193548388,21.380260687358415 L27.741935483870968,21.044900582403603 L28.387096774193548,21.873570880350982 L29.032258064516128,20.919410266556543 L29.677419354838708,20.19242158266121 L30.32258064516129,20.737658116071735 L30.967741935483872,20.350371670698962 L31.612903225806452,18.803377037947858 L32.25806451612903,18.470174721080994 L32.90322580645161,17.014052843898305 L33.54838709677419,17.980556005555805 L34.193548387096776,20.759640997176948 L34.83870967741935,21.692515861402285 L35.483870967741936,21.88125924529204 L36.12903225806451,24.031206263295296 L36.774193548387096,22.356377624866216 L37.41935483870968,21.43000932164454 L38.064516129032256,20.490634535763512 L38.70967741935484,19.69443064935479 L39.354838709677416,19.293088704344523 L40.0,18.41662174041212 L40.64516129032258,18.83315451356153 L41.29032258064516,19.123871642813704 L41.935483870967744,18.188819072456532 L42.58064516129032,14.778425040433628 L43.225806451612904,14.205681688412744 L43.87096774193548,13.081899012861745 L44.516129032258064,14.980181546330698 L45.16129032258064,15.125536791282803 L45.806451612903224,13.906293570721006 L46.45161290322581,12.14034652084888 L47.096774193548384,12.261839949222267 L47.74193548387097,13.151320035161987 L48.387096774193544,9.999077130633156 L49.03225806451613,9.834202202670081 L49.67741935483871,13.140471340590583 L50.32258064516129,13.366096302414332 L50.96774193548387,13.094912134869059 L51.61290322580645,11.467813768945378 L52.25806451612903,11.936418948167937 L52.90322580645161,10.71500466082227 L53.54838709677419,9.855899591812886 L54.193548387096776,10.45250476041249 L54.83870967741935,12.402853060606626 L55.483870967741936,10.059827164493829 L56.12903225806451,11.276899318271752 L56.774193548387096,13.448537086069852 L57.41935483870967,12.36597148267263 L58.064516129032256,8.43489322600606 L58.70967741935484,7.0117224327633245 L59.354838709677416,5.601571400875862 L60.0,2.9591573870713326 L60.64516129032258,4.25867032450477 L61.29032258064516,4.636157092284282 L61.935483870967744,5.104755632158877 L62.58064516129032,5.525637178224002 L63.225806451612904,5.931327896149973 L63.87096774193548,3.7293151114215384 L64.51612903225806,3.837788778439645 L65.16129032258064,0.4295591738526525 L65.80645161290322,0.0 L66.45161290322581,2.3690587794753846 L67.09677419354838,2.8528547868370957 L67.74193548387096,4.039558563032642 L68.38709677419355,7.506360495348474 L69.03225806451613,6.571321203687226 L69.6774193548387,7.3479921283890555 L70.3225806451613,10.595682299232756 L70.96774193548387,8.467432670372308 L71.61290322580645,8.816722127353316 L72.25806451612902,7.196130322433294 L72.90322580645162,11.068629612023063 L73.54838709677419,10.72151786117389 L74.19354838709677,10.304971809328551 L74.83870967741936,8.846028209261625 L75.48387096774194,10.240576773436235 L76.12903225806451,10.410271868020384 L76.77419354838709,12.48795622279527 L77.41935483870968,10.484240843675224 L78.06451612903226,9.439964359980134 L78.70967741935483,8.460952666760502 L79.35483870967742,13.168914307263712 L80.0,13.042726859880545\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
+      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,25.0 L0.6451612903225806,23.688841994448975 L1.2903225806451613,21.702635103391884 L1.935483870967742,21.780527913006505 L2.5806451612903225,20.897767081643508 L3.225806451612903,18.688703896048022 L3.870967741935484,20.499658604818414 L4.516129032258064,18.230018024497063 L5.161290322580645,19.233933645311787 L5.806451612903226,23.392428383364347 L6.451612903225806,18.582680176585363 L7.096774193548387,20.08640577931185 L7.741935483870968,18.188900553482455 L8.387096774193548,19.242591352756165 L9.032258064516128,20.27248009590403 L9.67741935483871,19.705606078029316 L10.32258064516129,20.395799312216848 L10.96774193548387,21.613926798817985 L11.612903225806452,21.21365389513179 L12.258064516129032,20.29843993954477 L12.903225806451612,19.586602436746286 L13.548387096774194,18.876936000155094 L14.193548387096774,18.106685529491845 L14.838709677419354,18.511287286900224 L15.483870967741936,19.114936643374953 L16.129032258064516,18.15645406860463 L16.774193548387096,20.49533639044242 L17.419354838709676,20.58403805567012 L18.064516129032256,21.53604062854956 L18.70967741935484,22.128867850718816 L19.35483870967742,20.23137590358182 L20.0,21.118452309974607 L20.64516129032258,21.237455951257637 L21.29032258064516,23.059219515641104 L21.93548387096774,22.49235877645879 L22.58064516129032,23.100336986655712 L23.225806451612904,23.9874200323947 L23.870967741935484,23.022444177041088 L24.516129032258064,24.076134976314798 L25.161290322580644,24.6040625893822 L25.806451612903224,22.531298541919902 L26.451612903225804,22.52264747382172 L27.096774193548388,21.380255009320315 L27.741935483870968,21.044888354082175 L28.387096774193548,21.873565071302593 L29.032258064516128,20.91940471090826 L29.677419354838708,20.19241622008211 L30.32258064516129,20.737659248038273 L30.967741935483872,20.35036626617245 L31.612903225806452,18.803378683608862 L32.25806451612903,18.47017645523182 L32.90322580645161,17.014048325410823 L33.54838709677419,17.980551230390358 L34.193548387096776,20.759635483959208 L34.83870967741935,21.692510100437374 L35.483870967741936,21.88125343420182 L36.12903225806451,24.031199881235374 L36.774193548387096,22.356371687596983 L37.41935483870968,21.430003630394502 L38.064516129032256,20.49062909398685 L38.70967741935484,19.694425419029056 L39.354838709677416,19.293083580604716 L40.0,18.416616849439016 L40.64516129032258,18.83314951196822 L41.29032258064516,19.12386656401352 L41.935483870967744,18.18881424198186 L42.58064516129032,14.778421115670424 L43.225806451612904,14.205677915755196 L43.87096774193548,13.081895538651485 L44.516129032258064,14.980177567986242 L45.16129032258064,15.125532774335792 L45.806451612903224,13.906289877573112 L46.45161290322581,12.14034329669034 L47.096774193548384,12.261836692798248 L47.74193548387097,13.15131654251532 L48.387096774193544,9.999074475139766 L49.03225806451613,9.834199590963157 L49.67741935483871,13.140467850825045 L50.32258064516129,13.366092752728704 L50.96774193548387,13.094908657202854 L51.61290322580645,11.467810723393947 L52.25806451612903,11.936415778167229 L52.90322580645161,10.715001815197251 L53.54838709677419,9.85589697434371 L54.193548387096776,10.452501984500579 L54.83870967741935,12.40284976673321 L55.483870967741936,10.05982449286682 L56.12903225806451,11.276896323422205 L56.774193548387096,13.448533514490107 L57.41935483870967,12.365968198593999 L58.064516129032256,8.434890985919008 L58.70967741935484,7.011720570633216 L59.354838709677416,5.60156991324499 L60.0,2.959156601196515 L60.64516129032258,4.258669193513306 L61.29032258064516,4.636155861042202 L61.935483870967744,5.104754276469279 L62.58064516129032,5.525635710759271 L63.225806451612904,5.931326320944404 L63.87096774193548,3.7293141210129725 L64.51612903225806,3.837787759223314 L65.16129032258064,0.42955905977296993 L65.80645161290322,0.0 L66.45161290322581,2.369058150315329 L67.09677419354838,2.852854029193473 L67.74193548387096,4.03955749023153 L68.38709677419355,7.506358501855431 L69.03225806451613,6.571319458516172 L69.6774193548387,7.347990176954511 L70.3225806451613,10.595679485296635 L70.96774193548387,8.46743042164363 L71.61290322580645,8.816719785862496 L72.25806451612902,7.196128411329276 L72.90322580645162,11.068626672484505 L73.54838709677419,10.721515013819136 L74.19354838709677,10.304969072597533 L74.83870967741936,8.846025859987876 L75.48387096774194,10.240574053806856 L76.12903225806451,10.410269103324426 L76.77419354838709,12.487952906320684 L77.41935483870968,10.484238059335041 L78.06451612903226,9.439961852972475 L78.70967741935483,8.460950419752745 L79.35483870967742,13.168910809944466 L80.0,13.031848146998312\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
       "pe_history_5yr": [
         {
           "year": 2021,
@@ -340,26 +461,42 @@
           "year": 2025,
           "value": 31.7
         }
-      ]
+      ],
+      "phase_label_zh": "Layer 2: 先進製程 / 封裝",
+      "phase_label_en": "Layer 2: Advanced Nodes / Packaging",
+      "category_zh": "晶圓代工與先進封裝",
+      "category_en": "Foundry & Advanced Packaging",
+      "pain_points_zh": [
+        "摩爾定律放緩",
+        "AI 晶片尺寸與散熱限制"
+      ],
+      "pain_points_en": [
+        "Moore's Law deceleration",
+        "AI chip size and thermal limits"
+      ],
+      "ai_solutions_zh": [
+        "3nm/2nm 先進製程",
+        "CoWoS 先進封裝突破頻寬限制"
+      ],
+      "ai_solutions_en": [
+        "3nm/2nm advanced nodes",
+        "CoWoS advanced packaging breaks bandwidth limits"
+      ],
+      "eps_trend_zh": "穩健創高",
+      "eps_trend_en": "Steady Record Highs",
+      "rating_zh": "強力買進",
+      "rating_en": "Strong Buy",
+      "rating_reason_zh": "幾乎囊括所有 AI 晶片代工",
+      "rating_reason_en": "Captures almost all AI chip foundry demand"
     },
     {
       "name": "Broadcom",
       "ticker": "AVGO",
       "exchange": "NASDAQ",
       "phase": "Layer 2",
-      "phase_label": "Layer 2: 網通 / 雲端 ASIC",
-      "pain_points": [
-        "叢集規模擴大導致網絡延遲與瓶頸",
-        "通用 GPU 成本過高"
-      ],
-      "ai_solutions": [
-        "Tomahawk / Jericho 網絡交換器",
-        "Google TPU 等客製化 ASIC 晶片"
-      ],
-      "price": "300.76",
+      "price": "300.68",
       "market_cap": "$1.43T",
       "eps": "5.14",
-      "eps_trend": "整合發酵中",
       "ps_history": [
         {
           "year": 2024,
@@ -370,13 +507,9 @@
           "value": 18
         }
       ],
-      "rating": "買進",
-      "rating_reason": "AI 網通與 ASIC 雙引擎",
-      "eps_2026e": "17.77",
-      "pe_ratio": "58.51",
-      "category": "網通 IC 與 ASIC",
+      "eps_2026e": "17.84",
+      "pe_ratio": "58.5",
       "deep_dive": {
-        "profile": "Broadcom 在 AI 網路基礎設施與客製化晶片 (ASIC) 分野居主導地位。幫助 Google、Meta 等超大型雲端供應商設計並量產專用 AI 加速器。",
         "financial_5yr": [
           {
             "year": 2023,
@@ -394,35 +527,49 @@
             "eps": "+$5.80"
           }
         ],
-        "partnerships": [
-          "Google (TPU)",
-          "Meta (MTIA)",
-          "TSMC"
-        ],
         "pipeline_milestones": [
           {
             "program": "Tomahawk 5/6",
             "phase": "Production",
-            "milestone": "AI 叢集網路升級",
-            "date": "2024-2026"
+            "date": "2024-2026",
+            "milestone_zh": "AI 叢集網路升級",
+            "milestone_en": "AI Cluster Network Upgrades"
           },
           {
             "program": "Custom ASIC Gen X",
             "phase": "Design",
-            "milestone": "支援 3nm",
-            "date": "2025+"
+            "date": "2025+",
+            "milestone_zh": "支援 3nm",
+            "milestone_en": "Support for 3nm ASICs"
           }
         ],
         "earnings_dates": [
           "Q1 2026: Mar 05",
           "Q2 2026: Jun 04"
         ],
-        "risk_assessment": "VMware 併購後的整合陣痛期，以及主要 CSP 客戶若轉向自研底層 IP 帶來的訂單流失風險。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
-        "investment_strategy": "長期持有。AI 從單點算力走向叢集算力，網通晶片不可或缺。",
+        "pipeline_link": "N/A",
+        "profile_zh": "Broadcom 在 AI 網路基礎設施與客製化晶片 (ASIC) 分野居主導地位。幫助 Google、Meta 等超大型雲端供應商設計並量產專用 AI 加速器。",
+        "profile_en": "Broadcom dominates the AI network infrastructure and custom chip (ASIC) sectors. It helps hyperscalers like Google and Meta design and mass-produce dedicated AI accelerators.",
+        "partnerships_zh": [
+          "Google (TPU)",
+          "Meta (MTIA)",
+          "TSMC"
+        ],
+        "partnerships_en": [
+          "Google (TPU)",
+          "Meta (MTIA)",
+          "TSMC"
+        ],
+        "risk_assessment_zh": "VMware 併購後的整合陣痛期，以及主要 CSP 客戶若轉向自研底層 IP 帶來的訂單流失風險。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
+        "risk_assessment_en": "Integration growing pains post-VMware acquisition, and risk of order loss if major CSP clients pivot to in-house base IPs.<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 Read Latest SEC Filings (Risk Factors)</a>",
+        "investment_strategy_zh": "長期持有。AI 從單點算力走向叢集算力，網通晶片不可或缺。",
+        "investment_strategy_en": "Long-term holding. As AI transitions from single-node compute to cluster compute, networking chips are indispensable.",
+        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/AVGO/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
+        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/AVGO/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View 5-Year Financial Statements</a>",
         "financial_link": "<a href=\"https://finance.yahoo.com/quote/AVGO/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "pipeline_link": "N/A"
+        "risk_assessment": "AI 算力基礎建設龍頭，需關注 CSP 資本支出動向。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>"
       },
-      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,19.046727789622533 L0.6451612903225806,18.596698571746998 L1.2903225806451613,17.81754381449086 L1.935483870967742,16.745094436445505 L2.5806451612903225,16.7025546335936 L3.225806451612903,17.347367406432973 L3.870967741935484,17.14138412223423 L4.516129032258064,15.106182469603278 L5.161290322580645,15.213654687976637 L5.806451612903226,19.77886559065291 L6.451612903225806,12.598558986427243 L7.096774193548387,15.41291539631433 L7.741935483870968,13.800880041315773 L8.387096774193548,13.169491882797708 L9.032258064516128,14.248663836704115 L9.67741935483871,14.268817872686736 L10.32258064516129,15.742040935694934 L10.96774193548387,16.270434029213494 L11.612903225806452,15.37709132352321 L12.258064516129032,13.173969036171565 L12.903225806451612,11.400721930712834 L13.548387096774194,8.955792286371324 L14.193548387096774,6.042917964858592 L14.838709677419354,8.172160375741335 L15.483870967741936,9.7036001242102 L16.129032258064516,11.288779404765881 L16.774193548387096,13.664299480212078 L17.419354838709676,12.088074506404109 L18.064516129032256,12.84708207347789 L18.70967741935484,14.22627806983483 L19.35483870967742,12.220171068333682 L20.0,13.65982232683822 L20.64516129032258,12.929923102494774 L21.29032258064516,16.34207532899547 L21.93548387096774,15.786826161034034 L22.58064516129032,15.744279512381862 L23.225806451612904,16.22565564967466 L23.870967741935484,13.109036620650109 L24.516129032258064,14.8106355805266 L25.161290322580644,16.292819796082778 L25.806451612903224,7.83855768298687 L26.451612903225804,6.25561697911812 L27.096774193548388,3.447976299291817 L27.741935483870968,2.2411849368296934 L28.387096774193548,6.020532197989308 L29.032258064516128,7.030294583000398 L29.677419354838708,7.245239019747121 L30.32258064516129,7.151198261495331 L30.967741935483872,5.089126842820974 L31.612903225806452,2.657628658601034 L32.25806451612903,1.4956156756777474 L32.90322580645161,0.0 L33.54838709677419,1.477707062182322 L34.193548387096776,11.875382337944847 L34.83870967741935,16.380144824273785 L35.483870967741936,16.046542131519324 L36.12903225806451,19.467655510567997 L36.774193548387096,18.603414301807785 L37.41935483870968,16.257002569091924 L38.064516129032256,15.866675575334746 L38.70967741935484,14.101253219579865 L39.354838709677416,13.899363723940091 L40.0,13.470905622702208 L40.64516129032258,14.085548953770036 L41.29032258064516,13.982362206363089 L41.935483870967744,14.823574143029031 L42.58064516129032,14.482605369188532 L43.225806451612904,15.424758630774226 L43.87096774193548,15.346250993325619 L44.516129032258064,15.406815788277472 L45.16129032258064,17.87885480167169 L45.806451612903224,15.07706043527241 L46.45161290322581,13.45296278020545 L47.096774193548384,12.914588509899302 L47.74193548387097,16.21661919332376 L48.387096774193544,15.514493380658807 L49.03225806451613,13.565124371760911 L49.67741935483871,17.851937115026423 L50.32258064516129,18.70436931832807 L50.96774193548387,19.446878506761188 L51.61290322580645,20.6671971705486 L52.25806451612903,19.590441784136036 L52.90322580645161,17.809315162571327 L53.54838709677419,17.70837383765157 L54.193548387096776,18.271420372115795 L54.83870967741935,18.143561360550777 L55.483870967741936,18.18618331300587 L56.12903225806451,20.604386953109554 L56.774193548387096,23.359075367879615 L57.41935483870967,22.807235408450566 L58.064516129032256,17.780152053438865 L58.70967741935484,15.308113040044645 L59.354838709677416,16.093244180932857 L60.0,15.572812753123465 L60.64516129032258,18.17271762388297 L61.29032258064516,19.518656722548478 L61.935483870967744,17.865395958349055 L62.58064516129032,17.647802196899455 L63.225806451612904,17.540131450318384 L63.87096774193548,17.840723694190984 L64.51612903225806,18.358909699513184 L65.16129032258064,19.446878506761188 L65.80645161290322,17.916992754952663 L66.45161290322581,20.297058441775373 L67.09677419354838,20.77935876210406 L67.74193548387096,20.94311030446286 L68.38709677419355,22.060242220843325 L69.03225806451613,21.232489127500017 L69.6774193548387,17.813806007545715 L70.3225806451613,18.327501167893526 L70.96774193548387,14.902088626277905 L71.61290322580645,15.613196128891632 L72.25806451612902,15.839757888689478 L72.90322580645162,17.095969083270674 L73.54838709677419,20.193871694368426 L74.19354838709677,19.57473751832621 L74.83870967741936,20.38454776917276 L75.48387096774194,21.59140758963754 L76.12903225806451,20.714303122177817 L76.77419354838709,22.807235408450566 L77.41935483870968,20.11535721111955 L78.06451612903226,21.062001317679634 L78.70967741935483,20.945355726950055 L79.35483870967742,23.051746856545435 L80.0,25.0\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
+      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,19.037333907002154 L0.6451612903225806,18.587526644398682 L1.2903225806451613,17.808756167760908 L1.935483870967742,16.73683572380255 L2.5806451612903225,16.694316901662873 L3.225806451612903,17.338811651607863 L3.870967741935484,17.13292995875934 L4.516129032258064,15.098732071480887 L5.161290322580645,15.206151284350335 L5.806451612903226,19.769110616267014 L6.451612903225806,12.59234535300886 L7.096774193548387,15.405313716925091 L7.741935483870968,13.794073420850673 L8.387096774193548,13.162996664181497 L9.032258064516128,14.24163636841362 L9.67741935483871,14.2617804643871 L10.32258064516129,15.734276930959396 L10.96774193548387,16.26240941999236 L11.612903225806452,15.369507312635275 L12.258064516129032,13.167471609414736 L12.903225806451612,11.395099072824191 L13.548387096774194,8.95137527246532 L14.193548387096774,6.039937586146117 L14.838709677419354,8.168129850594305 L15.483870967741936,9.698814290046517 L16.129032258064516,11.283211757145406 L16.774193548387096,13.657560221541264 L17.419354838709676,12.082112644908854 L18.064516129032256,12.840745867997052 L18.70967741935484,14.219261642247425 L19.35483870967742,12.21414405656112 L20.0,13.653085276308024 L20.64516129032258,12.923546039659783 L21.29032258064516,16.33401538614809 L21.93548387096774,15.779040068139594 L22.58064516129032,15.736514403576015 L23.225806451612904,16.217653125236062 L23.870967741935484,13.102571218684963 L24.516129032258064,14.803330946695874 L25.161290322580644,16.284784146158554 L25.806451612903224,7.834691691326761 L26.451612903225804,6.252531696844493 L27.096774193548388,3.4462757507781205 L27.741935483870968,2.2400795801269737 L28.387096774193548,6.017562859979922 L29.032258064516128,7.026827228249029 L29.677419354838708,7.241665653987926 L30.32258064516129,7.147671276818198 L30.967741935483872,5.086616875716402 L31.612903225806452,2.6563179110572506 L32.25806451612903,1.4948780351623938 L32.90322580645161,0.0 L33.54838709677419,1.47697825422944 L34.193548387096776,11.869525376634382 L34.83870967741935,16.372066105478428 L35.483870967741936,16.038627946210884 L36.12903225806451,19.45805402558957 L36.774193548387096,18.59423906224854 L37.41935483870968,16.248984584292643 L38.064516129032256,15.85885010055626 L38.70967741935484,14.094298454488028 L39.354838709677416,13.892508531134123 L40.0,13.464261746252268 L40.64516129032258,14.07860193405217 L41.29032258064516,13.975466078546647 L41.935483870967744,14.816263127874501 L42.58064516129032,14.475462520486216 L43.225806451612904,15.417151110279072 L43.87096774193548,15.338682192947596 L44.516129032258064,15.399217117226597 L45.16129032258064,17.870036916245446 L45.806451612903224,15.06962440019312 L46.45161290322581,13.44632775319979 L47.096774193548384,12.908219010114745 L47.74193548387097,16.20862112568274 L48.387096774193544,15.506841602813166 L49.03225806451613,13.558434026443505 L49.67741935483871,17.84313250545478 L50.32258064516129,18.695144287561348 L50.96774193548387,19.437287269040823 L51.61290322580645,20.657004069326344 L52.25806451612903,19.580779740732346 L52.90322580645161,17.800531574228255 L53.54838709677419,17.699640033763256 L54.193548387096776,18.262408872598446 L54.83870967741935,18.13461292134278 L55.483870967741936,18.177213852569302 L56.12903225806451,20.594224830006823 L56.774193548387096,23.34755462717548 L57.41935483870967,22.795986836271197 L58.064516129032256,17.771382848397067 L58.70967741935484,15.300563049378216 L59.354838709677416,16.08530696208421 L60.0,15.565132212051644 L60.64516129032258,18.163754804750063 L61.29032258064516,19.509030083674634 L61.935483870967744,17.856584710850115 L62.58064516129032,17.63909826706035 L63.225806451612904,17.531480623897686 L63.87096774193548,17.83192461509997 L64.51612903225806,18.349855050092017 L65.16129032258064,19.437287269040823 L65.80645161290322,17.90815605981483 L66.45161290322581,20.287047893682967 L67.09677419354838,20.76911034257006 L67.74193548387096,20.932781122354584 L68.38709677419355,22.04936206713458 L69.03225806451613,21.22201722320206 L69.6774193548387,17.805020204309304 L70.3225806451613,18.318462009220305 L70.96774193548387,14.894738887629883 L71.61290322580645,15.605495670661547 L72.25806451612902,15.831945689765595 L72.90322580645162,17.087537318579972 L73.54838709677419,20.18391203817744 L74.19354838709677,19.56508322029649 L74.83870967741936,20.374494071176535 L75.48387096774194,21.58075866606672 L76.12903225806451,20.704086788210013 L76.77419354838709,22.795986836271197 L77.41935483870968,20.10543627842206 L78.06451612903226,21.051613498295964 L78.70967741935483,20.935025437395105 L79.35483870967742,23.040377690851624 L80.0,25.0\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
       "pe_history_5yr": [
         {
           "year": 2021,
@@ -444,26 +591,42 @@
           "year": 2025,
           "value": 58.7
         }
-      ]
+      ],
+      "phase_label_zh": "Layer 2: 網通 / 雲端 ASIC",
+      "phase_label_en": "Layer 2: Networking / Cloud ASICs",
+      "category_zh": "網通 IC 與 ASIC",
+      "category_en": "Networking IC & ASICs",
+      "pain_points_zh": [
+        "叢集規模擴大導致網絡延遲與瓶頸",
+        "通用 GPU 成本過高"
+      ],
+      "pain_points_en": [
+        "Cluster scale expansion leads to network latency and bottlenecks",
+        "General-purpose GPUs too costly"
+      ],
+      "ai_solutions_zh": [
+        "Tomahawk / Jericho 網絡交換器",
+        "Google TPU 等客製化 ASIC 晶片"
+      ],
+      "ai_solutions_en": [
+        "Tomahawk / Jericho network switches",
+        "Custom ASIC chips like Google TPU"
+      ],
+      "eps_trend_zh": "整合發酵中",
+      "eps_trend_en": "Integration Maturing",
+      "rating_zh": "買進",
+      "rating_en": "Buy",
+      "rating_reason_zh": "AI 網通與 ASIC 雙引擎",
+      "rating_reason_en": "AI Networking & ASIC Dual Engine"
     },
     {
       "name": "Qualcomm",
       "ticker": "QCOM",
       "exchange": "NASDAQ",
       "phase": "Layer 2",
-      "phase_label": "Layer 2: 邊緣 AI / Snapdragon",
-      "pain_points": [
-        "雲端 推論成本過高且延遲長",
-        "資料隱私與離線可用性"
-      ],
-      "ai_solutions": [
-        "Snapdragon X Elite 筆電處理器",
-        "手機端 NPU 支援百億參數大模型"
-      ],
-      "price": "127.97",
-      "market_cap": "$136.68B",
+      "price": "127.11",
+      "market_cap": "$135.76B",
       "eps": "4.96",
-      "eps_trend": "邊緣 AI 復甦",
       "ps_history": [
         {
           "year": 2024,
@@ -474,13 +637,9 @@
           "value": 6
         }
       ],
-      "rating": "買進",
-      "rating_reason": "AI PC 與 AI 手機換機潮",
       "eps_2026e": "11.13",
-      "pe_ratio": "25.8",
-      "category": "邊緣 AI 處理器",
+      "pe_ratio": "25.63",
       "deep_dive": {
-        "profile": "Qualcomm 正從傳統手機通訊晶片龍頭轉型為邊緣 AI (Edge AI) 領航者，透過整合高效能 NPU 賦能 AI PC 與下一代 AI 智慧型手機。",
         "financial_5yr": [
           {
             "year": 2023,
@@ -498,35 +657,49 @@
             "eps": "+$12.50"
           }
         ],
-        "partnerships": [
-          "Microsoft (Copilot+ PC)",
-          "Samsung, Xiaomi",
-          "Automotive OEM"
-        ],
         "pipeline_milestones": [
           {
             "program": "Snapdragon X Elite",
             "phase": "Launch",
-            "milestone": "AI PC 滲透率提升",
-            "date": "2024-2025"
+            "date": "2024-2025",
+            "milestone_zh": "AI PC 滲透率提升",
+            "milestone_en": "AI PC Penetration Growth"
           },
           {
             "program": "Snapdragon 8 Gen 4",
             "phase": "Launch",
-            "milestone": "支援更大參數端側模型",
-            "date": "2025"
+            "date": "2025",
+            "milestone_zh": "支援更大參數端側模型",
+            "milestone_en": "Support for larger parameter on-device models"
           }
         ],
         "earnings_dates": [
           "Q1 2026: Jan 30",
           "Q2 2026: May 01"
         ],
-        "risk_assessment": "智慧型手機市場飽和。Apple 自研基帶晶片的替代威脅，以及 ARM 架構授權訴訟爭端。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
-        "investment_strategy": "景氣循環操作。受惠於終端 AI 殺手級應用的普及，估值相對較低。",
+        "pipeline_link": "N/A",
+        "profile_zh": "Qualcomm 正從傳統手機通訊晶片龍頭轉型為邊緣 AI (Edge AI) 領航者，透過整合高效能 NPU 賦能 AI PC 與下一代 AI 智慧型手機。",
+        "profile_en": "Qualcomm is transitioning from a traditional mobile comms chip leader to an Edge AI pioneer, enabling AI PCs and next-gen AI smartphones via high-performance NPUs.",
+        "partnerships_zh": [
+          "Microsoft (Copilot+ PC)",
+          "Samsung, Xiaomi",
+          "Automotive OEM"
+        ],
+        "partnerships_en": [
+          "Microsoft (Copilot+ PC)",
+          "Samsung, Xiaomi",
+          "Automotive OEMs"
+        ],
+        "risk_assessment_zh": "智慧型手機市場飽和。Apple 自研基帶晶片的替代威脅，以及 ARM 架構授權訴訟爭端。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
+        "risk_assessment_en": "Smartphone market saturation. Threat of Apple in-house baseband chips, and ARM architecture licensing disputes.<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 Read Latest SEC Filings (Risk Factors)</a>",
+        "investment_strategy_zh": "景氣循環操作。受惠於終端 AI 殺手級應用的普及，估值相對較低。",
+        "investment_strategy_en": "Cyclical play. Benefits from the proliferation of Edge AI killer apps at a relatively low valuation.",
+        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/QCOM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
+        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/QCOM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View 5-Year Financial Statements</a>",
         "financial_link": "<a href=\"https://finance.yahoo.com/quote/QCOM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "pipeline_link": "N/A"
+        "risk_assessment": "AI 算力基礎建設龍頭，需關注 CSP 資本支出動向。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>"
       },
-      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,9.608405064042735 L0.6451612903225806,9.153316091279157 L1.2903225806451613,9.097498541440968 L1.935483870967742,8.08428045790669 L2.5806451612903225,7.9426060665982945 L3.225806451612903,8.183033055281573 L3.870967741935484,9.539711638704656 L4.516129032258064,8.54795113873633 L5.161290322580645,9.453841543631258 L5.806451612903226,14.635854601611268 L6.451612903225806,11.119640541075698 L7.096774193548387,11.136810584009421 L7.741935483870968,10.608734018473934 L8.387096774193548,10.132187462144396 L9.032258064516128,10.402660369261287 L9.67741935483871,8.861372346993114 L10.32258064516129,8.092862165972754 L10.96774193548387,7.90395855969383 L11.612903225806452,7.577674729540345 L12.258064516129032,8.045639577803819 L12.903225806451612,0.0 L13.548387096774194,2.8550448117577467 L14.193548387096774,3.8682628952920304 L14.838709677419354,4.473621221033255 L15.483870967741936,2.9108623615959353 L16.129032258064516,2.988130868198482 L16.774193548387096,6.371258872293318 L17.419354838709676,3.417461463160681 L18.064516129032256,6.216695351881839 L18.70967741935484,7.208449225048568 L19.35483870967742,6.916498853960931 L20.0,5.8818231868606965 L20.64516129032258,4.726924085216428 L21.29032258064516,5.658566241111139 L21.93548387096774,5.8818231868606965 L22.58064516129032,8.985876695367786 L23.225806451612904,9.71143857524826 L23.870967741935484,9.26064376991851 L24.516129032258064,12.059871031838071 L25.161290322580644,10.46705962716554 L25.806451612903224,9.71143857524826 L26.451612903225804,10.46705962716554 L27.096774193548388,9.677098489380814 L27.741935483870968,8.410570914861772 L28.387096774193548,8.432041752030916 L29.032258064516128,7.290018525886541 L29.677419354838708,5.413845084994033 L30.32258064516129,5.340486391332782 L30.967741935483872,5.141993803145294 L31.612903225806452,4.92623177000015 L32.25806451612903,4.628476320714931 L32.90322580645161,1.948710411155929 L33.54838709677419,2.3543435636129217 L34.193548387096776,3.6402942936081324 L34.83870967741935,3.2217123708336963 L35.483870967741936,4.576694493048354 L36.12903225806451,6.207855198553556 L36.774193548387096,5.409531037155414 L37.41935483870968,4.952122683833441 L38.064516129032256,5.396588893639571 L38.70967741935484,5.167884716978584 L39.354838709677416,5.159249994499753 L40.0,5.141993803145294 L40.64516129032258,5.737498074914136 L41.29032258064516,5.642562515258209 L41.935483870967744,6.764519786171668 L42.58064516129032,5.931683242064604 L43.225806451612904,4.494707703709867 L43.87096774193548,1.8451533826243676 L44.516129032258064,2.8203932662153193 L45.16129032258064,2.095434425280029 L45.806451612903224,3.860363747790295 L46.45161290322581,7.532625732294708 L47.096774193548384,9.250093901778609 L47.74193548387097,9.573740264897115 L48.387096774193544,10.933036434950388 L49.03225806451613,11.78313579721351 L49.67741935483871,14.09178756382604 L50.32258064516129,13.09928486207903 L50.96774193548387,12.48220372431551 L51.61290322580645,13.33661713441725 L52.25806451612903,13.897602396675572 L52.90322580645161,14.536260400433763 L53.54838709677419,14.682977787756268 L54.193548387096776,14.890105098422584 L54.83870967741935,15.161969633874513 L55.483870967741936,14.71749679726679 L56.12903225806451,17.06498824803005 L56.774193548387096,16.327080636777318 L57.41935483870967,21.759957895953384 L58.064516129032256,21.31117763830864 L58.70967741935484,20.62505848152408 L59.354838709677416,20.124489769411163 L60.0,19.71454256911555 L60.64516129032258,20.823551069711566 L61.29032258064516,19.861259956438058 L61.935483870967744,19.028416785529398 L62.58064516129032,18.765186972556293 L63.225806451612904,19.615286334819416 L63.87096774193548,18.920532455556028 L64.51612903225806,19.98639385096429 L65.16129032258064,18.10063805496481 L65.80645161290322,17.651851170518473 L66.45161290322581,17.75110740481461 L67.09677419354838,19.14492921118 L67.74193548387096,19.71885661695417 L68.38709677419355,20.97026845703407 L69.03225806451613,20.37477081206682 L69.6774193548387,21.07832508384892 L70.3225806451613,21.647249254418554 L70.96774193548387,20.596258401790404 L71.61290322580645,21.86005573405214 L72.25806451612902,22.32909412417407 L72.90322580645162,23.61894804030898 L73.54838709677419,24.196553320968604 L74.19354838709677,24.383303216729015 L74.83870967741936,23.42785758950357 L75.48387096774194,23.914264826607084 L76.12903225806451,23.562487690716036 L76.77419354838709,24.161815627005435 L77.41935483870968,24.834966133067766 L78.06451612903226,24.695995476810303 L78.70967741935483,23.966377994353437 L79.35483870967742,23.883867687688912 L80.0,25.0\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
+      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,9.466964574867065 L0.6451612903225806,9.01857442829832 L1.2903225806451613,8.963578502554245 L1.935483870967742,7.965281332595094 L2.5806451612903225,7.825692362337161 L3.225806451612903,8.062573780596093 L3.870967741935484,9.399282304148429 L4.516129032258064,8.42213339531774 L5.161290322580645,9.31468273037828 L5.806451612903226,14.42041750676431 L6.451612903225806,10.955961472164475 L7.096774193548387,10.972878775215989 L7.741935483870968,10.452581929107946 L8.387096774193548,9.983043521410737 L9.032258064516128,10.24954164620833 L9.67741935483871,8.730934571628556 L10.32258064516129,7.973743248748992 L10.96774193548387,7.787620268900891 L11.612903225806452,7.466132747615514 L12.258064516129032,7.927209239158824 L12.903225806451612,0.0 L13.548387096774194,2.8130190758751823 L14.193548387096774,3.811322775090627 L14.838709677419354,4.407770337327495 L15.483870967741936,2.868008472362966 L16.129032258064516,2.9441461299792095 L16.774193548387096,6.277475110475017 L17.419354838709676,3.3671570573425385 L18.064516129032256,6.12518673672994 L18.70967741935484,7.102335645560629 L19.35483870967742,6.814689259634569 L20.0,5.795243828546955 L20.64516129032258,4.657344629817288 L21.29032258064516,5.57527318408324 L21.93548387096774,5.795243828546955 L22.58064516129032,8.853599709578681 L23.225806451612904,9.568487980945017 L23.870967741935484,9.124328792453223 L24.516129032258064,11.882358471840623 L25.161290322580644,10.312986429593723 L25.806451612903224,9.568487980945017 L26.451612903225804,10.312986429593723 L27.096774193548388,9.534653374841993 L27.741935483870968,8.28677538313676 L28.387096774193548,8.307923644265223 L29.032258064516128,7.182710790510118 L29.677419354838708,5.334154278491063 L30.32258064516129,5.261875411343148 L30.967741935483872,5.0663045976411105 L31.612903225806452,4.853718542043186 L32.25806451612903,4.560345998349405 L32.90322580645161,1.920025751386813 L33.54838709677419,2.319688058251412 L34.193548387096776,3.586709829403592 L34.83870967741935,3.1742893557452234 L35.483870967741936,4.509326389686912 L36.12903225806451,6.116476708836956 L36.774193548387096,5.329903732645235 L37.41935483870968,4.879228346374433 L38.064516129032256,5.317152095107758 L38.70967741935484,5.091814401972357 L39.354838709677416,5.083306781024412 L40.0,5.0663045976411105 L40.64516129032258,5.653043155772387 L41.29032258064516,5.5595050301390465 L41.935483870967744,6.664947295843216 L42.58064516129032,5.844369952884886 L43.225806451612904,4.428546430847341 L43.87096774193548,1.8179930633181165 L44.516129032258064,2.778877594726449 L45.16129032258064,2.06459001493894 L45.806451612903224,3.803539901591048 L46.45161290322581,7.421746863345277 L47.096774193548384,9.113934216437011 L47.74193548387097,9.43281656446204 L48.387096774193544,10.772104144249553 L49.03225806451613,11.609690199847478 L49.67741935483871,13.884359035968368 L50.32258064516129,12.906465791920436 L50.96774193548387,12.298467975303742 L51.61290322580645,13.14030457674749 L52.25806451612903,13.693032238855865 L52.90322580645161,14.322289313957983 L53.54838709677419,14.466847048253815 L54.193548387096776,14.670925482903794 L54.83870967741935,14.93878822226633 L55.483870967741936,14.500857944276715 L56.12903225806451,16.81379475152262 L56.774193548387096,16.08674900494134 L57.41935483870967,21.439655307501855 L58.064516129032256,20.997481012922705 L58.70967741935484,20.32146140426021 L59.354838709677416,19.828260971762273 L60.0,19.42434811905185 L60.64516129032258,20.517032217962246 L61.29032258064516,19.56890585334768 L61.935483870967744,18.74832198113306 L62.58064516129032,18.48896686271847 L63.225806451612904,19.32655291831639 L63.87096774193548,18.642025688705953 L64.51612903225806,19.6921977999018 L65.16129032258064,17.834199983285103 L65.80645161290322,17.39201915944966 L66.45161290322581,17.489814360185118 L67.09677419354838,18.86311936525182 L67.74193548387096,19.428598664897674 L68.38709677419355,20.661589952258076 L69.03225806451613,20.074857923383096 L69.6774193548387,20.768056005348768 L70.3225806451613,21.32860571649447 L70.96774193548387,20.29308525641695 L71.61290322580645,21.538279723786342 L72.25806451612902,22.000413954848888 L72.90322580645162,23.271281457956814 L73.54838709677419,23.8403844948445 L74.19354838709677,24.024385466397835 L74.83870967741936,23.083003823532483 L75.48387096774194,23.56225123533529 L76.12903225806451,23.215652194352455 L76.77419354838709,23.806158133363976 L77.41935483870968,24.469399987463827 L78.06451612903226,24.332474953772866 L78.70967741935483,23.613597306812366 L79.35483870967742,23.53230153672576 L80.0,25.0\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
       "pe_history_5yr": [
         {
           "year": 2021,
@@ -548,26 +721,42 @@
           "year": 2025,
           "value": 25.9
         }
-      ]
+      ],
+      "phase_label_zh": "Layer 2: 邊緣 AI / Snapdragon",
+      "phase_label_en": "Layer 2: Edge AI / Snapdragon",
+      "category_zh": "邊緣 AI 處理器",
+      "category_en": "Edge AI Processors",
+      "pain_points_zh": [
+        "雲端 推論成本過高且延遲長",
+        "資料隱私與離線可用性"
+      ],
+      "pain_points_en": [
+        "Cloud inference costs are high and latency is long",
+        "Data privacy and offline availability constraints"
+      ],
+      "ai_solutions_zh": [
+        "Snapdragon X Elite 筆電處理器",
+        "手機端 NPU 支援百億參數大模型"
+      ],
+      "ai_solutions_en": [
+        "Snapdragon X Elite laptop processors",
+        "Mobile NPUs supporting 10B+ parameter models"
+      ],
+      "eps_trend_zh": "邊緣 AI 復甦",
+      "eps_trend_en": "Edge AI Recovery",
+      "rating_zh": "買進",
+      "rating_en": "Buy",
+      "rating_reason_zh": "AI PC 與 AI 手機換機潮",
+      "rating_reason_en": "AI PC & AI Smartphone Replacement Cycle"
     },
     {
       "name": "Marvell",
       "ticker": "MRVL",
       "exchange": "NASDAQ",
       "phase": "Layer 2",
-      "phase_label": "Layer 2: 矽光子 / 高速傳輸",
-      "pain_points": [
-        "AI 伺服器間資料傳輸瓶頸",
-        "銅線傳輸極限與耗電"
-      ],
-      "ai_solutions": [
-        "PAM4 DSP 光通訊晶片",
-        "矽光子 (Silicon Photonics) 及 DCI 互連"
-      ],
-      "price": "93.86",
-      "market_cap": "$82.08B",
+      "price": "94.88",
+      "market_cap": "$82.97B",
       "eps": "3.07",
-      "eps_trend": "AI 營收佔比急升",
       "ps_history": [
         {
           "year": 2024,
@@ -578,13 +767,9 @@
           "value": 14
         }
       ],
-      "rating": "買進",
-      "rating_reason": "光通訊與 ASIC 需求激增",
       "eps_2026e": "5.44",
-      "pe_ratio": "30.57",
-      "category": "網通與資料中心互連",
+      "pe_ratio": "30.91",
       "deep_dive": {
-        "profile": "Marvell 是資料中心高速傳輸解決方案的核心玩家。隨著 AI 叢集規模變大，光通訊 (Optical Networking) 與 AEC 需求大增，成為 AI 基礎設施的二線領頭羊。",
         "financial_5yr": [
           {
             "year": 2023,
@@ -602,28 +787,40 @@
             "eps": "+$3.00"
           }
         ],
-        "partnerships": [
-          "AWS (ASIC)",
-          "Optical Transceiver Makers"
-        ],
         "pipeline_milestones": [
           {
             "program": "800G / 1.6T DSP",
             "phase": "Mass Production",
-            "milestone": "隨 AI 叢集大量部署",
-            "date": "2024-2026"
+            "date": "2024-2026",
+            "milestone_zh": "隨 AI 叢集大量部署",
+            "milestone_en": "Massive deployment alongside AI clusters"
           }
         ],
         "earnings_dates": [
           "Q1 2026: Feb 28",
           "Q2 2026: May 25"
         ],
-        "risk_assessment": "非 AI 業務 (傳統企業網路、電信、儲存) 復甦緩慢拖累集團整體獲利。估值溢價較高。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
-        "investment_strategy": "動能投資。光通訊升級週期的純度高，是除了 Broadcom 外的最佳網通替代標的。",
+        "pipeline_link": "N/A",
+        "profile_zh": "Marvell 是資料中心高速傳輸解決方案的核心玩家。隨著 AI 叢集規模變大，光通訊 (Optical Networking) 與 AEC 需求大增，成為 AI 基礎設施的二線領頭羊。",
+        "profile_en": "Marvell is a key player in data center high-speed transfer solutions. As AI clusters expand, Optical Networking and AEC demand skyrockets, making it a tier-2 leader in AI infra.",
+        "partnerships_zh": [
+          "AWS (ASIC)",
+          "Optical Transceiver Makers"
+        ],
+        "partnerships_en": [
+          "AWS (ASIC)",
+          "Optical Transceiver Makers"
+        ],
+        "risk_assessment_zh": "非 AI 業務 (傳統企業網路、電信、儲存) 復甦緩慢拖累集團整體獲利。估值溢價較高。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
+        "risk_assessment_en": "Sluggish recovery in non-AI businesses (traditional enterprise networking, telco, storage) dragging down group profits. High valuation premium.<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 Read Latest SEC Filings (Risk Factors)</a>",
+        "investment_strategy_zh": "動能投資。光通訊升級週期的純度高，是除了 Broadcom 外的最佳網通替代標的。",
+        "investment_strategy_en": "Momentum play. High purity in the optical network upgrade cycle; best networking alternative to Broadcom.",
+        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/MRVL/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
+        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/MRVL/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View 5-Year Financial Statements</a>",
         "financial_link": "<a href=\"https://finance.yahoo.com/quote/MRVL/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "pipeline_link": "N/A"
+        "risk_assessment": "AI 算力基礎建設龍頭，需關注 CSP 資本支出動向。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>"
       },
-      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,16.906303178698927 L0.6451612903225806,15.317466717070825 L1.2903225806451613,15.48769635656549 L1.935483870967742,13.303048931339363 L2.5806451612903225,13.284132921314022 L3.225806451612903,10.730644976693856 L3.870967741935484,12.574825897563953 L4.516129032258064,7.344903168525612 L5.161290322580645,9.066151700331096 L5.806451612903226,13.807422879325971 L6.451612903225806,10.230172726726227 L7.096774193548387,13.230144981318091 L7.741935483870968,10.70335476666112 L8.387096774193548,11.327951591199156 L9.032258064516128,11.592941914988069 L9.67741935483871,13.58976593280062 L10.32258064516129,15.085012219540166 L10.96774193548387,18.122830944916117 L11.612903225806452,16.495093108965467 L12.258064516129032,15.208045763738602 L12.903225806451612,10.87370001202301 L13.548387096774194,11.110294644673807 L14.193548387096774,9.510938049127871 L14.838709677419354,11.006191561234116 L15.483870967741936,6.113498372269387 L16.129032258064516,9.30273910761519 L16.774193548387096,11.933632405711855 L17.419354838709676,6.908440442169319 L18.064516129032256,6.501507789523334 L18.70967741935484,8.782238141150138 L19.35483870967742,6.596138417216952 L20.0,10.286956883635758 L20.64516129032258,10.286956883635758 L21.29032258064516,11.999874567634055 L21.93548387096774,13.01248080942604 L22.58064516129032,15.851573049035386 L23.225806451612904,20.365714825758836 L23.870967741935484,17.86732030223998 L24.516129032258064,22.258435760131697 L25.161290322580644,21.52974307752067 L25.806451612903224,15.529805793703643 L26.451612903225804,15.870496284427427 L27.096774193548388,11.81059886151342 L27.741935483870968,10.220707496346854 L28.387096774193548,8.611892895788248 L29.032258064516128,6.917905672548695 L29.677419354838708,0.0 L30.32258064516129,1.9021861647522336 L30.967741935483872,1.220797957937961 L31.612903225806452,7.760166668978783 L32.25806451612903,10.693889536281745 L32.90322580645161,7.315380320182012 L33.54838709677419,10.192319030575439 L34.193548387096776,14.924132204557646 L34.83870967741935,15.085012219540166 L35.483870967741936,15.264822695281431 L36.12903225806451,17.50770657612415 L36.774193548387096,14.886278508406859 L37.41935483870968,15.245899459889388 L38.064516129032256,14.573976483454489 L38.70967741935484,11.848452557664208 L39.354838709677416,12.974627113275252 L40.0,13.116583892865732 L40.64516129032258,13.665466099735493 L41.29032258064516,12.719102019865712 L41.935483870967744,14.403631238092595 L42.58064516129032,10.230172726726227 L43.225806451612904,9.435223431459594 L43.87096774193548,11.327951591199156 L44.516129032258064,14.725398493424338 L45.16129032258064,15.851573049035386 L45.806451612903224,16.012561444518433 L46.45161290322581,16.32508745583856 L47.096774193548384,16.17355706536818 L47.74193548387097,17.916120428944012 L48.387096774193544,18.702168072434013 L49.03225806451613,18.626402877198824 L49.67741935483871,19.251447674472374 L50.32258064516129,16.647078697538056 L50.96774193548387,16.126209237371214 L51.61290322580645,18.844218781791614 L52.25806451612903,17.38577851303109 L52.90322580645161,16.287204858220967 L53.54838709677419,15.633742693709191 L54.193548387096776,17.793007405711855 L54.83870967741935,20.084850371326045 L55.483870967741936,20.331076417790356 L56.12903225806451,23.285854003662394 L56.774193548387096,25.0 L57.41935483870967,24.54542327932227 L58.064516129032256,18.796870953794645 L58.70967741935484,16.83649168562603 L59.354838709677416,17.15848292732553 L60.0,17.793007405711855 L60.64516129032258,20.738305310471116 L61.29032258064516,20.378431471154023 L61.935483870967744,19.999612720344782 L62.58064516129032,19.923854750476295 L63.225806451612904,19.431388206814272 L63.87096774193548,19.554501230046426 L64.51612903225806,21.155006658897953 L65.16129032258064,20.586782145367444 L65.80645161290322,18.19076384264654 L66.45161290322581,19.734441762388325 L67.09677419354838,17.46153648289958 L67.74193548387096,18.247584126389583 L68.38709677419355,21.42017761685441 L69.03225806451613,20.87089801481605 L69.6774193548387,23.153268524684165 L70.3225806451613,9.998838161034348 L70.96774193548387,7.081943172779905 L71.61290322580645,6.466363605885725 L72.25806451612902,9.174907919926753 L72.90322580645162,11.798221808353219 L73.54838709677419,11.618281276011318 L74.19354838709677,8.09527917660877 L74.83870967741936,8.843444222481178 L75.48387096774194,11.845569636350184 L76.12903225806451,10.036720758651944 L76.77419354838709,11.570926222647651 L77.41935483870968,9.44007887788321 L78.06451612903226,7.356586586482436 L78.70967741935483,1.589096574829366 L79.35483870967742,2.3183167092096255 L80.0,5.936021689972808\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
+      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,16.906295953332226 L0.6451612903225806,15.317466717070825 L1.2903225806451613,15.48769635656549 L1.935483870967742,13.303048931339363 L2.5806451612903225,13.284132921314022 L3.225806451612903,10.730644976693856 L3.870967741935484,12.574833122930656 L4.516129032258064,7.344910393892313 L5.161290322580645,9.066144474964394 L5.806451612903226,13.807422879325971 L6.451612903225806,10.230172726726227 L7.096774193548387,13.230144981318091 L7.741935483870968,10.70335476666112 L8.387096774193548,11.327951591199156 L9.032258064516128,11.592941914988069 L9.67741935483871,13.58976593280062 L10.32258064516129,15.085012219540166 L10.96774193548387,18.122830944916117 L11.612903225806452,16.495093108965467 L12.258064516129032,15.208045763738602 L12.903225806451612,10.87370001202301 L13.548387096774194,11.110294644673807 L14.193548387096774,9.510938049127871 L14.838709677419354,11.006191561234116 L15.483870967741936,6.113498372269387 L16.129032258064516,9.30273910761519 L16.774193548387096,11.933632405711855 L17.419354838709676,6.908440442169319 L18.064516129032256,6.501507789523334 L18.70967741935484,8.782238141150138 L19.35483870967742,6.596138417216952 L20.0,10.286956883635758 L20.64516129032258,10.286956883635758 L21.29032258064516,11.999874567634055 L21.93548387096774,13.01248080942604 L22.58064516129032,15.851573049035386 L23.225806451612904,20.365714825758836 L23.870967741935484,17.86732030223998 L24.516129032258064,22.258435760131697 L25.161290322580644,21.52974307752067 L25.806451612903224,15.529805793703643 L26.451612903225804,15.870496284427427 L27.096774193548388,11.81059886151342 L27.741935483870968,10.220707496346854 L28.387096774193548,8.611892895788248 L29.032258064516128,6.917905672548695 L29.677419354838708,0.0 L30.32258064516129,1.9021861647522336 L30.967741935483872,1.220797957937961 L31.612903225806452,7.760166668978783 L32.25806451612903,10.693889536281745 L32.90322580645161,7.315380320182012 L33.54838709677419,10.192319030575439 L34.193548387096776,14.924132204557646 L34.83870967741935,15.085012219540166 L35.483870967741936,15.264822695281431 L36.12903225806451,17.50770657612415 L36.774193548387096,14.886278508406859 L37.41935483870968,15.245899459889388 L38.064516129032256,14.573976483454489 L38.70967741935484,11.848452557664208 L39.354838709677416,12.974627113275252 L40.0,13.116583892865732 L40.64516129032258,13.665466099735493 L41.29032258064516,12.719102019865712 L41.935483870967744,14.403631238092595 L42.58064516129032,10.230172726726227 L43.225806451612904,9.435223431459594 L43.87096774193548,11.327951591199156 L44.516129032258064,14.725398493424338 L45.16129032258064,15.851573049035386 L45.806451612903224,16.012561444518433 L46.45161290322581,16.32508745583856 L47.096774193548384,16.17355706536818 L47.74193548387097,17.916120428944012 L48.387096774193544,18.702168072434013 L49.03225806451613,18.626402877198824 L49.67741935483871,19.251447674472374 L50.32258064516129,16.647078697538056 L50.96774193548387,16.126209237371214 L51.61290322580645,18.844218781791614 L52.25806451612903,17.38577851303109 L52.90322580645161,16.287204858220967 L53.54838709677419,15.633742693709191 L54.193548387096776,17.793007405711855 L54.83870967741935,20.084850371326045 L55.483870967741936,20.331076417790356 L56.12903225806451,23.285854003662394 L56.774193548387096,25.0 L57.41935483870967,24.54542327932227 L58.064516129032256,18.796870953794645 L58.70967741935484,16.83649168562603 L59.354838709677416,17.15848292732553 L60.0,17.793007405711855 L60.64516129032258,20.738305310471116 L61.29032258064516,20.378431471154023 L61.935483870967744,19.999612720344782 L62.58064516129032,19.923854750476295 L63.225806451612904,19.431388206814272 L63.87096774193548,19.554501230046426 L64.51612903225806,21.155006658897953 L65.16129032258064,20.586782145367444 L65.80645161290322,18.19076384264654 L66.45161290322581,19.734441762388325 L67.09677419354838,17.46153648289958 L67.74193548387096,18.247584126389583 L68.38709677419355,21.42017761685441 L69.03225806451613,20.87089801481605 L69.6774193548387,23.153268524684165 L70.3225806451613,9.998838161034348 L70.96774193548387,7.081943172779905 L71.61290322580645,6.466363605885725 L72.25806451612902,9.174907919926753 L72.90322580645162,11.798221808353219 L73.54838709677419,11.618281276011318 L74.19354838709677,8.09527917660877 L74.83870967741936,8.843444222481178 L75.48387096774194,11.845569636350184 L76.12903225806451,10.036720758651944 L76.77419354838709,11.570926222647651 L77.41935483870968,9.44007887788321 L78.06451612903226,7.356586586482436 L78.70967741935483,1.589096574829366 L79.35483870967742,2.3183167092096255 L80.0,4.97004073950761\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
       "pe_history_5yr": [
         {
           "year": 2021,
@@ -645,26 +842,42 @@
           "year": 2025,
           "value": 30.7
         }
-      ]
+      ],
+      "phase_label_zh": "Layer 2: 矽光子 / 高速傳輸",
+      "phase_label_en": "Layer 2: Silicon Photonics / High-Speed Transfer",
+      "category_zh": "網通與資料中心互連",
+      "category_en": "Networking & DCI Interconnects",
+      "pain_points_zh": [
+        "AI 伺服器間資料傳輸瓶頸",
+        "銅線傳輸極限與耗電"
+      ],
+      "pain_points_en": [
+        "Server-to-server data transfer bottlenecks in AI clusters",
+        "Copper cable transmission limits and power drain"
+      ],
+      "ai_solutions_zh": [
+        "PAM4 DSP 光通訊晶片",
+        "矽光子 (Silicon Photonics) 及 DCI 互連"
+      ],
+      "ai_solutions_en": [
+        "PAM4 DSP Optical Comms chips",
+        "Silicon Photonics and DCI interconnects"
+      ],
+      "eps_trend_zh": "AI 營收佔比急升",
+      "eps_trend_en": "AI Rev Share Surging",
+      "rating_zh": "買進",
+      "rating_en": "Buy",
+      "rating_reason_zh": "光通訊與 ASIC 需求激增",
+      "rating_reason_en": "Optical Comms & ASIC demand soaring"
     },
     {
       "name": "Micron",
       "ticker": "MU",
       "exchange": "NASDAQ",
       "phase": "Layer 2",
-      "phase_label": "Layer 2: 記憶體 / HBM",
-      "pain_points": [
-        "Memory Wall：算力成長遠超越記憶體頻寬",
-        "大模型消耗極大 VRAM"
-      ],
-      "ai_solutions": [
-        "HBM3e (高頻寬記憶體) 量產",
-        "高容量 DDR5 伺服器模組"
-      ],
-      "price": "357.69",
-      "market_cap": "$403.38B",
-      "eps": "21.19",
-      "eps_trend": "虧轉盈爆發",
+      "price": "357.22",
+      "market_cap": "$402.85B",
+      "eps": "21.18",
       "ps_history": [
         {
           "year": 2024,
@@ -675,13 +888,9 @@
           "value": 5
         }
       ],
-      "rating": "買進",
-      "rating_reason": "HBM 供應緊缺至 2025+",
-      "eps_2026e": "98.26",
-      "pe_ratio": "16.88",
-      "category": "記憶體晶片 (DRAM/NAND)",
+      "eps_2026e": "98.55",
+      "pe_ratio": "16.87",
       "deep_dive": {
-        "profile": "Micron 是美國最大的記憶體製造商。AI 帶動的 HBM (High Bandwidth Memory) 需求大幅消耗了 DRAM 總體產能，讓整體記憶體產業迎來超級循環強週期。",
         "financial_5yr": [
           {
             "year": 2023,
@@ -699,34 +908,47 @@
             "eps": "+$9.50"
           }
         ],
-        "partnerships": [
-          "NVIDIA (HBM 供應商)",
-          "Intel, AMD"
-        ],
         "pipeline_milestones": [
           {
             "program": "HBM3E",
             "phase": "Mass Production",
-            "milestone": "供貨給 NVDA H200/B200",
-            "date": "2024-2025"
+            "date": "2024-2025",
+            "milestone_zh": "供貨給 NVDA H200/B200",
+            "milestone_en": "Supply NVDA H200/B200"
           },
           {
             "program": "HBM4",
             "phase": "Development",
-            "milestone": "次世代高頻寬",
-            "date": "2026"
+            "date": "2026",
+            "milestone_zh": "次世代高頻寬",
+            "milestone_en": "Next-Gen High Bandwidth"
           }
         ],
         "earnings_dates": [
           "Q1 2026: Mar 20",
           "Q2 2026: Jun 20"
         ],
-        "risk_assessment": "典型的週期性產業 (Cyclical)。若消費性電子終端 (PC/手機) 需求疲軟，將拖累標準型 DRAM 價格，抵銷 HBM 貢獻。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
-        "investment_strategy": "波段操作。趁 HBM 滲透率提升與供需緊缺的週期上行期持有。",
+        "pipeline_link": "N/A",
+        "profile_zh": "Micron 是美國最大的記憶體製造商。AI 帶動的 HBM (High Bandwidth Memory) 需求大幅消耗了 DRAM 總體產能，讓整體記憶體產業迎來超級循環強週期。",
+        "profile_en": "Micron is the largest US memory manufacturer. AI-driven HBM demand heavily consumes DRAM capacity, propelling the memory industry into a super-cycle.",
+        "partnerships_zh": [
+          "NVIDIA (HBM 供應商)",
+          "Intel, AMD"
+        ],
+        "partnerships_en": [
+          "NVIDIA (HBM Supplier)",
+          "Intel, AMD"
+        ],
+        "risk_assessment_zh": "典型的週期性產業 (Cyclical)。若消費性電子終端 (PC/手機) 需求疲軟，將拖累標準型 DRAM 價格，抵銷 HBM 貢獻。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
+        "risk_assessment_en": "Classic cyclical industry. If consumer electronics demand (PC/Mobile) softens, standard DRAM prices will drag down overall growth despite HBM contributions.<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 Read Latest SEC Filings (Risk Factors)</a>",
+        "investment_strategy_zh": "波段操作。趁 HBM 滲透率提升與供需緊缺的週期上行期持有。",
+        "investment_strategy_en": "Swing trade. Hold during the HBM penetration up-cycle and supply shortage.",
+        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/MU/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
+        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/MU/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View 5-Year Financial Statements</a>",
         "financial_link": "<a href=\"https://finance.yahoo.com/quote/MU/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "pipeline_link": "N/A"
+        "risk_assessment": "AI 算力基礎建設龍頭，需關注 CSP 資本支出動向。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>"
       },
-      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,25.0 L0.6451612903225806,24.71337934133573 L1.2903225806451613,23.470529112509258 L1.935483870967742,23.3364381003117 L2.5806451612903225,22.984648569666852 L3.225806451612903,22.72216941361866 L3.870967741935484,23.164106507614118 L4.516129032258064,22.25423594467611 L5.161290322580645,22.607282538557023 L5.806451612903226,23.507090195080853 L6.451612903225806,22.570384788336664 L7.096774193548387,23.049220912657606 L7.741935483870968,22.639987944481945 L8.387096774193548,21.751920132090465 L9.032258064516128,21.7644984450819 L9.67741935483871,21.39635685152716 L10.32258064516129,21.772047225023947 L10.96774193548387,22.09238713287481 L11.612903225806452,21.401388944786813 L12.258064516129032,20.369082726845125 L12.903225806451612,20.278515289012407 L13.548387096774194,20.126730663730413 L14.193548387096774,19.730915757510402 L14.838709677419354,19.9506266012195 L15.483870967741936,19.97075241404785 L16.129032258064516,19.054172820132017 L16.774193548387096,20.45210394494606 L17.419354838709676,18.81936697674909 L18.064516129032256,18.749763820603814 L18.70967741935484,18.784147444352037 L19.35483870967742,17.49439416362181 L20.0,18.516636195044192 L20.64516129032258,18.19881041366546 L21.29032258064516,18.865490444629668 L21.93548387096774,18.03696160186416 L22.58064516129032,18.446194570039825 L23.225806451612904,19.574099038968754 L23.870967741935484,19.790456007241502 L24.516129032258064,21.84919660090101 L25.161290322580644,21.346042319456277 L25.806451612903224,19.957335632197328 L26.451612903225804,19.907019820021315 L27.096774193548388,19.426508038087327 L27.741935483870968,18.904903601427286 L28.387096774193548,18.57114435151564 L29.032258064516128,18.65248735179327 L29.677419354838708,19.09945653904838 L30.32258064516129,19.72923881979223 L30.967741935483872,18.842847945118923 L31.612903225806452,18.029415382132374 L32.25806451612903,17.568189664062523 L32.90322580645161,16.62142263100929 L33.54838709677419,17.06168150718144 L34.193548387096776,18.51412078846693 L34.83870967741935,18.81936697674909 L35.483870967741936,19.237824382479847 L36.12903225806451,19.823998601920383 L36.774193548387096,17.89272447641908 L37.41935483870968,16.436091570733026 L38.064516129032256,15.54131600746885 L38.70967741935484,15.568152131380158 L39.354838709677416,14.695176758452252 L40.0,14.853669134606946 L40.64516129032258,14.04032873918964 L41.29032258064516,14.1863016871888 L41.935483870967744,14.792009030783252 L42.58064516129032,12.274380191018311 L43.225806451612904,12.548711840450155 L43.87096774193548,9.924539850850342 L44.516129032258064,10.25004498289421 L45.16129032258064,11.30122379074357 L45.806451612903224,9.785277213934137 L46.45161290322581,9.71984079998173 L47.096774193548384,10.369171566141036 L47.74193548387097,10.770179858866873 L48.387096774193544,10.495011020681073 L49.03225806451613,8.303727061924214 L49.67741935483871,8.114967880114161 L50.32258064516129,6.092309609708234 L50.96774193548387,5.381736053997088 L51.61290322580645,5.208076992281377 L52.25806451612903,6.093986547426411 L52.90322580645161,4.3196507504539525 L53.54838709677419,2.2189700724734074 L54.193548387096776,2.1761838386625136 L54.83870967741935,3.9303861421758484 L55.483870967741936,2.0075607105218367 L56.12903225806451,3.547834405190958 L56.774193548387096,6.906909628571864 L57.41935483870967,6.614121423399073 L58.064516129032256,5.6241854051015565 L58.70967741935484,6.562947940787048 L59.354838709677416,7.422850880143962 L60.0,4.311260941442562 L60.64516129032258,4.006729051822035 L61.29032258064516,4.2005216069968725 L61.935483870967744,5.197170496587596 L62.58064516129032,3.4211552016867053 L63.225806451612904,3.7231704046248453 L63.87096774193548,2.8154478580922557 L64.51612903225806,3.4194782639685357 L65.16129032258064,3.6678007374020005 L65.80645161290322,2.7458178197392833 L66.45161290322581,3.873339537234827 L67.09677419354838,4.140958315373457 L67.74193548387096,4.115788888339296 L68.38709677419355,6.883419699466135 L69.03225806451613,5.114117275858458 L69.6774193548387,5.426199225526158 L70.3225806451613,7.670336164823468 L70.96774193548387,6.074690242721246 L71.61290322580645,4.917808034001229 L72.25806451612902,3.610754132460979 L72.90322580645162,4.729886040945136 L73.54838709677419,2.986590233125579 L74.19354838709677,1.6719888317484077 L74.83870967741936,0.0033564356466051493 L75.48387096774194,0.0 L76.12903225806451,1.4647730941974046 L76.77419354838709,3.2575654469108137 L77.41935483870968,4.813779010638495 L78.06451612903226,5.553715617784366 L78.70967741935483,6.6812373352799135 L79.35483870967742,8.915307527847663 L80.0,8.728225283755783\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
+      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,25.0 L0.6451612903225806,24.71338060676474 L1.2903225806451613,23.470530314299108 L1.935483870967742,23.336439295235525 L2.5806451612903225,22.984649746577574 L3.225806451612903,22.722170577089344 L3.870967741935484,23.164107693713838 L4.516129032258064,22.25423708418663 L5.161290322580645,22.607283696145014 L5.806451612903226,23.507091398742784 L6.451612903225806,22.570385944035337 L7.096774193548387,23.049222092874704 L7.741935483870968,22.63998910374459 L8.387096774193548,21.7519212458803 L9.032258064516128,21.7644995595158 L9.67741935483871,21.396357947110662 L10.32258064516129,21.772048339844375 L10.96774193548387,22.09238826409799 L11.612903225806452,21.40139004062798 L12.258064516129032,20.369083769827867 L12.903225806451612,20.278516327357718 L13.548387096774194,20.12673169430371 L14.193548387096774,19.73091676781631 L14.838709677419354,19.950627622775528 L15.483870967741936,19.97075343663441 L16.129032258064516,19.054173795785843 L16.774193548387096,20.452104992179837 L17.419354838709676,18.81936794037987 L18.064516129032256,18.749764780670617 L18.70967741935484,18.784148406179426 L19.35483870967742,17.4943950594084 L20.0,18.516637143173877 L20.64516129032258,18.19881134552113 L21.29032258064516,18.86549141062216 L21.93548387096774,18.03696252543249 L22.58064516129032,18.446195514562604 L23.225806451612904,19.57410004124499 L23.870967741935484,19.790457020596122 L24.516129032258064,21.84919771967181 L25.161290322580644,21.346043412463462 L25.806451612903224,19.957336654096885 L26.451612903225804,19.907020839344494 L27.096774193548388,19.42650903280628 L27.741935483870968,18.9049045694379 L28.387096774193548,18.571145302436374 L29.032258064516128,18.652488306879107 L29.677419354838708,19.09945751702092 L30.32258064516129,19.729239830012272 L30.967741935483872,18.842848909952025 L31.612903225806452,18.029416305314307 L32.25806451612903,17.56819056362776 L32.90322580645161,16.621423482096063 L33.54838709677419,17.061682380811327 L34.193548387096776,18.514121736467814 L34.83870967741935,18.81936794037987 L35.483870967741936,19.237825367537404 L36.12903225806451,19.823999616992527 L36.774193548387096,17.892725392601864 L37.41935483870968,16.436092412330076 L38.064516129032256,15.541316803249623 L38.70967741935484,15.568152928535055 L39.354838709677416,14.695177510907136 L40.0,14.853669895177307 L40.64516129032258,14.04032945811355 L41.29032258064516,14.18630241358714 L41.935483870967744,14.792009788196355 L42.58064516129032,12.274380819518225 L43.225806451612904,12.548712482997002 L43.87096774193548,9.924540359028544 L44.516129032258064,10.250045507739644 L45.16129032258064,11.30122436941378 L45.806451612903224,9.785277714981506 L46.45161290322581,9.719841297678478 L47.096774193548384,10.369172097086249 L47.74193548387097,10.7701804103454 L48.387096774193544,10.495011558069796 L49.03225806451613,8.303727487109981 L49.67741935483871,8.114968295634661 L50.32258064516129,6.092309921660121 L50.96774193548387,5.3817363295646174 L51.61290322580645,5.2080772589568305 L52.25806451612903,6.093986859464163 L52.90322580645161,4.3196509716382465 L53.54838709677419,2.218970186094012 L54.193548387096776,2.176183950092284 L54.83870967741935,3.9303863434281574 L55.483870967741936,2.0075608133173937 L56.12903225806451,3.547834586855007 L56.774193548387096,6.906909982234698 L57.41935483870967,6.614121762069917 L58.064516129032256,5.624185693083515 L58.70967741935484,6.562948276837595 L59.354838709677416,7.422851260225162 L60.0,4.311261162197262 L60.64516129032258,4.006729256983419 L61.29032258064516,4.200521822081253 L61.935483870967744,5.197170762704594 L62.58064516129032,3.421155376864249 L63.225806451612904,3.7231705952668364 L63.87096774193548,2.8154480022550317 L64.51612903225806,3.4194784390602067 L65.16129032258064,3.66780092520883 L65.80645161290322,2.7458179603367086 L66.45161290322581,3.873339735566109 L67.09677419354838,4.14095852740795 L67.74193548387096,4.115789099085006 L68.38709677419355,6.883420051926187 L69.03225806451613,5.11411753772278 L69.6774193548387,5.426199503370388 L70.3225806451613,7.670336557576956 L70.96774193548387,6.0746905537709495 L71.61290322580645,4.917808285813695 L72.25806451612902,3.6107543173467818 L72.90322580645162,4.729886283135205 L73.54838709677419,2.9865903860515637 L74.19354838709677,1.671988917361272 L74.83870967741936,0.0033564358184676735 L75.48387096774194,0.0 L76.12903225806451,1.464773169199951 L76.77419354838709,3.257565613711872 L77.41935483870968,4.813779257124235 L78.06451612903226,5.553715902157975 L78.70967741935483,6.681237677387379 L79.35483870967742,8.915307984348921 L80.0,8.767655530860903\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
       "pe_history_5yr": [
         {
           "year": 2021,
@@ -748,26 +970,42 @@
           "year": 2025,
           "value": 17.2
         }
-      ]
+      ],
+      "phase_label_zh": "Layer 2: 記憶體 / HBM",
+      "phase_label_en": "Layer 2: Memory / HBM",
+      "category_zh": "記憶體晶片 (DRAM/NAND)",
+      "category_en": "Memory Chips (DRAM/NAND)",
+      "pain_points_zh": [
+        "Memory Wall：算力成長遠超越記憶體頻寬",
+        "大模型消耗極大 VRAM"
+      ],
+      "pain_points_en": [
+        "Memory Wall: Compute growth far outpaces memory bandwidth",
+        "LLMs consume massive VRAM"
+      ],
+      "ai_solutions_zh": [
+        "HBM3e (高頻寬記憶體) 量產",
+        "高容量 DDR5 伺服器模組"
+      ],
+      "ai_solutions_en": [
+        "HBM3e (High Bandwidth Memory) mass production",
+        "High-capacity DDR5 server modules"
+      ],
+      "eps_trend_zh": "虧轉盈爆發",
+      "eps_trend_en": "Turnaround Explosion",
+      "rating_zh": "買進",
+      "rating_en": "Buy",
+      "rating_reason_zh": "HBM 供應緊缺至 2025+",
+      "rating_reason_en": "HBM supply shortage into 2025+"
     },
     {
       "name": "AMD",
       "ticker": "AMD",
       "exchange": "NASDAQ",
       "phase": "Layer 2",
-      "phase_label": "Layer 2: AI GPU / CPU",
-      "pain_points": [
-        "市場急需 NVIDIA 的第二供應來源",
-        "軟體生態系 (ROCm) 較為弱勢"
-      ],
-      "ai_solutions": [
-        "MI300 / MI325X 系列 AI 晶片",
-        "EPYC 伺服器 CPU 霸主地位"
-      ],
-      "price": "202.63",
-      "market_cap": "$330.37B",
+      "price": "201.99",
+      "market_cap": "$329.33B",
       "eps": "2.61",
-      "eps_trend": "AI 營收上調中",
       "ps_history": [
         {
           "year": 2024,
@@ -778,13 +1016,9 @@
           "value": 9
         }
       ],
-      "rating": "買進",
-      "rating_reason": "唯一具備 GPU+CPU 挑戰實力的對手",
-      "eps_2026e": "10.75",
-      "pe_ratio": "77.64",
-      "category": "AI 晶片與處理器",
+      "eps_2026e": "10.77",
+      "pe_ratio": "77.39",
       "deep_dive": {
-        "profile": "AMD 在 AI GPU 領域（Instinct MI300系列）急起直追，成為雲端大廠除了 NVDA 之外最重要的備胎與議價籌碼。同時在伺服器 CPU 持續奪取 Intel 市佔。",
         "financial_5yr": [
           {
             "year": 2023,
@@ -802,35 +1036,48 @@
             "eps": "+$6.00"
           }
         ],
-        "partnerships": [
-          "Microsoft, Meta (MI300 大客戶)",
-          "TSMC",
-          "Supermicro"
-        ],
         "pipeline_milestones": [
           {
             "program": "MI325X",
             "phase": "Launch",
-            "milestone": "推論市場奪取市佔",
-            "date": "2024"
+            "date": "2024",
+            "milestone_zh": "推論市場奪取市佔",
+            "milestone_en": "Capture Inference Market Share"
           },
           {
             "program": "MI400 系列",
             "phase": "Design",
-            "milestone": "次世代 AI 架構",
-            "date": "2026"
+            "date": "2026",
+            "milestone_zh": "次世代 AI 架構",
+            "milestone_en": "Next-Gen CDNA Architecture"
           }
         ],
         "earnings_dates": [
           "Q1 2026: Apr 30",
           "Q2 2026: Jul 30"
         ],
-        "risk_assessment": "軟體生態系（ROCm）的成熟度仍落後 CUDA，開發者轉移成本高。且面臨 NVIDIA 快速推出新產品線的強烈壓制。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
-        "investment_strategy": "多頭佈局。市場絕對需要第二家 GPU 供應商，AMD 的容錯空間與潛在市佔增長率極大。",
+        "pipeline_link": "N/A",
+        "profile_zh": "AMD 在 AI GPU 領域（Instinct MI300系列）急起直追，成為雲端大廠除了 NVDA 之外最重要的備胎與議價籌碼。同時在伺服器 CPU 持續奪取 Intel 市佔。",
+        "profile_en": "AMD is catching up rapidly in the AI GPU sector (Instinct MI300 series), becoming the most crucial backup and bargaining chip for CSPs outside NVIDIA. Meanwhile, it continues to grab server CPU market share from Intel.",
+        "partnerships_zh": [
+          "Microsoft, Meta (MI300 大客戶)",
+          "TSMC",
+          "Supermicro"
+        ],
+        "partnerships_en": [
+          "Microsoft, Meta, Oracle (MI300 adopters)",
+          "TSMC"
+        ],
+        "risk_assessment_zh": "軟體生態系（ROCm）的成熟度仍落後 CUDA，開發者轉移成本高。且面臨 NVIDIA 快速推出新產品線的強烈壓制。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
+        "risk_assessment_en": "Consistently trailing NVIDIA in the high-margin training market. Software ecosystem barriers remain difficult to completely overcome.<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 Read Latest SEC Filings (Risk Factors)</a>",
+        "investment_strategy_zh": "多頭佈局。市場絕對需要第二家 GPU 供應商，AMD 的容錯空間與潛在市佔增長率極大。",
+        "investment_strategy_en": "Core Holding. The natural hedge against NVIDIA's monopoly, capturing spillover inference demand.",
+        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/AMD/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
+        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/AMD/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View 5-Year Financial Statements</a>",
         "financial_link": "<a href=\"https://finance.yahoo.com/quote/AMD/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "pipeline_link": "N/A"
+        "risk_assessment": "AI 算力基礎建設龍頭，需關注 CSP 資本支出動向。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>"
       },
-      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,25.0 L0.6451612903225806,24.895602424394742 L1.2903225806451613,24.356610115139635 L1.935483870967742,22.96785562341357 L2.5806451612903225,24.196368357324523 L3.225806451612903,14.717876110233764 L3.870967741935484,12.824123353033775 L4.516129032258064,6.985042472549512 L5.161290322580645,7.633289178617066 L5.806451612903226,12.00106813019867 L6.451612903225806,11.632027516503932 L7.096774193548387,11.22657000542808 L7.741935483870968,6.246961245160033 L8.387096774193548,7.2278316675412135 L9.032258064516128,7.587158638821585 L9.67741935483871,5.771096497591003 L10.32258064516129,6.38535286454648 L10.96774193548387,8.279109326415579 L11.612903225806452,7.123430387266843 L12.258064516129032,2.7702218993067973 L12.903225806451612,1.131391128443692 L13.548387096774194,1.5344220812505043 L14.193548387096774,0.0 L14.838709677419354,2.3040670894830235 L15.483870967741936,1.9932972162671732 L16.129032258064516,1.1362516543199916 L16.774193548387096,3.4670257034388676 L17.419354838709676,1.9423135599336163 L18.064516129032256,6.465473743454034 L18.70967741935484,7.4754776837401025 L19.35483870967742,4.940757895279674 L20.0,6.509174020311367 L20.64516129032258,1.3207664041636917 L21.29032258064516,3.974454231850938 L21.93548387096774,4.25366402889286 L22.58064516129032,5.78080643533626 L23.225806451612904,8.264542567463138 L23.870967741935484,9.900939370718978 L24.516129032258064,14.157033662549988 L25.161290322580644,14.700882793012282 L25.806451612903224,11.964647528148447 L26.451612903225804,14.130326702914136 L27.096774193548388,12.161306183344667 L27.741935483870968,11.362531361876377 L28.387096774193548,10.821112494352231 L29.032258064516128,11.918516988352964 L29.677419354838708,11.345534339985782 L30.32258064516129,11.738855355047336 L30.967741935483872,11.255703523332969 L31.612903225806452,10.493345599245787 L32.25806451612903,10.369524443480902 L32.90322580645161,10.418081541545417 L33.54838709677419,10.415654983276381 L34.193548387096776,13.001358428070366 L34.83870967741935,13.778283111109992 L35.483870967741936,13.392249180193772 L36.12903225806451,16.07749708405494 L36.774193548387096,15.361269699763241 L37.41935483870968,12.357968543210001 L38.064516129032256,11.988927929515262 L38.70967741935484,12.00106813019867 L39.354838709677416,11.967077791086595 L40.0,11.97921428710089 L40.64516129032258,11.82868617170015 L41.29032258064516,11.894240291655262 L41.935483870967744,12.180729763504297 L42.58064516129032,9.920362950878605 L43.225806451612904,10.500628978722009 L43.87096774193548,12.134599223708815 L44.516129032258064,13.185876882583178 L45.16129032258064,14.482373999387397 L45.806451612903224,14.848984350143986 L46.45161290322581,13.75157615147414 L47.096774193548384,10.527335938357862 L47.74193548387097,9.88879917003557 L48.387096774193544,8.839951774099355 L49.03225806451613,7.890645132561211 L49.67741935483871,7.868794994132543 L50.32258064516129,3.527723002186793 L50.96774193548387,2.573563244110577 L51.61290322580645,1.1289682748437713 L52.25806451612903,3.161112651430205 L52.90322580645161,2.9863041346626495 L53.54838709677419,2.81392217616413 L54.193548387096776,2.949887237281537 L54.83870967741935,6.700979558969518 L55.483870967741936,4.384768564133974 L56.12903225806451,5.39477250442004 L56.774193548387096,15.572495113911906 L57.41935483870967,17.439544616145156 L58.064516129032256,13.569484255230362 L58.70967741935484,11.73399853384015 L59.354838709677416,12.323974499428815 L60.0,12.321547941159777 L60.64516129032258,14.176457242709619 L61.29032258064516,13.841406968126952 L61.935483870967744,14.870834488572651 L62.58064516129032,15.5894921358025 L63.225806451612904,14.800427252079468 L63.87096774193548,15.582208756326278 L64.51612903225806,16.44410743481153 L65.16129032258064,12.258424084142817 L65.80645161290322,12.981934847910736 L66.45161290322581,14.725163194379098 L67.09677419354838,15.56763829270472 L67.74193548387096,15.953675928290053 L68.38709677419355,17.815868609316116 L69.03225806451613,15.11605024183339 L69.6774193548387,15.752160451886647 L70.3225806451613,17.45654163803575 L70.96774193548387,14.9679523893708 L71.61290322580645,14.834417591191542 L72.25806451612902,14.445953397337172 L72.90322580645162,16.167327900707754 L73.54838709677419,17.223462380789304 L74.19354838709677,16.448964256018716 L74.83870967741936,16.51451837597383 L75.48387096774194,15.749730188948497 L76.12903225806451,14.339125558793766 L76.77419354838709,15.29571557980813 L77.41935483870968,14.9679523893708 L78.06451612903226,14.314848862096063 L78.70967741935483,10.697287633918231 L79.35483870967742,14.703309351281318 L80.0,14.980088885385095\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
+      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,25.0 L0.6451612903225806,24.895602424394742 L1.2903225806451613,24.356610115139635 L1.935483870967742,22.96785562341357 L2.5806451612903225,24.196368357324523 L3.225806451612903,14.717876110233764 L3.870967741935484,12.824123353033775 L4.516129032258064,6.985042472549512 L5.161290322580645,7.633289178617066 L5.806451612903226,12.00106813019867 L6.451612903225806,11.632027516503932 L7.096774193548387,11.22657000542808 L7.741935483870968,6.246961245160033 L8.387096774193548,7.2278316675412135 L9.032258064516128,7.587158638821585 L9.67741935483871,5.771096497591003 L10.32258064516129,6.38535286454648 L10.96774193548387,8.279109326415579 L11.612903225806452,7.123430387266843 L12.258064516129032,2.7702218993067973 L12.903225806451612,1.131391128443692 L13.548387096774194,1.5344220812505043 L14.193548387096774,0.0 L14.838709677419354,2.3040670894830235 L15.483870967741936,1.9932972162671732 L16.129032258064516,1.1362516543199916 L16.774193548387096,3.4670257034388676 L17.419354838709676,1.9423135599336163 L18.064516129032256,6.465473743454034 L18.70967741935484,7.4754776837401025 L19.35483870967742,4.940757895279674 L20.0,6.509174020311367 L20.64516129032258,1.3207664041636917 L21.29032258064516,3.974454231850938 L21.93548387096774,4.25366402889286 L22.58064516129032,5.78080643533626 L23.225806451612904,8.264542567463138 L23.870967741935484,9.900939370718978 L24.516129032258064,14.157033662549988 L25.161290322580644,14.700882793012282 L25.806451612903224,11.964647528148447 L26.451612903225804,14.130326702914136 L27.096774193548388,12.161306183344667 L27.741935483870968,11.362531361876377 L28.387096774193548,10.821112494352231 L29.032258064516128,11.918516988352964 L29.677419354838708,11.345534339985782 L30.32258064516129,11.738855355047336 L30.967741935483872,11.255703523332969 L31.612903225806452,10.493345599245787 L32.25806451612903,10.369524443480902 L32.90322580645161,10.418081541545417 L33.54838709677419,10.415654983276381 L34.193548387096776,13.001358428070366 L34.83870967741935,13.778283111109992 L35.483870967741936,13.392249180193772 L36.12903225806451,16.07749708405494 L36.774193548387096,15.361269699763241 L37.41935483870968,12.357968543210001 L38.064516129032256,11.988927929515262 L38.70967741935484,12.00106813019867 L39.354838709677416,11.967077791086595 L40.0,11.97921428710089 L40.64516129032258,11.82868617170015 L41.29032258064516,11.894240291655262 L41.935483870967744,12.180729763504297 L42.58064516129032,9.920362950878605 L43.225806451612904,10.500628978722009 L43.87096774193548,12.134599223708815 L44.516129032258064,13.185876882583178 L45.16129032258064,14.482373999387397 L45.806451612903224,14.848984350143986 L46.45161290322581,13.75157615147414 L47.096774193548384,10.527335938357862 L47.74193548387097,9.88879917003557 L48.387096774193544,8.839951774099355 L49.03225806451613,7.890645132561211 L49.67741935483871,7.868794994132543 L50.32258064516129,3.527723002186793 L50.96774193548387,2.573563244110577 L51.61290322580645,1.1289682748437713 L52.25806451612903,3.161112651430205 L52.90322580645161,2.9863041346626495 L53.54838709677419,2.81392217616413 L54.193548387096776,2.949887237281537 L54.83870967741935,6.700979558969518 L55.483870967741936,4.384768564133974 L56.12903225806451,5.39477250442004 L56.774193548387096,15.572495113911906 L57.41935483870967,17.439544616145156 L58.064516129032256,13.569484255230362 L58.70967741935484,11.73399853384015 L59.354838709677416,12.323974499428815 L60.0,12.321547941159777 L60.64516129032258,14.176457242709619 L61.29032258064516,13.841406968126952 L61.935483870967744,14.870834488572651 L62.58064516129032,15.5894921358025 L63.225806451612904,14.800427252079468 L63.87096774193548,15.582208756326278 L64.51612903225806,16.44410743481153 L65.16129032258064,12.258424084142817 L65.80645161290322,12.981934847910736 L66.45161290322581,14.725163194379098 L67.09677419354838,15.56763829270472 L67.74193548387096,15.953675928290053 L68.38709677419355,17.815868609316116 L69.03225806451613,15.11605024183339 L69.6774193548387,15.752160451886647 L70.3225806451613,17.45654163803575 L70.96774193548387,14.9679523893708 L71.61290322580645,14.834417591191542 L72.25806451612902,14.445953397337172 L72.90322580645162,16.167327900707754 L73.54838709677419,17.223462380789304 L74.19354838709677,16.448964256018716 L74.83870967741936,16.51451837597383 L75.48387096774194,15.749730188948497 L76.12903225806451,14.339125558793766 L76.77419354838709,15.29571557980813 L77.41935483870968,14.9679523893708 L78.06451612903226,14.314848862096063 L78.70967741935483,10.697287633918231 L79.35483870967742,14.703309351281318 L80.0,15.13547382199302\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
       "pe_history_5yr": [
         {
           "year": 2021,
@@ -852,7 +1099,33 @@
           "year": 2025,
           "value": 77.7
         }
-      ]
+      ],
+      "phase_label_zh": "Layer 2: AI GPU / CPU",
+      "phase_label_en": "Layer 2: AI GPU / CPU",
+      "category_zh": "AI 晶片與處理器",
+      "category_en": "AI Chips & Processors",
+      "pain_points_zh": [
+        "市場急需 NVIDIA 的第二供應來源",
+        "軟體生態系 (ROCm) 較為弱勢"
+      ],
+      "pain_points_en": [
+        "Market desperate for a second source to NVIDIA",
+        "Software ecosystem (ROCm) relatively weak"
+      ],
+      "ai_solutions_zh": [
+        "MI300 / MI325X 系列 AI 晶片",
+        "EPYC 伺服器 CPU 霸主地位"
+      ],
+      "ai_solutions_en": [
+        "MI300 / MI325X series AI chips",
+        "Dominance in EPYC server CPUs"
+      ],
+      "eps_trend_zh": "AI 營收上調中",
+      "eps_trend_en": "AI Revenue Revisions Up",
+      "rating_zh": "買進",
+      "rating_en": "Buy",
+      "rating_reason_zh": "唯一具備 GPU+CPU 挑戰實力的對手",
+      "rating_reason_en": "Only rival with GPU+CPU combined capabilities"
     }
   ],
   "news_feed": [

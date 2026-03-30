@@ -367,35 +367,33 @@
 
     <div class="dashboard-header">
         <div>
-            <h1>AI 核心基礎設施與半導體動態儀表板 2026</h1>
-            <p style="color: var(--text-secondary); margin: 0;">整合價值鏈分析、公司財報、管線追蹤與即時動態</p>
+            <h1 id="ui-main-title">AI 核心基礎設施與半導體動態儀表板 2026</h1>
+            <p id="ui-sub-title" style="color: var(--text-secondary); margin: 0;">整合價值鏈分析、公司財報、管線追蹤與即時動態</p>
         </div>
-        <div class="last-updated" id="last-updated-badge">🔄 同步中...</div>
+        <div style="display: flex; gap: 15px; align-items: center;">
+            <button class="tab-btn" id="lang-toggle-btn" onclick="toggleLanguage()">切換至中文 (ZH)</button>
+            <div class="last-updated" id="last-updated-badge">🔄 同步中...</div>
+        </div>
     </div>
 
     <div class="tab-controls">
-        <button class="tab-btn active" onclick="switchTab('tab-home')">🏠 首頁: 價值鏈地圖</button>
-        <button class="tab-btn" onclick="switchTab('tab-companies')">🏢 公司矩陣與財報</button>
-        <button class="tab-btn" onclick="switchTab('tab-news')">📰 每日新聞</button>
-        <button class="tab-btn" onclick="switchTab('tab-audit')">⚙️ 系統驗證紀錄</button>
+        <button class="tab-btn active" id="tab-home-btn" onclick="switchTab('tab-home')">🏠 首頁: 價值鏈地圖</button>
+        <button class="tab-btn" id="tab-companies-btn" onclick="switchTab('tab-companies')">🏢 公司矩陣與財報</button>
+        <button class="tab-btn" id="tab-news-btn" onclick="switchTab('tab-news')">📰 每日新聞</button>
+        <button class="tab-btn" id="tab-audit-btn" onclick="switchTab('tab-audit')">⚙️ 系統驗證紀錄</button>
     </div>
 
     <!-- TAB 0: HOME INFOGRAPHIC -->
     <div id="tab-home" class="tab-content active">
         <div class="panel">
-            <h2>AI 產業五層架構痛點與解決方案 (動態)</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 20px;">點擊任意階段，即可跳轉並篩選出相關的 AI 參與公司。</p>
-            
+            <h2 id="cake-title">AI 五層蛋糕架構 (The 5-Layer AI Cake)</h2>
+            <p id="cake-desc" style="color: var(--text-secondary); margin-bottom: 20px;">點擊各層次可篩選下方公司矩陣。底層為 AI 運算基石，上層為最終價值展現的應用端。</p>
             
             <div class="cake-wrap">
-                <h2>AI 五層蛋糕架構 (The 5-Layer AI Cake)</h2>
-                <p>點擊各層次可篩選下方公司矩陣。底層為 AI 運算基石，上層為最終價值展現的應用端。</p>
                 <div id="cake-container" class="ai-cake-container">
                     <!-- Javascript will inject Cake Layers here -->
                 </div>
             </div>
-
-
 
             <div class="infographic-container" id="infographic-container">
                 <!-- Javascript will inject Dynamic Value Chain Stats here -->
@@ -407,14 +405,14 @@
     <!-- TAB 1: Companies -->
     <div id="tab-companies" class="tab-content">
         <div class="filter-status" id="filter-status">
-            <span id="filter-text">目前檢視：全部階段</span>
-            <button class="clear-filter" onclick="clearFilter()">清除過濾</button>
+            <span id="filter-text" data-filter="">目前檢視：全部階段</span>
+            <button class="clear-filter" id="clear-filter-btn" onclick="clearFilter()">清除過濾</button>
         </div>
         <div class="panel" style="overflow-x: auto;">
-            <h2>AI 核心基礎設施解決方案矩陣 (點擊列查看深度報告)</h2>
+            <h2 id="matrix-title">AI 核心基礎設施解決方案矩陣 (點擊列查看深度報告)</h2>
             <table style="min-width: 1200px;">
                 <thead>
-                    <tr>
+                    <tr id="company-table-head">
                         <th style="width:130px">公司</th>
                         <th style="width:100px">分類</th>
                         <th style="width:150px">階段</th>
@@ -431,7 +429,7 @@
                     </tr>
                 </thead>
                 <tbody id="company-table-body">
-                    <tr><td colspan="11" style="text-align: center; color: var(--text-secondary);">載入資料中...</td></tr>
+                    <tr><td colspan="13" style="text-align: center; color: var(--text-secondary);">載入資料中...</td></tr>
                 </tbody>
             </table>
         </div>
@@ -439,13 +437,14 @@
 
     <!-- TAB 2: News -->
     <div id="tab-news" class="tab-content">
+        <h2 id="news-title">最新動態牆 (News Feed)</h2>
         <div class="panel" id="news-feed-container"></div>
     </div>
 
     <!-- TAB 3: Audit Log -->
     <div id="tab-audit" class="tab-content">
         <div class="panel">
-            <h2>自我驗證與修改日誌 (Audit Log)</h2>
+            <h2 id="audit-title">自我驗證與修改日誌 (Audit Log)</h2>
             <div id="audit-log-container"></div>
         </div>
     </div>
@@ -466,17 +465,17 @@
                 <!-- Left Column: Pipeline & Financials -->
                 <div>
                     <div class="detail-card">
-                        <h3>🔬 近期管線里程碑 (Pipeline Milestones)</h3>
+                        <h3 id="modal-pipeline-title">🔬 近期管線里程碑 (Pipeline Milestones)</h3>
                         <table style="margin-bottom: 15px;">
-                            <thead><tr><th>專案</th><th>階段</th><th>預計進度</th><th>時程</th></tr></thead>
+                            <thead id="modal-pipe-head"><tr><th>專案</th><th>階段</th><th>預計進度</th><th>時程</th></tr></thead>
                             <tbody id="modal-pipeline"></tbody>
                         </table>
                     </div>
                     
                     <div class="detail-card">
-                        <h3>📊 近 5 年營收與 EPS 軌跡</h3>
+                        <h3 id="modal-fin-title">📊 近 5 年營收與 EPS 軌跡</h3>
                         <table>
-                            <thead><tr><th>年份</th><th>營收 (Revenue)</th><th>EPS</th></tr></thead>
+                            <thead id="modal-fin-head"><tr><th>年份</th><th>營收 (Revenue)</th><th>EPS</th></tr></thead>
                             <tbody id="modal-financials"></tbody>
                         </table>
                     </div>
@@ -485,17 +484,17 @@
                 <!-- Right Column: Risks & Partners -->
                 <div>
                     <div class="detail-card">
-                        <h3>🔥 投資策略與風險評估</h3>
-                        <p class="risk-text"><strong>風險因子：</strong><br><span id="modal-risk"></span></p>
-                        <p class="strategy-text"><strong>策略：</strong><br><span id="modal-strategy"></span></p>
+                        <h3 id="modal-strategy-title">🔥 投資策略與風險評估</h3>
+                        <p class="risk-text"><strong id="modal-risk-label">風險因子：</strong><br><span id="modal-risk"></span></p>
+                        <p class="strategy-text"><strong id="modal-strategy-label">策略：</strong><br><span id="modal-strategy"></span></p>
                         <div style="margin-top: 20px; border-top: 1px solid var(--border-color); padding-top: 15px;">
-                            <span style="color: var(--text-secondary); font-size: 0.85em;">近期法說會 (Earnings):</span>
+                            <span id="modal-earnings-label" style="color: var(--text-secondary); font-size: 0.85em;">近期法說會 (Earnings):</span>
                             <ul id="modal-earnings" style="margin: 5px 0 0; padding-left: 20px; font-size: 0.9em; color: #cbd5e1;"></ul>
                         </div>
                     </div>
                     
                     <div class="detail-card">
-                        <h3>🤝 重大合作夥伴</h3>
+                        <h3 id="modal-partners-title">🤝 重大合作夥伴</h3>
                         <ul id="modal-partners" style="color: #cbd5e1; padding-left: 20px; font-size: 0.95em;"></ul>
                     </div>
                 </div>
@@ -505,45 +504,184 @@
 
     <script>
         let globalData = null;
+        let currentLang = 'en';
+
+        const TRANSLATIONS = {
+            'en': {
+                mainLayout: {
+                    title: "AI Infrastructure & Semiconductor Dynamic Dashboard 2026",
+                    subtitle: "Integrating Value Chain Analysis, Financials, Pipelines & Real-time Feeds",
+                    toggleBtn: "切換至中文 (ZH)",
+                    tabHome: "🏠 Home: Value Chain Map",
+                    tabCompanies: "🏢 Companies Matrix",
+                    tabNews: "📰 Daily News",
+                    tabAudit: "⚙️ Audit Log",
+                    cakeTitle: "The 5-Layer AI Cake (Dynamic)",
+                    cakeDesc: "Click any layer to filter the company matrix below. The bottom layers are the bedrock of AI compute, while upper layers capture end-user application value.",
+                    matrixTitle: "AI Core Infrastructure Solutions Matrix (Click to view deep dive)",
+                    filterPrefix: "Filter: ",
+                    clearFilter: "Clear Filter",
+                    newsTitle: "Latest News Feeds",
+                    auditTitle: "Self-Verification & Audit Log",
+                    loading: "Loading data...",
+                    noTracked: "No tracked companies in this phase.",
+                    repCompanies: "🏢 Rep: ",
+                    traditional: "⚠️ Before Last Year",
+                    traditionalChallenge: "📌 Challenge:",
+                    aiSolution: "🚀 This Year's Formats",
+                    aiDir: "💡 Action & Solutions:",
+                    evidenceNote: "📝 Note: ",
+                    obs: "Observing",
+                    tableHeaders: ["Company", "Category", "Phase", "Core Pain Points", "AI Solutions", "Price", "Market Cap", "TTM EPS", "P/E", "5Yr P/E History", "6mo Trend", "2026E EPS", "Rating"]
+                },
+                modal: {
+                    descBlank: "No description",
+                    pipeline: "🔬 Recent Pipeline Milestones",
+                    pipeHeaders: ["Program", "Phase", "Milestone", "Timeline"],
+                    financials: "📊 5-Year Revenue & EPS Trajectory",
+                    finHeaders: ["Year", "Revenue", "EPS"],
+                    strategyRisk: "🔥 Investment Strategy & Risks",
+                    risk: "Risk Factors:",
+                    strategy: "Strategy:",
+                    earnings: "Upcoming Earnings:",
+                    partners: "🤝 Major Partnerships"
+                }
+            },
+            'zh': {
+                mainLayout: {
+                    title: "AI 核心基礎設施與半導體動態儀表板 2026",
+                    subtitle: "整合價值鏈分析、公司財報、管線追蹤與即時動態",
+                    toggleBtn: "Switch to English (EN)",
+                    tabHome: "🏠 首頁: 價值鏈地圖",
+                    tabCompanies: "🏢 公司矩陣與財報",
+                    tabNews: "📰 每日新聞",
+                    tabAudit: "⚙️ 系統驗證紀錄",
+                    cakeTitle: "AI 五層蛋糕架構 (The 5-Layer AI Cake)",
+                    cakeDesc: "點擊各層次可篩選下方公司矩陣。底層為 AI 運算基石，上層為最終價值展現的應用端。",
+                    matrixTitle: "AI 核心基礎設施解決方案矩陣 (點擊列查看深度報告)",
+                    filterPrefix: "篩選階段：",
+                    clearFilter: "清除過濾",
+                    newsTitle: "最新動態牆 (News Feed)",
+                    auditTitle: "自我驗證與修改日誌 (Audit Log)",
+                    loading: "載入資料中...",
+                    noTracked: "此階段目前沒有追蹤的公司。",
+                    repCompanies: "🏢 代表公司: ",
+                    traditional: "⚠️ 去年之前",
+                    traditionalChallenge: "📌 挑戰：",
+                    aiSolution: "🚀 今年之後",
+                    aiDir: "💡 發展方向與解決方案：",
+                    evidenceNote: "📝 備註: ",
+                    obs: "觀察中",
+                    tableHeaders: ["公司", "分類", "階段", "核心痛點", "AI 解決方案", "股價", "市值", "TTM EPS", "P/E", "近五年 P/E", "近半年走勢", "2026E EPS", "投資評級"]
+                },
+                modal: {
+                    descBlank: "無描述",
+                    pipeline: "🔬 近期管線里程碑 (Pipeline Milestones)",
+                    pipeHeaders: ["專案", "階段", "預計進度", "時程"],
+                    financials: "📊 近 5 年營收與 EPS 軌跡",
+                    finHeaders: ["年份", "營收 (Revenue)", "EPS"],
+                    strategyRisk: "🔥 投資策略與風險評估",
+                    risk: "風險因子：",
+                    strategy: "策略：",
+                    earnings: "近期法說會 (Earnings):",
+                    partners: "🤝 重大合作夥伴"
+                }
+            }
+        };
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            updateStaticUI();
+            
+            // Re-render dynamic components
+            renderInfographic();
+            renderAICake();
+            if (document.getElementById('filter-status').style.display !== 'none') {
+                const currentFilter = document.getElementById('filter-text').getAttribute('data-filter');
+                renderCompanies(currentFilter);
+            } else {
+                renderCompanies();
+            }
+            renderNews();
+        }
+
+        function updateStaticUI() {
+            const t = TRANSLATIONS[currentLang].mainLayout;
+            const m = TRANSLATIONS[currentLang].modal;
+            
+            document.getElementById('ui-main-title').innerText = t.title;
+            document.getElementById('ui-sub-title').innerText = t.subtitle;
+            document.getElementById('lang-toggle-btn').innerText = t.toggleBtn;
+            
+            document.getElementById('tab-home-btn').innerText = t.tabHome;
+            document.getElementById('tab-companies-btn').innerText = t.tabCompanies;
+            document.getElementById('tab-news-btn').innerText = t.tabNews;
+            document.getElementById('tab-audit-btn').innerText = t.tabAudit;
+            
+            const ct = document.getElementById('cake-title'); if (ct) ct.innerText = t.cakeTitle;
+            const cd = document.getElementById('cake-desc'); if (cd) cd.innerText = t.cakeDesc;
+            
+            const mt = document.getElementById('matrix-title'); if (mt) mt.innerText = t.matrixTitle;
+            const cb = document.getElementById('clear-filter-btn'); if (cb) cb.innerText = t.clearFilter;
+            
+            const nwt = document.getElementById('news-title'); if (nwt) nwt.innerText = t.newsTitle;
+            const adwt = document.getElementById('audit-title'); if (adwt) adwt.innerText = t.auditTitle;
+            
+            const tableHeaders = document.querySelectorAll('#company-table-head th');
+            tableHeaders.forEach((th, idx) => {
+                if(t.tableHeaders[idx]) th.innerText = t.tableHeaders[idx];
+            });
+            
+            // Modal static
+            document.getElementById('modal-pipeline-title').innerText = m.pipeline;
+            document.getElementById('modal-fin-title').innerText = m.financials;
+            document.getElementById('modal-strategy-title').innerText = m.strategyRisk;
+            document.getElementById('modal-risk-label').innerText = m.risk;
+            document.getElementById('modal-strategy-label').innerText = m.strategy;
+            document.getElementById('modal-earnings-label').innerText = m.earnings;
+            document.getElementById('modal-partners-title').innerText = m.partners;
+            
+            const pipeHeaders = document.querySelectorAll('#modal-pipe-head th');
+            pipeHeaders.forEach((th, idx) => { if(m.pipeHeaders[idx]) th.innerText = m.pipeHeaders[idx]; });
+            
+            const finHeaders = document.querySelectorAll('#modal-fin-head th');
+            finHeaders.forEach((th, idx) => { if(m.finHeaders[idx]) th.innerText = m.finHeaders[idx]; });
+        }
+
 
         // Routing / Tab Logic
         function switchTab(tabId) {
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-            
-            // Because tab buttons might not trigger this via 'event' perfectly when called programmatically, we match by id fragment
             document.querySelector(`button[onclick="switchTab('${tabId}')"]`).classList.add('active');
             document.getElementById(tabId).classList.add('active');
         }
 
         function getPhaseBadgeClass(phase) {
-            if (phase.includes('Layer 5')) return 'phase-0'; // Pinkish
-            if (phase.includes('Layer 4')) return 'phase-1'; // Purplish
-            if (phase.includes('Layer 3')) return 'phase-3'; // Greenish
-            if (phase.includes('Layer 2')) return 'phase-1'; // Bluish
-            if (phase.includes('Layer 1')) return 'phase-2'; // Orangish
-            
-            if (phase.includes('Target Discovery / Molecular Design') || phase.includes('Pre-clinical') || phase.includes('Target Discovery')) return 'phase-0';
-            if (phase.includes('Phase I') && !phase.includes('II')) return 'phase-1';
-            if (phase.includes('Phase II')) return 'phase-2';
-            if (phase.includes('Phase III') || phase.includes('Post-Market')) return 'phase-3';
-            return '';
+            if (phase.includes('Layer 5')) return 'phase-0';
+            if (phase.includes('Layer 4')) return 'phase-1';
+            if (phase.includes('Layer 3')) return 'phase-3';
+            if (phase.includes('Layer 2')) return 'phase-1';
+            if (phase.includes('Layer 1')) return 'phase-2';
+            return 'phase-0';
         }
 
-        // Filtering Logic
         function filterCompaniesByPhase(phase) {
             switchTab('tab-companies');
             document.getElementById('filter-status').style.display = 'flex';
-            document.getElementById('filter-text').innerHTML = `<strong>篩選階段：</strong> ${phase}`;
+            const t = TRANSLATIONS[currentLang].mainLayout;
+            const tNode = document.getElementById('filter-text');
+            tNode.innerHTML = `<strong>${t.filterPrefix}</strong> ${phase}`;
+            tNode.setAttribute('data-filter', phase);
             renderCompanies(phase);
         }
 
         function clearFilter() {
             document.getElementById('filter-status').style.display = 'none';
+            document.getElementById('filter-text').setAttribute('data-filter', '');
             renderCompanies(null);
         }
 
-        // Modal Logic
         function openCompanyDetail(ticker) {
             const comp = globalData.companies.find(c => c.ticker === ticker);
             if (!comp) return;
@@ -552,36 +690,40 @@
             document.getElementById('modal-ticker').innerText = comp.exchange + ': ' + comp.ticker;
             
             const badge = document.getElementById('modal-badge');
-            badge.className = `badge ${getPhaseBadgeClass(comp.phase)}`;
-            badge.innerText = comp.phase;
+            const phaseStr = comp['phase_label_' + currentLang] || comp.phase_label_zh;
+            badge.className = `badge ${getPhaseBadgeClass(phaseStr)}`;
+            badge.innerText = phaseStr;
 
             const dd = comp.deep_dive;
-            document.getElementById('modal-profile').innerText = dd.profile || '無描述';
+            document.getElementById('modal-profile').innerText = dd['profile_' + currentLang] || TRANSLATIONS[currentLang].modal.descBlank;
 
             // Pipeline
             const pipeBody = document.getElementById('modal-pipeline');
-            let pipeHtml = dd.pipeline_milestones.map(p => 
-                `<tr><td><strong>${p.program}</strong></td><td><span class="badge" style="border:1px solid #334155">${p.phase}</span></td><td style="color:#e2e8f0">${p.milestone}</td><td style="color:var(--accent-blue)">${p.date}</td></tr>`
+            let pipeHtml = (dd.pipeline_milestones || []).map(p => 
+                `<tr><td><strong>${p.program}</strong></td><td><span class="badge" style="border:1px solid #334155">${p.phase}</span></td><td style="color:#e2e8f0">${p['milestone_' + currentLang] || p.milestone_zh}</td><td style="color:var(--accent-blue)">${p.date}</td></tr>`
             ).join('');
             if (dd.pipeline_link) pipeHtml += `<tr><td colspan="4" style="text-align:right; font-size:0.85em; padding-top:10px;">${dd.pipeline_link}</td></tr>`;
             pipeBody.innerHTML = pipeHtml;
 
             // Financials
             const finBody = document.getElementById('modal-financials');
-            let finHtml = dd.financial_5yr.map(f => {
+            let finHtml = (dd.financial_5yr || []).map(f => {
                 const epsColor = f.eps.includes('-') && f.eps !== 'N/A' ? 'neg' : (f.eps !== 'N/A' ? 'pos' : 'neu');
                 return `<tr><td>${f.year}</td><td>${f.revenue}</td><td class="${epsColor}">${f.eps}</td></tr>`;
             }).join('');
-            if (dd.financial_link) finHtml += `<tr><td colspan="3" style="text-align:right; font-size:0.85em; padding-top:10px;">${dd.financial_link}</td></tr>`;
+            if (dd['financial_link_' + currentLang] || dd.financial_link) {
+                const linkLabel = dd['financial_link_' + currentLang] || dd.financial_link;
+                finHtml += `<tr><td colspan="3" style="text-align:right; font-size:0.85em; padding-top:10px;">${linkLabel}</td></tr>`;
+            }
             finBody.innerHTML = finHtml;
 
             // Risk & Strategies
-            document.getElementById('modal-risk').innerHTML = dd.risk_assessment;
-            document.getElementById('modal-strategy').innerText = dd.investment_strategy;
+            document.getElementById('modal-risk').innerHTML = dd['risk_assessment_' + currentLang] || dd.risk_assessment_zh;
+            document.getElementById('modal-strategy').innerText = dd['investment_strategy_' + currentLang] || dd.investment_strategy_zh;
 
             // Simple Lists
-            document.getElementById('modal-earnings').innerHTML = dd.earnings_dates.map(e => `<li>${e}</li>`).join('');
-            document.getElementById('modal-partners').innerHTML = dd.partnerships.map(p => `<li>${p}</li>`).join('');
+            document.getElementById('modal-earnings').innerHTML = (dd.earnings_dates || []).map(e => `<li>${e}</li>`).join('');
+            document.getElementById('modal-partners').innerHTML = (dd['partnerships_' + currentLang] || dd.partnerships_zh || []).map(p => `<li>${p}</li>`).join('');
 
             document.getElementById('company-modal').classList.add('active');
         }
@@ -590,22 +732,27 @@
             document.getElementById('company-modal').classList.remove('active');
         }
 
-        // --- Rendering ---
-
         function renderInfographic() {
             const container = document.getElementById('infographic-container');
             container.innerHTML = '';
-            globalData.value_chain_stats.forEach((s, idx) => {
+            const t = TRANSLATIONS[currentLang].mainLayout;
+            
+            globalData.value_chain_stats.forEach(s => {
                 const el = document.createElement('div');
                 el.className = 'flow-stage';
                 el.onclick = () => filterCompaniesByPhase(s.phase); 
                 
+                const titleStr = s['title_' + currentLang] || s.title_zh;
+                const pains = s['pain_points_' + currentLang] || s.pain_points_zh || [];
+                const sols = s['ai_solutions_' + currentLang] || s.ai_solutions_zh || [];
+                const evidence = (s.ai_metrics && s.ai_metrics['notes_' + currentLang]) ? s.ai_metrics['notes_' + currentLang] : t.obs;
+
                 let traditionalBlock = `
                     <div class="stage-section traditional">
-                        <div class="section-label">⚠️ 去年之前</div>
-                        <div style="font-size: 0.85em; font-weight: 600; margin-bottom: 8px; color: var(--text-secondary);">📌 挑戰：</div>
+                        <div class="section-label">${t.traditional}</div>
+                        <div style="font-size: 0.85em; font-weight: 600; margin-bottom: 8px; color: var(--text-secondary);">${t.traditionalChallenge}</div>
                         <ul class="solution-list">
-                            ${s.pain_points.map(p => `<li>${p}</li>`).join('')}
+                            ${pains.map(p => `<li>${p}</li>`).join('')}
                         </ul>
                     </div>
                 `;
@@ -614,25 +761,25 @@
                 if (s.ai_metrics) {
                     aiBlock = `
                         <div class="stage-section ai">
-                            <div class="section-label">🚀 今年之後</div>
-                            <div style="font-size: 0.85em; font-weight: 600; margin-bottom: 8px; color: #93c5fd;">💡 發展方向與解決方案：</div>
+                            <div class="section-label">${t.aiSolution}</div>
+                            <div style="font-size: 0.85em; font-weight: 600; margin-bottom: 8px; color: #93c5fd;">${t.aiDir}</div>
                             <ul class="solution-list">
-                                ${s.ai_solutions.map(sol => `<li>${sol}</li>`).join('')}
+                                ${sols.map(sol => `<li>${sol}</li>`).join('')}
                             </ul>
-                            <div class="evidence-note">📝 備註: ${s.ai_metrics.notes || '觀察中'}</div>
+                            <div class="evidence-note">${t.evidenceNote}${evidence}</div>
                         </div>
                     `;
                 } else {
                     aiBlock = `
                         <div class="stage-section ai" style="justify-content: center; align-items: center; opacity: 0.5;">
-                            <div style="font-size: 0.9rem; color: var(--text-secondary);">尚無特定資料</div>
+                            <div style="font-size: 0.9rem; color: var(--text-secondary);">${t.descBlank}</div>
                         </div>
                     `;
                 }
 
                 el.innerHTML = `
                     <div class="stage-header">
-                        <h3>${s.title}</h3>
+                        <h3>${titleStr}</h3>
                     </div>
                     <div class="stage-body">
                         ${traditionalBlock}
@@ -643,64 +790,61 @@
             });
         }
 
-        
-        
-        
         function renderAICake() {
             const containerEle = document.getElementById('cake-container');
             if (!containerEle) return;
-            
             containerEle.innerHTML = ''; // clear
+            const t = TRANSLATIONS[currentLang].mainLayout;
             
-            const layersData = [
-                { id: "Layer 5", class: "layer-5", name: "Layer 5: Applications", sub: "End-user products and services" },
-                { id: "Layer 4", class: "layer-4", name: "Layer 4: Models", sub: "Software algorithms and neural networks" },
-                { id: "Layer 3", class: "layer-3", name: "Layer 3: Infrastructure", sub: "Physical data centers and supercomputers" },
-                { id: "Layer 2", class: "layer-2", name: "Layer 2: Chips", sub: "Specialized semiconductors and processors" },
-                { id: "Layer 1", class: "layer-1", name: "Layer 1: Energy", sub: "Foundational power for AI systems" }
-            ];
-
-            layersData.reverse().forEach(layer => {
+            // Re-render based on GlobalData dynamic phases
+            const displayPhases = [...globalData.value_chain_stats].reverse();
+            
+            displayPhases.forEach(layer => {
                 const el = document.createElement('div');
-                el.className = `cake-layer ${layer.class}`;
                 
-                // Increase height slightly to fit companies
+                // Keep styling matching layer id roughly
+                let cls = 'layer-1';
+                if(layer.phase.includes('5')) cls = 'layer-5';
+                if(layer.phase.includes('4')) cls = 'layer-4';
+                if(layer.phase.includes('3')) cls = 'layer-3';
+                if(layer.phase.includes('2')) cls = 'layer-2';
+                el.className = `cake-layer ${cls}`;
+                
                 el.style.minHeight = '75px';
                 el.style.height = 'auto';
                 el.style.padding = '10px 0';
-                
-                el.onclick = () => filterCompaniesByPhase(layer.id);
+                el.onclick = () => filterCompaniesByPhase(layer.phase);
                 
                 // Find companies matching this layer
                 const compNames = globalData.companies
-                    .filter(c => c.phase_label && c.phase_label.includes(layer.id))
+                    .filter(c => (c['phase_label_' + currentLang] || c.phase_label_zh).includes(layer.phase))
                     .map(c => c.ticker)
                     .join(', ');
                 
-                const compDisplayHtml = compNames ? `<div style="font-size: 0.8em; color: rgba(255,255,255,0.9); font-weight: 700; margin-top: 6px; padding: 2px 8px; border-radius: 4px; background: rgba(0,0,0,0.2);">🏢 代表公司: ${compNames}</div>` : '';
+                const compDisplayHtml = compNames ? `<div style="font-size: 0.8em; color: rgba(255,255,255,0.9); font-weight: 700; margin-top: 6px; padding: 2px 8px; border-radius: 4px; background: rgba(0,0,0,0.2);">${t.repCompanies}${compNames}</div>` : '';
 
+                const pTitle = layer['title_' + currentLang] || layer.title_zh;
+                
                 el.innerHTML = `
-                    <div class="layer-title">${layer.name}</div>
-                    <div class="layer-sub">${layer.sub}</div>
+                    <div class="layer-title">${pTitle}</div>
                     ${compDisplayHtml}
                 `;
                 containerEle.appendChild(el);
             });
         }
 
-
         function renderCompanies(filterPhase = null) {
             const tbody = document.getElementById('company-table-body');
             tbody.innerHTML = '';
+            const t = TRANSLATIONS[currentLang].mainLayout;
             
             let displayList = globalData.companies;
-            // Match substring to handle synchronized long names
             if (filterPhase) {
-                displayList = displayList.filter(c => c.phase_label.toLowerCase().includes(filterPhase.toLowerCase()));
+                displayList = displayList.filter(c => (c['phase_label_' + currentLang] || c.phase_label_zh).toLowerCase().includes(filterPhase.toLowerCase()));
             }
 
             if (displayList.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="12" style="text-align:center; padding: 40px;">此階段目前沒有追蹤的公司。</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="13" style="text-align:center; padding: 40px;">${t.noTracked}</td></tr>`;
                 return;
             }
 
@@ -709,19 +853,25 @@
                 row.className = 'clickable-row';
                 row.onclick = () => openCompanyDetail(c.ticker);
                 
-                const painPointsHtml = c.pain_points.map(p => `• ${p}`).join('<br>');
-                const solutionsHtml = c.ai_solutions.map(s => `• ${s}`).join('<br>');
+                const pt = c['pain_points_' + currentLang] || c.pain_points_zh || [];
+                const sols = c['ai_solutions_' + currentLang] || c.ai_solutions_zh || [];
+                const phaseStr = c['phase_label_' + currentLang] || c.phase_label_zh || "";
+                const catStr = c['category_' + currentLang] || c.category_zh || "";
+                const rtStr = c['rating_' + currentLang] || c.rating_zh || "";
+                const rtrStr = c['rating_reason_' + currentLang] || c.rating_reason_zh || "";
+                
+                const painPointsHtml = pt.map(p => `• ${p}`).join('<br>');
+                const solutionsHtml = sols.map(s => `• ${s}`).join('<br>');
                 
                 const peHistoryHtml = `<div class="ps-mini">` + 
                     (c.pe_history_5yr && c.pe_history_5yr.length > 0 ? c.pe_history_5yr.map(pe => {
                         let w = Math.min(pe.value, 80);
                         if (pe.value > 100) w = 60;
                         return `<div class="ps-row"><span class="ps-yr">${pe.year}</span><div class="ps-bar" style="width:${Math.max(4, w)}px; background: #8b5cf6;"></div><span class="ps-val">${pe.value}x</span></div>`;
-                    }).join('') : `<div style="font-size:0.8em;color:var(--text-secondary)">無</div>`) + `</div>`;
+                    }).join('') : `<div style="font-size:0.8em;color:var(--text-secondary)">-</div>`) + `</div>`;
 
-                const trendHtml = c.trend_6mo_svg ? c.trend_6mo_svg : '<span style="color:#64748b;font-size:0.8em;">No Data</span>';
-
-                const phaseBadgesHtml = (c.phase_label || "").split(',').map(p => `<span class="badge ${getPhaseBadgeClass(p.trim())}" style="margin-bottom:4px;display:inline-block;margin-right:4px;">${p.trim()}</span>`).join('');
+                const trendHtml = c.trend_6mo_svg ? c.trend_6mo_svg : '<span style="color:#64748b;font-size:0.8em;">-</span>';
+                const phaseBadgesHtml = phaseStr.split(',').map(p => `<span class="badge ${getPhaseBadgeClass(p.trim())}" style="margin-bottom:4px;display:inline-block;margin-right:4px;">${p.trim()}</span>`).join('');
 
                 const epsColor = c.eps > 0 ? 'pos' : (c.eps < 0 ? 'neg' : 'neu');
                 const epsValHtml = c.eps === 'N/A' || c.eps === undefined ? `<div class="metric-val neu">N/A</div>` : `<div class="metric-val ${epsColor}">${c.eps > 0 ? '+' : ''}$${Math.abs(c.eps)}</div>`;
@@ -734,7 +884,7 @@
                         <strong>${c.name}</strong>
                         <span class="ticker">${c.exchange}: ${c.ticker}</span>
                     </td>
-                    <td><div style="font-size: 0.85em; color: var(--accent-blue); font-weight: 500;">${c.category || 'N/A'}</div></td>
+                    <td><div style="font-size: 0.85em; color: var(--accent-blue); font-weight: 500;">${catStr}</div></td>
                     <td>${phaseBadgesHtml}</td>
                     <td style="font-size: 0.85em; line-height: 1.4;">${painPointsHtml}</td>
                     <td style="font-size: 0.85em; line-height: 1.4; color: #bae6fd;">${solutionsHtml}</td>
@@ -744,62 +894,72 @@
                     <td>${peHtml}</td>
                     <td>${peHistoryHtml}</td>
                     <td>${trendHtml}</td>
-                    <td>${eps2026eHtml}<div style="font-size:0.85em;color:var(--text-secondary);margin-top:2px;">${c.eps_trend || 'Forward'}</div></td>
-                    <td><span style="color: var(--accent-orange); font-weight: 600;">${c.rating}</span><div style="font-size:0.8em;color:var(--text-secondary);margin-top:4px;">${c.rating_reason}</div></td>
+                    <td>${eps2026eHtml}<div style="font-size:0.85em;color:var(--text-secondary);margin-top:2px;">${c['eps_trend_' + currentLang] || c.eps_trend_zh || ''}</div></td>
+                    <td><span style="color: var(--accent-orange); font-weight: 600;">${rtStr}</span><div style="font-size:0.8em;color:var(--text-secondary);margin-top:4px;">${rtrStr}</div></td>
                 `;
                 tbody.appendChild(row);
             });
         }
 
+        function renderNews() {
+            const newsContainer = document.getElementById('news-feed-container');
+            newsContainer.innerHTML = '';
+            
+            (globalData.news_feed || []).forEach(n => {
+                const el = document.createElement('div');
+                el.className = 'news-item';
+                const companiesHtml = n.companies_impacted.map(c => `<span class="badge">${c}</span>`).join(' ');
+                
+                const titleStr = n['title_' + currentLang] || n.title || n.title_zh;
+                const summaryStr = n['summary_' + currentLang] || n.summary || n.summary_zh;
+                const catStr = n['category_' + currentLang] || n.category || n.category_zh;
+                
+                const titleHtml = n.url ? `<a href="${n.url}" target="_blank" style="color:inherit;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">${titleStr}</a>` : titleStr;
+                const sourceHtml = n.url ? `<a href="${n.url}" target="_blank" style="color:inherit;text-decoration:underline;">${n.source}</a>` : n.source;
+                el.innerHTML = `
+                    <div class="news-meta">
+                        <span class="date">${n.date}</span><span>•</span><span style="color: #ccc;">${catStr}</span><span>•</span><span style="color: #ccc;">Source: ${sourceHtml}</span><span>${companiesHtml}</span>
+                    </div>
+                    <div class="news-title">${titleHtml}</div>
+                    <div class="news-summary">${summaryStr}</div>
+                `;
+                newsContainer.appendChild(el);
+            });
+        }
+
         async function loadDashboardData() {
             try {
+                // Determine user preference or default to EN
+                currentLang = 'en'; 
+                
                 const response = await fetch('ai_companies_data.json');
                 globalData = await response.json();
                 
                 // Update Date
-                const updateDate = new Date(globalData.last_updated).toLocaleString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
-                document.getElementById('last-updated-badge').innerText = `✅ 最後更新: ${updateDate}`;
+                const updateDate = new Date(globalData.last_updated).toLocaleString(currentLang === 'zh' ? 'zh-TW' : 'en-US', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+                document.getElementById('last-updated-badge').innerText = `✅ Last Synced: ${updateDate}`;
 
-                // Render Phase 11: Infographic
+                // Init static text mapping
+                updateStaticUI();
+
+                // Render components
                 renderInfographic();
                 renderAICake();
-
-
-
-                // Render Phase 12: Matrix Default (All)
                 renderCompanies();
+                renderNews();
 
-                // Render News
-                const newsContainer = document.getElementById('news-feed-container');
-                newsContainer.innerHTML = '<h2>最新動態牆 (News Feed)</h2>';
-                globalData.news_feed.forEach(n => {
-                    const el = document.createElement('div');
-                    el.className = 'news-item';
-                    const companiesHtml = n.companies_impacted.map(c => `<span class="badge">${c}</span>`).join(' ');
-                    const titleHtml = n.url ? `<a href="${n.url}" target="_blank" style="color:inherit;text-decoration:none;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">${n.title}</a>` : n.title;
-                    const sourceHtml = n.url ? `<a href="${n.url}" target="_blank" style="color:inherit;text-decoration:underline;">${n.source}</a>` : n.source;
-                    el.innerHTML = `
-                        <div class="news-meta">
-                            <span class="date">${n.date}</span><span>•</span><span style="color: #ccc;">${n.category}</span><span>•</span><span style="color: #ccc;">Source: ${sourceHtml}</span><span>${companiesHtml}</span>
-                        </div>
-                        <div class="news-title">${titleHtml}</div>
-                        <div class="news-summary">${n.summary}</div>
-                    `;
-                    newsContainer.appendChild(el);
-                });
-
-                // Render Audit
+                // Render Audit (Doesn't necessarily need full translation, but can keep as is)
                 const auditContainer = document.getElementById('audit-log-container');
                 auditContainer.innerHTML = '';
                 [...globalData.update_history].reverse().forEach(a => {
                     const el = document.createElement('div');
                     el.className = 'audit-item';
-                    const auditDate = new Date(a.date).toLocaleString('zh-TW', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+                    const auditDate = new Date(a.date).toLocaleString(currentLang === 'zh' ? 'zh-TW' : 'en-US', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
                     el.innerHTML = `
                         <div class="audit-time">${auditDate}</div>
                         <div>
                             <div class="audit-desc">${a.verified ? '✅' : '⚠️'} [${a.action.toUpperCase()}] ${a.description}</div>
-                            <div class="audit-reason">↳ 判斷依據: ${a.reason}</div>
+                            <div class="audit-reason">↳ Reason / Result: ${a.reason}</div>
                         </div>
                     `;
                     auditContainer.appendChild(el);
@@ -807,13 +967,12 @@
 
             } catch (error) {
                 console.error("Error loading JSON data:", error);
-                document.getElementById('last-updated-badge').innerText = '❌ 資料庫載入失敗';
+                document.getElementById('last-updated-badge').innerText = '❌ Failed to load Database';
                 document.getElementById('last-updated-badge').style.background = 'rgba(239, 68, 68, 0.2)';
                 document.getElementById('last-updated-badge').style.color = '#fca5a5';
             }
         }
 
-        // Close modal on outside click
         window.onclick = function(event) {
             const modal = document.getElementById('company-modal');
             if (event.target == modal) {
