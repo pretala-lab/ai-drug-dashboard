@@ -1,226 +1,176 @@
 {
-  "last_updated": "2026-03-30T10:24:38.310086Z",
+  "last_updated": "2026-04-05T23:30:00.000000+08:00",
   "metrics_comparison": {
     "traditional": {
-      "cost_zh": "高昂 (建置數據中心)",
-      "cost_en": "High (Data Center Buildout)",
-      "timeline_zh": "數年 (硬體研發與部署)",
-      "timeline_en": "Years (Hardware R&D & Deployment)",
-      "success_rate_zh": "高風險 (易受架構轉變影響)",
-      "success_rate_en": "High Risk (Vulnerable to Paradigm Shifts)",
-      "source_zh": "傳統硬體部署",
-      "source_en": "Traditional Hardware Deployment"
+      "cost": "高昂 (建置數據中心)",
+      "timeline": "數年 (硬體研發與部署)",
+      "success_rate": "高風險 (易受架構轉變影響)",
+      "source": "傳統硬體部署"
     },
     "with_ai": {
-      "cost_zh": "AI 晶片規模化效益",
-      "cost_en": "AI Chip Scale Efficiency",
-      "timeline_zh": "算力加速研發與訓練",
-      "timeline_en": "Compute-Accelerated R&D & Training",
-      "success_rate_zh": "高速成長 (AI 需求爆發)",
-      "success_rate_en": "High Growth (AI Demand Explosion)",
-      "source_zh": "AI 算力與基礎設施市場",
-      "source_en": "AI Compute & Infrastructure Market"
+      "cost": "AI 晶片規模化效益",
+      "timeline": "算力加速研發與訓練",
+      "success_rate": "高速成長 (AI 需求爆發)",
+      "source": "AI 算力與基礎設施市場"
     }
   },
   "value_chain_stats": [
     {
       "phase": "Layer 5",
-      "ai_metrics": {
-        "notes_zh": "最上層是應用層，也是經濟價值產生之處。例如藥物研發平台、工業機器人、自動駕駛車等。應用程式依賴其下方的每一層架構。",
-        "notes_en": "The top layer is the application layer, where economic value is generated (e.g., drug discovery platforms, industrial robots, autonomous vehicles). Applications rely on every layer below them.",
-        "cost_zh": "依賴 Token / API 費用",
-        "cost_en": "Dependent on Token / API fees",
-        "time_zh": "產品迭代極快",
-        "time_en": "Rapid product iteration",
-        "success_rate_zh": "經濟價值產生之處",
-        "success_rate_en": "Core economic value generator"
-      },
-      "title_zh": "Layer 5: Applications (應用)",
-      "title_en": "Layer 5: Applications",
+      "title_zh": "Layer 5: AI 應用與服務 (Applications)",
+      "title_en": "Layer 5: AI Applications & Services",
+      "cost": "終端/SaaS",
+      "time": "敏捷開發",
+      "success_rate": "高競爭",
       "pain_points_zh": [
         "獲客成本高",
-        "容易被底層模型取代",
-        "需解決實際終端問題"
+        "容易被底層模型取代"
       ],
       "pain_points_en": [
         "High customer acquisition cost",
-        "Easily replaced by base models",
-        "Must solve concrete end-user problems"
+        "Easily disrupted by underlying model providers"
       ],
+      "ai_metrics": {
+        "cost": "依賴 Token 費用",
+        "time": "產品迭代極快",
+        "success_rate": "10-20% 勝出",
+        "notes_zh": "如 Copilot, ChatGPT",
+        "notes_en": "e.g. Copilot, ChatGPT"
+      },
       "ai_solutions_zh": [
-        "針對特定產業微調模型",
-        "AI Agent 自主執行流程"
+        "垂直領域微調",
+        "AI Agent 自主執行"
       ],
       "ai_solutions_en": [
-        "Fine-tuning models for specific industries",
-        "Autonomous AI Agent workflows"
-      ],
-      "cost_zh": "發展特定領域應用",
-      "cost_en": "Domain-specific app dev",
-      "time_zh": "敏捷開發 (週/月)",
-      "time_en": "Agile (Weeks/Months)",
-      "success_rate_zh": "高競爭 / 贏者通吃",
-      "success_rate_en": "High competition / Winner-takes-all"
+        "Vertical domain fine-tuning",
+        "Autonomous AI Agent execution"
+      ]
     },
     {
       "phase": "Layer 4",
-      "ai_metrics": {
-        "notes_zh": "基礎設施之上是模型層。AI 模型能理解語言、生物、化學、物理、醫療以及真實世界本身。最具變革性的進展正發生在化學 AI、物理模擬、機器人。",
-        "notes_en": "Above the infrastructure is the model layer. AI models can understand language, biology, chemistry, physics, medicine, and the real world itself. The most transformative progress is happening in chemical AI, physics simulation, and robotics.",
-        "cost_zh": "極高 (百億至兆級參數)",
-        "cost_en": "Extremely high (10B to Trillion parameters)",
-        "time_zh": "Scaling Laws 訓練",
-        "time_en": "Scaling laws training",
-        "success_rate_zh": "語言/物理/生物 AI 變革",
-        "success_rate_en": "Language/Physics/Bio AI revolutions"
-      },
-      "title_zh": "Layer 4: Models (模型)",
-      "title_en": "Layer 4: Models",
+      "title_zh": "Layer 4: 基礎大模型與開源 (Foundation Models)",
+      "title_en": "Layer 4: Foundation Models & Open Source",
+      "cost": "數千萬至十億美金",
+      "time": "數月訓練期",
+      "success_rate": "巨頭壟斷",
       "pain_points_zh": [
         "算力資源龐大",
-        "高品質訓練數據取得困難",
-        "開源模型競爭激烈"
+        "資料品質與清洗"
       ],
       "pain_points_en": [
-        "Massive compute resource requirements",
-        "Difficulty acquiring high-quality training data",
-        "Fierce open-source model competition"
+        "Enormous compute requirements",
+        "Data quality and cleaning challenges"
       ],
+      "ai_metrics": {
+        "cost": "極高 (百億參數)",
+        "time": "Scale Laws 訓練",
+        "success_rate": "少數贏家全拿",
+        "notes_zh": "如 GPT-4, Llama 3",
+        "notes_en": "e.g. GPT-4, Llama 3"
+      },
       "ai_solutions_zh": [
-        "MoE 架構提升推論效率",
-        "合成數據擴充與對齊 (Alignment)"
+        "MoE 架構",
+        "合成數據擴充"
       ],
       "ai_solutions_en": [
-        "MoE architectures for inference efficiency",
-        "Synthetic data augmentation and Alignment"
-      ],
-      "cost_zh": "巨量訓練成本",
-      "cost_en": "Massive training costs",
-      "time_zh": "系統訓練與對齊",
-      "time_en": "System training & alignment",
-      "success_rate_zh": "基礎模型寡占化",
-      "success_rate_en": "Foundation model oligopoly"
+        "Mixture-of-Experts (MoE) architecture",
+        "Synthetic data augmentation"
+      ]
     },
     {
       "phase": "Layer 3",
-      "ai_metrics": {
-        "notes_zh": "這包括土地、電力輸送、散熱、建設工程、網路，以及將數萬顆處理器協調運作為單一機器的系統 (AI 工廠)。其設計目的並非儲存資訊，而是製造智慧。",
-        "notes_en": "This includes land, power delivery, cooling, construction engineering, networking, and the systems that coordinate tens of thousands of processors to work together as a single machine (AI Factories). Their design purpose is not to store information, but to manufacture intelligence.",
-        "cost_zh": "百億級建設規模",
-        "cost_en": "Tens of billions in construction scale",
-        "time_zh": "算力即服務",
-        "time_en": "Compute as a Service (CaaS)",
-        "success_rate_zh": "製造智慧的工廠",
-        "success_rate_en": "Factories that manufacture intelligence"
-      },
-      "title_zh": "Layer 3: Infrastructure (基礎設施)",
-      "title_en": "Layer 3: Infrastructure",
+      "title_zh": "Layer 3: 數據與 MLOps 平台 (Data & Platforms)",
+      "title_en": "Layer 3: Data & MLOps Platforms",
+      "cost": "平台化",
+      "time": "持續整合",
+      "success_rate": "高黏著度",
       "pain_points_zh": [
-        "資料中心擴建受限電網",
-        "冷卻與散熱挑戰",
-        "建設工程龐大"
+        "數據孤島",
+        "模型部署困難"
       ],
       "pain_points_en": [
-        "Data center expansion constrained by power grids",
-        "Cooling and thermal challenges",
-        "Massive construction engineering"
+        "Data silos",
+        "Difficulty deploying models to production"
       ],
+      "ai_metrics": {
+        "cost": "訂閱制",
+        "time": "即時管線",
+        "success_rate": "生態系依賴",
+        "notes_zh": "如 Databricks, Scale",
+        "notes_en": "e.g. Databricks, Scale AI"
+      },
       "ai_solutions_zh": [
-        "液冷散熱技術部署",
-        "大型 GPU 叢集調度與高速網路聯結"
+        "自動化特徵工程",
+        "LLMOps 監控"
       ],
       "ai_solutions_en": [
-        "Deployment of liquid cooling tech",
-        "Large GPU cluster orchestration and high-speed networking"
-      ],
-      "cost_zh": "大量資本支出 (Capex)",
-      "cost_en": "Massive Capital Expenditure (Capex)",
-      "time_zh": "長週期建設",
-      "time_en": "Long-cycle construction",
-      "success_rate_zh": "AI 工廠規模化",
-      "success_rate_en": "AI factory scaling"
+        "Automated feature engineering",
+        "LLMOps monitoring & observability"
+      ]
     },
     {
       "phase": "Layer 2",
+      "title_zh": "Layer 2: 雲端與算力基礎設施 (Cloud Infrastructure)",
+      "title_en": "Layer 2: Cloud & Compute Infrastructure",
+      "cost": "資本支出極大 (Capex)",
+      "time": "長週期建設",
+      "success_rate": "寡占市場",
+      "pain_points_zh": [
+        "冷卻與功耗問題",
+        "GPU 供應鏈短缺"
+      ],
+      "pain_points_en": [
+        "Cooling and power consumption issues",
+        "GPU supply chain shortages"
+      ],
       "ai_metrics": {
-        "notes_zh": "處理器被設計用來能夠大規模的、高效的將能源轉換為運算能力。AI 工作負載需要龐大的平行運算能力、高頻寬記憶體，以及高速互連技術。",
-        "notes_en": "Processors are designed to efficiently and massively convert energy into compute power. AI workloads require massive parallel computing capabilities, high-bandwidth memory, and high-speed interconnect tech.",
-        "cost_zh": "高頻寬記憶體與高效能架構",
-        "cost_en": "HBM and high-performance architectures",
-        "time_zh": "平行運算能力",
-        "time_en": "Parallel compute capability",
-        "success_rate_zh": "高效將能源轉換為算力",
-        "success_rate_en": "Highly efficient energy-to-compute conversion"
+        "cost": "大規模伺服器建置",
+        "time": "算力即服務",
+        "success_rate": "穩定現金牛",
+        "notes_zh": "如 AWS, CoreWeave",
+        "notes_en": "e.g. AWS, CoreWeave"
       },
-      "title_zh": "Layer 2: Chips (晶片)",
-      "title_en": "Layer 2: Chips",
+      "ai_solutions_zh": [
+        "液冷散熱技術",
+        "彈性 GPU 叢集調度"
+      ],
+      "ai_solutions_en": [
+        "Liquid cooling technology",
+        "Elastic GPU cluster orchestration"
+      ]
+    },
+    {
+      "phase": "Layer 1",
+      "title_zh": "Layer 1: AI 晶片、記憶體與網通組件 (AI Semiconductors)",
+      "title_en": "Layer 1: AI Chips, Memory & Networking (AI Semiconductors)",
+      "cost": "千億級研發",
+      "time": "1-2 年架構迭代",
+      "success_rate": "硬體壟斷",
       "pain_points_zh": [
         "摩爾定律極限",
         "封裝產能 (CoWoS) 瓶頸",
         "記憶體頻寬不足 (Memory Wall)"
       ],
       "pain_points_en": [
-        "Limits of Moore's Law",
-        "Advanced packaging (CoWoS) capacity bottlenecks",
-        "Memory Bandwidth limits (Memory Wall)"
+        "Moore's Law limitations",
+        "Advanced packaging (CoWoS) capacity bottleneck",
+        "Insufficient memory bandwidth (Memory Wall)"
       ],
-      "ai_solutions_zh": [
-        "新一代架構如 Blackwell",
-        "HBM3E 與 2.5D/3D 封裝",
-        "CPO 矽光子互連"
-      ],
-      "ai_solutions_en": [
-        "Next-gen architectures (e.g., Blackwell)",
-        "HBM3E and 2.5D/3D packaging",
-        "CPO Silicon Photonics interconnects"
-      ],
-      "cost_zh": "千億級研發",
-      "cost_en": "Hundreds of billions in R&D",
-      "time_zh": "持續架構迭代",
-      "time_en": "Continuous architecture iteration",
-      "success_rate_zh": "龍頭市佔極高",
-      "success_rate_en": "Extremely high leader market share"
-    },
-    {
-      "phase": "Layer 1",
       "ai_metrics": {
-        "notes_zh": "能源是 AI 基礎設施的第一性原理，也是限制能產生多少智慧的根本約束。每一個 token 都是電子流動、熱能轉換為運算能力的結果。",
-        "notes_en": "Energy is the first principle of AI infrastructure and the fundamental constraint limiting how much intelligence can be generated. Every token is the result of electron flow and heat converted into compute.",
-        "cost_zh": "電費成最大營運成本",
-        "cost_en": "Electricity becomes the largest OpEx",
-        "time_zh": "電網升級與建置",
-        "time_en": "Power grid upgrades & buildouts",
-        "success_rate_zh": "AI 基礎設施的第一性原理",
-        "success_rate_en": "The first principle of AI infrastructure"
+        "cost": "先進製程極昂貴",
+        "time": "AI 輔助晶片設計",
+        "success_rate": "龍頭市佔 > 80%",
+        "notes_zh": "NVDA, TSM 核心",
+        "notes_en": "NVDA, TSM at the core"
       },
-      "title_zh": "Layer 1: Energy (基礎能源)",
-      "title_en": "Layer 1: Energy",
-      "pain_points_zh": [
-        "AI 資料中心耗電量巨大",
-        "綠能供應需要擴充",
-        "即時生成智慧需要即時電力"
-      ],
-      "pain_points_en": [
-        "Massive power consumption of AI Data Centers",
-        "Need for green energy supply expansion",
-        "Real-time intelligence requires real-time power"
-      ],
       "ai_solutions_zh": [
-        "SMR 小型核能投資",
-        "高效能資料中心散熱調度",
-        "智慧電網配電與儲能"
+        "HBM 記憶體與 2.5D/3D 封裝",
+        "CPO 矽光子網通傳輸"
       ],
       "ai_solutions_en": [
-        "SMR (Small Modular Reactor) investments",
-        "High-efficiency data center thermal dispatch",
-        "Smart grid distribution & energy storage"
-      ],
-      "cost_zh": "基礎設施鉅額投資",
-      "cost_en": "Infrastructure mega-investments",
-      "time_zh": "極長線基建佈局",
-      "time_en": "Extremely long-term buildouts",
-      "success_rate_zh": "AI 的底層限制與動力",
-      "success_rate_en": "The bedrock limit & driver of AI"
+        "HBM memory with 2.5D/3D packaging",
+        "CPO silicon photonics interconnects"
+      ]
     }
   ],
   "companies": [
@@ -228,11 +178,31 @@
       "name": "NVIDIA",
       "ticker": "NVDA",
       "exchange": "NASDAQ",
-      "phase": "Layer 2, Layer 3, Layer 4",
-      "price": "167.52",
-      "market_cap": "$4.07T",
-      "eps": "4.91",
-      "ps_history": [
+      "phase": "Layer 1",
+      "phase_label_zh": "Layer 1: AI GPU / 架構",
+      "phase_label_en": "Layer 1: AI GPU / Architecture",
+      "pain_points_zh": [
+        "算力需求爆炸性成長",
+        "通用運算架構能耗過高"
+      ],
+      "pain_points_en": [
+        "Explosive growth in compute demand",
+        "General-purpose compute architectures are power-inefficient"
+      ],
+      "ai_solutions_zh": [
+        "Blackwell 架構 GPU 加速器",
+        "CUDA 軟體生態系護城河"
+      ],
+      "ai_solutions_en": [
+        "Blackwell architecture GPU accelerators",
+        "CUDA software ecosystem moat"
+      ],
+      "price": 135.0,
+      "market_cap": "3.3T",
+      "eps": 2.15,
+      "eps_trend_zh": "爆發性增長",
+      "eps_trend_en": "Explosive growth",
+      "pe_history_5yr": [
         {
           "year": 2024,
           "value": 35
@@ -242,9 +212,17 @@
           "value": 25
         }
       ],
-      "eps_2026e": "11.12",
-      "pe_ratio": "34.12",
+      "rating_zh": "強力買進",
+      "rating_en": "Strong Buy",
+      "rating_reason_zh": "壟斷 AI 訓練市場",
+      "rating_reason_en": "Dominates AI training market",
+      "eps_2026e": "+$4.50",
+      "pe_ratio": 30.0,
+      "category_zh": "AI 晶片與軟體平台",
+      "category_en": "AI Chips & Software Platform",
       "deep_dive": {
+        "profile_zh": "NVIDIA 是全球 AI 算力的絕對霸主。透過領先的 GPU 架構（Hopper, Blackwell）與難以超越的 CUDA 軟體生態系，主導了整個大模型訓練與推論市場。",
+        "profile_en": "NVIDIA is the undisputed leader in global AI compute. Through its leading GPU architectures (Hopper, Blackwell) and an unmatched CUDA software ecosystem, it dominates the entire large model training and inference market.",
         "financial_5yr": [
           {
             "year": 2023,
@@ -267,107 +245,74 @@
             "eps": "+$4.50"
           }
         ],
-        "pipeline_milestones": [
-          {
-            "program": "Blackwell (B200)",
-            "phase": "Mass Production",
-            "date": "2H 2024",
-            "milestone_zh": "全面出貨",
-            "milestone_en": "Mass Production"
-          },
-          {
-            "program": "Rubin",
-            "phase": "Design",
-            "date": "2026",
-            "milestone_zh": "新一代架構發表",
-            "milestone_en": "Next-Gen Architecture Unveil"
-          }
-        ],
-        "earnings_dates": [
-          "Q1 2026: May 20",
-          "Q2 2026: Aug 21"
-        ],
-        "pipeline_link": "N/A",
-        "profile_zh": "NVIDIA 是全球 AI 算力的絕對霸主。透過領先的 GPU 架構（Hopper, Blackwell）與難以超越的 CUDA 軟體生態系，主導了整個大模型訓練與推論市場。",
-        "profile_en": "NVIDIA is the absolute hegemon of global AI compute. Through leading GPU architectures (Hopper, Blackwell) and an insurmountable CUDA software ecosystem, it dominates the LLM training and inference market.",
         "partnerships_zh": [
           "TSMC (獨家代工)",
           "AWS, GCP, Azure (最大客戶)",
           "Foxconn (伺服器代工)"
         ],
         "partnerships_en": [
-          "TSMC (Exclusive Foundry)",
-          "AWS, GCP, Azure (Largest Customers)",
-          "Foxconn (Server Assembly)"
+          "TSMC (exclusive foundry)",
+          "AWS, GCP, Azure (largest customers)",
+          "Foxconn (server manufacturing)"
         ],
-        "risk_assessment_zh": "估值較高。需留意大型 CSP 自研晶片 (ASIC) 帶來的潛在侵蝕，以及地緣政治出口管制風險。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
-        "risk_assessment_en": "High valuation. Need to monitor potential erosion from large CSP custom chips (ASICs) and geopolitical export control risks.<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 Read Latest SEC Filings (Risk Factors)</a>",
+        "pipeline_milestones": [
+          {
+            "program": "Blackwell (B200)",
+            "phase": "Mass Production",
+            "milestone_zh": "全面出貨",
+            "milestone_en": "Full volume shipments",
+            "date": "2H 2024"
+          },
+          {
+            "program": "Rubin",
+            "phase": "Design",
+            "milestone_zh": "新一代架構發表",
+            "milestone_en": "Next-gen architecture announced",
+            "date": "2026"
+          }
+        ],
+        "earnings_dates": [
+          "Q1 2026: May 20",
+          "Q2 2026: Aug 21"
+        ],
+        "risk_assessment_zh": "估值較高。需留意大型 CSP 自研晶片 (ASIC) 帶來的潛在侵蝕，以及地緣政治出口管制風險。",
+        "risk_assessment_en": "Elevated valuation. Watch for potential erosion from large CSPs developing in-house ASICs, and geopolitical export control risks.",
         "investment_strategy_zh": "核心持股（Core Holding）。AI 算力基礎設施無可取代的基石。",
-        "investment_strategy_en": "Core Holding. Irreplaceable cornerstone of AI compute infrastructure.",
-        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/NVDA/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/NVDA/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View 5-Year Financial Statements</a>",
-        "financial_link": "<a href=\"https://finance.yahoo.com/quote/NVDA/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "risk_assessment": "AI 算力基礎建設龍頭，需關注 CSP 資本支出動向。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>"
-      },
-      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,15.942384236696796 L0.6451612903225806,12.948847070476914 L1.2903225806451613,12.531132979691272 L1.935483870967742,11.486876727114966 L2.5806451612903225,12.290635902820677 L3.225806451612903,13.607048580003886 L3.870967741935484,13.923487527298702 L4.516129032258064,11.34764513560593 L5.161290322580645,9.157857486962492 L5.806451612903226,15.113311104183014 L6.451612903225806,11.847617513356226 L7.096774193548387,17.094251365562897 L7.741935483870968,17.220821149603264 L8.387096774193548,15.967707851634136 L9.032258064516128,15.07533533990627 L9.67741935483871,15.4424118589465 L10.32258064516129,16.37908620962081 L10.96774193548387,16.936022233786225 L11.612903225806452,15.746198656901912 L12.258064516129032,13.151378041200035 L12.903225806451612,9.841372953297537 L13.548387096774194,3.8036417328538263 L14.193548387096774,0.0 L14.838709677419354,2.626479963438186 L15.483870967741936,2.8796291896481847 L16.129032258064516,0.10126548536155866 L16.774193548387096,5.284599958354146 L17.419354838709676,7.487030098207722 L18.064516129032256,11.999510912333932 L18.70967741935484,11.955209073387488 L19.35483870967742,5.056755030822956 L20.0,8.784454893252562 L20.64516129032258,8.379402609935589 L21.29032258064516,12.771639714691135 L21.93548387096774,10.676791476739556 L22.58064516129032,12.936185263008245 L23.225806451612904,16.252506767451177 L23.870967741935484,12.986813176624391 L24.516129032258064,16.708186964384296 L25.161290322580644,17.822059012715123 L25.806451612903224,15.499365847232347 L26.451612903225804,18.492922329710762 L27.096774193548388,16.948684041254893 L27.741935483870968,19.011892247728696 L28.387096774193548,17.163857503188147 L29.032258064516128,16.18921704636636 L29.677419354838708,17.37271454858097 L30.32258064516129,14.967608566065275 L30.967741935483872,15.58154686916287 L31.612903225806452,13.594174293691347 L32.25806451612903,13.961270128990112 L32.90322580645161,14.714449681726007 L33.54838709677419,16.51827916861278 L34.193548387096776,20.25883400109639 L34.83870967741935,19.45502653474435 L35.483870967741936,18.549943924901477 L36.12903225806451,22.841147339397864 L36.774193548387096,20.81580865777887 L37.41935483870968,16.48029374620677 L38.064516129032256,14.771413328141122 L38.70967741935484,11.27768164719781 L39.354838709677416,11.657439289965243 L40.0,10.44223414936799 L40.64516129032258,11.904281757764073 L41.29032258064516,12.334667314147651 L41.935483870967744,12.992897798062424 L42.58064516129032,11.505536232858269 L43.225806451612904,11.96757147884889 L43.87096774193548,12.524536477402103 L44.516129032258064,11.340981026411892 L45.16129032258064,13.916968290043666 L45.806451612903224,14.030895582873896 L46.45161290322581,13.980258011128482 L47.096774193548384,13.429619087244973 L47.74193548387097,15.119521281301514 L48.387096774193544,12.644789844902034 L49.03225806451613,13.163798395437036 L49.67741935483871,18.328425072039984 L50.32258064516129,15.005584330342018 L50.96774193548387,14.043557390342567 L51.61290322580645,12.252389710924463 L52.25806451612903,13.011885680200797 L52.90322580645161,11.714402936380358 L53.54838709677419,9.815634038801727 L54.193548387096776,9.189053244493998 L54.83870967741935,10.062476506600559 L55.483870967741936,13.556198529414605 L56.12903225806451,16.891701078581242 L56.774193548387096,20.784158968171827 L57.41935483870967,22.24620657656791 L58.064516129032256,13.682787629713506 L58.70967741935484,10.75236633825164 L59.354838709677416,11.701750787040954 L60.0,10.746030605452669 L60.64516129032258,12.714415298785818 L61.29032258064516,15.328378326694335 L61.935483870967744,13.961270128990112 L62.58064516129032,12.056184814871045 L63.225806451612904,12.106812728487192 L63.87096774193548,10.891597929760675 L64.51612903225806,9.796646156663355 L65.16129032258064,8.97385080817294 L65.80645161290322,7.258644315437593 L66.45161290322581,14.011907700735525 L67.09677419354838,18.885390070593196 L67.74193548387096,15.537245030216424 L68.38709677419355,17.07524416716599 L69.03225806451613,15.18281100238633 L69.6774193548387,14.992932181002615 L70.3225806451613,18.48665420381666 L70.96774193548387,15.429653470185162 L71.61290322580645,14.087849571159744 L72.25806451612902,13.284003472290633 L72.90322580645162,15.113243497278146 L73.54838709677419,16.942483522265658 L74.19354838709677,15.062605925532733 L74.83870967741936,15.879123489999781 L75.48387096774194,16.8475441115738 L76.12903225806451,18.012179287330504 L76.77419354838709,21.721296909050942 L77.41935483870968,19.86040719445639 L78.06451612903226,20.13890900999153 L78.70967741935483,17.93622775877702 L79.35483870967742,22.64540603354925 L80.0,25.0\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
-      "pe_history_5yr": [
-        {
-          "year": 2021,
-          "value": 27.3
-        },
-        {
-          "year": 2022,
-          "value": 29.5
-        },
-        {
-          "year": 2023,
-          "value": 32.4
-        },
-        {
-          "year": 2024,
-          "value": 32.7
-        },
-        {
-          "year": 2025,
-          "value": 34.5
-        }
-      ],
-      "phase_label_zh": "Layer 2: Chips, Layer 3: Infrastructure, Layer 4: Models",
-      "phase_label_en": "Layer 2: Chips, Layer 3: Infrastructure, Layer 4: Models",
-      "category_zh": "AI 晶片與軟體平台",
-      "category_en": "AI Chips & Software Platforms",
-      "pain_points_zh": [
-        "算力需求爆炸性成長",
-        "通用運算架構能耗過高"
-      ],
-      "pain_points_en": [
-        "Explosive growth in compute demand",
-        "General-purpose compute architectures consume too much power"
-      ],
-      "ai_solutions_zh": [
-        "Blackwell 架構 GPU 加速器",
-        "CUDA 軟體生態系護城河"
-      ],
-      "ai_solutions_en": [
-        "Blackwell architecture GPU accelerators",
-        "CUDA software ecosystem moat"
-      ],
-      "eps_trend_zh": "爆發性增長",
-      "eps_trend_en": "Explosive Growth",
-      "rating_zh": "強力買進",
-      "rating_en": "Strong Buy",
-      "rating_reason_zh": "壟斷 AI 訓練市場",
-      "rating_reason_en": "Monopolizes AI training market"
+        "investment_strategy_en": "Core Holding. The irreplaceable cornerstone of AI compute infrastructure.",
+        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/NVDA/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看財務報表行情</a>",
+        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/NVDA/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View Financials</a>",
+        "pipeline_link": "N/A"
+      }
     },
     {
       "name": "TSMC",
       "ticker": "TSM",
       "exchange": "NYSE",
-      "phase": "Layer 2",
-      "price": "326.74",
-      "market_cap": "$1.69T",
-      "eps": "10.36",
-      "ps_history": [
+      "phase": "Layer 1",
+      "phase_label_zh": "Layer 1: 先進製程 / 封裝",
+      "phase_label_en": "Layer 1: Advanced Process / Packaging",
+      "pain_points_zh": [
+        "摩爾定律放緩",
+        "AI 晶片尺寸與散熱限制"
+      ],
+      "pain_points_en": [
+        "Slowdown of Moore's Law",
+        "AI chip die size and thermal constraints"
+      ],
+      "ai_solutions_zh": [
+        "3nm/2nm 先進製程",
+        "CoWoS 先進封裝突破頻寬限制"
+      ],
+      "ai_solutions_en": [
+        "3nm/2nm advanced process nodes",
+        "CoWoS advanced packaging to break bandwidth limits"
+      ],
+      "price": 185.0,
+      "market_cap": "900B",
+      "eps": 6.5,
+      "eps_trend_zh": "穩健創高",
+      "eps_trend_en": "Steady record highs",
+      "pe_history_5yr": [
         {
           "year": 2024,
           "value": 10
@@ -377,9 +322,17 @@
           "value": 12
         }
       ],
-      "eps_2026e": "17.96",
-      "pe_ratio": "31.54",
+      "rating_zh": "強力買進",
+      "rating_en": "Strong Buy",
+      "rating_reason_zh": "幾乎囊括所有 AI 晶片代工",
+      "rating_reason_en": "Manufactures virtually all high-end AI chips",
+      "eps_2026e": "+$8.00",
+      "pe_ratio": 28.5,
+      "category_zh": "晶圓代工與先進封裝",
+      "category_en": "Foundry & Advanced Packaging",
       "deep_dive": {
+        "profile_zh": "台積電 (TSMC) 是全球最大的晶圓代工廠。幾乎所有高階 AI 晶片 (NVDA, AMD, Broadcom) 均仰賴其 5nm/3nm 先進製程與 CoWoS 封裝技術。",
+        "profile_en": "TSMC is the world's largest contract chipmaker. Nearly all leading AI chips (NVDA, AMD, Broadcom) rely on its 5nm/3nm advanced process nodes and CoWoS packaging technology.",
         "financial_5yr": [
           {
             "year": 2023,
@@ -397,107 +350,74 @@
             "eps": "+$8.00"
           }
         ],
-        "pipeline_milestones": [
-          {
-            "program": "N3E / N3P",
-            "phase": "Mass Production",
-            "date": "2024-2025",
-            "milestone_zh": "產能滿載出貨",
-            "milestone_en": "Full Capacity Shipment"
-          },
-          {
-            "program": "N2 (2nm)",
-            "phase": "Risk Production",
-            "date": "2026",
-            "milestone_zh": "進入量產",
-            "milestone_en": "Enter Mass Production"
-          }
-        ],
-        "earnings_dates": [
-          "Q1 2026: Apr 15",
-          "Q2 2026: Jul 15"
-        ],
-        "pipeline_link": "N/A",
-        "profile_zh": "台積電 (TSMC) 是全球最大的晶圓代工廠。幾乎所有高階 AI 晶片 (NVDA, AMD, Broadcom) 均仰賴其 5nm/3nm 先進製程與 CoWoS 封裝技術。",
-        "profile_en": "TSMC is the world's largest semiconductor foundry. Almost all high-end AI chips (NVDA, AMD, Broadcom) rely on its 5nm/3nm advanced nodes and CoWoS packaging tech.",
         "partnerships_zh": [
           "NVIDIA, AMD (AI 晶片)",
           "Apple",
           "Broadcom"
         ],
         "partnerships_en": [
-          "NVIDIA, AMD (AI Chips)",
+          "NVIDIA, AMD (AI chips)",
           "Apple",
           "Broadcom"
         ],
-        "risk_assessment_zh": "地緣政治風險 (台灣海峽) 是最大的估值折價因素。此外需防範 Intel Foundry 或 Samsung 的技術追趕。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
-        "risk_assessment_en": "Geopolitical risk (Taiwan Strait) is the largest valuation discount factor. Also monitor technological catch-up from Intel Foundry or Samsung.<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 Read Latest SEC Filings (Risk Factors)</a>",
+        "pipeline_milestones": [
+          {
+            "program": "N3E / N3P",
+            "phase": "Mass Production",
+            "milestone_zh": "產能滿載出貨",
+            "milestone_en": "Full capacity shipments",
+            "date": "2024-2025"
+          },
+          {
+            "program": "N2 (2nm)",
+            "phase": "Risk Production",
+            "milestone_zh": "進入量產",
+            "milestone_en": "Entering volume production",
+            "date": "2026"
+          }
+        ],
+        "earnings_dates": [
+          "Q1 2026: Apr 15",
+          "Q2 2026: Jul 15"
+        ],
+        "risk_assessment_zh": "地緣政治風險 (台灣海峽) 是最大的估值折價因素。此外需防範 Intel Foundry 或 Samsung 的技術追趕。",
+        "risk_assessment_en": "Geopolitical risk (Taiwan Strait) is the largest valuation discount factor. Also watch for Intel Foundry or Samsung closing the technology gap.",
         "investment_strategy_zh": "逢低買進（Buy on Dips）。AI 時代的「賣鏟子製造商」，具備極深技術護城河。",
-        "investment_strategy_en": "Buy on Dips. The \"pick and shovel maker\" of the AI era, possessing a deep technological moat.",
-        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/TSM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/TSM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View 5-Year Financial Statements</a>",
-        "financial_link": "<a href=\"https://finance.yahoo.com/quote/TSM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "risk_assessment": "AI 算力基礎建設龍頭，需關注 CSP 資本支出動向。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>"
-      },
-      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,25.0 L0.6451612903225806,23.688841646239606 L1.2903225806451613,21.70264086704573 L1.935483870967742,21.78053369734665 L2.5806451612903225,20.89776599219744 L3.225806451612903,18.688708859280347 L3.870967741935484,20.499664048993075 L4.516129032258064,18.23001622656642 L5.161290322580645,19.233938753342912 L5.806451612903226,23.392434595783218 L6.451612903225806,18.582685111660552 L7.096774193548387,20.08640447438938 L7.741935483870968,18.188912023328015 L8.387096774193548,19.242596463086553 L9.032258064516128,20.272485479746006 L9.67741935483871,19.705604671976374 L10.32258064516129,20.395804728809193 L10.96774193548387,21.613925899565256 L11.612903225806452,21.213659528924985 L12.258064516129032,20.298445330281005 L12.903225806451612,19.586607638437044 L13.548387096774194,18.876941013376957 L14.193548387096774,18.10669033815527 L14.838709677419354,18.511292203015326 L15.483870967741936,19.114941719803582 L16.129032258064516,18.156458890485283 L16.774193548387096,20.495335194121257 L17.419354838709676,20.584043522253765 L18.064516129032256,21.53604634796026 L18.70967741935484,22.128873727568962 L19.35483870967742,20.231374637159632 L20.0,21.11845791848474 L20.64516129032258,21.237461591372035 L21.29032258064516,23.05922563956839 L21.93548387096774,22.492364749842647 L22.58064516129032,23.100343121502725 L23.225806451612904,23.987426402827833 L23.870967741935484,23.022450291201803 L24.516129032258064,24.076141370308306 L25.161290322580644,24.604062484231548 L25.806451612903224,22.531304525645144 L26.451612903225804,22.52266009459743 L27.096774193548388,21.380260687358415 L27.741935483870968,21.044900582403603 L28.387096774193548,21.873570880350982 L29.032258064516128,20.919410266556543 L29.677419354838708,20.19242158266121 L30.32258064516129,20.737658116071735 L30.967741935483872,20.350371670698962 L31.612903225806452,18.803377037947858 L32.25806451612903,18.470174721080994 L32.90322580645161,17.014052843898305 L33.54838709677419,17.980556005555805 L34.193548387096776,20.759640997176948 L34.83870967741935,21.692515861402285 L35.483870967741936,21.88125924529204 L36.12903225806451,24.031206263295296 L36.774193548387096,22.356377624866216 L37.41935483870968,21.43000932164454 L38.064516129032256,20.490634535763512 L38.70967741935484,19.69443064935479 L39.354838709677416,19.293088704344523 L40.0,18.41662174041212 L40.64516129032258,18.83315451356153 L41.29032258064516,19.123871642813704 L41.935483870967744,18.188819072456532 L42.58064516129032,14.778425040433628 L43.225806451612904,14.205681688412744 L43.87096774193548,13.081899012861745 L44.516129032258064,14.980181546330698 L45.16129032258064,15.125536791282803 L45.806451612903224,13.906293570721006 L46.45161290322581,12.14034652084888 L47.096774193548384,12.261839949222267 L47.74193548387097,13.151320035161987 L48.387096774193544,9.999077130633156 L49.03225806451613,9.834202202670081 L49.67741935483871,13.140471340590583 L50.32258064516129,13.366096302414332 L50.96774193548387,13.094912134869059 L51.61290322580645,11.467813768945378 L52.25806451612903,11.936418948167937 L52.90322580645161,10.71500466082227 L53.54838709677419,9.855899591812886 L54.193548387096776,10.45250476041249 L54.83870967741935,12.402853060606626 L55.483870967741936,10.059827164493829 L56.12903225806451,11.276899318271752 L56.774193548387096,13.448537086069852 L57.41935483870967,12.36597148267263 L58.064516129032256,8.43489322600606 L58.70967741935484,7.0117224327633245 L59.354838709677416,5.601571400875862 L60.0,2.9591573870713326 L60.64516129032258,4.25867032450477 L61.29032258064516,4.636157092284282 L61.935483870967744,5.104755632158877 L62.58064516129032,5.525637178224002 L63.225806451612904,5.931327896149973 L63.87096774193548,3.7293151114215384 L64.51612903225806,3.837788778439645 L65.16129032258064,0.4295591738526525 L65.80645161290322,0.0 L66.45161290322581,2.3690587794753846 L67.09677419354838,2.8528547868370957 L67.74193548387096,4.039558563032642 L68.38709677419355,7.506360495348474 L69.03225806451613,6.571321203687226 L69.6774193548387,7.3479921283890555 L70.3225806451613,10.595682299232756 L70.96774193548387,8.467432670372308 L71.61290322580645,8.816722127353316 L72.25806451612902,7.196130322433294 L72.90322580645162,11.068629612023063 L73.54838709677419,10.72151786117389 L74.19354838709677,10.304971809328551 L74.83870967741936,8.846028209261625 L75.48387096774194,10.240576773436235 L76.12903225806451,10.410271868020384 L76.77419354838709,12.48795622279527 L77.41935483870968,10.484240843675224 L78.06451612903226,9.439964359980134 L78.70967741935483,8.460952666760502 L79.35483870967742,13.168914307263712 L80.0,13.03185160791729\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
-      "pe_history_5yr": [
-        {
-          "year": 2021,
-          "value": 38.9
-        },
-        {
-          "year": 2022,
-          "value": 27.3
-        },
-        {
-          "year": 2023,
-          "value": 27.7
-        },
-        {
-          "year": 2024,
-          "value": 31.4
-        },
-        {
-          "year": 2025,
-          "value": 31.7
-        }
-      ],
-      "phase_label_zh": "Layer 2: 先進製程 / 封裝",
-      "phase_label_en": "Layer 2: Advanced Nodes / Packaging",
-      "category_zh": "晶圓代工與先進封裝",
-      "category_en": "Foundry & Advanced Packaging",
-      "pain_points_zh": [
-        "摩爾定律放緩",
-        "AI 晶片尺寸與散熱限制"
-      ],
-      "pain_points_en": [
-        "Moore's Law deceleration",
-        "AI chip size and thermal limits"
-      ],
-      "ai_solutions_zh": [
-        "3nm/2nm 先進製程",
-        "CoWoS 先進封裝突破頻寬限制"
-      ],
-      "ai_solutions_en": [
-        "3nm/2nm advanced nodes",
-        "CoWoS advanced packaging breaks bandwidth limits"
-      ],
-      "eps_trend_zh": "穩健創高",
-      "eps_trend_en": "Steady Record Highs",
-      "rating_zh": "強力買進",
-      "rating_en": "Strong Buy",
-      "rating_reason_zh": "幾乎囊括所有 AI 晶片代工",
-      "rating_reason_en": "Captures almost all AI chip foundry demand"
+        "investment_strategy_en": "Buy on Dips. The 'pick-and-shovel' play of the AI era, with an extremely deep technology moat.",
+        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/TSM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看財務報表行情</a>",
+        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/TSM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View Financials</a>",
+        "pipeline_link": "N/A"
+      }
     },
     {
       "name": "Broadcom",
       "ticker": "AVGO",
       "exchange": "NASDAQ",
-      "phase": "Layer 2",
-      "price": "300.68",
-      "market_cap": "$1.43T",
-      "eps": "5.14",
-      "ps_history": [
+      "phase": "Layer 1",
+      "phase_label_zh": "Layer 1: 網通 / 雲端 ASIC",
+      "phase_label_en": "Layer 1: Networking / Cloud ASIC",
+      "pain_points_zh": [
+        "叢集規模擴大導致網絡延遲與瓶頸",
+        "通用 GPU 成本過高"
+      ],
+      "pain_points_en": [
+        "Network latency and bottlenecks as cluster scale grows",
+        "General-purpose GPU cost too high"
+      ],
+      "ai_solutions_zh": [
+        "Tomahawk / Jericho 網絡交換器",
+        "Google TPU 等客製化 ASIC 晶片"
+      ],
+      "ai_solutions_en": [
+        "Tomahawk / Jericho network switches",
+        "Custom ASIC chips (e.g. Google TPU)"
+      ],
+      "price": 170.0,
+      "market_cap": "800B",
+      "eps": 4.5,
+      "eps_trend_zh": "整合發酵中",
+      "eps_trend_en": "Integration synergies building",
+      "pe_history_5yr": [
         {
           "year": 2024,
           "value": 15
@@ -507,9 +427,17 @@
           "value": 18
         }
       ],
-      "eps_2026e": "17.84",
-      "pe_ratio": "58.5",
+      "rating_zh": "買進",
+      "rating_en": "Buy",
+      "rating_reason_zh": "AI 網通與 ASIC 雙引擎",
+      "rating_reason_en": "Dual engine: AI networking + ASIC",
+      "eps_2026e": "+$5.80",
+      "pe_ratio": 35.0,
+      "category_zh": "網通 IC 與 ASIC",
+      "category_en": "Networking IC & ASIC",
       "deep_dive": {
+        "profile_zh": "Broadcom 在 AI 網路基礎設施與客製化晶片 (ASIC) 分野居主導地位。幫助 Google、Meta 等超大型雲端供應商設計並量產專用 AI 加速器。",
+        "profile_en": "Broadcom leads in AI network infrastructure and custom silicon (ASIC). It helps hyperscalers like Google and Meta design and mass-produce dedicated AI accelerators.",
         "financial_5yr": [
           {
             "year": 2023,
@@ -518,7 +446,7 @@
           },
           {
             "year": 2024,
-            "revenue": "$50.0B (含 VMware)",
+            "revenue": "$50.0B (incl. VMware)",
             "eps": "$4.50"
           },
           {
@@ -527,29 +455,6 @@
             "eps": "+$5.80"
           }
         ],
-        "pipeline_milestones": [
-          {
-            "program": "Tomahawk 5/6",
-            "phase": "Production",
-            "date": "2024-2026",
-            "milestone_zh": "AI 叢集網路升級",
-            "milestone_en": "AI Cluster Network Upgrades"
-          },
-          {
-            "program": "Custom ASIC Gen X",
-            "phase": "Design",
-            "date": "2025+",
-            "milestone_zh": "支援 3nm",
-            "milestone_en": "Support for 3nm ASICs"
-          }
-        ],
-        "earnings_dates": [
-          "Q1 2026: Mar 05",
-          "Q2 2026: Jun 04"
-        ],
-        "pipeline_link": "N/A",
-        "profile_zh": "Broadcom 在 AI 網路基礎設施與客製化晶片 (ASIC) 分野居主導地位。幫助 Google、Meta 等超大型雲端供應商設計並量產專用 AI 加速器。",
-        "profile_en": "Broadcom dominates the AI network infrastructure and custom chip (ASIC) sectors. It helps hyperscalers like Google and Meta design and mass-produce dedicated AI accelerators.",
         "partnerships_zh": [
           "Google (TPU)",
           "Meta (MTIA)",
@@ -560,74 +465,64 @@
           "Meta (MTIA)",
           "TSMC"
         ],
-        "risk_assessment_zh": "VMware 併購後的整合陣痛期，以及主要 CSP 客戶若轉向自研底層 IP 帶來的訂單流失風險。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
-        "risk_assessment_en": "Integration growing pains post-VMware acquisition, and risk of order loss if major CSP clients pivot to in-house base IPs.<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 Read Latest SEC Filings (Risk Factors)</a>",
+        "pipeline_milestones": [
+          {
+            "program": "Tomahawk 5/6",
+            "phase": "Production",
+            "milestone_zh": "AI 叢集網路升級",
+            "milestone_en": "AI cluster network upgrades",
+            "date": "2024-2026"
+          },
+          {
+            "program": "Custom ASIC Gen X",
+            "phase": "Design",
+            "milestone_zh": "支援 3nm",
+            "milestone_en": "3nm node support",
+            "date": "2025+"
+          }
+        ],
+        "earnings_dates": [
+          "Q1 2026: Mar 05",
+          "Q2 2026: Jun 04"
+        ],
+        "risk_assessment_zh": "VMware 併購後的整合陣痛期，以及主要 CSP 客戶若轉向自研底層 IP 帶來的訂單流失風險。",
+        "risk_assessment_en": "Post-VMware integration headwinds, and risk of key CSP customers developing their own underlying IP and reducing orders.",
         "investment_strategy_zh": "長期持有。AI 從單點算力走向叢集算力，網通晶片不可或缺。",
-        "investment_strategy_en": "Long-term holding. As AI transitions from single-node compute to cluster compute, networking chips are indispensable.",
-        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/AVGO/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/AVGO/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View 5-Year Financial Statements</a>",
-        "financial_link": "<a href=\"https://finance.yahoo.com/quote/AVGO/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "risk_assessment": "AI 算力基礎建設龍頭，需關注 CSP 資本支出動向。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>"
-      },
-      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,19.037333907002154 L0.6451612903225806,18.587526644398682 L1.2903225806451613,17.808756167760908 L1.935483870967742,16.73683572380255 L2.5806451612903225,16.694316901662873 L3.225806451612903,17.338811651607863 L3.870967741935484,17.13292995875934 L4.516129032258064,15.098732071480887 L5.161290322580645,15.206151284350335 L5.806451612903226,19.769110616267014 L6.451612903225806,12.59234535300886 L7.096774193548387,15.405313716925091 L7.741935483870968,13.794073420850673 L8.387096774193548,13.162996664181497 L9.032258064516128,14.24163636841362 L9.67741935483871,14.2617804643871 L10.32258064516129,15.734276930959396 L10.96774193548387,16.26240941999236 L11.612903225806452,15.369507312635275 L12.258064516129032,13.167471609414736 L12.903225806451612,11.395099072824191 L13.548387096774194,8.95137527246532 L14.193548387096774,6.039937586146117 L14.838709677419354,8.168129850594305 L15.483870967741936,9.698814290046517 L16.129032258064516,11.283211757145406 L16.774193548387096,13.657560221541264 L17.419354838709676,12.082112644908854 L18.064516129032256,12.840745867997052 L18.70967741935484,14.219261642247425 L19.35483870967742,12.21414405656112 L20.0,13.653085276308024 L20.64516129032258,12.923546039659783 L21.29032258064516,16.33401538614809 L21.93548387096774,15.779040068139594 L22.58064516129032,15.736514403576015 L23.225806451612904,16.217653125236062 L23.870967741935484,13.102571218684963 L24.516129032258064,14.803330946695874 L25.161290322580644,16.284784146158554 L25.806451612903224,7.834691691326761 L26.451612903225804,6.252531696844493 L27.096774193548388,3.4462757507781205 L27.741935483870968,2.2400795801269737 L28.387096774193548,6.017562859979922 L29.032258064516128,7.026827228249029 L29.677419354838708,7.241665653987926 L30.32258064516129,7.147671276818198 L30.967741935483872,5.086616875716402 L31.612903225806452,2.6563179110572506 L32.25806451612903,1.4948780351623938 L32.90322580645161,0.0 L33.54838709677419,1.47697825422944 L34.193548387096776,11.869525376634382 L34.83870967741935,16.372066105478428 L35.483870967741936,16.038627946210884 L36.12903225806451,19.45805402558957 L36.774193548387096,18.59423906224854 L37.41935483870968,16.248984584292643 L38.064516129032256,15.85885010055626 L38.70967741935484,14.094298454488028 L39.354838709677416,13.892508531134123 L40.0,13.464261746252268 L40.64516129032258,14.07860193405217 L41.29032258064516,13.975466078546647 L41.935483870967744,14.816263127874501 L42.58064516129032,14.475462520486216 L43.225806451612904,15.417151110279072 L43.87096774193548,15.338682192947596 L44.516129032258064,15.399217117226597 L45.16129032258064,17.870036916245446 L45.806451612903224,15.06962440019312 L46.45161290322581,13.44632775319979 L47.096774193548384,12.908219010114745 L47.74193548387097,16.20862112568274 L48.387096774193544,15.506841602813166 L49.03225806451613,13.558434026443505 L49.67741935483871,17.84313250545478 L50.32258064516129,18.695144287561348 L50.96774193548387,19.437287269040823 L51.61290322580645,20.657004069326344 L52.25806451612903,19.580779740732346 L52.90322580645161,17.800531574228255 L53.54838709677419,17.699640033763256 L54.193548387096776,18.262408872598446 L54.83870967741935,18.13461292134278 L55.483870967741936,18.177213852569302 L56.12903225806451,20.594224830006823 L56.774193548387096,23.34755462717548 L57.41935483870967,22.795986836271197 L58.064516129032256,17.771382848397067 L58.70967741935484,15.300563049378216 L59.354838709677416,16.08530696208421 L60.0,15.565132212051644 L60.64516129032258,18.163754804750063 L61.29032258064516,19.509030083674634 L61.935483870967744,17.856584710850115 L62.58064516129032,17.63909826706035 L63.225806451612904,17.531480623897686 L63.87096774193548,17.83192461509997 L64.51612903225806,18.349855050092017 L65.16129032258064,19.437287269040823 L65.80645161290322,17.90815605981483 L66.45161290322581,20.287047893682967 L67.09677419354838,20.76911034257006 L67.74193548387096,20.932781122354584 L68.38709677419355,22.04936206713458 L69.03225806451613,21.22201722320206 L69.6774193548387,17.805020204309304 L70.3225806451613,18.318462009220305 L70.96774193548387,14.894738887629883 L71.61290322580645,15.605495670661547 L72.25806451612902,15.831945689765595 L72.90322580645162,17.087537318579972 L73.54838709677419,20.18391203817744 L74.19354838709677,19.56508322029649 L74.83870967741936,20.374494071176535 L75.48387096774194,21.58075866606672 L76.12903225806451,20.704086788210013 L76.77419354838709,22.795986836271197 L77.41935483870968,20.10543627842206 L78.06451612903226,21.051613498295964 L78.70967741935483,20.935025437395105 L79.35483870967742,23.040377690851624 L80.0,25.0\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
-      "pe_history_5yr": [
-        {
-          "year": 2021,
-          "value": 53.3
-        },
-        {
-          "year": 2022,
-          "value": 58.2
-        },
-        {
-          "year": 2023,
-          "value": 68.8
-        },
-        {
-          "year": 2024,
-          "value": 56.0
-        },
-        {
-          "year": 2025,
-          "value": 58.7
-        }
-      ],
-      "phase_label_zh": "Layer 2: 網通 / 雲端 ASIC",
-      "phase_label_en": "Layer 2: Networking / Cloud ASICs",
-      "category_zh": "網通 IC 與 ASIC",
-      "category_en": "Networking IC & ASICs",
-      "pain_points_zh": [
-        "叢集規模擴大導致網絡延遲與瓶頸",
-        "通用 GPU 成本過高"
-      ],
-      "pain_points_en": [
-        "Cluster scale expansion leads to network latency and bottlenecks",
-        "General-purpose GPUs too costly"
-      ],
-      "ai_solutions_zh": [
-        "Tomahawk / Jericho 網絡交換器",
-        "Google TPU 等客製化 ASIC 晶片"
-      ],
-      "ai_solutions_en": [
-        "Tomahawk / Jericho network switches",
-        "Custom ASIC chips like Google TPU"
-      ],
-      "eps_trend_zh": "整合發酵中",
-      "eps_trend_en": "Integration Maturing",
-      "rating_zh": "買進",
-      "rating_en": "Buy",
-      "rating_reason_zh": "AI 網通與 ASIC 雙引擎",
-      "rating_reason_en": "AI Networking & ASIC Dual Engine"
+        "investment_strategy_en": "Long-term hold. As AI scales from single-node to cluster compute, networking chips are indispensable.",
+        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/AVGO/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看財務報表行情</a>",
+        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/AVGO/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View Financials</a>",
+        "pipeline_link": "N/A"
+      }
     },
     {
       "name": "Qualcomm",
       "ticker": "QCOM",
       "exchange": "NASDAQ",
-      "phase": "Layer 2",
-      "price": "127.11",
-      "market_cap": "$135.76B",
-      "eps": "4.96",
-      "ps_history": [
+      "phase": "Layer 1",
+      "phase_label_zh": "Layer 1: 邊緣 AI / Snapdragon",
+      "phase_label_en": "Layer 1: Edge AI / Snapdragon",
+      "pain_points_zh": [
+        "雲端推論成本過高且延遲長",
+        "資料隱私與離線可用性"
+      ],
+      "pain_points_en": [
+        "Cloud inference is costly and latency-heavy",
+        "Data privacy and offline availability requirements"
+      ],
+      "ai_solutions_zh": [
+        "Snapdragon X Elite 筆電處理器",
+        "手機端 NPU 支援百億參數大模型"
+      ],
+      "ai_solutions_en": [
+        "Snapdragon X Elite laptop processor",
+        "On-device NPU supporting 10B+ parameter models"
+      ],
+      "price": 200.0,
+      "market_cap": "230B",
+      "eps": 10.0,
+      "eps_trend_zh": "邊緣 AI 復甦",
+      "eps_trend_en": "Edge AI recovery",
+      "pe_history_5yr": [
         {
           "year": 2024,
           "value": 5
@@ -637,9 +532,17 @@
           "value": 6
         }
       ],
-      "eps_2026e": "11.13",
-      "pe_ratio": "25.63",
+      "rating_zh": "買進",
+      "rating_en": "Buy",
+      "rating_reason_zh": "AI PC 與 AI 手機換機潮",
+      "rating_reason_en": "AI PC and AI smartphone upgrade cycle",
+      "eps_2026e": "+$12.50",
+      "pe_ratio": 20.0,
+      "category_zh": "邊緣 AI 處理器",
+      "category_en": "Edge AI Processor",
       "deep_dive": {
+        "profile_zh": "Qualcomm 正從傳統手機通訊晶片龍頭轉型為邊緣 AI (Edge AI) 領航者，透過整合高效能 NPU 賦能 AI PC 與下一代 AI 智慧型手機。",
+        "profile_en": "Qualcomm is transforming from a traditional mobile comms chip leader into an Edge AI pioneer, enabling AI PCs and next-gen AI smartphones through its high-performance integrated NPU.",
         "financial_5yr": [
           {
             "year": 2023,
@@ -657,107 +560,74 @@
             "eps": "+$12.50"
           }
         ],
-        "pipeline_milestones": [
-          {
-            "program": "Snapdragon X Elite",
-            "phase": "Launch",
-            "date": "2024-2025",
-            "milestone_zh": "AI PC 滲透率提升",
-            "milestone_en": "AI PC Penetration Growth"
-          },
-          {
-            "program": "Snapdragon 8 Gen 4",
-            "phase": "Launch",
-            "date": "2025",
-            "milestone_zh": "支援更大參數端側模型",
-            "milestone_en": "Support for larger parameter on-device models"
-          }
-        ],
-        "earnings_dates": [
-          "Q1 2026: Jan 30",
-          "Q2 2026: May 01"
-        ],
-        "pipeline_link": "N/A",
-        "profile_zh": "Qualcomm 正從傳統手機通訊晶片龍頭轉型為邊緣 AI (Edge AI) 領航者，透過整合高效能 NPU 賦能 AI PC 與下一代 AI 智慧型手機。",
-        "profile_en": "Qualcomm is transitioning from a traditional mobile comms chip leader to an Edge AI pioneer, enabling AI PCs and next-gen AI smartphones via high-performance NPUs.",
         "partnerships_zh": [
           "Microsoft (Copilot+ PC)",
           "Samsung, Xiaomi",
-          "Automotive OEM"
+          "車廠 OEM"
         ],
         "partnerships_en": [
           "Microsoft (Copilot+ PC)",
           "Samsung, Xiaomi",
           "Automotive OEMs"
         ],
-        "risk_assessment_zh": "智慧型手機市場飽和。Apple 自研基帶晶片的替代威脅，以及 ARM 架構授權訴訟爭端。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
-        "risk_assessment_en": "Smartphone market saturation. Threat of Apple in-house baseband chips, and ARM architecture licensing disputes.<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 Read Latest SEC Filings (Risk Factors)</a>",
+        "pipeline_milestones": [
+          {
+            "program": "Snapdragon X Elite",
+            "phase": "Launch",
+            "milestone_zh": "AI PC 滲透率提升",
+            "milestone_en": "AI PC penetration rate expansion",
+            "date": "2024-2025"
+          },
+          {
+            "program": "Snapdragon 8 Gen 4",
+            "phase": "Launch",
+            "milestone_zh": "支援更大參數端側模型",
+            "milestone_en": "Supports larger on-device model parameters",
+            "date": "2025"
+          }
+        ],
+        "earnings_dates": [
+          "Q1 2026: Jan 30",
+          "Q2 2026: May 01"
+        ],
+        "risk_assessment_zh": "智慧型手機市場飽和。Apple 自研基帶晶片的替代威脅，以及 ARM 架構授權訴訟爭端。",
+        "risk_assessment_en": "Saturated smartphone market. Threat from Apple's in-house baseband chip development, and ongoing ARM architecture licensing disputes.",
         "investment_strategy_zh": "景氣循環操作。受惠於終端 AI 殺手級應用的普及，估值相對較低。",
-        "investment_strategy_en": "Cyclical play. Benefits from the proliferation of Edge AI killer apps at a relatively low valuation.",
-        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/QCOM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/QCOM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View 5-Year Financial Statements</a>",
-        "financial_link": "<a href=\"https://finance.yahoo.com/quote/QCOM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "risk_assessment": "AI 算力基礎建設龍頭，需關注 CSP 資本支出動向。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>"
-      },
-      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,9.466971104123356 L0.6451612903225806,9.018580957554612 L1.2903225806451613,8.963585031810535 L1.935483870967742,7.965281332595094 L2.5806451612903225,7.825692362337161 L3.225806451612903,8.06258030985239 L3.870967741935484,9.39928883340472 L4.516129032258064,8.422126866061447 L5.161290322580645,9.31468273037828 L5.806451612903226,14.42041750676431 L6.451612903225806,10.955961472164475 L7.096774193548387,10.972878775215989 L7.741935483870968,10.452575399851655 L8.387096774193548,9.983043521410737 L9.032258064516128,10.249535116952039 L9.67741935483871,8.730934571628556 L10.32258064516129,7.9737367194927025 L10.96774193548387,7.787613739644598 L11.612903225806452,7.466132747615514 L12.258064516129032,7.927209239158824 L12.903225806451612,0.0 L13.548387096774194,2.8130190758751823 L14.193548387096774,3.811322775090627 L14.838709677419354,4.407770337327495 L15.483870967741936,2.8680150016192556 L16.129032258064516,2.9441461299792095 L16.774193548387096,6.277475110475017 L17.419354838709676,3.3671570573425385 L18.064516129032256,6.12518673672994 L18.70967741935484,7.102342174816918 L19.35483870967742,6.814689259634569 L20.0,5.795243828546955 L20.64516129032258,4.657344629817288 L21.29032258064516,5.57527318408324 L21.93548387096774,5.795243828546955 L22.58064516129032,8.85360623883497 L23.225806451612904,9.568487980945017 L23.870967741935484,9.124328792453223 L24.516129032258064,11.882351942584332 L25.161290322580644,10.312986429593723 L25.806451612903224,9.568487980945017 L26.451612903225804,10.312986429593723 L27.096774193548388,9.534653374841993 L27.741935483870968,8.286768853880467 L28.387096774193548,8.307923644265223 L29.032258064516128,7.182710790510118 L29.677419354838708,5.334154278491063 L30.32258064516129,5.261875411343148 L30.967741935483872,5.0663045976411105 L31.612903225806452,4.853718542043186 L32.25806451612903,4.560345998349405 L32.90322580645161,1.920025751386813 L33.54838709677419,2.319688058251412 L34.193548387096776,3.586709829403592 L34.83870967741935,3.1742893557452234 L35.483870967741936,4.509326389686912 L36.12903225806451,6.116476708836956 L36.774193548387096,5.329903732645235 L37.41935483870968,4.879228346374433 L38.064516129032256,5.317152095107758 L38.70967741935484,5.091814401972357 L39.354838709677416,5.083306781024412 L40.0,5.0663045976411105 L40.64516129032258,5.653043155772387 L41.29032258064516,5.5595050301390465 L41.935483870967744,6.664947295843216 L42.58064516129032,5.844369952884886 L43.225806451612904,4.428546430847341 L43.87096774193548,1.8179930633181165 L44.516129032258064,2.778877594726449 L45.16129032258064,2.06459001493894 L45.806451612903224,3.803539901591048 L46.45161290322581,7.421746863345277 L47.096774193548384,9.113934216437011 L47.74193548387097,9.43281656446204 L48.387096774193544,10.772104144249553 L49.03225806451613,11.609690199847478 L49.67741935483871,13.884359035968368 L50.32258064516129,12.906465791920436 L50.96774193548387,12.298467975303742 L51.61290322580645,13.14030457674749 L52.25806451612903,13.693032238855865 L52.90322580645161,14.322289313957983 L53.54838709677419,14.466847048253815 L54.193548387096776,14.670925482903794 L54.83870967741935,14.93878822226633 L55.483870967741936,14.500857944276715 L56.12903225806451,16.81379475152262 L56.774193548387096,16.08674900494134 L57.41935483870967,21.439655307501855 L58.064516129032256,20.997481012922705 L58.70967741935484,20.32146140426021 L59.354838709677416,19.828260971762273 L60.0,19.42434811905185 L60.64516129032258,20.517032217962246 L61.29032258064516,19.56890585334768 L61.935483870967744,18.74832198113306 L62.58064516129032,18.48896686271847 L63.225806451612904,19.32655291831639 L63.87096774193548,18.642025688705953 L64.51612903225806,19.6921977999018 L65.16129032258064,17.834199983285103 L65.80645161290322,17.39201915944966 L66.45161290322581,17.489814360185118 L67.09677419354838,18.86311936525182 L67.74193548387096,19.428598664897674 L68.38709677419355,20.661589952258076 L69.03225806451613,20.074857923383096 L69.6774193548387,20.768056005348768 L70.3225806451613,21.32860571649447 L70.96774193548387,20.29308525641695 L71.61290322580645,21.538279723786342 L72.25806451612902,22.000413954848888 L72.90322580645162,23.271281457956814 L73.54838709677419,23.8403844948445 L74.19354838709677,24.024385466397835 L74.83870967741936,23.083003823532483 L75.48387096774194,23.56225123533529 L76.12903225806451,23.215652194352455 L76.77419354838709,23.806158133363976 L77.41935483870968,24.469399987463827 L78.06451612903226,24.332474953772866 L78.70967741935483,23.613597306812366 L79.35483870967742,23.53230153672576 L80.0,25.0\" fill=\"none\" stroke=\"#f43f5e\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
-      "pe_history_5yr": [
-        {
-          "year": 2021,
-          "value": 21.3
-        },
-        {
-          "year": 2022,
-          "value": 20.2
-        },
-        {
-          "year": 2023,
-          "value": 21.3
-        },
-        {
-          "year": 2024,
-          "value": 26.6
-        },
-        {
-          "year": 2025,
-          "value": 25.9
-        }
-      ],
-      "phase_label_zh": "Layer 2: 邊緣 AI / Snapdragon",
-      "phase_label_en": "Layer 2: Edge AI / Snapdragon",
-      "category_zh": "邊緣 AI 處理器",
-      "category_en": "Edge AI Processors",
-      "pain_points_zh": [
-        "雲端 推論成本過高且延遲長",
-        "資料隱私與離線可用性"
-      ],
-      "pain_points_en": [
-        "Cloud inference costs are high and latency is long",
-        "Data privacy and offline availability constraints"
-      ],
-      "ai_solutions_zh": [
-        "Snapdragon X Elite 筆電處理器",
-        "手機端 NPU 支援百億參數大模型"
-      ],
-      "ai_solutions_en": [
-        "Snapdragon X Elite laptop processors",
-        "Mobile NPUs supporting 10B+ parameter models"
-      ],
-      "eps_trend_zh": "邊緣 AI 復甦",
-      "eps_trend_en": "Edge AI Recovery",
-      "rating_zh": "買進",
-      "rating_en": "Buy",
-      "rating_reason_zh": "AI PC 與 AI 手機換機潮",
-      "rating_reason_en": "AI PC & AI Smartphone Replacement Cycle"
+        "investment_strategy_en": "Cyclical play. Benefits from killer app adoption at the edge; relatively low valuation vs. AI peers.",
+        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/QCOM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看財務報表行情</a>",
+        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/QCOM/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View Financials</a>",
+        "pipeline_link": "N/A"
+      }
     },
     {
       "name": "Marvell",
       "ticker": "MRVL",
       "exchange": "NASDAQ",
-      "phase": "Layer 2",
-      "price": "94.88",
-      "market_cap": "$82.97B",
-      "eps": "3.07",
-      "ps_history": [
+      "phase": "Layer 1",
+      "phase_label_zh": "Layer 1: 矽光子 / 高速傳輸",
+      "phase_label_en": "Layer 1: Silicon Photonics / High-Speed Interconnects",
+      "pain_points_zh": [
+        "AI 伺服器間資料傳輸瓶頸",
+        "銅線傳輸極限與耗電"
+      ],
+      "pain_points_en": [
+        "Data transfer bottleneck between AI servers",
+        "Copper interconnect bandwidth limits and power consumption"
+      ],
+      "ai_solutions_zh": [
+        "PAM4 DSP 光通訊晶片",
+        "矽光子 (Silicon Photonics) 及 DCI 互連"
+      ],
+      "ai_solutions_en": [
+        "PAM4 DSP optical communication chips",
+        "Silicon Photonics and DCI interconnects"
+      ],
+      "price": 85.0,
+      "market_cap": "75B",
+      "eps": 1.5,
+      "eps_trend_zh": "AI 營收佔比急升",
+      "eps_trend_en": "AI revenue mix rapidly rising",
+      "pe_history_5yr": [
         {
           "year": 2024,
           "value": 11
@@ -767,9 +637,17 @@
           "value": 14
         }
       ],
-      "eps_2026e": "5.44",
-      "pe_ratio": "30.91",
+      "rating_zh": "買進",
+      "rating_en": "Buy",
+      "rating_reason_zh": "光通訊與 ASIC 需求激增",
+      "rating_reason_en": "Surging demand for optical networking and ASICs",
+      "eps_2026e": "+$3.00",
+      "pe_ratio": 50.0,
+      "category_zh": "網通與資料中心互連",
+      "category_en": "Networking & Data Center Interconnects",
       "deep_dive": {
+        "profile_zh": "Marvell 是資料中心高速傳輸解決方案的核心玩家。隨著 AI 叢集規模變大，光通訊 (Optical Networking) 與 AEC 需求大增，成為 AI 基礎設施的二線領頭羊。",
+        "profile_en": "Marvell is a key player in high-speed data center interconnect solutions. As AI clusters scale up, optical networking and AEC demand surges, positioning Marvell as a secondary AI infrastructure leader.",
         "financial_5yr": [
           {
             "year": 2023,
@@ -787,98 +665,65 @@
             "eps": "+$3.00"
           }
         ],
+        "partnerships_zh": [
+          "AWS (ASIC)",
+          "光收發器廠商"
+        ],
+        "partnerships_en": [
+          "AWS (ASIC)",
+          "Optical Transceiver Makers"
+        ],
         "pipeline_milestones": [
           {
             "program": "800G / 1.6T DSP",
             "phase": "Mass Production",
-            "date": "2024-2026",
             "milestone_zh": "隨 AI 叢集大量部署",
-            "milestone_en": "Massive deployment alongside AI clusters"
+            "milestone_en": "Mass deployment with AI clusters",
+            "date": "2024-2026"
           }
         ],
         "earnings_dates": [
           "Q1 2026: Feb 28",
           "Q2 2026: May 25"
         ],
-        "pipeline_link": "N/A",
-        "profile_zh": "Marvell 是資料中心高速傳輸解決方案的核心玩家。隨著 AI 叢集規模變大，光通訊 (Optical Networking) 與 AEC 需求大增，成為 AI 基礎設施的二線領頭羊。",
-        "profile_en": "Marvell is a key player in data center high-speed transfer solutions. As AI clusters expand, Optical Networking and AEC demand skyrockets, making it a tier-2 leader in AI infra.",
-        "partnerships_zh": [
-          "AWS (ASIC)",
-          "Optical Transceiver Makers"
-        ],
-        "partnerships_en": [
-          "AWS (ASIC)",
-          "Optical Transceiver Makers"
-        ],
-        "risk_assessment_zh": "非 AI 業務 (傳統企業網路、電信、儲存) 復甦緩慢拖累集團整體獲利。估值溢價較高。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
-        "risk_assessment_en": "Sluggish recovery in non-AI businesses (traditional enterprise networking, telco, storage) dragging down group profits. High valuation premium.<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 Read Latest SEC Filings (Risk Factors)</a>",
+        "risk_assessment_zh": "非 AI 業務 (傳統企業網路、電信、儲存) 復甦緩慢拖累集團整體獲利。估值溢價較高。",
+        "risk_assessment_en": "Slow recovery in non-AI segments (legacy enterprise networking, telecom, storage) drags on overall profitability. Elevated valuation premium.",
         "investment_strategy_zh": "動能投資。光通訊升級週期的純度高，是除了 Broadcom 外的最佳網通替代標的。",
-        "investment_strategy_en": "Momentum play. High purity in the optical network upgrade cycle; best networking alternative to Broadcom.",
-        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/MRVL/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/MRVL/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View 5-Year Financial Statements</a>",
-        "financial_link": "<a href=\"https://finance.yahoo.com/quote/MRVL/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "risk_assessment": "AI 算力基礎建設龍頭，需關注 CSP 資本支出動向。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>"
-      },
-      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,16.906295953332226 L0.6451612903225806,15.317466717070825 L1.2903225806451613,15.48769635656549 L1.935483870967742,13.303048931339363 L2.5806451612903225,13.284132921314022 L3.225806451612903,10.730644976693856 L3.870967741935484,12.574833122930656 L4.516129032258064,7.344910393892313 L5.161290322580645,9.066144474964394 L5.806451612903226,13.807422879325971 L6.451612903225806,10.230172726726227 L7.096774193548387,13.230144981318091 L7.741935483870968,10.70335476666112 L8.387096774193548,11.327951591199156 L9.032258064516128,11.592941914988069 L9.67741935483871,13.58976593280062 L10.32258064516129,15.085012219540166 L10.96774193548387,18.122830944916117 L11.612903225806452,16.495093108965467 L12.258064516129032,15.208045763738602 L12.903225806451612,10.87370001202301 L13.548387096774194,11.110294644673807 L14.193548387096774,9.510938049127871 L14.838709677419354,11.006191561234116 L15.483870967741936,6.113498372269387 L16.129032258064516,9.30273910761519 L16.774193548387096,11.933632405711855 L17.419354838709676,6.908440442169319 L18.064516129032256,6.501507789523334 L18.70967741935484,8.782238141150138 L19.35483870967742,6.596138417216952 L20.0,10.286956883635758 L20.64516129032258,10.286956883635758 L21.29032258064516,11.999874567634055 L21.93548387096774,13.01248080942604 L22.58064516129032,15.851573049035386 L23.225806451612904,20.365714825758836 L23.870967741935484,17.86732030223998 L24.516129032258064,22.258435760131697 L25.161290322580644,21.52974307752067 L25.806451612903224,15.529805793703643 L26.451612903225804,15.870496284427427 L27.096774193548388,11.81059886151342 L27.741935483870968,10.220707496346854 L28.387096774193548,8.611892895788248 L29.032258064516128,6.917905672548695 L29.677419354838708,0.0 L30.32258064516129,1.9021861647522336 L30.967741935483872,1.220797957937961 L31.612903225806452,7.760166668978783 L32.25806451612903,10.693889536281745 L32.90322580645161,7.315380320182012 L33.54838709677419,10.192319030575439 L34.193548387096776,14.924132204557646 L34.83870967741935,15.085012219540166 L35.483870967741936,15.264822695281431 L36.12903225806451,17.50770657612415 L36.774193548387096,14.886278508406859 L37.41935483870968,15.245899459889388 L38.064516129032256,14.573976483454489 L38.70967741935484,11.848452557664208 L39.354838709677416,12.974627113275252 L40.0,13.116583892865732 L40.64516129032258,13.665466099735493 L41.29032258064516,12.719102019865712 L41.935483870967744,14.403631238092595 L42.58064516129032,10.230172726726227 L43.225806451612904,9.435223431459594 L43.87096774193548,11.327951591199156 L44.516129032258064,14.725398493424338 L45.16129032258064,15.851573049035386 L45.806451612903224,16.012561444518433 L46.45161290322581,16.32508745583856 L47.096774193548384,16.17355706536818 L47.74193548387097,17.916120428944012 L48.387096774193544,18.702168072434013 L49.03225806451613,18.626402877198824 L49.67741935483871,19.251447674472374 L50.32258064516129,16.647078697538056 L50.96774193548387,16.126209237371214 L51.61290322580645,18.844218781791614 L52.25806451612903,17.38577851303109 L52.90322580645161,16.287204858220967 L53.54838709677419,15.633742693709191 L54.193548387096776,17.793007405711855 L54.83870967741935,20.084850371326045 L55.483870967741936,20.331076417790356 L56.12903225806451,23.285854003662394 L56.774193548387096,25.0 L57.41935483870967,24.54542327932227 L58.064516129032256,18.796870953794645 L58.70967741935484,16.83649168562603 L59.354838709677416,17.15848292732553 L60.0,17.793007405711855 L60.64516129032258,20.738305310471116 L61.29032258064516,20.378431471154023 L61.935483870967744,19.999612720344782 L62.58064516129032,19.923854750476295 L63.225806451612904,19.431388206814272 L63.87096774193548,19.554501230046426 L64.51612903225806,21.155006658897953 L65.16129032258064,20.586782145367444 L65.80645161290322,18.19076384264654 L66.45161290322581,19.734441762388325 L67.09677419354838,17.46153648289958 L67.74193548387096,18.247584126389583 L68.38709677419355,21.42017761685441 L69.03225806451613,20.87089801481605 L69.6774193548387,23.153268524684165 L70.3225806451613,9.998838161034348 L70.96774193548387,7.081943172779905 L71.61290322580645,6.466363605885725 L72.25806451612902,9.174907919926753 L72.90322580645162,11.798221808353219 L73.54838709677419,11.618281276011318 L74.19354838709677,8.09527917660877 L74.83870967741936,8.843444222481178 L75.48387096774194,11.845569636350184 L76.12903225806451,10.036720758651944 L76.77419354838709,11.570926222647651 L77.41935483870968,9.44007887788321 L78.06451612903226,7.356586586482436 L78.70967741935483,1.589096574829366 L79.35483870967742,2.3183167092096255 L80.0,4.97004073950761\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
-      "pe_history_5yr": [
-        {
-          "year": 2021,
-          "value": 22.8
-        },
-        {
-          "year": 2022,
-          "value": 28.1
-        },
-        {
-          "year": 2023,
-          "value": 27.8
-        },
-        {
-          "year": 2024,
-          "value": 27.8
-        },
-        {
-          "year": 2025,
-          "value": 30.7
-        }
-      ],
-      "phase_label_zh": "Layer 2: 矽光子 / 高速傳輸",
-      "phase_label_en": "Layer 2: Silicon Photonics / High-Speed Transfer",
-      "category_zh": "網通與資料中心互連",
-      "category_en": "Networking & DCI Interconnects",
-      "pain_points_zh": [
-        "AI 伺服器間資料傳輸瓶頸",
-        "銅線傳輸極限與耗電"
-      ],
-      "pain_points_en": [
-        "Server-to-server data transfer bottlenecks in AI clusters",
-        "Copper cable transmission limits and power drain"
-      ],
-      "ai_solutions_zh": [
-        "PAM4 DSP 光通訊晶片",
-        "矽光子 (Silicon Photonics) 及 DCI 互連"
-      ],
-      "ai_solutions_en": [
-        "PAM4 DSP Optical Comms chips",
-        "Silicon Photonics and DCI interconnects"
-      ],
-      "eps_trend_zh": "AI 營收佔比急升",
-      "eps_trend_en": "AI Rev Share Surging",
-      "rating_zh": "買進",
-      "rating_en": "Buy",
-      "rating_reason_zh": "光通訊與 ASIC 需求激增",
-      "rating_reason_en": "Optical Comms & ASIC demand soaring"
+        "investment_strategy_en": "Momentum play. High purity optical upgrade cycle; best networking alternative beyond Broadcom.",
+        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/MRVL/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看財務報表行情</a>",
+        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/MRVL/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View Financials</a>",
+        "pipeline_link": "N/A"
+      }
     },
     {
       "name": "Micron",
       "ticker": "MU",
       "exchange": "NASDAQ",
-      "phase": "Layer 2",
-      "price": "357.22",
-      "market_cap": "$402.85B",
-      "eps": "21.18",
-      "ps_history": [
+      "phase": "Layer 1",
+      "phase_label_zh": "Layer 1: 記憶體 / HBM",
+      "phase_label_en": "Layer 1: Memory / HBM",
+      "pain_points_zh": [
+        "Memory Wall：算力成長遠超越記憶體頻寬",
+        "大模型消耗極大 VRAM"
+      ],
+      "pain_points_en": [
+        "Memory Wall: compute growth far outpaces memory bandwidth",
+        "Large models consume enormous VRAM"
+      ],
+      "ai_solutions_zh": [
+        "HBM3e (高頻寬記憶體) 量產",
+        "高容量 DDR5 伺服器模組"
+      ],
+      "ai_solutions_en": [
+        "HBM3e (High Bandwidth Memory) volume production",
+        "High-capacity DDR5 server modules"
+      ],
+      "price": 130.0,
+      "market_cap": "145B",
+      "eps": 2.2,
+      "eps_trend_zh": "虧轉盈爆發",
+      "eps_trend_en": "Loss-to-profit inflection",
+      "pe_history_5yr": [
         {
           "year": 2024,
           "value": 4
@@ -888,9 +733,17 @@
           "value": 5
         }
       ],
-      "eps_2026e": "98.55",
-      "pe_ratio": "16.87",
+      "rating_zh": "買進",
+      "rating_en": "Buy",
+      "rating_reason_zh": "HBM 供應緊缺至 2025+",
+      "rating_reason_en": "HBM supply tight through 2025+",
+      "eps_2026e": "+$9.50",
+      "pe_ratio": 15.0,
+      "category_zh": "記憶體晶片 (DRAM/NAND)",
+      "category_en": "Memory Chips (DRAM/NAND)",
       "deep_dive": {
+        "profile_zh": "Micron 是美國最大的記憶體製造商。AI 帶動的 HBM (High Bandwidth Memory) 需求大幅消耗了 DRAM 總體產能，讓整體記憶體產業迎來超級循環強週期。",
+        "profile_en": "Micron is America's largest memory manufacturer. AI-driven HBM demand has significantly absorbed total DRAM capacity, ushering in a super-cycle for the memory industry.",
         "financial_5yr": [
           {
             "year": 2023,
@@ -908,105 +761,72 @@
             "eps": "+$9.50"
           }
         ],
+        "partnerships_zh": [
+          "NVIDIA (HBM 供應商)",
+          "Intel, AMD"
+        ],
+        "partnerships_en": [
+          "NVIDIA (HBM supplier)",
+          "Intel, AMD"
+        ],
         "pipeline_milestones": [
           {
             "program": "HBM3E",
             "phase": "Mass Production",
-            "date": "2024-2025",
             "milestone_zh": "供貨給 NVDA H200/B200",
-            "milestone_en": "Supply NVDA H200/B200"
+            "milestone_en": "Supply to NVDA H200/B200",
+            "date": "2024-2025"
           },
           {
             "program": "HBM4",
             "phase": "Development",
-            "date": "2026",
             "milestone_zh": "次世代高頻寬",
-            "milestone_en": "Next-Gen High Bandwidth"
+            "milestone_en": "Next-gen high bandwidth",
+            "date": "2026"
           }
         ],
         "earnings_dates": [
           "Q1 2026: Mar 20",
           "Q2 2026: Jun 20"
         ],
-        "pipeline_link": "N/A",
-        "profile_zh": "Micron 是美國最大的記憶體製造商。AI 帶動的 HBM (High Bandwidth Memory) 需求大幅消耗了 DRAM 總體產能，讓整體記憶體產業迎來超級循環強週期。",
-        "profile_en": "Micron is the largest US memory manufacturer. AI-driven HBM demand heavily consumes DRAM capacity, propelling the memory industry into a super-cycle.",
-        "partnerships_zh": [
-          "NVIDIA (HBM 供應商)",
-          "Intel, AMD"
-        ],
-        "partnerships_en": [
-          "NVIDIA (HBM Supplier)",
-          "Intel, AMD"
-        ],
-        "risk_assessment_zh": "典型的週期性產業 (Cyclical)。若消費性電子終端 (PC/手機) 需求疲軟，將拖累標準型 DRAM 價格，抵銷 HBM 貢獻。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
-        "risk_assessment_en": "Classic cyclical industry. If consumer electronics demand (PC/Mobile) softens, standard DRAM prices will drag down overall growth despite HBM contributions.<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 Read Latest SEC Filings (Risk Factors)</a>",
+        "risk_assessment_zh": "典型的週期性產業 (Cyclical)。若消費性電子終端 (PC/手機) 需求疲軟，將拖累標準型 DRAM 價格，抵銷 HBM 貢獻。",
+        "risk_assessment_en": "Classic cyclical industry. Weak consumer electronics (PC/phone) demand can depress standard DRAM prices, offsetting HBM gains.",
         "investment_strategy_zh": "波段操作。趁 HBM 滲透率提升與供需緊缺的週期上行期持有。",
-        "investment_strategy_en": "Swing trade. Hold during the HBM penetration up-cycle and supply shortage.",
-        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/MU/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/MU/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View 5-Year Financial Statements</a>",
-        "financial_link": "<a href=\"https://finance.yahoo.com/quote/MU/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "risk_assessment": "AI 算力基礎建設龍頭，需關注 CSP 資本支出動向。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>"
-      },
-      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,25.0 L0.6451612903225806,24.71338060676474 L1.2903225806451613,23.470530314299108 L1.935483870967742,23.336439295235525 L2.5806451612903225,22.984649746577574 L3.225806451612903,22.722170577089344 L3.870967741935484,23.164107693713838 L4.516129032258064,22.25423708418663 L5.161290322580645,22.607283696145014 L5.806451612903226,23.507091398742784 L6.451612903225806,22.570385944035337 L7.096774193548387,23.049222092874704 L7.741935483870968,22.63998910374459 L8.387096774193548,21.7519212458803 L9.032258064516128,21.7644995595158 L9.67741935483871,21.396357947110662 L10.32258064516129,21.772048339844375 L10.96774193548387,22.09238826409799 L11.612903225806452,21.40139004062798 L12.258064516129032,20.369083769827867 L12.903225806451612,20.278516327357718 L13.548387096774194,20.12673169430371 L14.193548387096774,19.73091676781631 L14.838709677419354,19.950627622775528 L15.483870967741936,19.97075343663441 L16.129032258064516,19.054173795785843 L16.774193548387096,20.452104992179837 L17.419354838709676,18.81936794037987 L18.064516129032256,18.749764780670617 L18.70967741935484,18.784148406179426 L19.35483870967742,17.4943950594084 L20.0,18.516637143173877 L20.64516129032258,18.19881134552113 L21.29032258064516,18.86549141062216 L21.93548387096774,18.03696252543249 L22.58064516129032,18.446195514562604 L23.225806451612904,19.57410004124499 L23.870967741935484,19.790457020596122 L24.516129032258064,21.84919771967181 L25.161290322580644,21.346043412463462 L25.806451612903224,19.957336654096885 L26.451612903225804,19.907020839344494 L27.096774193548388,19.42650903280628 L27.741935483870968,18.9049045694379 L28.387096774193548,18.571145302436374 L29.032258064516128,18.652488306879107 L29.677419354838708,19.09945751702092 L30.32258064516129,19.729239830012272 L30.967741935483872,18.842848909952025 L31.612903225806452,18.029416305314307 L32.25806451612903,17.56819056362776 L32.90322580645161,16.621423482096063 L33.54838709677419,17.061682380811327 L34.193548387096776,18.514121736467814 L34.83870967741935,18.81936794037987 L35.483870967741936,19.237825367537404 L36.12903225806451,19.823999616992527 L36.774193548387096,17.892725392601864 L37.41935483870968,16.436092412330076 L38.064516129032256,15.541316803249623 L38.70967741935484,15.568152928535055 L39.354838709677416,14.695177510907136 L40.0,14.853669895177307 L40.64516129032258,14.04032945811355 L41.29032258064516,14.18630241358714 L41.935483870967744,14.792009788196355 L42.58064516129032,12.274380819518225 L43.225806451612904,12.548712482997002 L43.87096774193548,9.924540359028544 L44.516129032258064,10.250045507739644 L45.16129032258064,11.30122436941378 L45.806451612903224,9.785277714981506 L46.45161290322581,9.719841297678478 L47.096774193548384,10.369172097086249 L47.74193548387097,10.7701804103454 L48.387096774193544,10.495011558069796 L49.03225806451613,8.303727487109981 L49.67741935483871,8.114968295634661 L50.32258064516129,6.092309921660121 L50.96774193548387,5.3817363295646174 L51.61290322580645,5.2080772589568305 L52.25806451612903,6.093986859464163 L52.90322580645161,4.3196509716382465 L53.54838709677419,2.218970186094012 L54.193548387096776,2.176183950092284 L54.83870967741935,3.9303863434281574 L55.483870967741936,2.0075608133173937 L56.12903225806451,3.547834586855007 L56.774193548387096,6.906909982234698 L57.41935483870967,6.614121762069917 L58.064516129032256,5.624185693083515 L58.70967741935484,6.562948276837595 L59.354838709677416,7.422851260225162 L60.0,4.311261162197262 L60.64516129032258,4.006729256983419 L61.29032258064516,4.200521822081253 L61.935483870967744,5.197170762704594 L62.58064516129032,3.421155376864249 L63.225806451612904,3.7231705952668364 L63.87096774193548,2.8154480022550317 L64.51612903225806,3.4194784390602067 L65.16129032258064,3.66780092520883 L65.80645161290322,2.7458179603367086 L66.45161290322581,3.873339735566109 L67.09677419354838,4.14095852740795 L67.74193548387096,4.115789099085006 L68.38709677419355,6.883420051926187 L69.03225806451613,5.11411753772278 L69.6774193548387,5.426199503370388 L70.3225806451613,7.670336557576956 L70.96774193548387,6.0746905537709495 L71.61290322580645,4.917808285813695 L72.25806451612902,3.6107543173467818 L72.90322580645162,4.729886283135205 L73.54838709677419,2.9865903860515637 L74.19354838709677,1.671988917361272 L74.83870967741936,0.0033564358184676735 L75.48387096774194,0.0 L76.12903225806451,1.464773169199951 L76.77419354838709,3.257565613711872 L77.41935483870968,4.813779257124235 L78.06451612903226,5.553715902157975 L78.70967741935483,6.681237677387379 L79.35483870967742,8.915307984348921 L80.0,8.767655530860903\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
-      "pe_history_5yr": [
-        {
-          "year": 2021,
-          "value": 14.9
-        },
-        {
-          "year": 2022,
-          "value": 20.8
-        },
-        {
-          "year": 2023,
-          "value": 16.3
-        },
-        {
-          "year": 2024,
-          "value": 17.6
-        },
-        {
-          "year": 2025,
-          "value": 17.2
-        }
-      ],
-      "phase_label_zh": "Layer 2: 記憶體 / HBM",
-      "phase_label_en": "Layer 2: Memory / HBM",
-      "category_zh": "記憶體晶片 (DRAM/NAND)",
-      "category_en": "Memory Chips (DRAM/NAND)",
-      "pain_points_zh": [
-        "Memory Wall：算力成長遠超越記憶體頻寬",
-        "大模型消耗極大 VRAM"
-      ],
-      "pain_points_en": [
-        "Memory Wall: Compute growth far outpaces memory bandwidth",
-        "LLMs consume massive VRAM"
-      ],
-      "ai_solutions_zh": [
-        "HBM3e (高頻寬記憶體) 量產",
-        "高容量 DDR5 伺服器模組"
-      ],
-      "ai_solutions_en": [
-        "HBM3e (High Bandwidth Memory) mass production",
-        "High-capacity DDR5 server modules"
-      ],
-      "eps_trend_zh": "虧轉盈爆發",
-      "eps_trend_en": "Turnaround Explosion",
-      "rating_zh": "買進",
-      "rating_en": "Buy",
-      "rating_reason_zh": "HBM 供應緊缺至 2025+",
-      "rating_reason_en": "HBM supply shortage into 2025+"
+        "investment_strategy_en": "Swing trade. Hold during the upcycle as HBM penetration rises and supply remains tight.",
+        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/MU/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看財務報表行情</a>",
+        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/MU/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View Financials</a>",
+        "pipeline_link": "N/A"
+      }
     },
     {
       "name": "AMD",
       "ticker": "AMD",
       "exchange": "NASDAQ",
-      "phase": "Layer 2",
-      "price": "201.99",
-      "market_cap": "$329.33B",
-      "eps": "2.61",
-      "ps_history": [
+      "phase": "Layer 1",
+      "phase_label_zh": "Layer 1: AI GPU / CPU",
+      "phase_label_en": "Layer 1: AI GPU / CPU",
+      "pain_points_zh": [
+        "市場急需 NVIDIA 的第二供應來源",
+        "軟體生態系 (ROCm) 較為弱勢"
+      ],
+      "pain_points_en": [
+        "Market urgently needs a second GPU supplier",
+        "Software ecosystem (ROCm) less mature than CUDA"
+      ],
+      "ai_solutions_zh": [
+        "MI300 / MI325X 系列 AI 晶片",
+        "EPYC 伺服器 CPU 霸主地位"
+      ],
+      "ai_solutions_en": [
+        "MI300 / MI325X series AI chips",
+        "EPYC server CPU market leadership"
+      ],
+      "price": 160.0,
+      "market_cap": "260B",
+      "eps": 3.0,
+      "eps_trend_zh": "AI 營收上調中",
+      "eps_trend_en": "AI revenue estimates rising",
+      "pe_history_5yr": [
         {
           "year": 2024,
           "value": 10
@@ -1016,9 +836,17 @@
           "value": 9
         }
       ],
-      "eps_2026e": "10.77",
-      "pe_ratio": "77.39",
+      "rating_zh": "買進",
+      "rating_en": "Buy",
+      "rating_reason_zh": "唯一具備 GPU+CPU 挑戰實力的對手",
+      "rating_reason_en": "Only credible challenger with both GPU+CPU capabilities",
+      "eps_2026e": "+$6.00",
+      "pe_ratio": 50.0,
+      "category_zh": "AI 晶片與處理器",
+      "category_en": "AI Chips & Processors",
       "deep_dive": {
+        "profile_zh": "AMD 在 AI GPU 領域（Instinct MI300系列）急起直追，成為雲端大廠除了 NVDA 之外最重要的備胎與議價籌碼。同時在伺服器 CPU 持續奪取 Intel 市佔。",
+        "profile_en": "AMD is rapidly closing the gap in AI GPUs (Instinct MI300 series), becoming the most important NVDA alternative and bargaining chip for cloud providers. It also continues to take server CPU share from Intel.",
         "financial_5yr": [
           {
             "year": 2023,
@@ -1036,178 +864,147 @@
             "eps": "+$6.00"
           }
         ],
-        "pipeline_milestones": [
-          {
-            "program": "MI325X",
-            "phase": "Launch",
-            "date": "2024",
-            "milestone_zh": "推論市場奪取市佔",
-            "milestone_en": "Capture Inference Market Share"
-          },
-          {
-            "program": "MI400 系列",
-            "phase": "Design",
-            "date": "2026",
-            "milestone_zh": "次世代 AI 架構",
-            "milestone_en": "Next-Gen CDNA Architecture"
-          }
-        ],
-        "earnings_dates": [
-          "Q1 2026: Apr 30",
-          "Q2 2026: Jul 30"
-        ],
-        "pipeline_link": "N/A",
-        "profile_zh": "AMD 在 AI GPU 領域（Instinct MI300系列）急起直追，成為雲端大廠除了 NVDA 之外最重要的備胎與議價籌碼。同時在伺服器 CPU 持續奪取 Intel 市佔。",
-        "profile_en": "AMD is catching up rapidly in the AI GPU sector (Instinct MI300 series), becoming the most crucial backup and bargaining chip for CSPs outside NVIDIA. Meanwhile, it continues to grab server CPU market share from Intel.",
         "partnerships_zh": [
           "Microsoft, Meta (MI300 大客戶)",
           "TSMC",
           "Supermicro"
         ],
         "partnerships_en": [
-          "Microsoft, Meta, Oracle (MI300 adopters)",
-          "TSMC"
+          "Microsoft, Meta (MI300 key customers)",
+          "TSMC",
+          "Supermicro"
         ],
-        "risk_assessment_zh": "軟體生態系（ROCm）的成熟度仍落後 CUDA，開發者轉移成本高。且面臨 NVIDIA 快速推出新產品線的強烈壓制。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>",
-        "risk_assessment_en": "Consistently trailing NVIDIA in the high-margin training market. Software ecosystem barriers remain difficult to completely overcome.<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 Read Latest SEC Filings (Risk Factors)</a>",
+        "pipeline_milestones": [
+          {
+            "program": "MI325X",
+            "phase": "Launch",
+            "milestone_zh": "推論市場奪取市佔",
+            "milestone_en": "Gaining inference market share",
+            "date": "2024"
+          },
+          {
+            "program": "MI400 Series",
+            "phase": "Design",
+            "milestone_zh": "次世代 AI 架構",
+            "milestone_en": "Next-gen AI architecture",
+            "date": "2026"
+          }
+        ],
+        "earnings_dates": [
+          "Q1 2026: Apr 30",
+          "Q2 2026: Jul 30"
+        ],
+        "risk_assessment_zh": "軟體生態系（ROCm）的成熟度仍落後 CUDA，開發者轉移成本高。且面臨 NVIDIA 快速推出新產品線的強烈壓制。",
+        "risk_assessment_en": "ROCm software ecosystem maturity still trails CUDA, with high developer switching costs. Faces strong suppression from NVIDIA's rapid product cadence.",
         "investment_strategy_zh": "多頭佈局。市場絕對需要第二家 GPU 供應商，AMD 的容錯空間與潛在市佔增長率極大。",
-        "investment_strategy_en": "Core Holding. The natural hedge against NVIDIA's monopoly, capturing spillover inference demand.",
-        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/AMD/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/AMD/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View 5-Year Financial Statements</a>",
-        "financial_link": "<a href=\"https://finance.yahoo.com/quote/AMD/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看 5 年財務報表行情</a>",
-        "risk_assessment": "AI 算力基礎建設龍頭，需關注 CSP 資本支出動向。<br><br><a href=\"https://www.sec.gov/edgar/searchedgar/companysearch\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查閱最新 SEC 分析報告 (Risk Factors)</a>"
-      },
-      "trend_6mo_svg": "<svg width=\"80\" height=\"25\" viewBox=\"0 -5 80 35\" preserveAspectRatio=\"none\"><path d=\"M0.0,25.0 L0.6451612903225806,24.895602424394742 L1.2903225806451613,24.356610115139635 L1.935483870967742,22.96785562341357 L2.5806451612903225,24.196368357324523 L3.225806451612903,14.717876110233764 L3.870967741935484,12.824123353033775 L4.516129032258064,6.985042472549512 L5.161290322580645,7.633289178617066 L5.806451612903226,12.00106813019867 L6.451612903225806,11.632027516503932 L7.096774193548387,11.22657000542808 L7.741935483870968,6.246961245160033 L8.387096774193548,7.2278316675412135 L9.032258064516128,7.587158638821585 L9.67741935483871,5.771096497591003 L10.32258064516129,6.38535286454648 L10.96774193548387,8.279109326415579 L11.612903225806452,7.123430387266843 L12.258064516129032,2.7702218993067973 L12.903225806451612,1.131391128443692 L13.548387096774194,1.5344220812505043 L14.193548387096774,0.0 L14.838709677419354,2.3040670894830235 L15.483870967741936,1.9932972162671732 L16.129032258064516,1.1362516543199916 L16.774193548387096,3.4670257034388676 L17.419354838709676,1.9423135599336163 L18.064516129032256,6.465473743454034 L18.70967741935484,7.4754776837401025 L19.35483870967742,4.940757895279674 L20.0,6.509174020311367 L20.64516129032258,1.3207664041636917 L21.29032258064516,3.974454231850938 L21.93548387096774,4.25366402889286 L22.58064516129032,5.78080643533626 L23.225806451612904,8.264542567463138 L23.870967741935484,9.900939370718978 L24.516129032258064,14.157033662549988 L25.161290322580644,14.700882793012282 L25.806451612903224,11.964647528148447 L26.451612903225804,14.130326702914136 L27.096774193548388,12.161306183344667 L27.741935483870968,11.362531361876377 L28.387096774193548,10.821112494352231 L29.032258064516128,11.918516988352964 L29.677419354838708,11.345534339985782 L30.32258064516129,11.738855355047336 L30.967741935483872,11.255703523332969 L31.612903225806452,10.493345599245787 L32.25806451612903,10.369524443480902 L32.90322580645161,10.418081541545417 L33.54838709677419,10.415654983276381 L34.193548387096776,13.001358428070366 L34.83870967741935,13.778283111109992 L35.483870967741936,13.392249180193772 L36.12903225806451,16.07749708405494 L36.774193548387096,15.361269699763241 L37.41935483870968,12.357968543210001 L38.064516129032256,11.988927929515262 L38.70967741935484,12.00106813019867 L39.354838709677416,11.967077791086595 L40.0,11.97921428710089 L40.64516129032258,11.82868617170015 L41.29032258064516,11.894240291655262 L41.935483870967744,12.180729763504297 L42.58064516129032,9.920362950878605 L43.225806451612904,10.500628978722009 L43.87096774193548,12.134599223708815 L44.516129032258064,13.185876882583178 L45.16129032258064,14.482373999387397 L45.806451612903224,14.848984350143986 L46.45161290322581,13.75157615147414 L47.096774193548384,10.527335938357862 L47.74193548387097,9.88879917003557 L48.387096774193544,8.839951774099355 L49.03225806451613,7.890645132561211 L49.67741935483871,7.868794994132543 L50.32258064516129,3.527723002186793 L50.96774193548387,2.573563244110577 L51.61290322580645,1.1289682748437713 L52.25806451612903,3.161112651430205 L52.90322580645161,2.9863041346626495 L53.54838709677419,2.81392217616413 L54.193548387096776,2.949887237281537 L54.83870967741935,6.700979558969518 L55.483870967741936,4.384768564133974 L56.12903225806451,5.39477250442004 L56.774193548387096,15.572495113911906 L57.41935483870967,17.439544616145156 L58.064516129032256,13.569484255230362 L58.70967741935484,11.73399853384015 L59.354838709677416,12.323974499428815 L60.0,12.321547941159777 L60.64516129032258,14.176457242709619 L61.29032258064516,13.841406968126952 L61.935483870967744,14.870834488572651 L62.58064516129032,15.5894921358025 L63.225806451612904,14.800427252079468 L63.87096774193548,15.582208756326278 L64.51612903225806,16.44410743481153 L65.16129032258064,12.258424084142817 L65.80645161290322,12.981934847910736 L66.45161290322581,14.725163194379098 L67.09677419354838,15.56763829270472 L67.74193548387096,15.953675928290053 L68.38709677419355,17.815868609316116 L69.03225806451613,15.11605024183339 L69.6774193548387,15.752160451886647 L70.3225806451613,17.45654163803575 L70.96774193548387,14.9679523893708 L71.61290322580645,14.834417591191542 L72.25806451612902,14.445953397337172 L72.90322580645162,16.167327900707754 L73.54838709677419,17.223462380789304 L74.19354838709677,16.448964256018716 L74.83870967741936,16.51451837597383 L75.48387096774194,15.749730188948497 L76.12903225806451,14.339125558793766 L76.77419354838709,15.29571557980813 L77.41935483870968,14.9679523893708 L78.06451612903226,14.314848862096063 L78.70967741935483,10.697287633918231 L79.35483870967742,14.703309351281318 L80.0,15.13547382199302\" fill=\"none\" stroke=\"#10b981\" stroke-width=\"2\" stroke-linejoin=\"round\" /></svg>",
-      "pe_history_5yr": [
-        {
-          "year": 2021,
-          "value": 94.5
-        },
-        {
-          "year": 2022,
-          "value": 91.1
-        },
-        {
-          "year": 2023,
-          "value": 85.5
-        },
-        {
-          "year": 2024,
-          "value": 70.3
-        },
-        {
-          "year": 2025,
-          "value": 77.7
-        }
-      ],
-      "phase_label_zh": "Layer 2: AI GPU / CPU",
-      "phase_label_en": "Layer 2: AI GPU / CPU",
-      "category_zh": "AI 晶片與處理器",
-      "category_en": "AI Chips & Processors",
-      "pain_points_zh": [
-        "市場急需 NVIDIA 的第二供應來源",
-        "軟體生態系 (ROCm) 較為弱勢"
-      ],
-      "pain_points_en": [
-        "Market desperate for a second source to NVIDIA",
-        "Software ecosystem (ROCm) relatively weak"
-      ],
-      "ai_solutions_zh": [
-        "MI300 / MI325X 系列 AI 晶片",
-        "EPYC 伺服器 CPU 霸主地位"
-      ],
-      "ai_solutions_en": [
-        "MI300 / MI325X series AI chips",
-        "Dominance in EPYC server CPUs"
-      ],
-      "eps_trend_zh": "AI 營收上調中",
-      "eps_trend_en": "AI Revenue Revisions Up",
-      "rating_zh": "買進",
-      "rating_en": "Buy",
-      "rating_reason_zh": "唯一具備 GPU+CPU 挑戰實力的對手",
-      "rating_reason_en": "Only rival with GPU+CPU combined capabilities"
+        "investment_strategy_en": "Bull position. The market absolutely needs a second GPU supplier; AMD has large upside potential and room for market share gains.",
+        "financial_link_zh": "<a href=\"https://finance.yahoo.com/quote/AMD/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 查看財務報表行情</a>",
+        "financial_link_en": "<a href=\"https://finance.yahoo.com/quote/AMD/financials\" target=\"_blank\" style=\"color:#60a5fa;text-decoration:underline;\">🔗 View Financials</a>",
+        "pipeline_link": "N/A"
+      }
     }
   ],
   "news_feed": [
     {
-      "id": "news_20260327_amd_mi325x",
-      "date": "2026-03-27",
-      "category_zh": "市場競爭 (Competition)",
-      "category_en": "Market Competition",
-      "title_zh": "AMD (AMD) 擴增 MI325X 產能，拿下來自二線雲端業者與企業端大單",
-      "title_en": "AMD (AMD) Expands MI325X Capacity, Securing Massive Orders from Tier-2 CSPs and Enterprise Segments",
-      "summary_zh": "AMD 宣布大幅擴增 MI325X 加速器的產能，以應對來自二線 CSP 與傳統企業端自建 AI 基礎設施的需求。雖然在頂規訓練市場仍落後，但推論 (Inference) 端的性價比獲市場肯定。",
-      "summary_en": "AMD announced a significant expansion in production capacity for its MI325X accelerator to meet demand from Tier-2 CSPs and traditional enterprise on-prem AI infrastructure buildouts. Although trailing in top-tier training, its cost-performance ratio in Inference is highly recognized.",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/technology",
-      "companies_impacted": [
-        "AMD"
-      ],
-      "phase": "Layer 2"
+      "id": "news_20260404_nvda_backlog",
+      "date": "2026-04-04",
+      "category_zh": "市場供需 (Supply)",
+      "category_en": "Supply & Demand",
+      "title_zh": "NVIDIA Blackwell B200 訂單積壓達 360 萬顆，H100 租賃成本逆勢漲 40%",
+      "title_en": "NVIDIA Blackwell B200 Backlog Hits 3.6M Units, H100 Lease Costs Surge 40%",
+      "summary_zh": "市場分析報告指出，Blackwell 系列供不應求至 2026 年中。受此影響，部分雲端加速器租賃商將四年前發布的 H100 租金調漲近四成，顯示算力需求仍處於極度飢渴狀態。",
+      "summary_en": "Market reports indicate Blackwell series is sold out through mid-2026. Consequently, some GPU cloud providers have raised H100 lease rates by nearly 40% despite being 4-year-old tech, highlighting extreme compute scarcity.",
+      "source": "Financial Content / Markets",
+      "url": "https://markets.financialcontent.com",
+      "companies_impacted": ["NVDA", "TSM"],
+      "phase": "Layer 1"
     },
     {
-      "id": "news_20260327_tsm_cpo",
-      "date": "2026-03-27",
-      "category_zh": "技術突破 (Technology)",
-      "category_en": "Technology Breakthrough",
-      "title_zh": "TSMC (TSM) 矽光子 CPO 封裝產能提早半年達標，協力 Broadcom 推進 AI 網通",
-      "title_en": "TSMC (TSM) Silicon Photonics CPO Packaging Capacity Hits Target Half a Year Early, Advancing AI Networking with Broadcom",
-      "summary_zh": "台積電 (TSMC) 在先進封裝論壇中指出其與 Broadcom 合作的 CPO (Co-Packaged Optics) 封裝技術產能預估將提早半年達標，大幅緩解 AI 伺服器光通訊的瓶頸。",
-      "summary_en": "TSMC reported at its Advanced Packaging Forum that capacity for its Co-Packaged Optics (CPO) tech, developed in partnership with Broadcom, is projected to hit targets half a year ahead of schedule, drastically relieving AI server optical communication bottlenecks.",
-      "source": "DigiTimes",
-      "url": "https://www.digitimes.com/",
-      "companies_impacted": [
-        "TSM",
-        "AVGO"
-      ],
-      "phase": "Layer 2"
+      "id": "news_20260403_tsm_2nm",
+      "date": "2026-04-03",
+      "category_zh": "技術里程碑 (Tech)",
+      "category_en": "Technology Milestone",
+      "title_zh": "台積電 2nm 正式進入量產里程碑，2026 年產能已全數售罄",
+      "title_en": "TSMC Hits 2nm Mass Production Milestone, 2026 Capacity Fully Sold Out",
+      "summary_zh": "台積電 (TSMC) 確認 2nm 晶片已正式進入量產階段，領先競爭對手約三年。首批兩座工廠的 2026 年產能已由 Apple、NVIDIA 等大客戶搶訂一空。",
+      "summary_en": "TSMC confirmed its 2nm chips have officially entered mass production, maintaining a 3-year lead over competitors. 2026 capacity at its initial two 2nm plants is already fully booked by major clients like Apple and NVIDIA.",
+      "source": "RTI / Wccftech",
+      "url": "https://wccftech.com",
+      "companies_impacted": ["TSM", "NVDA", "AAPL"],
+      "phase": "Layer 1"
     },
     {
-      "id": "news_20260327_nvda_b200",
-      "date": "2026-03-27",
-      "category_zh": "產品發表 (Product)",
-      "category_en": "Product Launch",
-      "title_zh": "NVIDIA (NVDA) Blackwell B200 首批大規模交付，CSP 客戶部署速度超預期",
-      "title_en": "NVIDIA (NVDA) Blackwell B200 Initial Mass Delivery, CSP Deployment Beats Expectations",
-      "summary_zh": "NVIDIA 今日確認首批 B200 晶片已順利交付給主要雲端服務供應商 (CSP)。市場分析指出其伺服器機櫃液冷設計的部署速度優於預期，將帶動下一季強勁的營收成長。",
-      "summary_en": "NVIDIA confirmed today that the first batch of B200 chips has been successfully delivered to major Cloud Service Providers (CSPs). Market analysts note the deployment of server rack liquid cooling designs is faster than expected, driving strong revenue growth next quarter.",
-      "source": "Tom's Hardware / Bloomberg",
-      "url": "https://www.bloomberg.com/technology",
+      "id": "news_20260402_avgo_meta",
+      "date": "2026-04-02",
+      "category_zh": "重大合約 (Contract)",
+      "category_en": "Major Contract",
+      "title_zh": "Broadcom 拿下 Meta 四代晶片設計合約，自研 AI 晶片布局達千億規模",
+      "title_en": "Broadcom Secures 4-Gen Chip Design Deal with Meta, $100B Custom AI Silicon Bet",
+      "summary_zh": "博通 (Broadcom) 獲得 Meta 未來四代 AI ASIC 的設計訂單。此外報導指出其與 OpenAI、Google 的客製化運算代工布局已達千億美元規模，鞏固非 GPU 算力的領導地位。",
+      "summary_en": "Broadcom secured a four-generation AI ASIC design deal with Meta. Reports detail its broader $100B custom silicon strategy involving Google and OpenAI, cementing its lead in non-GPU compute silicon.",
+      "source": "Jon Peddie Research",
+      "url": "https://www.jonpeddie.com",
+      "companies_impacted": ["AVGO", "META"],
+      "phase": "Layer 1"
+    },
+    {
+      "id": "news_20260401_mu_hbm4",
+      "date": "2026-04-01",
+      "category_zh": "產品量產 (Product)",
+      "category_en": "Production Launch",
+      "title_zh": "Micron 開始量產 HBM4 供應 NVIDIA Vera Rubin，但 TrendForce 警示供貨延遲",
+      "title_en": "Micron Starts HBM4 Mass Production for NVIDIA Vera Rubin; TrendForce Warns of Delay",
+      "summary_zh": "美光 (Micron) 宣布為 NVIDIA 下一代 Vera Rubin 架構量產 HBM4 記憶體。然而 TrendForce 指出由於規格變更與 NVIDIA 策略調整，大規模交付可能推遲至 2026 年底。",
+      "summary_en": "Micron announced high-volume production of HBM4 for NVIDIA's next-gen Vera Rubin. However, TrendForce warns that spec upgrades and strategic adjustments may delay widespread deployment until late 2026.",
+      "source": "TrendForce",
+      "url": "https://www.trendforce.com",
+      "companies_impacted": ["MU", "NVDA"],
+      "phase": "Layer 1"
+    },
+    {
+      "id": "news_20260401_qcom_ces",
+      "date": "2026-04-01",
+      "category_zh": "CES 2026 (Event)",
+      "category_en": "CES 2026 Event",
+      "title_zh": "CES 2026：Qualcomm 發表 Snapdragon X2 Plus，AMD 推進 AI Everywhere 願景",
+      "title_en": "CES 2026: Qualcomm Unveils Snapdragon X2 Plus; AMD Advances AI Everywhere Vision",
+      "summary_zh": "在 CES 2026 展示中，高通發表 Snapdragon X2 Plus 強化 AI PC 效能。同時 AMD 分享其「AI Everywhere」願景，擴大 MI300/MI320 系列在企業端的生態系合作。",
+      "summary_en": "At CES 2026, Qualcomm unveiled the Snapdragon X2 Plus to boost AI PC performance. Simultaneously, AMD detailed its 'AI Everywhere' vision, expanding ecosystem partnerships for its MI300/MI320 series.",
+      "source": "CES 2026 Live",
+      "url": "https://www.ces.tech",
+      "companies_impacted": ["QCOM", "AMD"],
+      "phase": "Layer 5"
+    },
+    {
+      "date": "2026-03-25",
+      "category_zh": "技術發表",
+      "category_en": "Technology Announcement",
+      "source": "GTC 2026",
       "companies_impacted": [
         "NVDA",
         "TSM"
       ],
-      "phase": "Layer 2"
+      "title_zh": "NVIDIA 發布次世代 Rubin GPU 架構",
+      "title_en": "NVIDIA Unveils Next-Gen Rubin GPU Architecture",
+      "summary_zh": "NVIDIA 執行長黃仁勳宣布 Rubin 架構將搭載次世代 HBM4 記憶體，並由台積電 3nm 家族生產，進一步鞏固 AI 算力優勢。",
+      "summary_en": "NVIDIA CEO Jensen Huang announced the Rubin architecture will feature next-gen HBM4 memory and be manufactured on TSMC's 3nm family, further cementing NVIDIA's AI compute advantage.",
+      "url": "https://developer.nvidia.com"
     }
   ],
   "update_history": [
+    {
+      "date": "2026-04-05T23:30:00Z",
+      "action": "MANUAL_WEB_UPDATE",
+      "description": "手動更新 2026 年 4 月第一週 AI 半導體重磅動態 (NVIDIA B200 積壓、台積電 2nm 量產、博通 Meta 協議)。",
+      "verified": true,
+      "reason": "算力需求與技術領先地位顯著變動"
+    },
     {
       "date": "2026-03-27T08:00:00Z",
       "action": "Sync",
       "description": "成功同步 NVDA, TSMC, AVGO 等七大企業的最新股價與 2026 預估 EPS。",
       "verified": true,
       "reason": "API 擷取資料完整無遺漏"
-    },
-    {
-      "date": "2026-03-26T18:00:00Z",
-      "action": "News",
-      "description": "更新 GTC 2026 大會與 AI PC 銷量相關新聞分析。",
-      "verified": true,
-      "reason": "自動推論關聯公司標籤完成"
-    },
-    {
-      "date": "2026-03-27T21:20:47.070123Z",
-      "action": "AUTO_DAILY_UPDATE",
-      "description": "AI 公司儀表板偵測到 3 則關於 TSM, NVDA, AVGO, AMD 的新動態。",
-      "verified": true,
-      "reason": "系統自動於 2026 年 Daily Run 爬取半導體與基礎建設新聞。"
-    },
-    {
-      "date": "2026-03-30T10:24:38.310086Z",
-      "action": "AUTO_DAILY_UPDATE",
-      "description": "AI 公司儀表板偵測到 3 則關於 AVGO, NVDA, AMD, TSM 的新動態。",
-      "verified": true,
-      "reason": "系統自動於 2026 年 Daily Run 爬取半導體與基礎建設新聞。"
     }
   ]
 }

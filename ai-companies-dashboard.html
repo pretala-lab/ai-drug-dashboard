@@ -437,7 +437,12 @@
 
     <!-- TAB 2: News -->
     <div id="tab-news" class="tab-content">
-        <h2 id="news-title">最新動態牆 (News Feed)</h2>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2 id="news-title" style="margin: 0;">最新動態牆 (News Feed)</h2>
+            <button class="tab-btn" id="perplexity-btn" onclick="openPerplexity()" style="background-color: var(--accent-blue); color: white; border: none; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3); padding: 10px 20px;">
+                🔍 透過 Perplexity 搜集今日五層蛋糕最新動態
+            </button>
+        </div>
         <div class="panel" id="news-feed-container"></div>
     </div>
 
